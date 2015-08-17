@@ -9,9 +9,9 @@ import java.util.PriorityQueue;
 import java.util.Queue;
 
 public class MainActivity {
-	static BufferedWriter bufferedwrtr,bufferedwrtrpassengerInfo;
+	static BufferedWriter bufferedwrtr,bufferedwrtrpassengerInfo,bufferedwrtrpassengerInfoC,bufferedwrtrpassengerInfoH;
 	public static double SimTime = 0;
-	public static int end_sim_time = 5000;// to stop the simulation
+	public static int end_sim_time = 5000, getSpottingsNowTime=2000;// to stop the simulation
 
 	public static Comparator<Event> Comparator = new Comparator<Event>() {
 
@@ -146,8 +146,20 @@ public class MainActivity {
 			
 			FileWriter wrtr = new FileWriter(outPassenger);
 			bufferedwrtr = new BufferedWriter(wrtr);
-
+int flag=0;
 			while (SimTime < end_sim_time) {
+				
+				
+				//getSpottingsNow method call
+				if(SimTime>=getSpottingsNowTime&&flag==0){
+					Event_handler_Western.getSpottingsNow(SimTime);
+					Event_handler_Central.getSpottingsNow(SimTime);
+					Event_handler_Harbour.getSpottingsNow(SimTime);
+				flag=1;
+				}
+				//....................
+				
+				
 				// printing passengers info into csv file
 
 				// ..............................
@@ -287,18 +299,77 @@ public class MainActivity {
 				bufferedwrtrpassengerInfo.write(
 						+Train_Spotting.Train_Spotting_List_Western.get(j).Id+"\t"
 						+Train_Spotting.Train_Spotting_List_Western.get(j).Timestamp+"\t"
-						+Train_Spotting.Train_Spotting_List_Western.get(j).Station+"\t"
+						+Train_Spotting.Train_Spotting_List_Western.get(j).DistFromOriginMeter+"\t"
 						+Train_Spotting.Train_Spotting_List_Western.get(j).Direction+"\t"
+						+Train_Spotting.Train_Spotting_List_Western.get(j).Confidence+"\t"
+						+Train_Spotting.Train_Spotting_List_Western.get(j).DistNow+"\t"
+						+Train_Spotting.Train_Spotting_List_Western.get(j).PosnConf+"\t"
+						+Train_Spotting.Train_Spotting_List_Western.get(j).NumUserInputs+"\t"
+						+Train_Spotting.Train_Spotting_List_Western.get(j).isPeak+"\t"
 						
 						);	
 					
 				bufferedwrtrpassengerInfo.newLine();
 
 			}
+			File passengerInfoC = new File("Train_Spotting_central.csv");
+			if (!passengerInfoC.exists()) {
+				passengerInfoC.createNewFile();
+			}
+			
+			FileWriter wrtrpassengerInfoC = new FileWriter(passengerInfoC);
+			bufferedwrtrpassengerInfoC = new BufferedWriter(wrtrpassengerInfoC);
+			
+			for (j = 0; j < Train_Spotting.Train_Spotting_List_Central.size(); j++) {
+
+				bufferedwrtrpassengerInfoC.write(
+						+Train_Spotting.Train_Spotting_List_Central.get(j).Id+"\t"
+						+Train_Spotting.Train_Spotting_List_Central.get(j).Timestamp+"\t"
+						+Train_Spotting.Train_Spotting_List_Central.get(j).DistFromOriginMeter+"\t"
+						+Train_Spotting.Train_Spotting_List_Central.get(j).Direction+"\t"
+						+Train_Spotting.Train_Spotting_List_Central.get(j).Confidence+"\t"
+						+Train_Spotting.Train_Spotting_List_Central.get(j).DistNow+"\t"
+						+Train_Spotting.Train_Spotting_List_Central.get(j).PosnConf+"\t"
+						+Train_Spotting.Train_Spotting_List_Central.get(j).NumUserInputs+"\t"
+						+Train_Spotting.Train_Spotting_List_Central.get(j).isPeak+"\t"
+						
+						);	
+					
+				bufferedwrtrpassengerInfoC.newLine();
+
+			}
+			File passengerInfoH = new File("Train_Spotting_harbour.csv");
+			if (!passengerInfoH.exists()) {
+				passengerInfoH.createNewFile();
+			}
+			
+			FileWriter wrtrpassengerInfoH = new FileWriter(passengerInfoH);
+			bufferedwrtrpassengerInfoH = new BufferedWriter(wrtrpassengerInfoH);
+			
+			for (j = 0; j < Train_Spotting.Train_Spotting_List_Harbour.size(); j++) {
+
+				bufferedwrtrpassengerInfoH.write(
+						+Train_Spotting.Train_Spotting_List_Harbour.get(j).Id+"\t"
+						+Train_Spotting.Train_Spotting_List_Harbour.get(j).Timestamp+"\t"
+						+Train_Spotting.Train_Spotting_List_Harbour.get(j).DistFromOriginMeter+"\t"
+						+Train_Spotting.Train_Spotting_List_Harbour.get(j).Direction+"\t"
+						+Train_Spotting.Train_Spotting_List_Harbour.get(j).Confidence+"\t"
+						+Train_Spotting.Train_Spotting_List_Harbour.get(j).DistNow+"\t"
+						+Train_Spotting.Train_Spotting_List_Harbour.get(j).PosnConf+"\t"
+						+Train_Spotting.Train_Spotting_List_Harbour.get(j).NumUserInputs+"\t"
+						+Train_Spotting.Train_Spotting_List_Harbour.get(j).isPeak+"\t"
+						
+						);	
+					
+				bufferedwrtrpassengerInfoH.newLine();
+
+			}			
 			
 			
 			
 			bufferedwrtrpassengerInfo.close();
+			bufferedwrtrpassengerInfoC.close();
+			bufferedwrtrpassengerInfoH.close();
 			bufferedwrtr.close();
 		} catch (IOException e) {
 			e.printStackTrace();

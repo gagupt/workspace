@@ -31,6 +31,20 @@ public class Event_handler_Western {
 				break;
 
 		}
+		int ii = 0;
+		double distFromOriginMeter = 0;
+		for (ii = 0; ii < Station.StationList_Western.size(); ii++) {
+			distFromOriginMeter = distFromOriginMeter
+					+ Station.StationList_Western.get(ii)
+							.getNextStationDistance();
+			if (station.equals(Station.StationList_Western.get(ii)
+					.getStationName())) {
+
+				break;
+
+			}
+
+		}
 		// checking all passenger which have this source station
 
 		for (int i = 0; i < Passenger.TotalNumOfPassenger_Western; i++) {
@@ -65,7 +79,8 @@ public class Event_handler_Western {
 				Train_Spotting.Train_Spotting_List_Western
 						.add(new Train_Spotting(
 								Passenger.ListOfPassenger_Western.get(i).id,
-								timestamp, "up", station));
+								timestamp, "up", distFromOriginMeter, 0, 0, 0,
+								0, true));
 				// ........................
 				countWalkIn++;
 			} else if (Passenger.ListOfPassenger_Western.get(i).getSrc()
@@ -82,7 +97,8 @@ public class Event_handler_Western {
 				Train_Spotting.Train_Spotting_List_Western
 						.add(new Train_Spotting(
 								Passenger.ListOfPassenger_Western.get(i).id,
-								timestamp, "down", station));
+								timestamp, "up", distFromOriginMeter, 0, 0, 0,
+								0, true));
 				// ........................
 
 				countWalkIn++;
@@ -322,5 +338,160 @@ public class Event_handler_Western {
 		}
 
 	}
+
+	static double getConfidenceFromPast(double t, double nowtime) {
+		double diffMin = nowtime - t;
+		if (diffMin < 10)
+			return 1;
+		if (diffMin < 50)
+			return 0.9;
+		if (diffMin < 150)
+			return 0.8;
+		if (diffMin < 300)
+			return 0.6;
+		if (diffMin < 600)
+			return 0.3;
+		if (diffMin > 2400)
+			return 0;
+		return (0.3 - 0.3 * diffMin / (2400 - 600));
+	}
+
+	static double getConfidenceFromFarSpotting(double diffKm) {
+		if (diffKm < 100)
+			return 1;
+		if (diffKm < 200)
+			return 0.9;
+		if (diffKm < 400)
+			return 0.8;
+		if (diffKm < 800)
+			return 0.6;
+		if (diffKm < 1200)
+			return 0.3;
+		if (diffKm > 2000)
+			return 0;
+		return (0.3 - 0.3 * diffKm / (2000 - 1200));
+	}
+
+	public static void getSpottingsNow(double nowtime) {
+		// TODO Auto-generated method stub
+		for (int i = 0; i < Train_Spotting.Train_Spotting_List_Western.size(); i++) {
+
+			double t = Train_Spotting.Train_Spotting_List_Western.get(i).Timestamp;
+
+			Train_Spotting.Train_Spotting_List_Western.get(i).setConfidence(
+					getConfidenceFromPast(t, nowtime));
+			double distAtSpotting = Train_Spotting.Train_Spotting_List_Western
+					.get(i).DistFromOriginMeter;
+
+			double distSinceSpotting = Trains.Speed_of_The_Train
+					* (nowtime - t);
+			double distNow = 0;
+			if (Train_Spotting.Train_Spotting_List_Western.get(i).Direction == "up") {
+				distNow = distAtSpotting + distSinceSpotting;
+				if (distNow > 123780) {
+					distNow = 123780 - (distNow - 123780) % 123780;
+				}
+
+			}
+			if (Train_Spotting.Train_Spotting_List_Western.get(i).Direction == "down") {
+				distNow = distAtSpotting - distSinceSpotting;
+				if (distNow < 0) {
+					distNow = (-1 * distNow) % 123780;
+				}
+
+			}
+			Train_Spotting.Train_Spotting_List_Western.get(i).setDistNow(
+					distNow);
+
+		}
+		// computePosnConf..................
+
+		for (int i = 0; i < Train_Spotting.Train_Spotting_List_Western.size(); i++) {
+			double dist = Train_Spotting.Train_Spotting_List_Western.get(i).DistNow;
+			for (int j = 0; j < Train_Spotting.Train_Spotting_List_Western
+					.size(); j++) {
+				double distEach = Train_Spotting.Train_Spotting_List_Western
+						.get(j).DistNow;
+
+				if (Math.abs(dist - distEach) < 2000) {
+					double confDist = getConfidenceFromFarSpotting(Math
+							.abs(dist - distEach));
+					double overallConf = Train_Spotting.Train_Spotting_List_Western
+							.get(i).Confidence * confDist;
+					double PosnConf = Train_Spotting.Train_Spotting_List_Western
+							.get(j).PosnConf;
+					PosnConf += (1 - PosnConf) * overallConf;
+					Train_Spotting.Train_Spotting_List_Western.get(j)
+							.setPosnConf(PosnConf);
+					int NumUserInputs = Train_Spotting.Train_Spotting_List_Western
+							.get(j).NumUserInputs;
+					Train_Spotting.Train_Spotting_List_Western.get(j)
+							.setNumUserInputs(NumUserInputs + 1);
+
+				}
+			}
+
+		}
+		for (int i = 0; i < Train_Spotting.Train_Spotting_List_Western.size(); i++) {
+
+			double confAdj4NumUsers = getConfidence4NumUsers(Train_Spotting.Train_Spotting_List_Western
+					.get(i).NumUserInputs);
+			double PosnConf = Train_Spotting.Train_Spotting_List_Western.get(i).Confidence;
+			PosnConf *= confAdj4NumUsers;
+			Train_Spotting.Train_Spotting_List_Western.get(i).setPosnConf(
+					PosnConf);
+
+		}
+		// computeConfidencePeaks.................
+		
+		
+		for (int i = 0; i < Train_Spotting.peakThres; i++) {
+
+			for (int j = 0; j < Train_Spotting.peakThres; j++) {
+				if (Train_Spotting.Train_Spotting_List_Western.get(i).PosnConf < Train_Spotting.Train_Spotting_List_Western
+						.get(j).PosnConf) {
+					Train_Spotting.Train_Spotting_List_Western.get(i).setPeak(
+							false);
+					break;
+				}
+			}
+		}
+
+		for (int i = Train_Spotting.peakThres; i < Train_Spotting.Train_Spotting_List_Western
+				.size() - Train_Spotting.peakThres; i++) {
+
+			for (int j = i - Train_Spotting.peakThres; j <= i
+					+ Train_Spotting.peakThres; j++) {
+				if (Train_Spotting.Train_Spotting_List_Western.get(i).PosnConf < Train_Spotting.Train_Spotting_List_Western
+						.get(j).PosnConf) {
+					Train_Spotting.Train_Spotting_List_Western.get(i).setPeak(
+							false);
+					break;
+				}
+			}
+		}
+		for (int i = Train_Spotting.Train_Spotting_List_Western.size()
+				- Train_Spotting.peakThres; i < Train_Spotting.Train_Spotting_List_Western
+				.size(); i++) {
+
+			for (int j = Train_Spotting.Train_Spotting_List_Western.size()
+					- Train_Spotting.peakThres; j < Train_Spotting.Train_Spotting_List_Western
+					.size() -  Train_Spotting.peakThres; j++) {
+				if (Train_Spotting.Train_Spotting_List_Western.get(i).PosnConf < Train_Spotting.Train_Spotting_List_Western
+						.get(j).PosnConf) {
+					Train_Spotting.Train_Spotting_List_Western.get(i).setPeak(
+							false);
+					break;
+				}
+			}
+		}
+
+	}
+
+	static double getConfidence4NumUsers(int N) {
+		return (1 - 1.0 / Math.pow(2, N - 1)); // this gives 0 confidence for 1
+												// user, tending toward 1 for
+												// large N
+	} // End getConfidence4NumUsers()
 
 }
