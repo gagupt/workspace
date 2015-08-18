@@ -340,20 +340,21 @@ public class Event_handler_Central {
 	}
 
 	static double getConfidenceFromPast(double t, double nowtime) {
-		double diffMin = nowtime - t;
-		if (diffMin < 10)
+		double diffSec = nowtime - t;
+	//	System.out.println("difftime=" + diffSec);
+		if (diffSec < 10)
 			return 1;
-		if (diffMin < 50)
+		if (diffSec < 50)
 			return 0.9;
-		if (diffMin < 150)
+		if (diffSec < 150)
 			return 0.8;
-		if (diffMin < 300)
+		if (diffSec < 300)
 			return 0.6;
-		if (diffMin < 600)
+		if (diffSec < 600)
 			return 0.3;
-		if (diffMin > 2400)
+		if (diffSec >= 2400)
 			return 0;
-		return (0.3 - 0.3 * diffMin / (2400 - 600));
+		return (0.3 - 0.3 * diffSec / (2400));
 	}
 
 	static double getConfidenceFromFarSpotting(double diffKm) {
@@ -367,9 +368,9 @@ public class Event_handler_Central {
 			return 0.6;
 		if (diffKm < 1200)
 			return 0.3;
-		if (diffKm > 2000)
+		if (diffKm >= 2000)
 			return 0;
-		return (0.3 - 0.3 * diffKm / (2000 - 1200));
+		return (0.3 - 0.3 * diffKm / (2000));
 	}
 
 	public static void getSpottingsNow(double nowtime) {
@@ -412,7 +413,7 @@ public class Event_handler_Central {
 					}
 					if (m > 25) {
 						dir = "down";
-						k1 = m;
+						k1 = m-1;
 					} else {
 						break;
 					}
@@ -443,8 +444,8 @@ public class Event_handler_Central {
 			}
 			if (dir == "up")
 				m--;
-			System.out.println("k=" + k1 + "m=" + m + "station=" + station
-					+ "distOffset=" + distOffset);
+			// System.out.println("k=" + k1 + "m=" + m + "station=" + station
+			// + "distOffset=" + distOffset);
 			int ii = 0;
 			double distNow = 0;
 			for (ii = 0; ii < Station.StationList_Central.size(); ii++) {
@@ -482,65 +483,48 @@ public class Event_handler_Central {
 					Posnconf += (1 - Posnconf) * overallConf;
 					NumUserInputs++;
 				}
-				dist += inrc;
+
 			}
-			PosnConf.PosnConfidnce_List_Central.add(new PosnConf(dist,
-					Posnconf, NumUserInputs,true));
-
+			if (Posnconf != 0)
+				PosnConf.PosnConfidnce_List_Central.add(new PosnConf(dist,
+						Posnconf, NumUserInputs, true));
+			dist += inrc;
 		}
-		
-		for (int i = 0; i <PosnConf.PosnConfidnce_List_Central.size(); i++) {
 
-			double confAdj4NumUsers = getConfidence4NumUsers(PosnConf.PosnConfidnce_List_Central.get(i).NumUserInputs);
-			double posnconf=PosnConf.PosnConfidnce_List_Central.get(i).PosnConfidence;
+		for (int i = 0; i < PosnConf.PosnConfidnce_List_Central.size(); i++) {
+
+			double confAdj4NumUsers = getConfidence4NumUsers(PosnConf.PosnConfidnce_List_Central
+					.get(i).NumUserInputs);
+			double posnconf = PosnConf.PosnConfidnce_List_Central.get(i).PosnConfidence;
 			posnconf *= confAdj4NumUsers;
 			PosnConf.PosnConfidnce_List_Central.get(i).setPosnConfidence(
 					posnconf);
 
 		}
 		// computeConfidencePeaks.................
-
-		for (int i = 0; i < PosnConf.peakThres; i++) {
-
-			for (int j = 0; j < PosnConf.peakThres; j++) {
-				if (PosnConf.PosnConfidnce_List_Central.get(i).PosnConfidence < PosnConf.PosnConfidnce_List_Central
-						.get(j).PosnConfidence) {
-					PosnConf.PosnConfidnce_List_Central.get(i).setPeak(
-							false);
-					break;
-				}
-			}
-		}
-
-		for (int i = PosnConf.peakThres; i < PosnConf.PosnConfidnce_List_Central
-				.size() - PosnConf.peakThres; i++) {
-
-			for (int j = i - PosnConf.peakThres; j <= i
-					+ PosnConf.peakThres; j++) {
-				if (PosnConf.PosnConfidnce_List_Central.get(i).PosnConfidence < PosnConf.PosnConfidnce_List_Central
-						.get(j).PosnConfidence) {
-					PosnConf.PosnConfidnce_List_Central.get(i).setPeak(
-							false);
-					break;
-				}
-			}
-		}
-		for (int i = PosnConf.PosnConfidnce_List_Central.size()
-				- PosnConf.peakThres; i < PosnConf.PosnConfidnce_List_Central
+		int jStart,jEnd;
+		for (int i = 0; i < PosnConf.PosnConfidnce_List_Central
 				.size(); i++) {
-
-			for (int j = PosnConf.PosnConfidnce_List_Central.size()
-					- PosnConf.peakThres; j < PosnConf.PosnConfidnce_List_Central
-					.size() - PosnConf.peakThres; j++) {
+			if(i < PosnConf.peakThres)
+				jStart=0;
+			else
+				jStart=i-PosnConf.peakThres;
+			if(i + PosnConf.peakThres>=PosnConf.PosnConfidnce_List_Central
+					.size())
+				jEnd=PosnConf.PosnConfidnce_List_Central
+						.size()-1;
+			else
+				jEnd=i+PosnConf.peakThres;
+			
+			for (int j = jStart; j <= jEnd; j++) {
 				if (PosnConf.PosnConfidnce_List_Central.get(i).PosnConfidence < PosnConf.PosnConfidnce_List_Central
 						.get(j).PosnConfidence) {
-					PosnConf.PosnConfidnce_List_Central.get(i).setPeak(
-							false);
+					PosnConf.PosnConfidnce_List_Central.get(i).setPeak(false);
 					break;
 				}
 			}
 		}
-
+		
 	}
 
 	static double getConfidence4NumUsers(int N) {

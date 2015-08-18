@@ -10,9 +10,11 @@ import java.util.Queue;
 
 public class MainActivity {
 	static BufferedWriter bufferedwrtr, bufferedwrtrpassengerInfo,
-			bufferedwrtrpassengerInfoC, bufferedwrtrpassengerInfoH;
+			bufferedwrtrpassengerInfoC, bufferedwrtrpassengerInfoH,
+			bufferedwrtrPosnConfW, bufferedwrtrPosnConfC,
+			bufferedwrtrPosnConfH;
 	public static double SimTime = 0;
-	public static int end_sim_time = 5000, getSpottingsNowTime = 2000;// to stop
+	public static int end_sim_time = 5000, getSpottingsNowTime = 3000;// to stop
 																		// the
 																		// simulation
 
@@ -340,9 +342,8 @@ public class MainActivity {
 										.get(j).Confidence
 								+ "\t"
 								+ Train_Spotting.Train_Spotting_List_Western
-										.get(j).DistNow
-								+ "\t"
-								
+										.get(j).DistNow + "\t"
+
 						);
 
 				bufferedwrtrpassengerInfo.newLine();
@@ -378,9 +379,8 @@ public class MainActivity {
 										.get(j).Confidence
 								+ "\t"
 								+ Train_Spotting.Train_Spotting_List_Central
-										.get(j).DistNow
-								+ "\t"
-								
+										.get(j).DistNow + "\t"
+
 						);
 
 				bufferedwrtrpassengerInfoC.newLine();
@@ -416,15 +416,97 @@ public class MainActivity {
 										.get(j).Confidence
 								+ "\t"
 								+ Train_Spotting.Train_Spotting_List_Harbour
-										.get(j).DistNow
-								+ "\t"
-								
+										.get(j).DistNow + "\t"
+
 						);
 
 				bufferedwrtrpassengerInfoH.newLine();
 
 			}
+			File posnconfW = new File("PosnCOnf_western.csv");
+			if (!posnconfW.exists()) {
+				posnconfW.createNewFile();
+			}
 
+			FileWriter file_posnconfW = new FileWriter(posnconfW);
+			bufferedwrtrPosnConfW = new BufferedWriter(file_posnconfW);
+			bufferedwrtrPosnConfW.write("Distance" + "\t" + "PosnConf" + "\t"
+					+ "NumUserInput" + "\t" + "isPeak");
+			bufferedwrtrPosnConfW.newLine();
+			for (j = 0; j < PosnConf.PosnConfidnce_List_Western.size(); j++) {
+
+				bufferedwrtrPosnConfW
+						.write(PosnConf.PosnConfidnce_List_Western.get(j).DistFromOriginMeter
+								+ "\t"
+								+ PosnConf.PosnConfidnce_List_Western.get(j).PosnConfidence
+								+ "\t"
+								+ PosnConf.PosnConfidnce_List_Western.get(j).NumUserInputs
+								+ "\t"
+								+ PosnConf.PosnConfidnce_List_Western.get(j).isPeak
+								+ "\t");
+
+				bufferedwrtrPosnConfW.newLine();
+
+			}
+			File posnconfC = new File("PosnCOnf_central.csv");
+			if (!posnconfC.exists()) {
+				posnconfC.createNewFile();
+			}
+
+			FileWriter file_posnconfC = new FileWriter(posnconfC);
+			bufferedwrtrPosnConfC = new BufferedWriter(file_posnconfC);
+			bufferedwrtrPosnConfC.write("Distance" + "\t" + "PosnConf" + "\t"
+					+ "NumUserInput" + "\t" + "isPeak");
+			bufferedwrtrPosnConfC.newLine();
+			for (j = 0; j < PosnConf.PosnConfidnce_List_Central.size(); j++) {
+
+				bufferedwrtrPosnConfC
+						.write(PosnConf.PosnConfidnce_List_Central.get(j).DistFromOriginMeter
+								+ "\t"
+								+ PosnConf.PosnConfidnce_List_Central.get(j).PosnConfidence
+								+ "\t"
+								+ PosnConf.PosnConfidnce_List_Central.get(j).NumUserInputs
+								+ "\t"
+								+ PosnConf.PosnConfidnce_List_Central.get(j).isPeak
+
+								+ "\t"
+
+						);
+
+				bufferedwrtrPosnConfC.newLine();
+
+			}
+			File posnconfH = new File("PosnCOnf_harbour.csv");
+			if (!posnconfH.exists()) {
+				posnconfH.createNewFile();
+			}
+
+			FileWriter file_posnconfH = new FileWriter(posnconfH);
+			bufferedwrtrPosnConfH = new BufferedWriter(file_posnconfH);
+			bufferedwrtrPosnConfH.write("Distance" + "\t" + "PosnConf" + "\t"
+					+ "NumUserInput" + "\t" + "isPeak");
+			bufferedwrtrPosnConfH.newLine();
+			for (j = 0; j < PosnConf.PosnConfidnce_List_Harbour.size(); j++) {
+
+				bufferedwrtrPosnConfH
+						.write(PosnConf.PosnConfidnce_List_Harbour.get(j).DistFromOriginMeter
+								+ "\t"
+								+ PosnConf.PosnConfidnce_List_Harbour.get(j).PosnConfidence
+								+ "\t"
+								+ PosnConf.PosnConfidnce_List_Harbour.get(j).NumUserInputs
+								+ "\t"
+								+ PosnConf.PosnConfidnce_List_Harbour.get(j).isPeak
+
+								+ "\t"
+
+						);
+
+				bufferedwrtrPosnConfH.newLine();
+
+			}
+			bufferedwrtrPosnConfW.close();
+			bufferedwrtrPosnConfC.close();
+			bufferedwrtrPosnConfH.close();
 			bufferedwrtrpassengerInfo.close();
 			bufferedwrtrpassengerInfoC.close();
 			bufferedwrtrpassengerInfoH.close();
