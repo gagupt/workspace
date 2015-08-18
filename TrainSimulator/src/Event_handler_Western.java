@@ -79,8 +79,8 @@ public class Event_handler_Western {
 				Train_Spotting.Train_Spotting_List_Western
 						.add(new Train_Spotting(
 								Passenger.ListOfPassenger_Western.get(i).id,
-								timestamp, "up", distFromOriginMeter, 0, 0, 0,
-								0, true));
+								timestamp, "up", station, distFromOriginMeter,
+								0, 0, 0, 0, true));
 				// ........................
 				countWalkIn++;
 			} else if (Passenger.ListOfPassenger_Western.get(i).getSrc()
@@ -97,8 +97,8 @@ public class Event_handler_Western {
 				Train_Spotting.Train_Spotting_List_Western
 						.add(new Train_Spotting(
 								Passenger.ListOfPassenger_Western.get(i).id,
-								timestamp, "up", distFromOriginMeter, 0, 0, 0,
-								0, true));
+								timestamp, "down", station, distFromOriginMeter,
+								0, 0, 0, 0, true));
 				// ........................
 
 				countWalkIn++;
@@ -380,26 +380,80 @@ public class Event_handler_Western {
 
 			Train_Spotting.Train_Spotting_List_Western.get(i).setConfidence(
 					getConfidenceFromPast(t, nowtime));
-			double distAtSpotting = Train_Spotting.Train_Spotting_List_Western
-					.get(i).DistFromOriginMeter;
 
-			double distSinceSpotting = Trains.Speed_of_The_Train
-					* (nowtime - t);
+			
+			// calculating number of stations between nowTime and t
+			String station = Train_Spotting.Train_Spotting_List_Western.get(i).Station;
+			int k1 = 0;
+			for (k1 = 0; k1 < Station.StationList_Western.size(); k1++) {
+				if (station.equals(Station.StationList_Western.get(k1)
+						.getStationName()))
+					break;
+
+			}
+			String dir = Train_Spotting.Train_Spotting_List_Western.get(i).Direction;
+			double timeBetweenStations;
+			double distOffset=0;
+			double timetoTravel = nowtime - t;
+			//System.out.println("timetoTravel="+timetoTravel);
+			int m = 0;
+			while (true) {
+				if (dir == "up") {
+					for (m = k1 + 1; m <= 35; m++) {
+						double dist = Station.StationList_Western.get(m).NextStationDistance;
+						timeBetweenStations = dist / Trains.Speed_of_The_Train
+								+ Trains.Halt_time_of_Train;
+						if (timetoTravel <= timeBetweenStations) {
+							distOffset=timetoTravel*Trains.Speed_of_The_Train;
+							break;
+						} else {
+							timetoTravel -= timeBetweenStations;
+						}
+					}
+					if (m > 35) {
+						dir = "down";
+						k1 = m;
+					} else {
+						break;
+					}
+				}
+	//			System.out.println("m="+m);
+				
+				if (dir == "down") {
+					for (m = k1; m >= 0; m--) {
+						double dist = Station.StationList_Western.get(m).NextStationDistance;
+						timeBetweenStations = dist / Trains.Speed_of_The_Train
+								+ Trains.Halt_time_of_Train;
+						if (timetoTravel <= timeBetweenStations) {
+							distOffset=-1*timetoTravel*Trains.Speed_of_The_Train;
+							break;
+						} else {
+							timetoTravel -= timeBetweenStations;
+						}
+					}
+					if (m < 0) {
+						dir = "up";
+						k1 = m;
+					} else {
+						break;
+					}
+				}
+				
+			}
+			if(dir=="up")
+				m--;
+			System.out.println("k="+k1+"m="+m+"station="+station+"distOffset="+distOffset);
+			int ii = 0;
 			double distNow = 0;
-			if (Train_Spotting.Train_Spotting_List_Western.get(i).Direction == "up") {
-				distNow = distAtSpotting + distSinceSpotting;
-				if (distNow > 123780) {
-					distNow = 123780 - (distNow - 123780) % 123780;
-				}
-
+			for (ii = 0; ii < Station.StationList_Western.size(); ii++) {
+				distNow = distNow
+						+ Station.StationList_Western.get(ii)
+								.getNextStationDistance();
+				if (m == ii)
+					break;
 			}
-			if (Train_Spotting.Train_Spotting_List_Western.get(i).Direction == "down") {
-				distNow = distAtSpotting - distSinceSpotting;
-				if (distNow < 0) {
-					distNow = (-1 * distNow) % 123780;
-				}
-
-			}
+			//
+			distNow+=distOffset;
 			Train_Spotting.Train_Spotting_List_Western.get(i).setDistNow(
 					distNow);
 
@@ -443,8 +497,7 @@ public class Event_handler_Western {
 
 		}
 		// computeConfidencePeaks.................
-		
-		
+
 		for (int i = 0; i < Train_Spotting.peakThres; i++) {
 
 			for (int j = 0; j < Train_Spotting.peakThres; j++) {
@@ -476,7 +529,7 @@ public class Event_handler_Western {
 
 			for (int j = Train_Spotting.Train_Spotting_List_Western.size()
 					- Train_Spotting.peakThres; j < Train_Spotting.Train_Spotting_List_Western
-					.size() -  Train_Spotting.peakThres; j++) {
+					.size() - Train_Spotting.peakThres; j++) {
 				if (Train_Spotting.Train_Spotting_List_Western.get(i).PosnConf < Train_Spotting.Train_Spotting_List_Western
 						.get(j).PosnConf) {
 					Train_Spotting.Train_Spotting_List_Western.get(i).setPeak(

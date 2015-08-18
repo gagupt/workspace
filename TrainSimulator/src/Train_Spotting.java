@@ -8,9 +8,9 @@ public class Train_Spotting {
 	public boolean isPeak;
 
 	
-	public String Direction;
+	public String Direction,Station;
 
-	public Train_Spotting(int id, double timestamp, String direction,
+	public Train_Spotting(int id, double timestamp, String direction,String station,
 			double distFromOriginMeter, double confidence,
 			double distNow, double posnConf, int numUserInputs,boolean ispeak) {
 		super();
@@ -23,6 +23,7 @@ public class Train_Spotting {
 		NumUserInputs = numUserInputs;
 		Direction = direction;
 		isPeak=ispeak;
+		Station=station;
 	}
 
 	static ArrayList<Train_Spotting> Train_Spotting_List_Western = new ArrayList<Train_Spotting>(
@@ -101,6 +102,14 @@ public class Train_Spotting {
 
 	public void setPeak(boolean isPeak) {
 		this.isPeak = isPeak;
+	}
+
+	public String getStation() {
+		return Station;
+	}
+
+	public void setStation(String station) {
+		Station = station;
 	}
 
 }

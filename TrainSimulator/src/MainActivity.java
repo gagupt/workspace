@@ -9,9 +9,12 @@ import java.util.PriorityQueue;
 import java.util.Queue;
 
 public class MainActivity {
-	static BufferedWriter bufferedwrtr,bufferedwrtrpassengerInfo,bufferedwrtrpassengerInfoC,bufferedwrtrpassengerInfoH;
+	static BufferedWriter bufferedwrtr, bufferedwrtrpassengerInfo,
+			bufferedwrtrpassengerInfoC, bufferedwrtrpassengerInfoH;
 	public static double SimTime = 0;
-	public static int end_sim_time = 5000, getSpottingsNowTime=2000;// to stop the simulation
+	public static int end_sim_time = 5000, getSpottingsNowTime = 2000;// to stop
+																		// the
+																		// simulation
 
 	public static Comparator<Event> Comparator = new Comparator<Event>() {
 
@@ -101,20 +104,20 @@ public class MainActivity {
 				Trains.Trainlist_Harbour.add(t);
 			}
 			for (int i = 0; i < Passenger.TotalNumOfPassenger_Western; i++) {
-				Passenger p = new Passenger(Passenger.passengerId, -1, -1, null, null,null,
-						"outofStation");
+				Passenger p = new Passenger(Passenger.passengerId, -1, -1,
+						null, null, null, "outofStation");
 				Passenger.ListOfPassenger_Western.add(p);
 				Passenger.passengerId++;
 			}
 			for (int i = 0; i < Passenger.TotalNumOfPassenger_Central; i++) {
-				Passenger p = new Passenger(Passenger.passengerId, -1, -1, null, null,null,
-						"outofStation");
+				Passenger p = new Passenger(Passenger.passengerId, -1, -1,
+						null, null, null, "outofStation");
 				Passenger.ListOfPassenger_Central.add(p);
 				Passenger.passengerId++;
 			}
 			for (int i = 0; i < Passenger.TotalNumOfPassenger_Harbour; i++) {
-				Passenger p = new Passenger(Passenger.passengerId, -1, -1, null, null,null,
-						"outofStation");
+				Passenger p = new Passenger(Passenger.passengerId, -1, -1,
+						null, null, null, "outofStation");
 				Passenger.ListOfPassenger_Harbour.add(p);
 				Passenger.passengerId++;
 			}
@@ -143,23 +146,21 @@ public class MainActivity {
 			if (!outPassenger.exists()) {
 				outPassenger.createNewFile();
 			}
-			
+
 			FileWriter wrtr = new FileWriter(outPassenger);
 			bufferedwrtr = new BufferedWriter(wrtr);
-int flag=0;
+			int flag = 0;
 			while (SimTime < end_sim_time) {
-				
-				
-				//getSpottingsNow method call
-				if(SimTime>=getSpottingsNowTime&&flag==0){
+
+				// getSpottingsNow method call
+				if (SimTime >= getSpottingsNowTime && flag == 0) {
 					Event_handler_Western.getSpottingsNow(SimTime);
 					Event_handler_Central.getSpottingsNow(SimTime);
 					Event_handler_Harbour.getSpottingsNow(SimTime);
-				flag=1;
+					flag = 1;
 				}
-				//....................
-				
-				
+				// ....................
+
 				// printing passengers info into csv file
 
 				// ..............................
@@ -172,21 +173,29 @@ int flag=0;
 				// bufferedwrtr.write("TRAINSIZE="+","+size);
 				// bufferedwrtr.newLine();
 				int i;
-				 //bufferedwrtr.write("passenger info Start");
+				// bufferedwrtr.write("passenger info Start");
 				bufferedwrtr.newLine();
 				for (i = 0; i < Passenger.ListOfPassenger_Western.size(); i++) {
 
-					bufferedwrtr.write(e.TimeStamp+"\t"
-						//	+ Passenger.ListOfPassenger_Western.get(i).ArrTime+"\t"
-							+ Passenger.ListOfPassenger_Western.get(i).id+"\t"
-							+ Passenger.ListOfPassenger_Western.get(i).TrainNo+"\t"
-							+ Passenger.ListOfPassenger_Western.get(i).Src+"\t"
-							+ Passenger.ListOfPassenger_Western.get(i).getDest()+"\t"
-							+Passenger.ListOfPassenger_Western.get(i).Status+"\t"
-							+Passenger.ListOfPassenger_Western.get(i).CurrStation
-							
+					bufferedwrtr
+							.write(e.TimeStamp
+									+ "\t"
+									// +
+									// Passenger.ListOfPassenger_Western.get(i).ArrTime+"\t"
+									+ Passenger.ListOfPassenger_Western.get(i).id
+									+ "\t"
+									+ Passenger.ListOfPassenger_Western.get(i).TrainNo
+									+ "\t"
+									+ Passenger.ListOfPassenger_Western.get(i).Src
+									+ "\t"
+									+ Passenger.ListOfPassenger_Western.get(i)
+											.getDest()
+									+ "\t"
+									+ Passenger.ListOfPassenger_Western.get(i).Status
+									+ "\t"
+									+ Passenger.ListOfPassenger_Western.get(i).CurrStation
+
 							);
-					
 
 					bufferedwrtr.newLine();
 
@@ -194,32 +203,47 @@ int flag=0;
 				bufferedwrtr.newLine();
 				for (i = 0; i < Passenger.ListOfPassenger_Central.size(); i++) {
 
-					bufferedwrtr.write(e.TimeStamp+"\t"
-							//+ Passenger.ListOfPassenger_Central.get(i).ArrTime+"\t"
-							+ Passenger.ListOfPassenger_Central.get(i).id+"\t"
-							+ Passenger.ListOfPassenger_Central.get(i).TrainNo+"\t"
-							+ Passenger.ListOfPassenger_Central.get(i).Src+"\t"
-							+ Passenger.ListOfPassenger_Central.get(i).Dest+"\t"
-							+Passenger.ListOfPassenger_Western.get(i).Status+"\t"
-							+Passenger.ListOfPassenger_Western.get(i).CurrStation		
-							);
+					bufferedwrtr
+							.write(e.TimeStamp
+									+ "\t"
+									// +
+									// Passenger.ListOfPassenger_Central.get(i).ArrTime+"\t"
+									+ Passenger.ListOfPassenger_Central.get(i).id
+									+ "\t"
+									+ Passenger.ListOfPassenger_Central.get(i).TrainNo
+									+ "\t"
+									+ Passenger.ListOfPassenger_Central.get(i).Src
+									+ "\t"
+									+ Passenger.ListOfPassenger_Central.get(i).Dest
+									+ "\t"
+									+ Passenger.ListOfPassenger_Western.get(i).Status
+									+ "\t"
+									+ Passenger.ListOfPassenger_Western.get(i).CurrStation);
 
 					bufferedwrtr.newLine();
 				}
 				bufferedwrtr.newLine();
 				for (i = 0; i < Passenger.ListOfPassenger_Harbour.size(); i++) {
 
-					bufferedwrtr.write(e.TimeStamp+"\t"
-							//+ Passenger.ListOfPassenger_Harbour.get(i).ArrTime+"\t"
-							+ Passenger.ListOfPassenger_Harbour.get(i).id+"\t"
-							+ Passenger.ListOfPassenger_Harbour.get(i).TrainNo+"\t"
-							+ Passenger.ListOfPassenger_Harbour.get(i).Src+"\t"
-							+ Passenger.ListOfPassenger_Harbour.get(i).Dest+"\t"
-							+Passenger.ListOfPassenger_Western.get(i).Status+"\t"
-							+Passenger.ListOfPassenger_Western.get(i).CurrStation
-							
-							);	
-						
+					bufferedwrtr
+							.write(e.TimeStamp
+									+ "\t"
+									// +
+									// Passenger.ListOfPassenger_Harbour.get(i).ArrTime+"\t"
+									+ Passenger.ListOfPassenger_Harbour.get(i).id
+									+ "\t"
+									+ Passenger.ListOfPassenger_Harbour.get(i).TrainNo
+									+ "\t"
+									+ Passenger.ListOfPassenger_Harbour.get(i).Src
+									+ "\t"
+									+ Passenger.ListOfPassenger_Harbour.get(i).Dest
+									+ "\t"
+									+ Passenger.ListOfPassenger_Western.get(i).Status
+									+ "\t"
+									+ Passenger.ListOfPassenger_Western.get(i).CurrStation
+
+							);
+
 					bufferedwrtr.newLine();
 
 				}
@@ -290,25 +314,45 @@ int flag=0;
 			if (!passengerInfo.exists()) {
 				passengerInfo.createNewFile();
 			}
-			
+
 			FileWriter wrtrpassengerInfo = new FileWriter(passengerInfo);
 			bufferedwrtrpassengerInfo = new BufferedWriter(wrtrpassengerInfo);
 			int j;
 			for (j = 0; j < Train_Spotting.Train_Spotting_List_Western.size(); j++) {
 
-				bufferedwrtrpassengerInfo.write(
-						+Train_Spotting.Train_Spotting_List_Western.get(j).Id+"\t"
-						+Train_Spotting.Train_Spotting_List_Western.get(j).Timestamp+"\t"
-						+Train_Spotting.Train_Spotting_List_Western.get(j).DistFromOriginMeter+"\t"
-						+Train_Spotting.Train_Spotting_List_Western.get(j).Direction+"\t"
-						+Train_Spotting.Train_Spotting_List_Western.get(j).Confidence+"\t"
-						+Train_Spotting.Train_Spotting_List_Western.get(j).DistNow+"\t"
-						+Train_Spotting.Train_Spotting_List_Western.get(j).PosnConf+"\t"
-						+Train_Spotting.Train_Spotting_List_Western.get(j).NumUserInputs+"\t"
-						+Train_Spotting.Train_Spotting_List_Western.get(j).isPeak+"\t"
-						
-						);	
-					
+				bufferedwrtrpassengerInfo
+						.write(+Train_Spotting.Train_Spotting_List_Western
+								.get(j).Id
+								+ "\t"
+								+ Train_Spotting.Train_Spotting_List_Western
+										.get(j).Timestamp
+								+ "\t"
+								+ Train_Spotting.Train_Spotting_List_Western
+										.get(j).Station
+								+ "\t"
+								+ Train_Spotting.Train_Spotting_List_Western
+										.get(j).DistFromOriginMeter
+								+ "\t"
+								+ Train_Spotting.Train_Spotting_List_Western
+										.get(j).Direction
+								+ "\t"
+								+ Train_Spotting.Train_Spotting_List_Western
+										.get(j).Confidence
+								+ "\t"
+								+ Train_Spotting.Train_Spotting_List_Western
+										.get(j).DistNow
+								+ "\t"
+								+ Train_Spotting.Train_Spotting_List_Western
+										.get(j).PosnConf
+								+ "\t"
+								+ Train_Spotting.Train_Spotting_List_Western
+										.get(j).NumUserInputs
+								+ "\t"
+								+ Train_Spotting.Train_Spotting_List_Western
+										.get(j).isPeak + "\t"
+
+						);
+
 				bufferedwrtrpassengerInfo.newLine();
 
 			}
@@ -316,25 +360,45 @@ int flag=0;
 			if (!passengerInfoC.exists()) {
 				passengerInfoC.createNewFile();
 			}
-			
+
 			FileWriter wrtrpassengerInfoC = new FileWriter(passengerInfoC);
 			bufferedwrtrpassengerInfoC = new BufferedWriter(wrtrpassengerInfoC);
-			
+
 			for (j = 0; j < Train_Spotting.Train_Spotting_List_Central.size(); j++) {
 
-				bufferedwrtrpassengerInfoC.write(
-						+Train_Spotting.Train_Spotting_List_Central.get(j).Id+"\t"
-						+Train_Spotting.Train_Spotting_List_Central.get(j).Timestamp+"\t"
-						+Train_Spotting.Train_Spotting_List_Central.get(j).DistFromOriginMeter+"\t"
-						+Train_Spotting.Train_Spotting_List_Central.get(j).Direction+"\t"
-						+Train_Spotting.Train_Spotting_List_Central.get(j).Confidence+"\t"
-						+Train_Spotting.Train_Spotting_List_Central.get(j).DistNow+"\t"
-						+Train_Spotting.Train_Spotting_List_Central.get(j).PosnConf+"\t"
-						+Train_Spotting.Train_Spotting_List_Central.get(j).NumUserInputs+"\t"
-						+Train_Spotting.Train_Spotting_List_Central.get(j).isPeak+"\t"
-						
-						);	
-					
+				bufferedwrtrpassengerInfoC
+						.write(+Train_Spotting.Train_Spotting_List_Central
+								.get(j).Id
+								+ "\t"
+								+ Train_Spotting.Train_Spotting_List_Central
+										.get(j).Timestamp
+								+ "\t"
+								+ Train_Spotting.Train_Spotting_List_Central
+										.get(j).Station
+								+ "\t"
+								+ Train_Spotting.Train_Spotting_List_Central
+										.get(j).DistFromOriginMeter
+								+ "\t"
+								+ Train_Spotting.Train_Spotting_List_Central
+										.get(j).Direction
+								+ "\t"
+								+ Train_Spotting.Train_Spotting_List_Central
+										.get(j).Confidence
+								+ "\t"
+								+ Train_Spotting.Train_Spotting_List_Central
+										.get(j).DistNow
+								+ "\t"
+								+ Train_Spotting.Train_Spotting_List_Central
+										.get(j).PosnConf
+								+ "\t"
+								+ Train_Spotting.Train_Spotting_List_Central
+										.get(j).NumUserInputs
+								+ "\t"
+								+ Train_Spotting.Train_Spotting_List_Central
+										.get(j).isPeak + "\t"
+
+						);
+
 				bufferedwrtrpassengerInfoC.newLine();
 
 			}
@@ -342,31 +406,49 @@ int flag=0;
 			if (!passengerInfoH.exists()) {
 				passengerInfoH.createNewFile();
 			}
-			
+
 			FileWriter wrtrpassengerInfoH = new FileWriter(passengerInfoH);
 			bufferedwrtrpassengerInfoH = new BufferedWriter(wrtrpassengerInfoH);
-			
+
 			for (j = 0; j < Train_Spotting.Train_Spotting_List_Harbour.size(); j++) {
 
-				bufferedwrtrpassengerInfoH.write(
-						+Train_Spotting.Train_Spotting_List_Harbour.get(j).Id+"\t"
-						+Train_Spotting.Train_Spotting_List_Harbour.get(j).Timestamp+"\t"
-						+Train_Spotting.Train_Spotting_List_Harbour.get(j).DistFromOriginMeter+"\t"
-						+Train_Spotting.Train_Spotting_List_Harbour.get(j).Direction+"\t"
-						+Train_Spotting.Train_Spotting_List_Harbour.get(j).Confidence+"\t"
-						+Train_Spotting.Train_Spotting_List_Harbour.get(j).DistNow+"\t"
-						+Train_Spotting.Train_Spotting_List_Harbour.get(j).PosnConf+"\t"
-						+Train_Spotting.Train_Spotting_List_Harbour.get(j).NumUserInputs+"\t"
-						+Train_Spotting.Train_Spotting_List_Harbour.get(j).isPeak+"\t"
-						
-						);	
-					
+				bufferedwrtrpassengerInfoH
+						.write(+Train_Spotting.Train_Spotting_List_Harbour
+								.get(j).Id
+								+ "\t"
+								+ Train_Spotting.Train_Spotting_List_Harbour
+										.get(j).Timestamp
+								+ "\t"
+								+ Train_Spotting.Train_Spotting_List_Harbour
+										.get(j).Station
+								+ "\t"
+								+ Train_Spotting.Train_Spotting_List_Harbour
+										.get(j).DistFromOriginMeter
+								+ "\t"
+								+ Train_Spotting.Train_Spotting_List_Harbour
+										.get(j).Direction
+								+ "\t"
+								+ Train_Spotting.Train_Spotting_List_Harbour
+										.get(j).Confidence
+								+ "\t"
+								+ Train_Spotting.Train_Spotting_List_Harbour
+										.get(j).DistNow
+								+ "\t"
+								+ Train_Spotting.Train_Spotting_List_Harbour
+										.get(j).PosnConf
+								+ "\t"
+								+ Train_Spotting.Train_Spotting_List_Harbour
+										.get(j).NumUserInputs
+								+ "\t"
+								+ Train_Spotting.Train_Spotting_List_Harbour
+										.get(j).isPeak + "\t"
+
+						);
+
 				bufferedwrtrpassengerInfoH.newLine();
 
-			}			
-			
-			
-			
+			}
+
 			bufferedwrtrpassengerInfo.close();
 			bufferedwrtrpassengerInfoC.close();
 			bufferedwrtrpassengerInfoH.close();

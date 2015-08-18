@@ -79,7 +79,7 @@ public class Event_handler_Harbour {
 				Train_Spotting.Train_Spotting_List_Harbour
 						.add(new Train_Spotting(
 								Passenger.ListOfPassenger_Harbour.get(i).id,
-								timestamp, "up", distFromOriginMeter, 0, 0, 0,
+								timestamp, "up",station, distFromOriginMeter, 0, 0, 0,
 								0, true));
 				// ........................
 				countWalkIn++;
@@ -97,7 +97,7 @@ public class Event_handler_Harbour {
 				Train_Spotting.Train_Spotting_List_Harbour
 						.add(new Train_Spotting(
 								Passenger.ListOfPassenger_Harbour.get(i).id,
-								timestamp, "up", distFromOriginMeter, 0, 0, 0,
+								timestamp, "up",station, distFromOriginMeter, 0, 0, 0,
 								0, true));
 				// ........................
 

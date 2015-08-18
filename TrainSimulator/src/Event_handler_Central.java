@@ -79,7 +79,7 @@ public class Event_handler_Central {
 				Train_Spotting.Train_Spotting_List_Central
 						.add(new Train_Spotting(
 								Passenger.ListOfPassenger_Central.get(i).id,
-								timestamp, "up", distFromOriginMeter, 0, 0, 0,
+								timestamp, "up",station, distFromOriginMeter, 0, 0, 0,
 								0, true));
 				// ........................
 				countWalkIn++;
@@ -97,7 +97,7 @@ public class Event_handler_Central {
 				Train_Spotting.Train_Spotting_List_Central
 						.add(new Train_Spotting(
 								Passenger.ListOfPassenger_Central.get(i).id,
-								timestamp, "up", distFromOriginMeter, 0, 0, 0,
+								timestamp, "up",station, distFromOriginMeter, 0, 0, 0,
 								0, true));
 				// ........................
 
@@ -371,7 +371,6 @@ public class Event_handler_Central {
 			return 0;
 		return (0.3 - 0.3 * diffKm / (2000 - 1200));
 	}
-
 	public static void getSpottingsNow(double nowtime) {
 		// TODO Auto-generated method stub
 		for (int i = 0; i < Train_Spotting.Train_Spotting_List_Central.size(); i++) {
