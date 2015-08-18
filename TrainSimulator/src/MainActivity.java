@@ -342,15 +342,7 @@ public class MainActivity {
 								+ Train_Spotting.Train_Spotting_List_Western
 										.get(j).DistNow
 								+ "\t"
-								+ Train_Spotting.Train_Spotting_List_Western
-										.get(j).PosnConf
-								+ "\t"
-								+ Train_Spotting.Train_Spotting_List_Western
-										.get(j).NumUserInputs
-								+ "\t"
-								+ Train_Spotting.Train_Spotting_List_Western
-										.get(j).isPeak + "\t"
-
+								
 						);
 
 				bufferedwrtrpassengerInfo.newLine();
@@ -388,15 +380,7 @@ public class MainActivity {
 								+ Train_Spotting.Train_Spotting_List_Central
 										.get(j).DistNow
 								+ "\t"
-								+ Train_Spotting.Train_Spotting_List_Central
-										.get(j).PosnConf
-								+ "\t"
-								+ Train_Spotting.Train_Spotting_List_Central
-										.get(j).NumUserInputs
-								+ "\t"
-								+ Train_Spotting.Train_Spotting_List_Central
-										.get(j).isPeak + "\t"
-
+								
 						);
 
 				bufferedwrtrpassengerInfoC.newLine();
@@ -434,15 +418,7 @@ public class MainActivity {
 								+ Train_Spotting.Train_Spotting_List_Harbour
 										.get(j).DistNow
 								+ "\t"
-								+ Train_Spotting.Train_Spotting_List_Harbour
-										.get(j).PosnConf
-								+ "\t"
-								+ Train_Spotting.Train_Spotting_List_Harbour
-										.get(j).NumUserInputs
-								+ "\t"
-								+ Train_Spotting.Train_Spotting_List_Harbour
-										.get(j).isPeak + "\t"
-
+								
 						);
 
 				bufferedwrtrpassengerInfoH.newLine();

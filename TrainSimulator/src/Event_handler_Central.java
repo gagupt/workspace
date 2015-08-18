@@ -79,8 +79,8 @@ public class Event_handler_Central {
 				Train_Spotting.Train_Spotting_List_Central
 						.add(new Train_Spotting(
 								Passenger.ListOfPassenger_Central.get(i).id,
-								timestamp, "up",station, distFromOriginMeter, 0, 0, 0,
-								0, true));
+								timestamp, "up", station, distFromOriginMeter,
+								0, 0));
 				// ........................
 				countWalkIn++;
 			} else if (Passenger.ListOfPassenger_Central.get(i).getSrc()
@@ -97,8 +97,8 @@ public class Event_handler_Central {
 				Train_Spotting.Train_Spotting_List_Central
 						.add(new Train_Spotting(
 								Passenger.ListOfPassenger_Central.get(i).id,
-								timestamp, "up",station, distFromOriginMeter, 0, 0, 0,
-								0, true));
+								timestamp, "down", station,
+								distFromOriginMeter, 0, 0));
 				// ........................
 
 				countWalkIn++;
@@ -371,6 +371,7 @@ public class Event_handler_Central {
 			return 0;
 		return (0.3 - 0.3 * diffKm / (2000 - 1200));
 	}
+
 	public static void getSpottingsNow(double nowtime) {
 		// TODO Auto-generated method stub
 		for (int i = 0; i < Train_Spotting.Train_Spotting_List_Central.size(); i++) {
@@ -379,34 +380,95 @@ public class Event_handler_Central {
 
 			Train_Spotting.Train_Spotting_List_Central.get(i).setConfidence(
 					getConfidenceFromPast(t, nowtime));
-			double distAtSpotting = Train_Spotting.Train_Spotting_List_Central
-					.get(i).DistFromOriginMeter;
 
-			double distSinceSpotting = Trains.Speed_of_The_Train
-					* (nowtime - t);
+			// calculating number of stations between nowTime and t
+			String station = Train_Spotting.Train_Spotting_List_Central.get(i).Station;
+			int k1 = 0;
+			for (k1 = 0; k1 < Station.StationList_Central.size(); k1++) {
+				if (station.equals(Station.StationList_Central.get(k1)
+						.getStationName()))
+					break;
+
+			}
+			String dir = Train_Spotting.Train_Spotting_List_Central.get(i).Direction;
+			double timeBetweenStations;
+			double distOffset = 0;
+			double timetoTravel = nowtime - t;
+			// System.out.println("timetoTravel="+timetoTravel);
+			int m = 0;
+			while (true) {
+				if (dir == "up") {
+					for (m = k1 + 1; m <= 25; m++) {
+						double dist = Station.StationList_Central.get(m).NextStationDistance;
+						timeBetweenStations = dist / Trains.Speed_of_The_Train
+								+ Trains.Halt_time_of_Train;
+						if (timetoTravel <= timeBetweenStations) {
+							distOffset = timetoTravel
+									* Trains.Speed_of_The_Train;
+							break;
+						} else {
+							timetoTravel -= timeBetweenStations;
+						}
+					}
+					if (m > 25) {
+						dir = "down";
+						k1 = m;
+					} else {
+						break;
+					}
+				}
+				// System.out.println("m="+m);
+
+				if (dir == "down") {
+					for (m = k1; m >= 0; m--) {
+						double dist = Station.StationList_Central.get(m).NextStationDistance;
+						timeBetweenStations = dist / Trains.Speed_of_The_Train
+								+ Trains.Halt_time_of_Train;
+						if (timetoTravel <= timeBetweenStations) {
+							distOffset = -1 * timetoTravel
+									* Trains.Speed_of_The_Train;
+							break;
+						} else {
+							timetoTravel -= timeBetweenStations;
+						}
+					}
+					if (m < 0) {
+						dir = "up";
+						k1 = m;
+					} else {
+						break;
+					}
+				}
+
+			}
+			if (dir == "up")
+				m--;
+			System.out.println("k=" + k1 + "m=" + m + "station=" + station
+					+ "distOffset=" + distOffset);
+			int ii = 0;
 			double distNow = 0;
-			if (Train_Spotting.Train_Spotting_List_Central.get(i).Direction == "up") {
-				distNow = distAtSpotting + distSinceSpotting;
-				if (distNow > 54000) {
-					distNow = 54000 - (distNow - 54000) % 54000;
-				}
-
+			for (ii = 0; ii < Station.StationList_Central.size(); ii++) {
+				distNow = distNow
+						+ Station.StationList_Central.get(ii)
+								.getNextStationDistance();
+				if (m == ii)
+					break;
 			}
-			if (Train_Spotting.Train_Spotting_List_Central.get(i).Direction == "down") {
-				distNow = distAtSpotting - distSinceSpotting;
-				if (distNow < 0) {
-					distNow = (-1 * distNow) % 54000;
-				}
-
-			}
+			//
+			distNow += distOffset;
 			Train_Spotting.Train_Spotting_List_Central.get(i).setDistNow(
 					distNow);
 
 		}
 		// computePosnConf..................
+		double dist = 0;
+		double inrc = 100;
+		double Posnconf;
+		int NumUserInputs;
+		while (dist < 54000) {
 
-		for (int i = 0; i < Train_Spotting.Train_Spotting_List_Central.size(); i++) {
-			double dist = Train_Spotting.Train_Spotting_List_Central.get(i).DistNow;
+			Posnconf = 0;
+			NumUserInputs = 0;
 			for (int j = 0; j < Train_Spotting.Train_Spotting_List_Central
 					.size(); j++) {
 				double distEach = Train_Spotting.Train_Spotting_List_Central
@@ -416,69 +478,63 @@ public class Event_handler_Central {
 					double confDist = getConfidenceFromFarSpotting(Math
 							.abs(dist - distEach));
 					double overallConf = Train_Spotting.Train_Spotting_List_Central
-							.get(i).Confidence * confDist;
-					double PosnConf = Train_Spotting.Train_Spotting_List_Central
-							.get(j).PosnConf;
-					PosnConf += (1 - PosnConf) * overallConf;
-					Train_Spotting.Train_Spotting_List_Central.get(j)
-							.setPosnConf(PosnConf);
-					int NumUserInputs = Train_Spotting.Train_Spotting_List_Central
-							.get(j).NumUserInputs;
-					Train_Spotting.Train_Spotting_List_Central.get(j)
-							.setNumUserInputs(NumUserInputs + 1);
-
+							.get(j).Confidence * confDist;
+					Posnconf += (1 - Posnconf) * overallConf;
+					NumUserInputs++;
 				}
+				dist += inrc;
 			}
+			PosnConf.PosnConfidnce_List_Central.add(new PosnConf(dist,
+					Posnconf, NumUserInputs,true));
 
 		}
-		for (int i = 0; i < Train_Spotting.Train_Spotting_List_Central.size(); i++) {
+		
+		for (int i = 0; i <PosnConf.PosnConfidnce_List_Central.size(); i++) {
 
-			double confAdj4NumUsers = getConfidence4NumUsers(Train_Spotting.Train_Spotting_List_Central
-					.get(i).NumUserInputs);
-			double PosnConf = Train_Spotting.Train_Spotting_List_Central.get(i).Confidence;
-			PosnConf *= confAdj4NumUsers;
-			Train_Spotting.Train_Spotting_List_Central.get(i).setPosnConf(
-					PosnConf);
+			double confAdj4NumUsers = getConfidence4NumUsers(PosnConf.PosnConfidnce_List_Central.get(i).NumUserInputs);
+			double posnconf=PosnConf.PosnConfidnce_List_Central.get(i).PosnConfidence;
+			posnconf *= confAdj4NumUsers;
+			PosnConf.PosnConfidnce_List_Central.get(i).setPosnConfidence(
+					posnconf);
 
 		}
 		// computeConfidencePeaks.................
-		
-		
-		for (int i = 0; i < Train_Spotting.peakThres; i++) {
 
-			for (int j = 0; j < Train_Spotting.peakThres; j++) {
-				if (Train_Spotting.Train_Spotting_List_Central.get(i).PosnConf < Train_Spotting.Train_Spotting_List_Central
-						.get(j).PosnConf) {
-					Train_Spotting.Train_Spotting_List_Central.get(i).setPeak(
+		for (int i = 0; i < PosnConf.peakThres; i++) {
+
+			for (int j = 0; j < PosnConf.peakThres; j++) {
+				if (PosnConf.PosnConfidnce_List_Central.get(i).PosnConfidence < PosnConf.PosnConfidnce_List_Central
+						.get(j).PosnConfidence) {
+					PosnConf.PosnConfidnce_List_Central.get(i).setPeak(
 							false);
 					break;
 				}
 			}
 		}
 
-		for (int i = Train_Spotting.peakThres; i < Train_Spotting.Train_Spotting_List_Central
-				.size() - Train_Spotting.peakThres; i++) {
+		for (int i = PosnConf.peakThres; i < PosnConf.PosnConfidnce_List_Central
+				.size() - PosnConf.peakThres; i++) {
 
-			for (int j = i - Train_Spotting.peakThres; j <= i
-					+ Train_Spotting.peakThres; j++) {
-				if (Train_Spotting.Train_Spotting_List_Central.get(i).PosnConf < Train_Spotting.Train_Spotting_List_Central
-						.get(j).PosnConf) {
-					Train_Spotting.Train_Spotting_List_Central.get(i).setPeak(
+			for (int j = i - PosnConf.peakThres; j <= i
+					+ PosnConf.peakThres; j++) {
+				if (PosnConf.PosnConfidnce_List_Central.get(i).PosnConfidence < PosnConf.PosnConfidnce_List_Central
+						.get(j).PosnConfidence) {
+					PosnConf.PosnConfidnce_List_Central.get(i).setPeak(
 							false);
 					break;
 				}
 			}
 		}
-		for (int i = Train_Spotting.Train_Spotting_List_Central.size()
-				- Train_Spotting.peakThres; i < Train_Spotting.Train_Spotting_List_Central
+		for (int i = PosnConf.PosnConfidnce_List_Central.size()
+				- PosnConf.peakThres; i < PosnConf.PosnConfidnce_List_Central
 				.size(); i++) {
 
-			for (int j = Train_Spotting.Train_Spotting_List_Central.size()
-					- Train_Spotting.peakThres; j < Train_Spotting.Train_Spotting_List_Central
-					.size() -  Train_Spotting.peakThres; j++) {
-				if (Train_Spotting.Train_Spotting_List_Central.get(i).PosnConf < Train_Spotting.Train_Spotting_List_Central
-						.get(j).PosnConf) {
-					Train_Spotting.Train_Spotting_List_Central.get(i).setPeak(
+			for (int j = PosnConf.PosnConfidnce_List_Central.size()
+					- PosnConf.peakThres; j < PosnConf.PosnConfidnce_List_Central
+					.size() - PosnConf.peakThres; j++) {
+				if (PosnConf.PosnConfidnce_List_Central.get(i).PosnConfidence < PosnConf.PosnConfidnce_List_Central
+						.get(j).PosnConfidence) {
+					PosnConf.PosnConfidnce_List_Central.get(i).setPeak(
 							false);
 					break;
 				}
