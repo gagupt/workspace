@@ -283,7 +283,7 @@ public class Event_handler_Harbour {
 	public static void Initialization() {
 		// scheduling first arrival
 
-		for (int i = 0, j = 0; i < Trains.NumOfTrains_Harbour; j = j + 50) {
+		for (int i = 0, j = 0; i < Trains.NumOfTrains_Harbour; j = j + 500) {
 			MainActivity.EventList
 					.add(new Event(
 							i + 1,
@@ -292,7 +292,7 @@ public class Event_handler_Harbour {
 									.get(Trains.TrainMovingCounter_Harbour[i]).StationName,
 							0 + j, "up"));
 			i++;
-			if (Trains.NumOfTrains_Harbour == 1)
+			if (Trains.NumOfTrains_Harbour == i)
 				break;
 			Trains.TrainMovingCounter_Harbour[i] = 24;
 			MainActivity.EventList
@@ -395,7 +395,7 @@ public class Event_handler_Harbour {
 			double timeBetweenStations;
 			double distOffset = 0;
 			double timetoTravel = nowtime - t;
-			 System.out.println("timetoTravel="+timetoTravel);
+			// System.out.println("timetoTravel="+timetoTravel);
 			int m = 0;
 			while (true) {
 				if (dir == "up") {
@@ -418,7 +418,7 @@ public class Event_handler_Harbour {
 						break;
 					}
 				}
-			 System.out.println("m="+m);
+		//	 System.out.println("m="+m);
 
 				if (dir == "down") {
 					for (m = k1; m >= 0; m--) {
@@ -444,8 +444,8 @@ public class Event_handler_Harbour {
 			}
 			if (dir == "up")
 				m--;
-			 System.out.println("k=" + k1 + "m=" + m + "station=" + station
-			 + "distOffset=" + distOffset);
+		//	 System.out.println("k=" + k1 + "m=" + m + "station=" + station
+			// + "distOffset=" + distOffset);
 			int ii = 0;
 			double distNow = 0;
 			for (ii = 0; ii < Station.StationList_Harbour.size(); ii++) {

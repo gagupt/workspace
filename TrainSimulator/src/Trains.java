@@ -2,8 +2,8 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 
 public class Trains {
-	static int NumOfTrains_Western = 6, NumOfTrains_Central = 6,
-			NumOfTrains_Harbour = 6;
+	static int NumOfTrains_Western = 10, NumOfTrains_Central = 10,
+			NumOfTrains_Harbour = 10;
 	static double Halt_time_of_Train = 20;// seconds
 	static double Speed_of_The_Train = 14;// meter per second
 	static int[] TrainMovingCounter_Western = new int[NumOfTrains_Western];

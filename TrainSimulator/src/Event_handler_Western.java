@@ -283,7 +283,7 @@ public class Event_handler_Western {
 	public static void Initialization() {
 		// scheduling first arrival
 
-		for (int i = 0, j = 0; i < Trains.NumOfTrains_Western; j = j + 50) {
+		for (int i = 0, j = 0; i < Trains.NumOfTrains_Western; j = j + 500) {
 			MainActivity.EventList
 					.add(new Event(
 							i + 1,
@@ -292,7 +292,7 @@ public class Event_handler_Western {
 									.get(Trains.TrainMovingCounter_Western[i]).StationName,
 							0 + j, "up"));
 			i++;
-			if (Trains.NumOfTrains_Western == 1)
+			if (Trains.NumOfTrains_Western == i)
 				break;
 			Trains.TrainMovingCounter_Western[i] = 35;
 			MainActivity.EventList

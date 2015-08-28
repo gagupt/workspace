@@ -14,7 +14,7 @@ public class MainActivity {
 			bufferedwrtrPosnConfW, bufferedwrtrPosnConfC,
 			bufferedwrtrPosnConfH;
 	public static double SimTime = 0;
-	public static int end_sim_time = 5000, getSpottingsNowTime = 3000;// to stop
+	public static int end_sim_time = 5000, getSpottingsNowTime = 2000;// to stop
 																		// the
 																		// simulation
 
@@ -176,7 +176,7 @@ public class MainActivity {
 				// bufferedwrtr.newLine();
 				int i;
 				// bufferedwrtr.write("passenger info Start");
-				bufferedwrtr.newLine();
+			/*	bufferedwrtr.newLine();
 				for (i = 0; i < Passenger.ListOfPassenger_Western.size(); i++) {
 
 					bufferedwrtr
@@ -253,7 +253,7 @@ public class MainActivity {
 				bufferedwrtr.newLine();
 
 				bufferedwrtr.newLine();
-
+*/
 				switch (e.TypeOfEvent) {
 				case "Arrival_Western":
 					Event_handler_Western.Arrival(e.TrainNo, e.StationName,

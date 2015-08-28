@@ -4,8 +4,8 @@ public class Passenger {
 	public int id,TrainNo;
 	public double ArrTime;
 	String Src,Dest,CurrStation,Status;
-	static int passengerId =0,TotalNumOfPassenger_Western=100,
-			TotalNumOfPassenger_Central=100,TotalNumOfPassenger_Harbour=100;;
+	static int passengerId =0,TotalNumOfPassenger_Western=100000,
+			TotalNumOfPassenger_Central=100000,TotalNumOfPassenger_Harbour=100000;
 	public void setId(int id) {
 		this.id = id;
 	}
