@@ -1,0 +1,123 @@
+\section{EVADING DETECTION}
+In Section 2, we discussed different approaches for detecti
+ng ma-
+licious web pages. Just as these approaches are being improv
+ed, ad-
+versaries are becoming more skilled at hiding malicious con
+tent \ref{fig2}. To
+better understand how adversaries attempt to stay under the
+radar,\cite{Sahin20141913}
+we present an overview of common tactics that we encounter.
+Social engineering has emerged as a growing malware distrib
+u-
+tion vector. In social engineering attacks, the user is
+asked to 
+install a malware binary under false pretenses. Social engi
+neering
+attacks challenge automated detection systems by requirin
+g arbi-
+trarily complex interaction before delivering the payload
+; interac-
+tion that can be difficult to simulate algorithmically.
+\begin{figure}[h!]
+\label{fig2}
+\centering
+\includegraphics[height=10cm,width=8cm]{1280px.png}
+\caption{The graph shows the number of sites involved in So-
+cial Engineering attacks compared to all sites hosting malw
+are
+or exploits.}
+\end{figure}
+
+\newpage
+\subsection{Dom Functions}
+\begin{enumerate}
+\item addEventListener
+dEventListener
+\item
+appendChild
+\item
+attachEvent
+\item
+body
+(read)
+\item
+childNodes
+(read)
+\item
+clearAttributes
+\item
+createComment
+\item
+createElement
+\item
+createTextNode
+\item
+detachEvent
+\item
+documentElement
+(read)
+\item
+firstChild
+(read)
+\item
+getAttribute
+\item
+getElementById
+\item
+getElementsByClassName
+\item
+getElementsByName
+\item
+getElementsByTagNam 
+
+\end{enumerate}
+
+\newpage
+
+\subsubsection{Some Other Function}
+\begin{itemize}
+\item hasAttribute
+\item
+hasChildNodes
+\item
+innerHTML
+(read)
+\item
+innerHTML
+(write)
+\item
+insertBefore
+\item
+lastChild
+(read)
+\item
+nextSibling
+(write)
+\item
+outerHTML
+(read)
+\item
+outerHTML
+(write)
+\item
+parentNode
+(read)
+\item
+previousSibling
+(read)
+\item
+removeAttribute
+\item
+removeChild
+\item
+removeEventListener
+\item
+setAttribute
+\item
+text
+(read)
+\item
+text
+(write)
+\end{itemize}

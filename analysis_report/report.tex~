@@ -1,0 +1,24 @@
+\documentclass[a4paper,12pt]{report}
+\textwidth=12cm \textheight=25cm
+\usepackage{multicol}
+
+\usepackage{graphicx}
+\usepackage{verbatim}
+\usepackage{mathtools}
+\setlength{\topmargin}{-0.20in}
+\setlength{\textheight}{9.0in}
+\setlength{\oddsidemargin}{-0.25in}
+\setlength{\evensidemargin}{-0.25in}
+\setlength{\textwidth}{7.0in}
+\setlength{\columnsep}{0.33in}
+\setlength{\parindent}{1pc}
+\graphicspath{{images/}}
+
+\begin{document}
+
+\input{file1}
+\begin{comment}
+This is comment
+\end{comment}
+
+\end{document}

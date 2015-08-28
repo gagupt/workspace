@@ -1,0 +1,150 @@
+\pagebreak
+\section{Background}
+The attack surface of the modern web browser is quite large.
+Web-based malware can target vulnerabilities in the browse
+r itself,
+or against the myriad of plugins that extend the browser to ha
+n-
+dle, for example, Flash, Java applets, or PDF files. A vulnera
+bility
+in any of these components may be leveraged to compromise the
+browser and the underlying operating system. As a prerequis
+ite to exploiting a user, an adversary needs to expose the user’s br
+owser
+to malicious payloads. This can be achieved by sending an ema
+il or
+IM to the user containing a URL to a malicious server, or by com
+-promising web servers and injecting references to maliciou
+s code
+into the content served to users multiple OS environments can co-exist on the same primary hard drive, with a virtual partition that allows sharing of files generated in either the "host" operating system or "guest" virtual environment. Adjunct software installations, wireless connectivity, and remote replication, such as printing and faxing, can be generated in any of the guest or host operating systems. Regardless of the system, all files are stored on the hard drive of the host OS.
+
+\subsection{Virtual Machine Honeypots}
+A computer’s instruction set architecture (ISA)
+clearly exemplifies the advantages of well-defined
+interfaces. Well-defined interfaces permit develop-
+ment of interacting computer subsystems not only
+in different organizations but also at different times,
+sometimes years apart. For example, Intel and
+AMD designers develop microprocessors that
+implement the Intel IA-32 (x86) instruction set,
+while Microsoft developers write software that is
+compiled to the same instruction set. Because both
+groups satisfy the ISA specification, the software
+can be expected to execute correctly on any PC built
+with an IA-32 microprocessor.
+Unfortunately, well-defined interfaces also have
+their limitations. Subsystems and components
+designed to specifications for one interface will not
+work with those designed for another. For exam-
+ple, application programs, when distributed as com-
+piled binaries, are tied to a specific ISA and depend
+on a specific operating system interface. This lack of
+interoperability can be confining, especially in a
+world of networked computers where it is advan-
+tageous to move software as freely as data.
+Several VM-based detection sys-
+tems have been proposed in the literature.
+ 
+
+They typically detect exploitation of the web browser by monitor
+ing changes
+to the operating system, such as the creation of new processe
+s, or
+changes to the file system or registry. Here, the virtual mach
+ine
+functions as a black box since no prior knowledge of vulnerab
+ili-
+ties or exploit techniques is required.
+
+
+\begin{figure}
+  \includegraphics[width=15cm,height=4cm]{crocodile.jpg}
+  \caption{This is a crocodile in IIT Bombay.}
+\end{figure}
+ 
+
+\subsection{Browser Emulation}
+Instead of deploying VM honeypots, one can
+emulate a browser and use dynamic analysis to identify explo
+its.
+JSAND by Cova et al. \cite{Zendler2013130} follows this approach and emulates a
+browser to extract features from web pages that indicate mal
+icious
+behavior. PhoneyC \cite{Wu20141} is another Browser Emulator. It incl
+udes To understand what a virtual machine is, it is first
+necessary to consider the meaning of “machine”
+from both a process and system perspective.
+From the perspective of a process executing 
+\footnote{a user
+program, the machine consists of a logical memory}
+address space assigned to the process along with
+user-level instructions and registers that allow the
+execution of code belonging to the process. The
+machine’s I/O is visible only through the operating
+system, and the only way the process can interact
+with the I/O system is through operating system
+calls. Thus the ABI defines the machine as seen by a
+process. Similarly, the API specifies the machine char-
+acteristics as seen by an application’s HLL program.
+From the perspective of the operating system and
+the applications it supports, the entire system runs on
+an underlying machine. A system is a full execution
+environment that can support numerous processes
+simultaneously.Here is a sine formula \ref{sine} These processes share a file system
+and other I/O resources. The system environment
+persists over time as processes come and go. The sys-
+tem allocates real memory and I/O resources to the
+processes, and allows the processes to interact with
+their resources. From the system perspective, there-
+fore, the underlying hardware’s characteristics alone
+define the machine; it is the ISA that provides the
+interface between the system and machine.
+\cite{Splendiani20149}
+support for JavaScript and VBScript as well as the ability to
+in-
+stantiate fake ActiveX objects. Modules with signatures fo
+r known
+vulnerabilities allow PhoneyC to detect exploits against p
+lugins.
+
+
+\subsection{There are some useful equations}
+\raggedright
+\subsubsection{This is matrix representation}
+$
+M_{m,n} =
+ \begin{pmatrix}
+  a_{1,1} & a_{1,2} & \cdots & a_{1,n} \\
+  a_{2,1} & a_{2,2} & \cdots & a_{2,n} \\
+  \vdots  & \vdots  & \ddots & \vdots  \\
+  a_{m,1} & a_{m,2} & \cdots & a_{m,n}
+ \end{pmatrix}
+$
+\vspace{10 mm}
+\hspace{10 mm}
+
+
+\label{sine}
+\subsubsection{Sine Formula}
+
+\[ \cos(\theta + \phi) = \cos \theta \cos \phi
+      - \sin \theta \sin \phi \]
+
+
+\subsubsection{Calculation of Area}
+
+\[ Area =\pi * r^2 \]
+
+\subsubsection{These are linear equations}
+
+\begin{align}
+2x - 5y =  8 \\
+3x + 9y =  -12
+\end{align}
+
+\subsubsection{This is a function}
+\[ f(n) = \left\{
+  \begin{array}{l l}
+    x/2 & \quad \text{if $x$ is even}\\
+    -(x+1)/2 & \quad \text{if $x$ is odd}
+  \end{array} \right.\] 
