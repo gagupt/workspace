@@ -11,10 +11,11 @@ import java.util.Queue;
 public class MainActivity {
 	static BufferedWriter bufferedwrtr, bufferedwrtrpassengerInfo,
 			bufferedwrtrpassengerInfoC, bufferedwrtrpassengerInfoH,
-			bufferedwrtrPosnConfW, bufferedwrtrPosnConfC,
-			bufferedwrtrPosnConfH;
+			bufferedwrtrPosnConfW_Up, bufferedwrtrPosnConfC_Up,
+			bufferedwrtrPosnConfH_Up,bufferedwrtrPosnConfW_Down, bufferedwrtrPosnConfC_Down,
+			bufferedwrtrPosnConfH_Down;
 	public static double SimTime = 0;
-	public static int end_sim_time = 5000, getSpottingsNowTime = 2000;// to stop
+	public static int end_sim_time = 20000, getSpottingsNowTime = 10000;// to stop
 																		// the
 																		// simulation
 
@@ -423,90 +424,178 @@ public class MainActivity {
 				bufferedwrtrpassengerInfoH.newLine();
 
 			}
-			File posnconfW = new File("PosnCOnf_western.csv");
-			if (!posnconfW.exists()) {
-				posnconfW.createNewFile();
+			
+			File posnconfW_Up = new File("PosnCOnf_western_Up.csv");
+			if (!posnconfW_Up.exists()) {
+				posnconfW_Up.createNewFile();
 			}
 
-			FileWriter file_posnconfW = new FileWriter(posnconfW);
-			bufferedwrtrPosnConfW = new BufferedWriter(file_posnconfW);
-			bufferedwrtrPosnConfW.write("Distance" + "\t" + "PosnConf" + "\t"
+			FileWriter file_posnconfW_Up = new FileWriter(posnconfW_Up);
+			bufferedwrtrPosnConfW_Up = new BufferedWriter(file_posnconfW_Up);
+			bufferedwrtrPosnConfW_Up.write("Distance" + "\t" + "PosnConf" + "\t"
 					+ "NumUserInput" + "\t" + "isPeak");
-			bufferedwrtrPosnConfW.newLine();
-			for (j = 0; j < PosnConf.PosnConfidnce_List_Western.size(); j++) {
+			bufferedwrtrPosnConfW_Up.newLine();
+			for (j = 0; j < PosnConf.PosnConfidnce_List_Western_Up.size(); j++) {
 
-				bufferedwrtrPosnConfW
-						.write(PosnConf.PosnConfidnce_List_Western.get(j).DistFromOriginMeter
+				bufferedwrtrPosnConfW_Up
+						.write(PosnConf.PosnConfidnce_List_Western_Up.get(j).DistFromOriginMeter
 								+ "\t"
-								+ PosnConf.PosnConfidnce_List_Western.get(j).PosnConfidence
+								+ PosnConf.PosnConfidnce_List_Western_Up.get(j).PosnConfidence
 								+ "\t"
-								+ PosnConf.PosnConfidnce_List_Western.get(j).NumUserInputs
+								+ PosnConf.PosnConfidnce_List_Western_Up.get(j).NumUserInputs
 								+ "\t"
-								+ PosnConf.PosnConfidnce_List_Western.get(j).isPeak
+								+ PosnConf.PosnConfidnce_List_Western_Up.get(j).isPeak
 								+ "\t");
 
-				bufferedwrtrPosnConfW.newLine();
+				bufferedwrtrPosnConfW_Up.newLine();
 
 			}
-			File posnconfC = new File("PosnCOnf_central.csv");
-			if (!posnconfC.exists()) {
-				posnconfC.createNewFile();
+			File posnconfC_Up = new File("PosnCOnf_central_Up.csv");
+			if (!posnconfC_Up.exists()) {
+				posnconfC_Up.createNewFile();
 			}
 
-			FileWriter file_posnconfC = new FileWriter(posnconfC);
-			bufferedwrtrPosnConfC = new BufferedWriter(file_posnconfC);
-			bufferedwrtrPosnConfC.write("Distance" + "\t" + "PosnConf" + "\t"
+			FileWriter file_posnconfC_Up = new FileWriter(posnconfC_Up);
+			bufferedwrtrPosnConfC_Up = new BufferedWriter(file_posnconfC_Up);
+			bufferedwrtrPosnConfC_Up.write("Distance" + "\t" + "PosnConf" + "\t"
 					+ "NumUserInput" + "\t" + "isPeak");
-			bufferedwrtrPosnConfC.newLine();
-			for (j = 0; j < PosnConf.PosnConfidnce_List_Central.size(); j++) {
+			bufferedwrtrPosnConfC_Up.newLine();
+			for (j = 0; j < PosnConf.PosnConfidnce_List_Central_Up.size(); j++) {
 
-				bufferedwrtrPosnConfC
-						.write(PosnConf.PosnConfidnce_List_Central.get(j).DistFromOriginMeter
+				bufferedwrtrPosnConfC_Up
+						.write(PosnConf.PosnConfidnce_List_Central_Up.get(j).DistFromOriginMeter
 								+ "\t"
-								+ PosnConf.PosnConfidnce_List_Central.get(j).PosnConfidence
+								+ PosnConf.PosnConfidnce_List_Central_Up.get(j).PosnConfidence
 								+ "\t"
-								+ PosnConf.PosnConfidnce_List_Central.get(j).NumUserInputs
+								+ PosnConf.PosnConfidnce_List_Central_Up.get(j).NumUserInputs
 								+ "\t"
-								+ PosnConf.PosnConfidnce_List_Central.get(j).isPeak
+								+ PosnConf.PosnConfidnce_List_Central_Up.get(j).isPeak
 
 								+ "\t"
 
 						);
 
-				bufferedwrtrPosnConfC.newLine();
+				bufferedwrtrPosnConfC_Up.newLine();
 
 			}
-			File posnconfH = new File("PosnCOnf_harbour.csv");
-			if (!posnconfH.exists()) {
-				posnconfH.createNewFile();
+			File posnconfH_Up = new File("PosnCOnf_harbour_Up.csv");
+			if (!posnconfH_Up.exists()) {
+				posnconfH_Up.createNewFile();
 			}
 
-			FileWriter file_posnconfH = new FileWriter(posnconfH);
-			bufferedwrtrPosnConfH = new BufferedWriter(file_posnconfH);
-			bufferedwrtrPosnConfH.write("Distance" + "\t" + "PosnConf" + "\t"
+			FileWriter file_posnconfH_Up = new FileWriter(posnconfH_Up);
+			bufferedwrtrPosnConfH_Up = new BufferedWriter(file_posnconfH_Up);
+			bufferedwrtrPosnConfH_Up.write("Distance" + "\t" + "PosnConf" + "\t"
 					+ "NumUserInput" + "\t" + "isPeak");
-			bufferedwrtrPosnConfH.newLine();
-			for (j = 0; j < PosnConf.PosnConfidnce_List_Harbour.size(); j++) {
+			bufferedwrtrPosnConfH_Up.newLine();
+			for (j = 0; j < PosnConf.PosnConfidnce_List_Harbour_Up.size(); j++) {
 
-				bufferedwrtrPosnConfH
-						.write(PosnConf.PosnConfidnce_List_Harbour.get(j).DistFromOriginMeter
+				bufferedwrtrPosnConfH_Up
+						.write(PosnConf.PosnConfidnce_List_Harbour_Up.get(j).DistFromOriginMeter
 								+ "\t"
-								+ PosnConf.PosnConfidnce_List_Harbour.get(j).PosnConfidence
+								+ PosnConf.PosnConfidnce_List_Harbour_Up.get(j).PosnConfidence
 								+ "\t"
-								+ PosnConf.PosnConfidnce_List_Harbour.get(j).NumUserInputs
+								+ PosnConf.PosnConfidnce_List_Harbour_Up.get(j).NumUserInputs
 								+ "\t"
-								+ PosnConf.PosnConfidnce_List_Harbour.get(j).isPeak
+								+ PosnConf.PosnConfidnce_List_Harbour_Up.get(j).isPeak
 
 								+ "\t"
 
 						);
 
-				bufferedwrtrPosnConfH.newLine();
+				bufferedwrtrPosnConfH_Up.newLine();
 
 			}
-			bufferedwrtrPosnConfW.close();
-			bufferedwrtrPosnConfC.close();
-			bufferedwrtrPosnConfH.close();
+
+			File posnconfW_Down = new File("PosnCOnf_western_Down.csv");
+			if (!posnconfW_Down.exists()) {
+				posnconfW_Down.createNewFile();
+			}
+
+			FileWriter file_posnconfW_Down = new FileWriter(posnconfW_Down);
+			bufferedwrtrPosnConfW_Down = new BufferedWriter(file_posnconfW_Down);
+			bufferedwrtrPosnConfW_Down.write("Distance" + "\t" + "PosnConf" + "\t"
+					+ "NumUserInput" + "\t" + "isPeak");
+			bufferedwrtrPosnConfW_Down.newLine();
+			for (j = 0; j < PosnConf.PosnConfidnce_List_Western_Down.size(); j++) {
+
+				bufferedwrtrPosnConfW_Down
+						.write(PosnConf.PosnConfidnce_List_Western_Down.get(j).DistFromOriginMeter
+								+ "\t"
+								+ PosnConf.PosnConfidnce_List_Western_Down.get(j).PosnConfidence
+								+ "\t"
+								+ PosnConf.PosnConfidnce_List_Western_Down.get(j).NumUserInputs
+								+ "\t"
+								+ PosnConf.PosnConfidnce_List_Western_Down.get(j).isPeak
+								+ "\t");
+
+				bufferedwrtrPosnConfW_Down.newLine();
+
+			}
+			File posnconfC_Down = new File("PosnCOnf_central_Down.csv");
+			if (!posnconfC_Down.exists()) {
+				posnconfC_Down.createNewFile();
+			}
+
+			FileWriter file_posnconfC_Down = new FileWriter(posnconfC_Down);
+			bufferedwrtrPosnConfC_Down = new BufferedWriter(file_posnconfC_Down);
+			bufferedwrtrPosnConfC_Down.write("Distance" + "\t" + "PosnConf" + "\t"
+					+ "NumUserInput" + "\t" + "isPeak");
+			bufferedwrtrPosnConfC_Down.newLine();
+			for (j = 0; j < PosnConf.PosnConfidnce_List_Central_Down.size(); j++) {
+
+				bufferedwrtrPosnConfC_Down
+						.write(PosnConf.PosnConfidnce_List_Central_Down.get(j).DistFromOriginMeter
+								+ "\t"
+								+ PosnConf.PosnConfidnce_List_Central_Down.get(j).PosnConfidence
+								+ "\t"
+								+ PosnConf.PosnConfidnce_List_Central_Down.get(j).NumUserInputs
+								+ "\t"
+								+ PosnConf.PosnConfidnce_List_Central_Down.get(j).isPeak
+
+								+ "\t"
+
+						);
+
+				bufferedwrtrPosnConfC_Down.newLine();
+
+			}
+			File posnconfH_Down = new File("PosnCOnf_harbour_Down.csv");
+			if (!posnconfH_Down.exists()) {
+				posnconfH_Down.createNewFile();
+			}
+
+			FileWriter file_posnconfH_Down = new FileWriter(posnconfH_Down);
+			bufferedwrtrPosnConfH_Down = new BufferedWriter(file_posnconfH_Down);
+			bufferedwrtrPosnConfH_Down.write("Distance" + "\t" + "PosnConf" + "\t"
+					+ "NumUserInput" + "\t" + "isPeak");
+			bufferedwrtrPosnConfH_Down.newLine();
+			for (j = 0; j < PosnConf.PosnConfidnce_List_Harbour_Down.size(); j++) {
+
+				bufferedwrtrPosnConfH_Down
+						.write(PosnConf.PosnConfidnce_List_Harbour_Down.get(j).DistFromOriginMeter
+								+ "\t"
+								+ PosnConf.PosnConfidnce_List_Harbour_Down.get(j).PosnConfidence
+								+ "\t"
+								+ PosnConf.PosnConfidnce_List_Harbour_Down.get(j).NumUserInputs
+								+ "\t"
+								+ PosnConf.PosnConfidnce_List_Harbour_Down.get(j).isPeak
+
+								+ "\t"
+
+						);
+
+				bufferedwrtrPosnConfH_Down.newLine();
+
+			}
+
+			bufferedwrtrPosnConfW_Up.close();
+			bufferedwrtrPosnConfC_Up.close();
+			bufferedwrtrPosnConfH_Up.close();
+			bufferedwrtrPosnConfW_Down.close();
+			bufferedwrtrPosnConfC_Down.close();
+			bufferedwrtrPosnConfH_Down.close();
+			
 			bufferedwrtrpassengerInfo.close();
 			bufferedwrtrpassengerInfoC.close();
 			bufferedwrtrpassengerInfoH.close();

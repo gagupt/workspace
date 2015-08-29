@@ -283,7 +283,7 @@ public class Event_handler_Harbour {
 	public static void Initialization() {
 		// scheduling first arrival
 
-		for (int i = 0, j = 0; i < Trains.NumOfTrains_Harbour; j = j + 500) {
+		for (int i = 0, j = 0; i < Trains.NumOfTrains_Harbour; j = j + 1800) {
 			MainActivity.EventList
 					.add(new Event(
 							i + 1,
@@ -341,7 +341,7 @@ public class Event_handler_Harbour {
 
 	static double getConfidenceFromPast(double t, double nowtime) {
 		double diffSec = nowtime - t;
-//		System.out.println("difftime=" + diffSec);
+		// System.out.println("difftime=" + diffSec);
 		if (diffSec < 10)
 			return 1;
 		if (diffSec < 50)
@@ -413,12 +413,12 @@ public class Event_handler_Harbour {
 					}
 					if (m > 24) {
 						dir = "down";
-						k1 = m-1;
+						k1 = m - 1;
 					} else {
 						break;
 					}
 				}
-		//	 System.out.println("m="+m);
+				// System.out.println("m="+m);
 
 				if (dir == "down") {
 					for (m = k1; m >= 0; m--) {
@@ -444,7 +444,7 @@ public class Event_handler_Harbour {
 			}
 			if (dir == "up")
 				m--;
-		//	 System.out.println("k=" + k1 + "m=" + m + "station=" + station
+			// System.out.println("k=" + k1 + "m=" + m + "station=" + station
 			// + "distOffset=" + distOffset);
 			int ii = 0;
 			double distNow = 0;
@@ -464,67 +464,98 @@ public class Event_handler_Harbour {
 		// computePosnConf..................
 		double dist = 0;
 		double inrc = 100;
-		double Posnconf;
-		int NumUserInputs;
+		double Posnconf_Up, Posnconf_Down;
+		int NumUserInputs_Up, NumUserInputs_Down;
 		while (dist < 49000) {
 
-			Posnconf = 0;
-			NumUserInputs = 0;
+			Posnconf_Up = 0;
+			Posnconf_Down = 0;
+			NumUserInputs_Up = 0;
+			NumUserInputs_Down = 0;
 			for (int j = 0; j < Train_Spotting.Train_Spotting_List_Harbour
 					.size(); j++) {
 				double distEach = Train_Spotting.Train_Spotting_List_Harbour
 						.get(j).DistNow;
 
 				if (Math.abs(dist - distEach) < 2000) {
-					double confDist = getConfidenceFromFarSpotting(Math
-							.abs(dist - distEach));
-					double overallConf = Train_Spotting.Train_Spotting_List_Harbour
-							.get(j).Confidence * confDist;
-					Posnconf += (1 - Posnconf) * overallConf;
-					NumUserInputs++;
+					if (Train_Spotting.Train_Spotting_List_Harbour.get(j)
+							.getDirection().equals("up")) {
+						double confDist = getConfidenceFromFarSpotting(Math
+								.abs(dist - distEach));
+						double overallConf = Train_Spotting.Train_Spotting_List_Harbour
+								.get(j).Confidence * confDist;
+						Posnconf_Up += (1 - Posnconf_Up) * overallConf;
+						NumUserInputs_Up++;
+					} else if (Train_Spotting.Train_Spotting_List_Harbour
+							.get(j).getDirection().equals("down")) {
+						double confDist = getConfidenceFromFarSpotting(Math
+								.abs(dist - distEach));
+						double overallConf = Train_Spotting.Train_Spotting_List_Harbour
+								.get(j).Confidence * confDist;
+						Posnconf_Down += (1 - Posnconf_Down) * overallConf;
+						NumUserInputs_Down++;
+
+					}
 				}
 
 			}
-			if (Posnconf != 0)
-				PosnConf.PosnConfidnce_List_Harbour.add(new PosnConf(dist,
-						Posnconf, NumUserInputs, true));
+			if (Posnconf_Up != 0) {
+
+				PosnConf.PosnConfidnce_List_Harbour_Up.add(new PosnConf(dist,
+						Posnconf_Up, NumUserInputs_Up, true));
+			}
+			if (Posnconf_Down != 0) {
+
+				PosnConf.PosnConfidnce_List_Harbour_Down.add(new PosnConf(dist,
+						Posnconf_Down, NumUserInputs_Down, true));
+			}
 			dist += inrc;
 		}
 
-		for (int i = 0; i < PosnConf.PosnConfidnce_List_Harbour.size(); i++) {
+		for (int i = 0; i < PosnConf.PosnConfidnce_List_Harbour_Up.size(); i++) {
 
-			double confAdj4NumUsers = getConfidence4NumUsers(PosnConf.PosnConfidnce_List_Harbour
+			double confAdj4NumUsers = getConfidence4NumUsers(PosnConf.PosnConfidnce_List_Harbour_Up
 					.get(i).NumUserInputs);
-			double posnconf = PosnConf.PosnConfidnce_List_Harbour.get(i).PosnConfidence;
+			double posnconf = PosnConf.PosnConfidnce_List_Harbour_Up.get(i).PosnConfidence;
 			posnconf *= confAdj4NumUsers;
-			PosnConf.PosnConfidnce_List_Harbour.get(i).setPosnConfidence(
+			PosnConf.PosnConfidnce_List_Harbour_Up.get(i).setPosnConfidence(
+					posnconf);
+
+		}
+		for (int i = 0; i < PosnConf.PosnConfidnce_List_Harbour_Down.size(); i++) {
+
+			double confAdj4NumUsers = getConfidence4NumUsers(PosnConf.PosnConfidnce_List_Harbour_Down
+					.get(i).NumUserInputs);
+			double posnconf = PosnConf.PosnConfidnce_List_Harbour_Down.get(i).PosnConfidence;
+			posnconf *= confAdj4NumUsers;
+			PosnConf.PosnConfidnce_List_Harbour_Down.get(i).setPosnConfidence(
 					posnconf);
 
 		}
 		// computeConfidencePeaks.................
-		int jStart,jEnd;
-		for (int i = 0; i < PosnConf.PosnConfidnce_List_Harbour
-				.size(); i++) {
-			if(i < PosnConf.peakThres)
-				jStart=0;
+		int jStart, jEnd;
+		for (int i = 0; i < PosnConf.PosnConfidnce_List_Harbour_Up.size(); i++) {
+			if (i < PosnConf.peakThres)
+				jStart = 0;
 			else
-				jStart=i-PosnConf.peakThres;
-			if(i + PosnConf.peakThres>=PosnConf.PosnConfidnce_List_Harbour
+				jStart = i - PosnConf.peakThres;
+			if (i + PosnConf.peakThres >= PosnConf.PosnConfidnce_List_Harbour_Up
 					.size())
-				jEnd=PosnConf.PosnConfidnce_List_Harbour
-						.size()-1;
+				jEnd = PosnConf.PosnConfidnce_List_Harbour_Up.size() - 1;
 			else
-				jEnd=i+PosnConf.peakThres;
-			
+				jEnd = i + PosnConf.peakThres;
+
 			for (int j = jStart; j <= jEnd; j++) {
-				if (PosnConf.PosnConfidnce_List_Harbour.get(i).PosnConfidence < PosnConf.PosnConfidnce_List_Harbour
+				if (PosnConf.PosnConfidnce_List_Harbour_Up.get(i).PosnConfidence < 
+						PosnConf.PosnConfidnce_List_Harbour_Up
 						.get(j).PosnConfidence) {
-					PosnConf.PosnConfidnce_List_Harbour.get(i).setPeak(false);
+					PosnConf.PosnConfidnce_List_Harbour_Up.get(i)
+							.setPeak(false);
 					break;
 				}
 			}
 		}
-		
+
 	}
 
 	static double getConfidence4NumUsers(int N) {

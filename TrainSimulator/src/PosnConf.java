@@ -7,12 +7,19 @@ public class PosnConf {
 	int NumUserInputs;
 	public boolean isPeak;
 	
-	static ArrayList<PosnConf> PosnConfidnce_List_Western = new ArrayList<PosnConf>(
+	static ArrayList<PosnConf> PosnConfidnce_List_Western_Up = new ArrayList<PosnConf>(
 			2000);
-	static ArrayList<PosnConf> PosnConfidnce_List_Central = new ArrayList<PosnConf>(
+	static ArrayList<PosnConf> PosnConfidnce_List_Central_Up = new ArrayList<PosnConf>(
 			2000);
-	static ArrayList<PosnConf> PosnConfidnce_List_Harbour = new ArrayList<PosnConf>(
+	static ArrayList<PosnConf> PosnConfidnce_List_Harbour_Up = new ArrayList<PosnConf>(
 			2000);
+	static ArrayList<PosnConf> PosnConfidnce_List_Western_Down = new ArrayList<PosnConf>(
+			2000);
+	static ArrayList<PosnConf> PosnConfidnce_List_Central_Down = new ArrayList<PosnConf>(
+			2000);
+	static ArrayList<PosnConf> PosnConfidnce_List_Harbour_Down = new ArrayList<PosnConf>(
+			2000);
+	
 	public PosnConf( double distFromOriginMeter,double posnConfidence,
 			int numUserInputs,boolean ispeak) {
 		super();

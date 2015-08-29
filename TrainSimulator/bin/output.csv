@@ -6,99 +6,99 @@ SimTime	TrainNo	TypeOfEvent	Station_Name	 Direction 	NoOfPassengerWalkIn 	NoOfPa
 
 0	2	Arrival_Western	Dahanu Road 	down
 
-0	2	Arrival_Central	Kalyan 	down
-
-0	1	Stopped_Western	Churchgate 	up	87	0	87
-
-0	2	Stopped_Western	Dahanu Road 	down	0	0	0
-
-0	2	Stopped_Central	Kalyan 	down	0	0	0
-
 0	1	Arrival_Central	CST	up
 
 0	1	Arrival_Harbour	CST	up
 
-0	1	Stopped_Central	CST	up	112	0	112
+0	1	Stopped_Central	CST	up	3988	0	3988
 
-0	1	Stopped_Harbour	CST	up	107	0	107
+0	1	Stopped_Harbour	CST	up	4297	0	4297
 
 0	2	Arrival_Harbour	Panvel 	down
 
+0	2	Arrival_Central	Kalyan 	down
+
+0	1	Stopped_Western	Churchgate 	up	2879	0	2879
+
+0	2	Stopped_Western	Dahanu Road 	down	0	0	0
+
 0	2	Stopped_Harbour	Panvel 	down	0	0	0
 
-20	1	Departure_Western	Churchgate 	up
+0	2	Stopped_Central	Kalyan 	down	0	0	0
 
 20	2	Departure_Harbour	Panvel 	down
-
-20	1	Departure_Harbour	CST	up
-
-20	2	Departure_Western	Dahanu Road 	down
 
 20	2	Departure_Central	Kalyan 	down
 
 20	1	Departure_Central	CST	up
 
+20	2	Departure_Western	Dahanu Road 	down
+
+20	1	Departure_Western	Churchgate 	up
+
+20	1	Departure_Harbour	CST	up
+
 91	2	Arrival_Central	Dombivli 	down
 
-91	2	Stopped_Central	Dombivli 	down	95	0	95
+91	2	Stopped_Central	Dombivli 	down	3868	0	3868
 
 111	2	Departure_Central	Dombivli 	down
 
 113	1	Arrival_Western	Marine Lines 	up
 
-113	1	Stopped_Western	Marine Lines 	up	91	4	174
+113	1	Stopped_Western	Marine Lines 	up	2833	96	5616
 
 133	1	Departure_Western	Marine Lines 	up
 
-163	1	Arrival_Harbour	Masjid Bunder 	up
-
 163	1	Arrival_Central	Masjid Bunder 	up
 
-163	1	Stopped_Harbour	Masjid Bunder 	up	127	2	232
+163	1	Arrival_Harbour	Masjid Bunder 	up
 
-163	1	Stopped_Central	Masjid Bunder 	up	106	3	215
+163	1	Stopped_Central	Masjid Bunder 	up	3805	169	7624
 
-183	1	Departure_Harbour	Masjid Bunder 	up
+163	1	Stopped_Harbour	Masjid Bunder 	up	3868	175	7990
 
 183	1	Departure_Central	Masjid Bunder 	up
 
+183	1	Departure_Harbour	Masjid Bunder 	up
+
 198	1	Arrival_Western	Charni Road 	up
 
-198	1	Stopped_Western	Charni Road 	up	83	2	255
+198	1	Stopped_Western	Charni Road 	up	2631	172	8075
 
 218	1	Departure_Western	Charni Road 	up
 
 234	2	Arrival_Harbour	Mansarovar 	down
 
-234	2	Stopped_Harbour	Mansarovar 	down	127	0	127
+234	2	Stopped_Harbour	Mansarovar 	down	3908	0	3908
+
+254	1	Arrival_Central	Sandhurst Road 	up
 
 254	1	Arrival_Harbour	Sandhurst Road 	up
 
 254	2	Arrival_Central	Kopar 	down
 
-254	1	Arrival_Central	Sandhurst Road 	up
-
 254	2	Departure_Harbour	Mansarovar 	down
 
-254	1	Stopped_Harbour	Sandhurst Road 	up	103	13	322
+254	1	Stopped_Central	Sandhurst Road 	up	3644	340	10928
 
-254	2	Stopped_Central	Kopar 	down	118	5	208
+254	1	Stopped_Harbour	Sandhurst Road 	up	3961	344	11607
 
-254	1	Stopped_Central	Sandhurst Road 	up	112	7	320
+254	2	Stopped_Central	Kopar 	down	3678	158	7388
+
+274	1	Departure_Central	Sandhurst Road 	up
 
 274	1	Departure_Harbour	Sandhurst Road 	up
 
 274	2	Departure_Central	Kopar 	down
 
-274	1	Departure_Central	Sandhurst Road 	up
-
 310	1	Arrival_Harbour	Dockyard Road 	up
 
-310	1	Stopped_Harbour	Dockyard Road 	up	102	20	404
+310	1	Stopped_Harbour	Dockyard Road 	up	3677	527	14757
 
 316	1	Arrival_Western	Grant Road 	up
 
-316	1	Stopped_Western	Grant Road 	up	70	11	314
+316	1	Stopped_Western	Grant Road 	up	2517	269	10323
 
 330	1	Departure_Harbour	Dockyard Road 	up
 
@@ -106,23 +106,23 @@ SimTime	TrainNo	TypeOfEvent	Station_Name	 Direction 	NoOfPassengerWalkIn 	NoOfPa
 
 366	1	Arrival_Harbour	Reay Road 	up
 
-366	1	Stopped_Harbour	Reay Road 	up	108	12	500
+366	1	Stopped_Harbour	Reay Road 	up	3477	735	17499
 
 386	1	Departure_Harbour	Reay Road 	up
 
 397	2	Arrival_Harbour	Kharghar 	down
 
-397	2	Stopped_Harbour	Kharghar 	down	114	6	235
+397	2	Stopped_Harbour	Kharghar 	down	3815	172	7551
 
 400	1	Arrival_Western	Mumbai Central 	up
 
-400	1	Stopped_Western	Mumbai Central 	up	81	8	387
+400	1	Stopped_Western	Mumbai Central 	up	2627	309	12641
 
 417	1	Arrival_Central	Byculla 	up
 
 417	2	Departure_Harbour	Kharghar 	down
 
-417	1	Stopped_Central	Byculla 	up	100	13	407
+417	1	Stopped_Central	Byculla 	up	3587	468	14047
 
 420	1	Departure_Western	Mumbai Central 	up
 
@@ -130,53 +130,53 @@ SimTime	TrainNo	TypeOfEvent	Station_Name	 Direction 	NoOfPassengerWalkIn 	NoOfPa
 
 457	1	Arrival_Harbour	Cotton Green 	up
 
-457	1	Stopped_Harbour	Cotton Green 	up	100	20	580
+457	1	Stopped_Harbour	Cotton Green 	up	3292	908	19883
 
 477	1	Departure_Harbour	Cotton Green 	up
 
-500	4	Arrival_Harbour	Panvel 	down
+500	3	Arrival_Harbour	CST	up
 
 500	4	Arrival_Central	Kalyan 	down
 
-500	4	Stopped_Harbour	Panvel 	down	0	0	0
+500	3	Stopped_Harbour	CST	up	110	0	110
 
 500	4	Stopped_Central	Kalyan 	down	0	0	0
+
+500	4	Arrival_Harbour	Panvel 	down
 
 500	3	Arrival_Central	CST	up
 
 500	4	Arrival_Western	Dahanu Road 	down
 
-500	3	Stopped_Central	CST	up	1	0	1
+500	3	Arrival_Western	Churchgate 	up
+
+500	4	Stopped_Harbour	Panvel 	down	0	0	0
+
+500	3	Stopped_Central	CST	up	52	0	52
 
 500	4	Stopped_Western	Dahanu Road 	down	0	0	0
 
-500	3	Arrival_Western	Churchgate 	up
-
-500	3	Arrival_Harbour	CST	up
-
-500	3	Stopped_Western	Churchgate 	up	0	0	0
-
-500	3	Stopped_Harbour	CST	up	4	0	4
+500	3	Stopped_Western	Churchgate 	up	27	0	27
 
 509	1	Arrival_Central	Chinchpokli 	up
 
-509	1	Stopped_Central	Chinchpokli 	up	109	19	497
+509	1	Stopped_Central	Chinchpokli 	up	3311	602	16756
 
 520	4	Departure_Central	Kalyan 	down
 
-520	3	Departure_Harbour	CST	up
+520	4	Departure_Western	Dahanu Road 	down
 
 520	3	Departure_Western	Churchgate 	up
 
-520	4	Departure_Harbour	Panvel 	down
-
-520	4	Departure_Western	Dahanu Road 	down
+520	3	Departure_Harbour	CST	up
 
 520	3	Departure_Central	CST	up
 
+520	4	Departure_Harbour	Panvel 	down
+
 525	1	Arrival_Western	Mahalaxmi 	up
 
-525	1	Stopped_Western	Mahalaxmi 	up	74	7	454
+525	1	Stopped_Western	Mahalaxmi 	up	2436	389	14688
 
 529	1	Departure_Central	Chinchpokli 	up
 
@@ -184,33 +184,33 @@ SimTime	TrainNo	TypeOfEvent	Station_Name	 Direction 	NoOfPassengerWalkIn 	NoOfPa
 
 560	2	Arrival_Central	Diwa 	down
 
-560	2	Stopped_Central	Diwa 	down	117	7	318
+560	2	Stopped_Central	Diwa 	down	3574	320	10642
 
 580	2	Departure_Central	Diwa 	down
 
 591	4	Arrival_Central	Dombivli 	down
 
-591	4	Stopped_Central	Dombivli 	down	5	0	5
+591	4	Stopped_Central	Dombivli 	down	81	0	81
 
 600	1	Arrival_Central	Currey Road 	up
 
-600	1	Stopped_Central	Currey Road 	up	95	23	569
+600	1	Stopped_Central	Currey Road 	up	3193	766	19183
 
 611	4	Departure_Central	Dombivli 	down
 
 613	3	Arrival_Western	Marine Lines 	up
 
-613	3	Stopped_Western	Marine Lines 	up	0	0	0
-
-620	1	Departure_Central	Currey Road 	up
+613	3	Stopped_Western	Marine Lines 	up	36	0	63
 
 620	1	Arrival_Harbour	Sewri 	up
 
-620	1	Stopped_Harbour	Sewri 	up	94	35	639
+620	1	Departure_Central	Currey Road 	up
+
+620	1	Stopped_Harbour	Sewri 	up	3154	1085	21952
 
 631	2	Arrival_Harbour	CBD Belapur 	down
 
-631	2	Stopped_Harbour	CBD Belapur 	down	117	10	342
+631	2	Stopped_Harbour	CBD Belapur 	down	3764	335	10980
 
 633	3	Departure_Western	Marine Lines 	up
 
@@ -218,37 +218,37 @@ SimTime	TrainNo	TypeOfEvent	Station_Name	 Direction 	NoOfPassengerWalkIn 	NoOfPa
 
 643	2	Arrival_Western	Boisar 	down
 
-643	2	Stopped_Western	Boisar 	down	91	0	91
+643	2	Stopped_Western	Boisar 	down	2779	0	2779
 
 651	2	Departure_Harbour	CBD Belapur 	down
+
+663	3	Arrival_Harbour	Masjid Bunder 	up
 
 663	3	Arrival_Central	Masjid Bunder 	up
 
 663	2	Departure_Western	Boisar 	down
 
-663	3	Stopped_Central	Masjid Bunder 	up	3	0	4
+663	3	Stopped_Harbour	Masjid Bunder 	up	167	5	272
 
-663	3	Arrival_Harbour	Masjid Bunder 	up
-
-663	3	Stopped_Harbour	Masjid Bunder 	up	2	0	6
+663	3	Stopped_Central	Masjid Bunder 	up	100	1	151
 
 668	1	Arrival_Western	Lower Parel 	up
 
-668	1	Stopped_Western	Lower Parel 	up	62	13	503
-
-683	3	Departure_Central	Masjid Bunder 	up
+668	1	Stopped_Western	Lower Parel 	up	2337	496	16529
 
 683	3	Departure_Harbour	Masjid Bunder 	up
+
+683	3	Departure_Central	Masjid Bunder 	up
 
 688	1	Departure_Western	Lower Parel 	up
 
 691	1	Arrival_Central	Parel 	up
 
-691	1	Stopped_Central	Parel 	up	96	30	635
+691	1	Stopped_Central	Parel 	up	3134	933	21384
 
 698	3	Arrival_Western	Charni Road 	up
 
-698	3	Stopped_Western	Charni Road 	up	3	0	3
+698	3	Stopped_Western	Charni Road 	up	33	4	92
 
 711	1	Departure_Central	Parel 	up
 
@@ -256,65 +256,65 @@ SimTime	TrainNo	TypeOfEvent	Station_Name	 Direction 	NoOfPassengerWalkIn 	NoOfPa
 
 734	4	Arrival_Harbour	Mansarovar 	down
 
-734	4	Stopped_Harbour	Mansarovar 	down	2	0	2
+734	4	Stopped_Harbour	Mansarovar 	down	139	0	139
 
 754	4	Departure_Harbour	Mansarovar 	down
 
 754	3	Arrival_Central	Sandhurst Road 	up
 
-754	3	Arrival_Harbour	Sandhurst Road 	up
-
-754	3	Stopped_Central	Sandhurst Road 	up	4	1	7
-
-754	3	Stopped_Harbour	Sandhurst Road 	up	2	0	8
-
 754	4	Arrival_Central	Kopar 	down
 
-754	4	Stopped_Central	Kopar 	down	4	0	9
+754	3	Arrival_Harbour	Sandhurst Road 	up
+
+754	3	Stopped_Central	Sandhurst Road 	up	127	6	272
+
+754	4	Stopped_Central	Kopar 	down	107	3	185
+
+754	3	Stopped_Harbour	Sandhurst Road 	up	135	13	394
 
 774	3	Departure_Central	Sandhurst Road 	up
 
-774	3	Departure_Harbour	Sandhurst Road 	up
-
 774	4	Departure_Central	Kopar 	down
+
+774	3	Departure_Harbour	Sandhurst Road 	up
 
 781	1	Arrival_Western	Elphinstone Road 	up
 
-781	1	Stopped_Western	Elphinstone Road 	up	63	12	554
+781	1	Stopped_Western	Elphinstone Road 	up	2334	535	18328
 
 783	1	Arrival_Harbour	Wadala 	up
 
 783	1	Arrival_Central	Dadar 	up
 
-783	1	Stopped_Harbour	Wadala 	up	97	33	703
+783	1	Stopped_Harbour	Wadala 	up	3076	1215	23813
 
-783	1	Stopped_Central	Dadar 	up	87	35	687
-
-794	2	Arrival_Central	Mumbra 	down
+783	1	Stopped_Central	Dadar 	up	2822	1056	23150
 
 794	2	Arrival_Harbour	Seawoods-Darave 	down
 
-794	2	Stopped_Central	Mumbra 	down	94	9	403
+794	2	Arrival_Central	Mumbra 	down
 
-794	2	Stopped_Harbour	Seawoods-Darave 	down	118	12	448
+794	2	Stopped_Harbour	Seawoods-Darave 	down	3561	522	14019
+
+794	2	Stopped_Central	Mumbra 	down	3477	467	13652
 
 801	1	Departure_Western	Elphinstone Road 	up
 
-803	1	Departure_Harbour	Wadala 	up
-
 803	1	Departure_Central	Dadar 	up
+
+803	1	Departure_Harbour	Wadala 	up
 
 810	3	Arrival_Harbour	Dockyard Road 	up
 
-810	3	Stopped_Harbour	Dockyard Road 	up	2	0	10
-
-814	2	Departure_Harbour	Seawoods-Darave 	down
+810	3	Stopped_Harbour	Dockyard Road 	up	203	16	581
 
 814	2	Departure_Central	Mumbra 	down
 
+814	2	Departure_Harbour	Seawoods-Darave 	down
+
 816	3	Arrival_Western	Grant Road 	up
 
-816	3	Stopped_Western	Grant Road 	up	2	1	4
+816	3	Stopped_Western	Grant Road 	up	43	2	133
 
 830	3	Departure_Harbour	Dockyard Road 	up
 
@@ -322,21 +322,21 @@ SimTime	TrainNo	TypeOfEvent	Station_Name	 Direction 	NoOfPassengerWalkIn 	NoOfPa
 
 866	3	Arrival_Harbour	Reay Road 	up
 
-866	3	Stopped_Harbour	Reay Road 	up	5	2	13
+866	3	Stopped_Harbour	Reay Road 	up	182	31	732
 
 886	3	Departure_Harbour	Reay Road 	up
 
 886	1	Arrival_Western	Dadar 	up
 
-886	1	Stopped_Western	Dadar 	up	66	21	599
+886	1	Stopped_Western	Dadar 	up	2187	651	19864
 
 897	4	Arrival_Harbour	Kharghar 	down
 
-897	4	Stopped_Harbour	Kharghar 	down	6	0	8
+897	4	Stopped_Harbour	Kharghar 	down	150	5	284
 
 900	3	Arrival_Western	Mumbai Central 	up
 
-900	3	Stopped_Western	Mumbai Central 	up	2	0	6
+900	3	Stopped_Western	Mumbai Central 	up	50	3	180
 
 906	1	Departure_Western	Dadar 	up
 
@@ -344,7 +344,7 @@ SimTime	TrainNo	TypeOfEvent	Station_Name	 Direction 	NoOfPassengerWalkIn 	NoOfPa
 
 917	3	Arrival_Central	Byculla 	up
 
-917	3	Stopped_Central	Byculla 	up	2	0	9
+917	3	Stopped_Central	Byculla 	up	186	15	443
 
 920	3	Departure_Western	Mumbai Central 	up
 
@@ -354,17 +354,17 @@ SimTime	TrainNo	TypeOfEvent	Station_Name	 Direction 	NoOfPassengerWalkIn 	NoOfPa
 
 946	1	Arrival_Harbour	 G.T.B.nagar	up
 
-946	1	Stopped_Central	Matunga 	up	77	38	726
+946	1	Stopped_Central	Matunga 	up	2831	1281	24700
 
-946	1	Stopped_Harbour	 G.T.B.nagar	up	83	47	739
+946	1	Stopped_Harbour	 G.T.B.nagar	up	2802	1327	25288
 
 957	3	Arrival_Harbour	Cotton Green 	up
 
 957	2	Arrival_Harbour	Nerul 	down
 
-957	3	Stopped_Harbour	Cotton Green 	up	3	0	16
+957	3	Stopped_Harbour	Cotton Green 	up	197	35	894
 
-957	2	Stopped_Harbour	Nerul 	down	96	23	521
+957	2	Stopped_Harbour	Nerul 	down	3457	695	16781
 
 966	1	Departure_Central	Matunga 	up
 
@@ -374,53 +374,53 @@ SimTime	TrainNo	TypeOfEvent	Station_Name	 Direction 	NoOfPassengerWalkIn 	NoOfPa
 
 977	2	Departure_Harbour	Nerul 	down
 
-1000	5	Arrival_Harbour	CST	up
+1000	6	Arrival_Central	Kalyan 	down
 
 1000	5	Arrival_Western	Churchgate 	up
 
 1000	5	Arrival_Central	CST	up
 
-1000	5	Stopped_Harbour	CST	up	6	0	6
-
-1000	5	Stopped_Western	Churchgate 	up	0	0	0
-
-1000	5	Stopped_Central	CST	up	14	0	14
-
-1000	6	Arrival_Harbour	Panvel 	down
-
-1000	6	Arrival_Central	Kalyan 	down
-
-1000	6	Stopped_Harbour	Panvel 	down	0	0	0
-
-1000	6	Stopped_Central	Kalyan 	down	0	0	0
-
 1000	6	Arrival_Western	Dahanu Road 	down
+
+1000	5	Stopped_Central	CST	up	213	0	213
 
 1000	6	Stopped_Western	Dahanu Road 	down	0	0	0
 
+1000	5	Arrival_Harbour	CST	up
+
+1000	6	Arrival_Harbour	Panvel 	down
+
+1000	6	Stopped_Central	Kalyan 	down	0	0	0
+
+1000	5	Stopped_Western	Churchgate 	up	61	0	61
+
+1000	5	Stopped_Harbour	CST	up	215	0	215
+
+1000	6	Stopped_Harbour	Panvel 	down	0	0	0
+
 1009	3	Arrival_Central	Chinchpokli 	up
 
-1009	3	Stopped_Central	Chinchpokli 	up	4	2	11
+1009	3	Stopped_Central	Chinchpokli 	up	181	24	600
 
 1019	1	Arrival_Western	Matunga Road 	up
 
-1019	1	Stopped_Western	Matunga Road 	up	62	19	642
-
-1020	5	Departure_Harbour	CST	up
-
-1020	6	Departure_Western	Dahanu Road 	down
-
-1020	5	Departure_Western	Churchgate 	up
+1019	1	Stopped_Western	Matunga Road 	up	2235	718	21381
 
 1020	6	Departure_Central	Kalyan 	down
 
 1020	6	Departure_Harbour	Panvel 	down
 
+1020	5	Departure_Western	Churchgate 	up
+
 1020	5	Departure_Central	CST	up
+
+1020	6	Departure_Western	Dahanu Road 	down
+
+1020	5	Departure_Harbour	CST	up
 
 1025	3	Arrival_Western	Mahalaxmi 	up
 
-1025	3	Stopped_Western	Mahalaxmi 	up	1	0	7
+1025	3	Stopped_Western	Mahalaxmi 	up	79	5	254
 
 1029	3	Departure_Central	Chinchpokli 	up
 
@@ -430,17 +430,17 @@ SimTime	TrainNo	TypeOfEvent	Station_Name	 Direction 	NoOfPassengerWalkIn 	NoOfPa
 
 1060	4	Arrival_Central	Diwa 	down
 
-1060	4	Stopped_Central	Diwa 	down	5	1	13
+1060	4	Stopped_Central	Diwa 	down	158	7	336
 
 1071	2	Arrival_Western	Umroli 	down
 
-1071	2	Stopped_Western	Umroli 	down	91	5	177
+1071	2	Stopped_Western	Umroli 	down	2769	78	5470
 
 1080	4	Departure_Central	Diwa 	down
 
 1091	6	Arrival_Central	Dombivli 	down
 
-1091	6	Stopped_Central	Dombivli 	down	5	0	5
+1091	6	Stopped_Central	Dombivli 	down	178	0	178
 
 1091	2	Departure_Western	Umroli 	down
 
@@ -448,75 +448,75 @@ SimTime	TrainNo	TypeOfEvent	Station_Name	 Direction 	NoOfPassengerWalkIn 	NoOfPa
 
 1100	3	Arrival_Central	Currey Road 	up
 
-1100	2	Stopped_Central	Kalwa 	down	107	16	494
+1100	2	Stopped_Central	Kalwa 	down	3353	635	16370
 
-1100	3	Stopped_Central	Currey Road 	up	7	2	16
-
-1109	1	Arrival_Harbour	Chunabhatti 	up
+1100	3	Stopped_Central	Currey Road 	up	172	35	737
 
 1109	1	Arrival_Central	Sion 	up
 
-1109	1	Stopped_Harbour	Chunabhatti 	up	84	47	776
+1109	1	Arrival_Harbour	Chunabhatti 	up
 
-1109	1	Stopped_Central	Sion 	up	98	45	779
+1109	1	Stopped_Central	Sion 	up	2814	1418	26096
+
+1109	1	Stopped_Harbour	Chunabhatti 	up	2863	1595	26556
 
 1111	6	Departure_Central	Dombivli 	down
 
 1113	5	Arrival_Western	Marine Lines 	up
 
-1113	5	Stopped_Western	Marine Lines 	up	1	0	1
+1113	5	Stopped_Western	Marine Lines 	up	66	2	125
+
+1120	3	Arrival_Harbour	Sewri 	up
+
+1120	2	Arrival_Harbour	Juinagar 	down
 
 1120	2	Departure_Central	Kalwa 	down
 
 1120	3	Departure_Central	Currey Road 	up
 
-1120	2	Arrival_Harbour	Juinagar 	down
+1120	3	Stopped_Harbour	Sewri 	up	215	51	1058
 
-1120	3	Arrival_Harbour	Sewri 	up
-
-1120	2	Stopped_Harbour	Juinagar 	down	99	30	590
-
-1120	3	Stopped_Harbour	Sewri 	up	7	3	20
+1120	2	Stopped_Harbour	Juinagar 	down	3419	857	19343
 
 1124	1	Arrival_Western	Mahim 	up
 
-1124	1	Stopped_Western	Mahim 	up	60	24	678
-
-1129	1	Departure_Harbour	Chunabhatti 	up
+1124	1	Stopped_Western	Mahim 	up	2012	809	22584
 
 1129	1	Departure_Central	Sion 	up
 
+1129	1	Departure_Harbour	Chunabhatti 	up
+
 1131	4	Arrival_Harbour	CBD Belapur 	down
 
-1131	4	Stopped_Harbour	CBD Belapur 	down	7	1	14
+1131	4	Stopped_Harbour	CBD Belapur 	down	250	11	523
 
 1133	5	Departure_Western	Marine Lines 	up
 
-1140	3	Departure_Harbour	Sewri 	up
-
 1140	2	Departure_Harbour	Juinagar 	down
+
+1140	3	Departure_Harbour	Sewri 	up
 
 1143	4	Arrival_Western	Boisar 	down
 
-1143	4	Stopped_Western	Boisar 	down	3	0	3
+1143	4	Stopped_Western	Boisar 	down	123	0	123
 
 1144	1	Departure_Western	Mahim 	up
 
 1151	4	Departure_Harbour	CBD Belapur 	down
 
-1163	4	Departure_Western	Boisar 	down
-
 1163	5	Arrival_Harbour	Masjid Bunder 	up
 
 1163	5	Arrival_Central	Masjid Bunder 	up
 
-1163	5	Stopped_Harbour	Masjid Bunder 	up	3	0	9
+1163	4	Departure_Western	Boisar 	down
 
-1163	5	Stopped_Central	Masjid Bunder 	up	9	0	23
+1163	5	Stopped_Harbour	Masjid Bunder 	up	248	10	453
+
+1163	5	Stopped_Central	Masjid Bunder 	up	202	16	399
 
 1168	3	Arrival_Western	Lower Parel 	up
 
-1168	3	Stopped_Western	Lower Parel 	up	1	1	7
+1168	3	Stopped_Western	Lower Parel 	up	64	12	306
 
 1183	5	Departure_Harbour	Masjid Bunder 	up
 
@@ -526,11 +526,11 @@ SimTime	TrainNo	TypeOfEvent	Station_Name	 Direction 	NoOfPassengerWalkIn 	NoOfPa
 
 1191	3	Arrival_Central	Parel 	up
 
-1191	3	Stopped_Central	Parel 	up	2	3	15
+1191	3	Stopped_Central	Parel 	up	174	36	875
 
 1198	5	Arrival_Western	Charni Road 	up
 
-1198	5	Stopped_Western	Charni Road 	up	3	0	4
+1198	5	Stopped_Western	Charni Road 	up	61	3	183
 
 1211	3	Departure_Central	Parel 	up
 
@@ -538,33 +538,33 @@ SimTime	TrainNo	TypeOfEvent	Station_Name	 Direction 	NoOfPassengerWalkIn 	NoOfPa
 
 1234	6	Arrival_Harbour	Mansarovar 	down
 
-1234	6	Stopped_Harbour	Mansarovar 	down	8	0	8
-
-1254	5	Arrival_Central	Sandhurst Road 	up
-
-1254	5	Arrival_Harbour	Sandhurst Road 	up
-
-1254	6	Departure_Harbour	Mansarovar 	down
-
-1254	5	Stopped_Central	Sandhurst Road 	up	4	0	27
-
-1254	5	Stopped_Harbour	Sandhurst Road 	up	6	0	15
+1234	6	Stopped_Harbour	Mansarovar 	down	237	0	237
 
 1254	6	Arrival_Central	Kopar 	down
 
-1254	6	Stopped_Central	Kopar 	down	5	1	9
+1254	5	Arrival_Harbour	Sandhurst Road 	up
+
+1254	5	Arrival_Central	Sandhurst Road 	up
+
+1254	6	Departure_Harbour	Mansarovar 	down
+
+1254	6	Stopped_Central	Kopar 	down	178	3	353
+
+1254	5	Stopped_Harbour	Sandhurst Road 	up	243	16	680
+
+1254	5	Stopped_Central	Sandhurst Road 	up	180	12	567
 
 1263	2	Arrival_Central	Thane 	down
 
-1263	2	Stopped_Central	Thane 	down	116	26	584
+1263	2	Stopped_Central	Thane 	down	3251	805	18816
 
 1267	1	Arrival_Western	Bandra 	up
 
-1267	1	Stopped_Western	Bandra 	up	55	26	707
+1267	1	Stopped_Western	Bandra 	up	2029	900	23713
 
 1271	1	Arrival_Harbour	Kurla 	up
 
-1271	1	Stopped_Harbour	Kurla 	up	73	43	806
+1271	1	Stopped_Harbour	Kurla 	up	2565	1718	27403
 
 1274	5	Departure_Harbour	Sandhurst Road 	up
 
@@ -574,21 +574,21 @@ SimTime	TrainNo	TypeOfEvent	Station_Name	 Direction 	NoOfPassengerWalkIn 	NoOfPa
 
 1281	3	Arrival_Western	Elphinstone Road 	up
 
-1281	3	Stopped_Western	Elphinstone Road 	up	3	0	10
+1281	3	Stopped_Western	Elphinstone Road 	up	73	12	367
 
 1283	3	Arrival_Central	Dadar 	up
 
-1283	3	Stopped_Central	Dadar 	up	3	1	17
+1283	3	Stopped_Central	Dadar 	up	165	47	993
 
 1283	2	Departure_Central	Thane 	down
 
-1283	3	Arrival_Harbour	Wadala 	up
-
 1283	2	Arrival_Harbour	Sanpada 	down
 
-1283	3	Stopped_Harbour	Wadala 	up	11	0	31
+1283	3	Arrival_Harbour	Wadala 	up
 
-1283	2	Stopped_Harbour	Sanpada 	down	99	41	648
+1283	2	Stopped_Harbour	Sanpada 	down	3204	1074	21473
+
+1283	3	Stopped_Harbour	Wadala 	up	249	52	1255
 
 1287	1	Departure_Western	Bandra 	up
 
@@ -598,9 +598,9 @@ SimTime	TrainNo	TypeOfEvent	Station_Name	 Direction 	NoOfPassengerWalkIn 	NoOfPa
 
 1294	4	Arrival_Harbour	Seawoods-Darave 	down
 
-1294	4	Stopped_Central	Mumbra 	down	6	0	19
+1294	4	Stopped_Central	Mumbra 	down	180	12	504
 
-1294	4	Stopped_Harbour	Seawoods-Darave 	down	9	0	23
+1294	4	Stopped_Harbour	Seawoods-Darave 	down	318	29	812
 
 1301	3	Departure_Western	Elphinstone Road 	up
 
@@ -612,15 +612,15 @@ SimTime	TrainNo	TypeOfEvent	Station_Name	 Direction 	NoOfPassengerWalkIn 	NoOfPa
 
 1310	5	Arrival_Harbour	Dockyard Road 	up
 
-1310	5	Stopped_Harbour	Dockyard Road 	up	9	0	24
-
-1314	4	Departure_Central	Mumbra 	down
+1310	5	Stopped_Harbour	Dockyard Road 	up	297	28	949
 
 1314	4	Departure_Harbour	Seawoods-Darave 	down
 
+1314	4	Departure_Central	Mumbra 	down
+
 1316	5	Arrival_Western	Grant Road 	up
 
-1316	5	Stopped_Western	Grant Road 	up	0	0	4
+1316	5	Stopped_Western	Grant Road 	up	75	7	251
 
 1330	5	Departure_Harbour	Dockyard Road 	up
 
@@ -628,21 +628,21 @@ SimTime	TrainNo	TypeOfEvent	Station_Name	 Direction 	NoOfPassengerWalkIn 	NoOfPa
 
 1343	1	Arrival_Central	Kurla 	up
 
-1343	1	Stopped_Central	Kurla 	up	86	49	816
+1343	1	Stopped_Central	Kurla 	up	2649	1618	27127
 
 1363	1	Arrival_Harbour	Tilak Nagar 	up
 
 1363	1	Departure_Central	Kurla 	up
 
-1363	1	Stopped_Harbour	Tilak Nagar 	up	73	61	818
+1363	1	Stopped_Harbour	Tilak Nagar 	up	2433	1955	27881
 
 1366	5	Arrival_Harbour	Reay Road 	up
 
-1366	5	Stopped_Harbour	Reay Road 	up	12	2	34
+1366	5	Stopped_Harbour	Reay Road 	up	324	52	1221
 
 1374	2	Arrival_Harbour	Vashi 	down
 
-1374	2	Stopped_Harbour	Vashi 	down	91	42	697
+1374	2	Stopped_Harbour	Vashi 	down	3174	1325	23322
 
 1383	1	Departure_Harbour	Tilak Nagar 	up
 
@@ -650,29 +650,29 @@ SimTime	TrainNo	TypeOfEvent	Station_Name	 Direction 	NoOfPassengerWalkIn 	NoOfPa
 
 1386	3	Arrival_Western	Dadar 	up
 
-1386	3	Stopped_Western	Dadar 	up	1	0	11
+1386	3	Stopped_Western	Dadar 	up	75	12	430
 
 1394	2	Departure_Harbour	Vashi 	down
 
 1397	6	Arrival_Harbour	Kharghar 	down
 
-1397	6	Stopped_Harbour	Kharghar 	down	16	0	24
+1397	6	Stopped_Harbour	Kharghar 	down	430	10	657
 
 1400	5	Arrival_Western	Mumbai Central 	up
 
-1400	5	Stopped_Western	Mumbai Central 	up	0	0	4
+1400	5	Stopped_Western	Mumbai Central 	up	67	11	307
 
 1404	1	Arrival_Western	Khar Road 	up
 
-1404	1	Stopped_Western	Khar Road 	up	57	30	734
+1404	1	Stopped_Western	Khar Road 	up	1970	988	24695
 
 1406	3	Departure_Western	Dadar 	up
 
-1417	6	Departure_Harbour	Kharghar 	down
-
 1417	5	Arrival_Central	Byculla 	up
 
-1417	5	Stopped_Central	Byculla 	up	4	0	31
+1417	6	Departure_Harbour	Kharghar 	down
+
+1417	5	Stopped_Central	Byculla 	up	209	23	753
 
 1420	5	Departure_Western	Mumbai Central 	up
 
@@ -682,23 +682,23 @@ SimTime	TrainNo	TypeOfEvent	Station_Name	 Direction 	NoOfPassengerWalkIn 	NoOfPa
 
 1446	3	Arrival_Central	Matunga 	up
 
-1446	3	Stopped_Central	Matunga 	up	6	1	22
+1446	3	Stopped_Central	Matunga 	up	151	60	1084
 
 1446	3	Arrival_Harbour	 G.T.B.nagar	up
 
-1446	3	Stopped_Harbour	 G.T.B.nagar	up	13	1	43
+1446	3	Stopped_Harbour	 G.T.B.nagar	up	296	71	1480
 
 1454	1	Arrival_Harbour	Chembur 	up
 
-1454	1	Stopped_Harbour	Chembur 	up	71	58	831
-
-1457	5	Arrival_Harbour	Cotton Green 	up
+1454	1	Stopped_Harbour	Chembur 	up	2410	2122	28169
 
 1457	4	Arrival_Harbour	Nerul 	down
 
-1457	5	Stopped_Harbour	Cotton Green 	up	11	0	45
+1457	5	Arrival_Harbour	Cotton Green 	up
 
-1457	4	Stopped_Harbour	Nerul 	down	15	0	38
+1457	4	Stopped_Harbour	Nerul 	down	367	42	1137
+
+1457	5	Stopped_Harbour	Cotton Green 	up	392	56	1557
 
 1466	3	Departure_Central	Matunga 	up
 
@@ -706,35 +706,71 @@ SimTime	TrainNo	TypeOfEvent	Station_Name	 Direction 	NoOfPassengerWalkIn 	NoOfPa
 
 1474	1	Departure_Harbour	Chembur 	up
 
-1477	4	Departure_Harbour	Nerul 	down
-
 1477	5	Departure_Harbour	Cotton Green 	up
+
+1477	4	Departure_Harbour	Nerul 	down
 
 1497	2	Arrival_Central	Mulund 	down
 
-1497	2	Stopped_Central	Mulund 	down	105	37	652
+1497	2	Stopped_Central	Mulund 	down	3263	992	21087
+
+1500	8	Arrival_Western	Dahanu Road 	down
+
+1500	7	Arrival_Central	CST	up
+
+1500	8	Arrival_Central	Kalyan 	down
+
+1500	7	Stopped_Central	CST	up	205	0	205
+
+1500	8	Stopped_Central	Kalyan 	down	0	0	0
+
+1500	8	Arrival_Harbour	Panvel 	down
+
+1500	7	Arrival_Western	Churchgate 	up
+
+1500	7	Arrival_Harbour	CST	up
+
+1500	8	Stopped_Western	Dahanu Road 	down	0	0	0
+
+1500	8	Stopped_Harbour	Panvel 	down	0	0	0
+
+1500	7	Stopped_Western	Churchgate 	up	106	0	106
+
+1500	7	Stopped_Harbour	CST	up	451	0	451
 
 1506	1	Arrival_Central	Vidyavihar 	up
 
-1506	1	Stopped_Central	Vidyavihar 	up	73	47	842
+1506	1	Stopped_Central	Vidyavihar 	up	2439	1817	27749
 
 1509	5	Arrival_Central	Chinchpokli 	up
 
-1509	5	Stopped_Central	Chinchpokli 	up	7	2	36
+1509	5	Stopped_Central	Chinchpokli 	up	259	31	981
 
 1517	2	Departure_Central	Mulund 	down
 
 1518	1	Arrival_Western	Santacruz 	up
 
-1518	1	Stopped_Western	Santacruz 	up	53	38	749
+1518	1	Stopped_Western	Santacruz 	up	1911	1082	25524
 
 1519	3	Arrival_Western	Matunga Road 	up
 
-1519	3	Stopped_Western	Matunga Road 	up	5	0	16
+1519	3	Stopped_Western	Matunga Road 	up	109	25	514
+
+1520	8	Departure_Western	Dahanu Road 	down
+
+1520	7	Departure_Western	Churchgate 	up
+
+1520	7	Departure_Central	CST	up
+
+1520	7	Departure_Harbour	CST	up
+
+1520	8	Departure_Central	Kalyan 	down
+
+1520	8	Departure_Harbour	Panvel 	down
 
 1525	5	Arrival_Western	Mahalaxmi 	up
 
-1525	5	Stopped_Western	Mahalaxmi 	up	3	1	6
+1525	5	Stopped_Western	Mahalaxmi 	up	92	9	390
 
 1526	1	Departure_Central	Vidyavihar 	up
 
@@ -742,7 +778,7 @@ SimTime	TrainNo	TypeOfEvent	Station_Name	 Direction 	NoOfPassengerWalkIn 	NoOfPa
 
 1536	2	Arrival_Western	Palghar 	down
 
-1536	2	Stopped_Western	Palghar 	down	77	2	252
+1536	2	Stopped_Western	Palghar 	down	2743	172	8041
 
 1538	1	Departure_Western	Santacruz 	up
 
@@ -754,51 +790,61 @@ SimTime	TrainNo	TypeOfEvent	Station_Name	 Direction 	NoOfPassengerWalkIn 	NoOfPa
 
 1560	6	Arrival_Central	Diwa 	down
 
-1560	6	Stopped_Central	Diwa 	down	16	1	24
+1560	6	Stopped_Central	Diwa 	down	269	13	609
 
 1571	4	Arrival_Western	Umroli 	down
 
-1571	4	Stopped_Western	Umroli 	down	4	0	7
+1571	4	Stopped_Western	Umroli 	down	105	3	225
 
 1580	6	Departure_Central	Diwa 	down
+
+1591	8	Arrival_Central	Dombivli 	down
+
+1591	8	Stopped_Central	Dombivli 	down	275	0	275
 
 1591	4	Departure_Western	Umroli 	down
 
 1600	5	Arrival_Central	Currey Road 	up
 
-1600	5	Stopped_Central	Currey Road 	up	7	2	41
+1600	5	Stopped_Central	Currey Road 	up	241	41	1181
 
 1600	4	Arrival_Central	Kalwa 	down
 
-1600	4	Stopped_Central	Kalwa 	down	6	0	25
+1600	4	Stopped_Central	Kalwa 	down	244	20	728
 
 1609	3	Arrival_Central	Sion 	up
 
-1609	3	Stopped_Central	Sion 	up	2	1	23
+1609	3	Stopped_Central	Sion 	up	186	74	1196
 
 1609	3	Arrival_Harbour	Chunabhatti 	up
 
-1609	3	Stopped_Harbour	Chunabhatti 	up	14	5	52
+1609	3	Stopped_Harbour	Chunabhatti 	up	295	96	1679
+
+1611	8	Departure_Central	Dombivli 	down
+
+1613	7	Arrival_Western	Marine Lines 	up
+
+1613	7	Stopped_Western	Marine Lines 	up	114	4	216
 
 1617	1	Arrival_Harbour	Govandi 	up
 
-1617	1	Stopped_Harbour	Govandi 	up	54	68	817
+1617	1	Stopped_Harbour	Govandi 	up	2163	2186	28146
 
 1620	5	Departure_Central	Currey Road 	up
 
-1620	4	Departure_Central	Kalwa 	down
+1620	4	Arrival_Harbour	Juinagar 	down
 
 1620	5	Arrival_Harbour	Sewri 	up
 
-1620	4	Arrival_Harbour	Juinagar 	down
+1620	4	Departure_Central	Kalwa 	down
 
-1620	5	Stopped_Harbour	Sewri 	up	8	1	52
+1620	4	Stopped_Harbour	Juinagar 	down	349	59	1427
 
-1620	4	Stopped_Harbour	Juinagar 	down	9	1	46
+1620	5	Stopped_Harbour	Sewri 	up	373	79	1851
 
 1624	3	Arrival_Western	Mahim 	up
 
-1624	3	Stopped_Western	Mahim 	up	3	1	18
+1624	3	Stopped_Western	Mahim 	up	85	19	580
 
 1629	3	Departure_Central	Sion 	up
 
@@ -806,7 +852,9 @@ SimTime	TrainNo	TypeOfEvent	Station_Name	 Direction 	NoOfPassengerWalkIn 	NoOfPa
 
 1631	6	Arrival_Harbour	CBD Belapur 	down
 
-1631	6	Stopped_Harbour	CBD Belapur 	down	10	0	34
+1631	6	Stopped_Harbour	CBD Belapur 	down	445	44	1058
+
+1633	7	Departure_Western	Marine Lines 	up
 
 1637	1	Departure_Harbour	Govandi 	up
 
@@ -816,25 +864,37 @@ SimTime	TrainNo	TypeOfEvent	Station_Name	 Direction 	NoOfPassengerWalkIn 	NoOfPa
 
 1643	6	Arrival_Western	Boisar 	down
 
-1643	6	Stopped_Western	Boisar 	down	2	0	2
+1643	6	Stopped_Western	Boisar 	down	80	0	80
 
 1644	3	Departure_Western	Mahim 	up
 
 1651	6	Departure_Harbour	CBD Belapur 	down
 
+1663	7	Arrival_Harbour	Masjid Bunder 	up
+
+1663	7	Arrival_Central	Masjid Bunder 	up
+
 1663	6	Departure_Western	Boisar 	down
+
+1663	7	Stopped_Harbour	Masjid Bunder 	up	437	18	870
+
+1663	7	Stopped_Central	Masjid Bunder 	up	211	5	411
 
 1668	5	Arrival_Western	Lower Parel 	up
 
-1668	5	Stopped_Western	Lower Parel 	up	0	0	6
+1668	5	Stopped_Western	Lower Parel 	up	80	13	457
 
 1669	1	Arrival_Central	Ghatkopar 	up
 
-1669	1	Stopped_Central	Ghatkopar 	up	66	68	840
+1669	1	Stopped_Central	Ghatkopar 	up	2327	1919	28157
+
+1683	7	Departure_Harbour	Masjid Bunder 	up
+
+1683	7	Departure_Central	Masjid Bunder 	up
 
 1685	1	Arrival_Western	Vile Parle 	up
 
-1685	1	Stopped_Western	Vile Parle 	up	53	34	768
+1685	1	Stopped_Western	Vile Parle 	up	1782	1180	26126
 
 1688	5	Departure_Western	Lower Parel 	up
 
@@ -842,51 +902,81 @@ SimTime	TrainNo	TypeOfEvent	Station_Name	 Direction 	NoOfPassengerWalkIn 	NoOfPa
 
 1691	5	Arrival_Central	Parel 	up
 
-1691	5	Stopped_Central	Parel 	up	7	1	47
+1691	5	Stopped_Central	Parel 	up	218	67	1332
+
+1698	7	Arrival_Western	Charni Road 	up
+
+1698	7	Stopped_Western	Charni Road 	up	110	9	317
 
 1705	1	Departure_Western	Vile Parle 	up
 
 1711	5	Departure_Central	Parel 	up
 
+1718	7	Departure_Western	Charni Road 	up
+
 1731	2	Arrival_Central	Nahur 	down
 
-1731	2	Stopped_Central	Nahur 	down	101	37	716
+1731	2	Stopped_Central	Nahur 	down	3050	1107	23030
+
+1734	8	Arrival_Harbour	Mansarovar 	down
+
+1734	8	Stopped_Harbour	Mansarovar 	down	461	0	461
 
 1751	2	Departure_Central	Nahur 	down
 
+1754	8	Departure_Harbour	Mansarovar 	down
+
+1754	8	Arrival_Central	Kopar 	down
+
+1754	7	Arrival_Central	Sandhurst Road 	up
+
+1754	7	Arrival_Harbour	Sandhurst Road 	up
+
+1754	8	Stopped_Central	Kopar 	down	296	11	560
+
+1754	7	Stopped_Central	Sandhurst Road 	up	311	24	698
+
+1754	7	Stopped_Harbour	Sandhurst Road 	up	406	38	1238
+
 1763	4	Arrival_Central	Thane 	down
 
-1763	4	Stopped_Central	Thane 	down	14	1	38
+1763	4	Stopped_Central	Thane 	down	290	39	979
 
 1767	3	Arrival_Western	Bandra 	up
 
-1767	3	Stopped_Western	Bandra 	up	2	0	20
+1767	3	Stopped_Western	Bandra 	up	78	19	639
 
 1771	3	Arrival_Harbour	Kurla 	up
 
-1771	3	Stopped_Harbour	Kurla 	up	12	7	57
+1771	3	Stopped_Harbour	Kurla 	up	223	91	1811
+
+1774	7	Departure_Central	Sandhurst Road 	up
+
+1774	7	Departure_Harbour	Sandhurst Road 	up
+
+1774	8	Departure_Central	Kopar 	down
 
 1780	1	Arrival_Harbour	Mankhurd 	up
 
-1780	1	Stopped_Harbour	Mankhurd 	up	58	80	795
+1780	1	Stopped_Harbour	Mankhurd 	up	1986	2408	27724
 
 1781	5	Arrival_Western	Elphinstone Road 	up
 
-1781	5	Stopped_Western	Elphinstone Road 	up	3	0	9
+1781	5	Stopped_Western	Elphinstone Road 	up	85	15	527
 
 1783	5	Arrival_Central	Dadar 	up
 
-1783	5	Stopped_Central	Dadar 	up	7	3	51
-
-1783	4	Departure_Central	Thane 	down
+1783	5	Stopped_Central	Dadar 	up	224	61	1495
 
 1783	5	Arrival_Harbour	Wadala 	up
 
+1783	4	Departure_Central	Thane 	down
+
 1783	4	Arrival_Harbour	Sanpada 	down
 
-1783	5	Stopped_Harbour	Wadala 	up	4	3	53
+1783	5	Stopped_Harbour	Wadala 	up	322	104	2069
 
-1783	4	Stopped_Harbour	Sanpada 	down	13	2	57
+1783	4	Stopped_Harbour	Sanpada 	down	335	89	1673
 
 1787	3	Departure_Western	Bandra 	up
 
@@ -896,9 +986,9 @@ SimTime	TrainNo	TypeOfEvent	Station_Name	 Direction 	NoOfPassengerWalkIn 	NoOfPa
 
 1794	6	Arrival_Harbour	Seawoods-Darave 	down
 
-1794	6	Stopped_Central	Mumbra 	down	10	1	33
+1794	6	Stopped_Central	Mumbra 	down	265	31	843
 
-1794	6	Stopped_Harbour	Seawoods-Darave 	down	12	2	44
+1794	6	Stopped_Harbour	Seawoods-Darave 	down	345	46	1357
 
 1800	1	Departure_Harbour	Mankhurd 	up
 
@@ -906,305 +996,543 @@ SimTime	TrainNo	TypeOfEvent	Station_Name	 Direction 	NoOfPassengerWalkIn 	NoOfPa
 
 1803	5	Departure_Central	Dadar 	up
 
+1803	4	Departure_Harbour	Sanpada 	down
+
 1803	5	Departure_Harbour	Wadala 	up
 
-1803	4	Departure_Harbour	Sanpada 	down
+1810	7	Arrival_Harbour	Dockyard Road 	up
+
+1810	7	Stopped_Harbour	Dockyard Road 	up	397	63	1572
 
 1814	6	Departure_Harbour	Seawoods-Darave 	down
 
 1814	6	Departure_Central	Mumbra 	down
 
+1816	7	Arrival_Western	Grant Road 	up
+
+1816	7	Stopped_Western	Grant Road 	up	83	9	391
+
+1830	7	Departure_Harbour	Dockyard Road 	up
+
+1836	7	Departure_Western	Grant Road 	up
+
 1843	3	Arrival_Central	Kurla 	up
 
-1843	3	Stopped_Central	Kurla 	up	9	1	31
+1843	3	Stopped_Central	Kurla 	up	155	76	1275
 
 1859	1	Arrival_Western	Andheri 	up
 
-1859	1	Stopped_Western	Andheri 	up	41	32	777
+1859	1	Stopped_Western	Andheri 	up	1705	1238	26593
 
 1863	3	Departure_Central	Kurla 	up
 
 1863	3	Arrival_Harbour	Tilak Nagar 	up
 
-1863	3	Stopped_Harbour	Tilak Nagar 	up	7	4	60
+1863	3	Stopped_Harbour	Tilak Nagar 	up	265	138	1938
+
+1866	7	Arrival_Harbour	Reay Road 	up
+
+1866	7	Stopped_Harbour	Reay Road 	up	304	77	1799
 
 1874	4	Arrival_Harbour	Vashi 	down
 
-1874	4	Stopped_Harbour	Vashi 	down	7	7	57
+1874	4	Stopped_Harbour	Vashi 	down	252	98	1827
 
 1879	1	Departure_Western	Andheri 	up
 
 1883	3	Departure_Harbour	Tilak Nagar 	up
 
+1886	7	Departure_Harbour	Reay Road 	up
+
 1886	5	Arrival_Western	Dadar 	up
 
-1886	5	Stopped_Western	Dadar 	up	6	0	15
+1886	5	Stopped_Western	Dadar 	up	102	20	609
 
 1894	2	Arrival_Central	Bhandup 	down
 
 1894	4	Departure_Harbour	Vashi 	down
 
-1894	2	Stopped_Central	Bhandup 	down	87	52	751
+1894	2	Stopped_Central	Bhandup 	down	2932	1348	24614
+
+1897	8	Arrival_Harbour	Kharghar 	down
+
+1897	8	Stopped_Harbour	Kharghar 	down	293	22	732
+
+1900	7	Arrival_Western	Mumbai Central 	up
+
+1900	7	Stopped_Western	Mumbai Central 	up	133	6	518
 
 1903	1	Arrival_Central	Vikhroli 	up
 
-1903	1	Stopped_Central	Vikhroli 	up	57	57	840
+1903	1	Stopped_Central	Vikhroli 	up	2294	2145	28306
 
 1904	3	Arrival_Western	Khar Road 	up
 
-1904	3	Stopped_Western	Khar Road 	up	4	0	24
+1904	3	Stopped_Western	Khar Road 	up	105	26	718
 
 1906	5	Departure_Western	Dadar 	up
 
 1914	2	Departure_Central	Bhandup 	down
 
+1917	7	Arrival_Central	Byculla 	up
+
+1917	8	Departure_Harbour	Kharghar 	down
+
+1917	7	Stopped_Central	Byculla 	up	327	33	992
+
+1920	7	Departure_Western	Mumbai Central 	up
+
 1923	1	Departure_Central	Vikhroli 	up
 
 1924	3	Departure_Western	Khar Road 	up
 
+1937	7	Departure_Central	Byculla 	up
+
 1946	5	Arrival_Central	Matunga 	up
 
-1946	5	Stopped_Central	Matunga 	up	13	0	64
+1946	5	Stopped_Central	Matunga 	up	271	90	1676
 
 1946	5	Arrival_Harbour	 G.T.B.nagar	up
 
-1946	5	Stopped_Harbour	 G.T.B.nagar	up	6	4	55
+1946	5	Stopped_Harbour	 G.T.B.nagar	up	221	141	2149
 
 1954	3	Arrival_Harbour	Chembur 	up
 
-1954	3	Stopped_Harbour	Chembur 	up	2	4	58
+1954	3	Stopped_Harbour	Chembur 	up	161	138	1961
 
 1957	6	Arrival_Harbour	Nerul 	down
 
-1957	6	Stopped_Harbour	Nerul 	down	7	2	49
+1957	7	Arrival_Harbour	Cotton Green 	up
+
+1957	6	Stopped_Harbour	Nerul 	down	201	63	1495
+
+1957	7	Stopped_Harbour	Cotton Green 	up	205	90	1914
 
 1966	5	Departure_Central	Matunga 	up
 
-1966	5	Departure_Harbour	 G.T.B.nagar	up
-
 1966	2	Arrival_Harbour	Mankhurd 	down
 
-1966	2	Stopped_Harbour	Mankhurd 	down	106	48	755
+1966	5	Departure_Harbour	 G.T.B.nagar	up
+
+1966	2	Stopped_Harbour	Mankhurd 	down	3237	1434	25125
 
 1974	3	Departure_Harbour	Chembur 	up
+
+1977	7	Departure_Harbour	Cotton Green 	up
 
 1977	6	Departure_Harbour	Nerul 	down
 
 1986	2	Arrival_Central	Kanjurmarg 	down
 
-1986	2	Stopped_Central	Kanjurmarg 	down	79	52	778
+1986	2	Stopped_Central	Kanjurmarg 	down	2860	1431	26043
 
 1986	2	Departure_Harbour	Mankhurd 	down
 
 1997	4	Arrival_Central	Mulund 	down
 
-1997	4	Stopped_Central	Mulund 	down	6	2	42
+1997	4	Stopped_Central	Mulund 	down	334	49	1264
 
 2000	1	Arrival_Western	Jogeshwari 	up
 
-2000	1	Stopped_Western	Jogeshwari 	up	43	45	775
+2000	1	Stopped_Western	Jogeshwari 	up	1667	1288	26972
+
+2000	9	Arrival_Central	CST	up
+
+2000	10	Arrival_Harbour	Panvel 	down
+
+2000	10	Arrival_Central	Kalyan 	down
+
+2000	10	Stopped_Harbour	Panvel 	down	0	0	0
+
+2000	10	Stopped_Central	Kalyan 	down	0	0	0
+
+2000	10	Arrival_Western	Dahanu Road 	down
+
+2000	9	Arrival_Western	Churchgate 	up
+
+2000	9	Arrival_Harbour	CST	up
+
+2000	9	Stopped_Central	CST	up	431	0	431
+
+2000	10	Stopped_Western	Dahanu Road 	down	0	0	0
+
+2000	9	Stopped_Western	Churchgate 	up	144	0	144
+
+2000	9	Stopped_Harbour	CST	up	318	0	318
 
 2006	2	Departure_Central	Kanjurmarg 	down
 
 2006	3	Arrival_Central	Vidyavihar 	up
 
-2006	3	Stopped_Central	Vidyavihar 	up	7	1	37
+2006	3	Stopped_Central	Vidyavihar 	up	222	83	1414
+
+2009	7	Arrival_Central	Chinchpokli 	up
+
+2009	7	Stopped_Central	Chinchpokli 	up	300	40	1252
 
 2017	4	Departure_Central	Mulund 	down
 
 2018	3	Arrival_Western	Santacruz 	up
 
-2018	3	Stopped_Western	Santacruz 	up	4	0	28
+2018	3	Stopped_Western	Santacruz 	up	113	28	803
 
 2019	5	Arrival_Western	Matunga Road 	up
 
-2019	5	Stopped_Western	Matunga Road 	up	5	1	19
+2019	5	Stopped_Western	Matunga Road 	up	83	19	673
 
 2020	1	Departure_Western	Jogeshwari 	up
 
+2020	9	Departure_Western	Churchgate 	up
+
+2020	10	Departure_Harbour	Panvel 	down
+
+2020	9	Departure_Harbour	CST	up
+
+2020	10	Departure_Central	Kalyan 	down
+
+2020	9	Departure_Central	CST	up
+
+2020	10	Departure_Western	Dahanu Road 	down
+
+2025	7	Arrival_Western	Mahalaxmi 	up
+
+2025	7	Stopped_Western	Mahalaxmi 	up	112	17	613
+
 2026	3	Departure_Central	Vidyavihar 	up
+
+2029	7	Departure_Central	Chinchpokli 	up
 
 2036	4	Arrival_Western	Palghar 	down
 
-2036	4	Stopped_Western	Palghar 	down	1	0	8
+2036	4	Stopped_Western	Palghar 	down	108	4	329
 
 2038	3	Departure_Western	Santacruz 	up
 
 2039	5	Departure_Western	Matunga Road 	up
 
+2045	7	Departure_Western	Mahalaxmi 	up
+
 2056	4	Departure_Western	Palghar 	down
+
+2060	8	Arrival_Central	Diwa 	down
+
+2060	8	Stopped_Central	Diwa 	down	319	24	855
 
 2066	1	Arrival_Central	Kanjurmarg 	up
 
-2066	1	Stopped_Central	Kanjurmarg 	up	43	72	811
+2066	1	Stopped_Central	Kanjurmarg 	up	2069	2265	28110
 
 2071	6	Arrival_Western	Umroli 	down
 
-2071	6	Stopped_Western	Umroli 	down	2	0	4
+2071	6	Stopped_Western	Umroli 	down	83	4	159
+
+2080	8	Departure_Central	Diwa 	down
 
 2086	1	Departure_Central	Kanjurmarg 	up
 
+2091	10	Arrival_Central	Dombivli 	down
+
 2091	6	Departure_Western	Umroli 	down
+
+2091	10	Stopped_Central	Dombivli 	down	441	0	441
+
+2100	7	Arrival_Central	Currey Road 	up
 
 2100	6	Arrival_Central	Kalwa 	down
 
-2100	6	Stopped_Central	Kalwa 	down	13	0	46
+2100	7	Stopped_Central	Currey Road 	up	318	53	1517
+
+2100	6	Stopped_Central	Kalwa 	down	380	41	1182
 
 2109	5	Arrival_Central	Sion 	up
 
-2109	5	Stopped_Central	Sion 	up	10	5	69
+2109	5	Stopped_Central	Sion 	up	274	101	1849
 
 2109	5	Arrival_Harbour	Chunabhatti 	up
 
-2109	5	Stopped_Harbour	Chunabhatti 	up	11	5	61
+2109	5	Stopped_Harbour	Chunabhatti 	up	206	130	2225
+
+2111	10	Departure_Central	Dombivli 	down
+
+2113	9	Arrival_Western	Marine Lines 	up
+
+2113	9	Stopped_Western	Marine Lines 	up	106	6	244
 
 2117	3	Arrival_Harbour	Govandi 	up
 
-2117	3	Stopped_Harbour	Govandi 	up	3	6	55
+2117	3	Stopped_Harbour	Govandi 	up	155	159	1957
+
+2120	7	Departure_Central	Currey Road 	up
+
+2120	7	Arrival_Harbour	Sewri 	up
 
 2120	6	Departure_Central	Kalwa 	down
 
 2120	6	Arrival_Harbour	Juinagar 	down
 
-2120	6	Stopped_Harbour	Juinagar 	down	4	2	51
+2120	7	Stopped_Harbour	Sewri 	up	184	101	1997
+
+2120	6	Stopped_Harbour	Juinagar 	down	157	67	1585
 
 2124	5	Arrival_Western	Mahim 	up
 
-2124	5	Stopped_Western	Mahim 	up	4	1	22
+2124	5	Stopped_Western	Mahim 	up	90	24	739
 
 2129	5	Departure_Central	Sion 	up
 
-2129	5	Departure_Harbour	Chunabhatti 	up
-
 2129	2	Arrival_Harbour	Govandi 	down
 
-2129	2	Stopped_Harbour	Govandi 	down	83	41	797
+2129	5	Departure_Harbour	Chunabhatti 	up
+
+2129	2	Stopped_Harbour	Govandi 	down	2977	1580	26522
+
+2131	8	Arrival_Harbour	CBD Belapur 	down
+
+2131	8	Stopped_Harbour	CBD Belapur 	down	279	35	976
+
+2133	9	Departure_Western	Marine Lines 	up
 
 2137	3	Departure_Harbour	Govandi 	up
 
 2140	6	Departure_Harbour	Juinagar 	down
 
-2144	5	Departure_Western	Mahim 	up
+2140	7	Departure_Harbour	Sewri 	up
 
-2149	2	Departure_Harbour	Govandi 	down
+2143	8	Arrival_Western	Boisar 	down
+
+2143	8	Stopped_Western	Boisar 	down	113	0	113
+
+2144	5	Departure_Western	Mahim 	up
 
 2149	2	Arrival_Central	Vikhroli 	down
 
-2149	2	Stopped_Central	Vikhroli 	down	84	51	811
+2149	2	Departure_Harbour	Govandi 	down
+
+2149	2	Stopped_Central	Vikhroli 	down	2760	1613	27190
+
+2151	8	Departure_Harbour	CBD Belapur 	down
 
 2154	2	Arrival_Western	Kelve Road 	down
 
-2154	2	Stopped_Western	Kelve Road 	down	87	8	331
+2154	2	Stopped_Western	Kelve Road 	down	2763	227	10577
 
 2157	1	Arrival_Central	Bhandup 	up
 
-2157	1	Stopped_Central	Bhandup 	up	60	54	817
+2157	1	Stopped_Central	Bhandup 	up	1842	2467	27485
 
-2169	2	Departure_Central	Vikhroli 	down
+2163	9	Arrival_Harbour	Masjid Bunder 	up
+
+2163	9	Arrival_Central	Masjid Bunder 	up
+
+2163	9	Stopped_Harbour	Masjid Bunder 	up	255	8	565
+
+2163	9	Stopped_Central	Masjid Bunder 	up	587	17	1001
+
+2163	8	Departure_Western	Boisar 	down
+
+2168	7	Arrival_Western	Lower Parel 	up
+
+2168	7	Stopped_Western	Lower Parel 	up	96	18	691
 
 2169	3	Arrival_Central	Ghatkopar 	up
 
-2169	3	Stopped_Central	Ghatkopar 	up	6	2	41
+2169	2	Departure_Central	Vikhroli 	down
+
+2169	3	Stopped_Central	Ghatkopar 	up	268	108	1574
 
 2174	2	Departure_Western	Kelve Road 	down
 
 2177	1	Departure_Central	Bhandup 	up
 
+2183	9	Departure_Central	Masjid Bunder 	up
+
+2183	9	Departure_Harbour	Masjid Bunder 	up
+
 2185	3	Arrival_Western	Vile Parle 	up
 
-2185	3	Stopped_Western	Vile Parle 	up	2	0	30
+2185	3	Stopped_Western	Vile Parle 	up	73	51	825
+
+2188	7	Departure_Western	Lower Parel 	up
 
 2189	3	Departure_Central	Ghatkopar 	up
 
+2191	7	Arrival_Central	Parel 	up
+
+2191	7	Stopped_Central	Parel 	up	436	71	1882
+
+2198	9	Arrival_Western	Charni Road 	up
+
+2198	9	Stopped_Western	Charni Road 	up	78	8	314
+
 2205	3	Departure_Western	Vile Parle 	up
+
+2211	7	Departure_Central	Parel 	up
+
+2218	9	Departure_Western	Charni Road 	up
 
 2231	4	Arrival_Central	Nahur 	down
 
-2231	4	Stopped_Central	Nahur 	down	9	3	48
+2231	4	Stopped_Central	Nahur 	down	367	67	1564
+
+2234	10	Arrival_Harbour	Mansarovar 	down
+
+2234	10	Stopped_Harbour	Mansarovar 	down	279	0	279
 
 2251	4	Departure_Central	Nahur 	down
 
+2254	10	Departure_Harbour	Mansarovar 	down
+
+2254	10	Arrival_Central	Kopar 	down
+
+2254	9	Arrival_Harbour	Sandhurst Road 	up
+
+2254	9	Arrival_Central	Sandhurst Road 	up
+
+2254	10	Stopped_Central	Kopar 	down	458	17	882
+
+2254	9	Stopped_Harbour	Sandhurst Road 	up	261	22	804
+
+2254	9	Stopped_Central	Sandhurst Road 	up	454	40	1415
+
 2261	1	Arrival_Western	Goregaon 	up
 
-2261	1	Stopped_Western	Goregaon 	up	50	55	770
+2261	1	Stopped_Western	Goregaon 	up	1572	1392	27152
 
 2263	6	Arrival_Central	Thane 	down
 
-2263	6	Stopped_Central	Thane 	down	12	3	55
+2263	6	Stopped_Central	Thane 	down	357	59	1480
 
 2267	5	Arrival_Western	Bandra 	up
 
-2267	5	Stopped_Western	Bandra 	up	4	2	24
+2267	5	Stopped_Western	Bandra 	up	76	26	789
 
 2271	5	Arrival_Harbour	Kurla 	up
 
-2271	5	Stopped_Harbour	Kurla 	up	3	3	61
+2271	5	Stopped_Harbour	Kurla 	up	178	126	2277
+
+2274	9	Departure_Central	Sandhurst Road 	up
+
+2274	9	Departure_Harbour	Sandhurst Road 	up
+
+2274	10	Departure_Central	Kopar 	down
 
 2280	3	Arrival_Harbour	Mankhurd 	up
 
-2280	3	Stopped_Harbour	Mankhurd 	up	2	5	52
+2280	3	Stopped_Harbour	Mankhurd 	up	123	163	1917
 
 2281	1	Departure_Western	Goregaon 	up
 
-2283	6	Departure_Central	Thane 	down
+2281	7	Arrival_Western	Elphinstone Road 	up
+
+2281	7	Stopped_Western	Elphinstone Road 	up	108	23	776
 
 2283	6	Arrival_Harbour	Sanpada 	down
 
-2283	6	Stopped_Harbour	Sanpada 	down	6	2	55
+2283	7	Arrival_Harbour	Wadala 	up
+
+2283	6	Departure_Central	Thane 	down
+
+2283	6	Stopped_Harbour	Sanpada 	down	140	76	1649
+
+2283	7	Stopped_Harbour	Wadala 	up	142	111	2028
+
+2283	7	Arrival_Central	Dadar 	up
+
+2283	7	Stopped_Central	Dadar 	up	337	85	2134
 
 2287	5	Departure_Western	Bandra 	up
 
-2291	5	Departure_Harbour	Kurla 	up
-
 2291	2	Arrival_Harbour	Chembur 	down
 
-2291	2	Stopped_Harbour	Chembur 	down	88	56	829
+2291	5	Departure_Harbour	Kurla 	up
+
+2291	2	Stopped_Harbour	Chembur 	down	2882	1838	27566
+
+2294	8	Arrival_Central	Mumbra 	down
+
+2294	8	Arrival_Harbour	Seawoods-Darave 	down
+
+2294	8	Stopped_Central	Mumbra 	down	432	31	1256
+
+2294	8	Stopped_Harbour	Seawoods-Darave 	down	233	42	1167
 
 2300	3	Departure_Harbour	Mankhurd 	up
 
+2301	7	Departure_Western	Elphinstone Road 	up
+
+2303	7	Departure_Harbour	Wadala 	up
+
 2303	6	Departure_Harbour	Sanpada 	down
+
+2303	7	Departure_Central	Dadar 	up
+
+2310	9	Arrival_Harbour	Dockyard Road 	up
+
+2310	9	Stopped_Harbour	Dockyard Road 	up	227	43	988
 
 2311	2	Departure_Harbour	Chembur 	down
 
+2314	8	Departure_Central	Mumbra 	down
+
+2314	8	Departure_Harbour	Seawoods-Darave 	down
+
+2316	9	Arrival_Western	Grant Road 	up
+
+2316	9	Stopped_Western	Grant Road 	up	104	6	412
+
 2320	1	Arrival_Central	Nahur 	up
 
-2320	1	Stopped_Central	Nahur 	up	45	87	775
+2320	1	Stopped_Central	Nahur 	up	1764	2618	26631
+
+2330	9	Departure_Harbour	Dockyard Road 	up
+
+2336	9	Departure_Western	Grant Road 	up
 
 2340	1	Departure_Central	Nahur 	up
 
 2343	5	Arrival_Central	Kurla 	up
 
-2343	5	Stopped_Central	Kurla 	up	12	4	77
+2343	5	Stopped_Central	Kurla 	up	364	108	2105
 
 2359	3	Arrival_Western	Andheri 	up
 
-2359	3	Stopped_Western	Andheri 	up	4	0	34
+2359	3	Stopped_Western	Andheri 	up	64	34	855
 
 2363	5	Departure_Central	Kurla 	up
 
 2363	5	Arrival_Harbour	Tilak Nagar 	up
 
-2363	5	Stopped_Harbour	Tilak Nagar 	up	5	3	63
+2363	5	Stopped_Harbour	Tilak Nagar 	up	140	154	2263
+
+2366	9	Arrival_Harbour	Reay Road 	up
+
+2366	9	Stopped_Harbour	Reay Road 	up	258	53	1193
 
 2371	1	Arrival_Harbour	Vashi 	up
 
-2371	1	Stopped_Harbour	Vashi 	up	62	82	775
+2371	1	Stopped_Harbour	Vashi 	up	1852	2669	26907
 
 2374	6	Arrival_Harbour	Vashi 	down
 
-2374	6	Stopped_Harbour	Vashi 	down	9	1	63
+2374	6	Stopped_Harbour	Vashi 	down	224	99	1774
 
 2379	3	Departure_Western	Andheri 	up
 
-2383	5	Departure_Harbour	Tilak Nagar 	up
+2383	2	Arrival_Harbour	Tilak Nagar 	down
 
 2383	2	Arrival_Central	Ghatkopar 	down
 
-2383	2	Arrival_Harbour	Tilak Nagar 	down
+2383	5	Departure_Harbour	Tilak Nagar 	up
 
-2383	2	Stopped_Central	Ghatkopar 	down	96	55	852
+2383	2	Stopped_Harbour	Tilak Nagar 	down	2728	2082	28212
 
-2383	2	Stopped_Harbour	Tilak Nagar 	down	98	63	864
+2383	2	Stopped_Central	Ghatkopar 	down	2556	1966	27780
+
+2386	9	Departure_Harbour	Reay Road 	up
+
+2386	7	Arrival_Western	Dadar 	up
+
+2386	7	Stopped_Western	Dadar 	up	70	27	819
 
 2391	1	Departure_Harbour	Vashi 	up
 
@@ -1212,41 +1540,81 @@ SimTime	TrainNo	TypeOfEvent	Station_Name	 Direction 	NoOfPassengerWalkIn 	NoOfPa
 
 2394	4	Arrival_Central	Bhandup 	down
 
-2394	4	Stopped_Central	Bhandup 	down	7	2	53
+2394	4	Stopped_Central	Bhandup 	down	427	91	1900
+
+2397	10	Arrival_Harbour	Kharghar 	down
+
+2397	10	Stopped_Harbour	Kharghar 	down	420	15	684
+
+2400	9	Arrival_Western	Mumbai Central 	up
+
+2400	9	Stopped_Western	Mumbai Central 	up	89	12	489
+
+2403	3	Arrival_Central	Vikhroli 	up
 
 2403	2	Departure_Central	Ghatkopar 	down
 
 2403	2	Departure_Harbour	Tilak Nagar 	down
 
-2403	3	Arrival_Central	Vikhroli 	up
-
-2403	3	Stopped_Central	Vikhroli 	up	6	6	41
+2403	3	Stopped_Central	Vikhroli 	up	288	119	1743
 
 2404	5	Arrival_Western	Khar Road 	up
 
-2404	5	Stopped_Western	Khar Road 	up	3	1	26
+2404	5	Stopped_Western	Khar Road 	up	61	26	824
+
+2406	7	Departure_Western	Dadar 	up
 
 2414	4	Departure_Central	Bhandup 	down
+
+2417	10	Departure_Harbour	Kharghar 	down
+
+2417	9	Arrival_Central	Byculla 	up
+
+2417	9	Stopped_Central	Byculla 	up	458	56	1817
+
+2420	9	Departure_Western	Mumbai Central 	up
 
 2423	3	Departure_Central	Vikhroli 	up
 
 2424	5	Departure_Western	Khar Road 	up
 
+2437	9	Departure_Central	Byculla 	up
+
+2446	7	Arrival_Harbour	 G.T.B.nagar	up
+
+2446	7	Stopped_Harbour	 G.T.B.nagar	up	324	124	2228
+
+2446	7	Arrival_Central	Matunga 	up
+
+2446	7	Stopped_Central	Matunga 	up	366	121	2379
+
 2454	1	Arrival_Western	Malad 	up
 
-2454	1	Stopped_Western	Malad 	up	43	44	769
+2454	1	Stopped_Western	Malad 	up	1495	1524	27123
 
 2454	5	Arrival_Harbour	Chembur 	up
 
-2454	5	Stopped_Harbour	Chembur 	up	8	3	68
+2454	5	Stopped_Harbour	Chembur 	up	214	171	2306
+
+2457	8	Arrival_Harbour	Nerul 	down
+
+2457	8	Stopped_Harbour	Nerul 	down	360	57	1470
+
+2457	9	Arrival_Harbour	Cotton Green 	up
+
+2457	9	Stopped_Harbour	Cotton Green 	up	350	54	1489
 
 2463	1	Arrival_Harbour	Sanpada 	up
 
-2463	1	Stopped_Harbour	Sanpada 	up	53	76	752
+2463	1	Stopped_Harbour	Sanpada 	up	1719	2794	25832
+
+2466	7	Departure_Harbour	 G.T.B.nagar	up
 
 2466	4	Arrival_Harbour	Mankhurd 	down
 
-2466	4	Stopped_Harbour	Mankhurd 	down	11	5	63
+2466	7	Departure_Central	Matunga 	up
+
+2466	4	Stopped_Harbour	Mankhurd 	down	381	119	2089
 
 2474	1	Departure_Western	Malad 	up
 
@@ -1254,119 +1622,211 @@ SimTime	TrainNo	TypeOfEvent	Station_Name	 Direction 	NoOfPassengerWalkIn 	NoOfPa
 
 2474	5	Departure_Harbour	Chembur 	up
 
-2474	2	Stopped_Harbour	Kurla 	down	73	71	866
+2474	2	Stopped_Harbour	Kurla 	down	2506	2299	28419
+
+2477	8	Departure_Harbour	Nerul 	down
+
+2477	9	Departure_Harbour	Cotton Green 	up
 
 2483	1	Departure_Harbour	Sanpada 	up
 
-2486	4	Departure_Harbour	Mankhurd 	down
-
 2486	4	Arrival_Central	Kanjurmarg 	down
 
-2486	4	Stopped_Central	Kanjurmarg 	down	12	4	61
+2486	4	Departure_Harbour	Mankhurd 	down
+
+2486	4	Stopped_Central	Kanjurmarg 	down	315	117	2098
 
 2494	2	Departure_Harbour	Kurla 	down
 
 2497	6	Arrival_Central	Mulund 	down
 
-2497	6	Stopped_Central	Mulund 	down	15	3	67
+2497	6	Stopped_Central	Mulund 	down	336	61	1755
 
 2500	3	Arrival_Western	Jogeshwari 	up
 
-2500	3	Stopped_Western	Jogeshwari 	up	3	4	33
+2500	3	Stopped_Western	Jogeshwari 	up	68	41	882
 
 2506	5	Arrival_Central	Vidyavihar 	up
 
-2506	5	Stopped_Central	Vidyavihar 	up	8	3	82
+2506	5	Stopped_Central	Vidyavihar 	up	253	132	2226
 
 2506	4	Departure_Central	Kanjurmarg 	down
+
+2509	9	Arrival_Central	Chinchpokli 	up
+
+2509	9	Stopped_Central	Chinchpokli 	up	431	83	2165
 
 2517	6	Departure_Central	Mulund 	down
 
 2518	5	Arrival_Western	Santacruz 	up
 
-2518	5	Stopped_Western	Santacruz 	up	2	1	27
+2518	5	Stopped_Western	Santacruz 	up	69	36	857
+
+2519	7	Arrival_Western	Matunga Road 	up
+
+2519	7	Stopped_Western	Matunga Road 	up	74	30	863
 
 2520	3	Departure_Western	Jogeshwari 	up
 
+2525	9	Arrival_Western	Mahalaxmi 	up
+
+2525	9	Stopped_Western	Mahalaxmi 	up	72	17	544
+
 2526	5	Departure_Central	Vidyavihar 	up
+
+2529	9	Departure_Central	Chinchpokli 	up
 
 2536	6	Arrival_Western	Palghar 	down
 
-2536	6	Stopped_Western	Palghar 	down	3	0	7
+2536	6	Stopped_Western	Palghar 	down	103	5	257
 
 2538	5	Departure_Western	Santacruz 	up
 
+2539	7	Departure_Western	Matunga Road 	up
+
+2545	9	Departure_Western	Mahalaxmi 	up
+
 2546	2	Arrival_Central	Vidyavihar 	down
 
-2546	2	Stopped_Central	Vidyavihar 	down	77	62	867
+2546	2	Stopped_Central	Vidyavihar 	down	2464	2147	28097
 
 2554	1	Arrival_Central	Mulund 	up
 
-2554	1	Stopped_Central	Mulund 	up	47	74	748
+2554	1	Stopped_Central	Mulund 	up	1668	2728	25571
 
 2556	6	Departure_Western	Palghar 	down
+
+2560	10	Arrival_Central	Diwa 	down
+
+2560	10	Stopped_Central	Diwa 	down	605	46	1441
 
 2566	3	Arrival_Central	Kanjurmarg 	up
 
 2566	2	Departure_Central	Vidyavihar 	down
 
-2566	3	Stopped_Central	Kanjurmarg 	up	8	4	45
+2566	3	Stopped_Central	Kanjurmarg 	up	281	145	1879
+
+2571	8	Arrival_Western	Umroli 	down
+
+2571	8	Stopped_Western	Umroli 	down	104	2	215
 
 2574	1	Departure_Central	Mulund 	up
+
+2580	10	Departure_Central	Diwa 	down
 
 2586	3	Departure_Central	Kanjurmarg 	up
 
 2589	2	Arrival_Western	Saphale 	down
 
-2589	2	Stopped_Western	Saphale 	down	85	17	399
+2589	2	Stopped_Western	Saphale 	down	2842	347	13072
+
+2591	8	Departure_Western	Umroli 	down
+
+2600	8	Arrival_Central	Kalwa 	down
+
+2600	9	Arrival_Central	Currey Road 	up
+
+2600	8	Stopped_Central	Kalwa 	down	455	46	1665
+
+2600	9	Stopped_Central	Currey Road 	up	501	106	2560
+
+2609	7	Arrival_Harbour	Chunabhatti 	up
+
+2609	7	Stopped_Harbour	Chunabhatti 	up	413	140	2501
+
+2609	7	Arrival_Central	Sion 	up
 
 2609	2	Departure_Western	Saphale 	down
 
+2609	7	Stopped_Central	Sion 	up	392	133	2638
+
 2610	1	Arrival_Western	Kandivali 	up
 
-2610	1	Stopped_Western	Kandivali 	up	53	44	778
+2610	1	Stopped_Western	Kandivali 	up	1534	1543	27114
 
 2617	5	Arrival_Harbour	Govandi 	up
 
-2617	5	Stopped_Harbour	Govandi 	up	4	7	65
+2617	5	Stopped_Harbour	Govandi 	up	283	179	2410
+
+2620	8	Arrival_Harbour	Juinagar 	down
+
+2620	8	Stopped_Harbour	Juinagar 	down	476	85	1861
+
+2620	9	Arrival_Harbour	Sewri 	up
+
+2620	9	Departure_Central	Currey Road 	up
+
+2620	8	Departure_Central	Kalwa 	down
+
+2620	9	Stopped_Harbour	Sewri 	up	491	92	1888
+
+2624	7	Arrival_Western	Mahim 	up
+
+2624	7	Stopped_Western	Mahim 	up	120	24	959
 
 2626	1	Arrival_Harbour	Juinagar 	up
 
-2626	1	Stopped_Harbour	Juinagar 	up	39	86	705
+2626	1	Stopped_Harbour	Juinagar 	up	1569	3044	24357
+
+2629	7	Departure_Harbour	Chunabhatti 	up
+
+2629	7	Departure_Central	Sion 	up
 
 2629	4	Arrival_Harbour	Govandi 	down
 
-2629	4	Stopped_Harbour	Govandi 	down	15	6	72
+2629	4	Stopped_Harbour	Govandi 	down	411	135	2365
 
 2630	1	Departure_Western	Kandivali 	up
+
+2631	10	Arrival_Harbour	CBD Belapur 	down
+
+2631	10	Stopped_Harbour	CBD Belapur 	down	620	38	1266
 
 2637	5	Departure_Harbour	Govandi 	up
 
 2637	2	Arrival_Harbour	Chunabhatti 	down
 
-2637	2	Stopped_Harbour	Chunabhatti 	down	80	76	870
+2637	2	Stopped_Harbour	Chunabhatti 	down	2347	2488	28278
+
+2640	8	Departure_Harbour	Juinagar 	down
+
+2640	9	Departure_Harbour	Sewri 	up
+
+2643	10	Arrival_Western	Boisar 	down
+
+2643	10	Stopped_Western	Boisar 	down	162	0	162
+
+2644	7	Departure_Western	Mahim 	up
 
 2646	1	Departure_Harbour	Juinagar 	up
 
-2649	4	Departure_Harbour	Govandi 	down
-
 2649	4	Arrival_Central	Vikhroli 	down
 
-2649	4	Stopped_Central	Vikhroli 	down	10	4	67
+2649	4	Departure_Harbour	Govandi 	down
+
+2649	4	Stopped_Central	Vikhroli 	down	332	161	2269
+
+2651	10	Departure_Harbour	CBD Belapur 	down
 
 2654	4	Arrival_Western	Kelve Road 	down
 
-2654	4	Stopped_Western	Kelve Road 	down	6	0	14
-
-2657	3	Arrival_Central	Bhandup 	up
+2654	4	Stopped_Western	Kelve Road 	down	140	11	458
 
 2657	2	Departure_Harbour	Chunabhatti 	down
 
-2657	3	Stopped_Central	Bhandup 	up	6	4	47
+2657	3	Arrival_Central	Bhandup 	up
+
+2657	3	Stopped_Central	Bhandup 	up	205	169	1915
+
+2663	10	Departure_Western	Boisar 	down
+
+2668	9	Arrival_Western	Lower Parel 	up
+
+2668	9	Stopped_Western	Lower Parel 	up	102	12	634
 
 2669	5	Arrival_Central	Ghatkopar 	up
 
-2669	5	Stopped_Central	Ghatkopar 	up	4	9	77
+2669	5	Stopped_Central	Ghatkopar 	up	213	156	2283
 
 2669	4	Departure_Central	Vikhroli 	down
 
@@ -1376,147 +1836,263 @@ SimTime	TrainNo	TypeOfEvent	Station_Name	 Direction 	NoOfPassengerWalkIn 	NoOfPa
 
 2685	5	Arrival_Western	Vile Parle 	up
 
-2685	5	Stopped_Western	Vile Parle 	up	3	1	29
+2685	5	Stopped_Western	Vile Parle 	up	91	42	906
+
+2688	9	Departure_Western	Lower Parel 	up
 
 2689	5	Departure_Central	Ghatkopar 	up
+
+2691	9	Arrival_Central	Parel 	up
+
+2691	9	Stopped_Central	Parel 	up	374	131	2803
 
 2705	5	Departure_Western	Vile Parle 	up
 
 2709	2	Arrival_Central	Kurla 	down
 
-2709	2	Stopped_Central	Kurla 	down	73	73	867
+2709	2	Stopped_Central	Kurla 	down	2382	2328	28151
+
+2711	9	Departure_Central	Parel 	up
 
 2729	2	Departure_Central	Kurla 	down
 
 2731	6	Arrival_Central	Nahur 	down
 
-2731	6	Stopped_Central	Nahur 	down	6	3	70
+2731	6	Stopped_Central	Nahur 	down	362	81	2036
 
 2751	6	Departure_Central	Nahur 	down
 
 2761	3	Arrival_Western	Goregaon 	up
 
-2761	3	Stopped_Western	Goregaon 	up	1	4	30
+2761	3	Stopped_Western	Goregaon 	up	87	49	920
+
+2763	8	Arrival_Central	Thane 	down
+
+2763	8	Stopped_Central	Thane 	down	441	91	2015
+
+2767	7	Arrival_Western	Bandra 	up
+
+2767	7	Stopped_Western	Bandra 	up	77	32	1004
+
+2771	7	Arrival_Harbour	Kurla 	up
+
+2771	7	Stopped_Harbour	Kurla 	up	446	168	2779
 
 2780	5	Arrival_Harbour	Mankhurd 	up
 
-2780	5	Stopped_Harbour	Mankhurd 	up	11	5	71
+2780	5	Stopped_Harbour	Mankhurd 	up	302	212	2500
+
+2781	9	Arrival_Western	Elphinstone Road 	up
+
+2781	9	Stopped_Western	Elphinstone Road 	up	118	25	727
 
 2781	3	Departure_Western	Goregaon 	up
 
-2789	1	Arrival_Central	Thane 	up
+2783	8	Arrival_Harbour	Sanpada 	down
+
+2783	8	Stopped_Harbour	Sanpada 	down	585	101	2345
+
+2783	9	Arrival_Harbour	Wadala 	up
+
+2783	8	Departure_Central	Thane 	down
+
+2783	9	Stopped_Harbour	Wadala 	up	560	122	2326
+
+2783	9	Arrival_Central	Dadar 	up
+
+2783	9	Stopped_Central	Dadar 	up	422	145	3080
+
+2787	7	Departure_Western	Bandra 	up
 
 2789	1	Arrival_Harbour	Nerul 	up
 
-2789	1	Stopped_Central	Thane 	up	40	91	697
+2789	1	Arrival_Central	Thane 	up
 
-2789	1	Stopped_Harbour	Nerul 	up	33	94	644
+2789	1	Stopped_Harbour	Nerul 	up	1337	3209	22485
+
+2789	1	Stopped_Central	Thane 	up	1426	2924	24073
+
+2791	7	Departure_Harbour	Kurla 	up
 
 2791	4	Arrival_Harbour	Chembur 	down
 
-2791	4	Stopped_Harbour	Chembur 	down	23	6	89
+2791	4	Stopped_Harbour	Chembur 	down	502	163	2704
+
+2794	10	Arrival_Harbour	Seawoods-Darave 	down
+
+2794	10	Stopped_Harbour	Seawoods-Darave 	down	728	68	1926
+
+2794	10	Arrival_Central	Mumbra 	down
+
+2794	10	Stopped_Central	Mumbra 	down	592	64	1969
 
 2800	2	Arrival_Harbour	 G.T.B.nagar	down
 
 2800	5	Departure_Harbour	Mankhurd 	up
 
-2800	2	Stopped_Harbour	 G.T.B.nagar	down	54	79	845
+2800	2	Stopped_Harbour	 G.T.B.nagar	down	2140	2751	27667
 
-2809	1	Departure_Central	Thane 	up
+2801	9	Departure_Western	Elphinstone Road 	up
+
+2803	8	Departure_Harbour	Sanpada 	down
+
+2803	9	Departure_Harbour	Wadala 	up
+
+2803	9	Departure_Central	Dadar 	up
 
 2809	1	Departure_Harbour	Nerul 	up
 
+2809	1	Departure_Central	Thane 	up
+
 2811	4	Departure_Harbour	Chembur 	down
 
-2820	3	Arrival_Central	Nahur 	up
+2814	10	Departure_Harbour	Seawoods-Darave 	down
+
+2814	10	Departure_Central	Mumbra 	down
 
 2820	2	Departure_Harbour	 G.T.B.nagar	down
 
-2820	3	Stopped_Central	Nahur 	up	7	6	48
+2820	3	Arrival_Central	Nahur 	up
+
+2820	3	Stopped_Central	Nahur 	up	217	178	1954
 
 2827	1	Arrival_Western	Borivali 	up
 
-2827	1	Stopped_Western	Borivali 	up	41	49	770
+2827	1	Stopped_Western	Borivali 	up	1317	1679	26752
 
 2840	3	Departure_Central	Nahur 	up
+
+2843	7	Arrival_Central	Kurla 	up
+
+2843	7	Stopped_Central	Kurla 	up	349	155	2832
 
 2847	1	Departure_Western	Borivali 	up
 
 2859	5	Arrival_Western	Andheri 	up
 
-2859	5	Stopped_Western	Andheri 	up	3	2	30
+2859	5	Stopped_Western	Andheri 	up	88	36	958
+
+2863	7	Arrival_Harbour	Tilak Nagar 	up
+
+2863	7	Stopped_Harbour	Tilak Nagar 	up	510	205	3084
+
+2863	7	Departure_Central	Kurla 	up
 
 2871	3	Arrival_Harbour	Vashi 	up
 
-2871	3	Stopped_Harbour	Vashi 	up	6	3	55
+2871	3	Stopped_Harbour	Vashi 	up	350	172	2095
+
+2874	8	Arrival_Harbour	Vashi 	down
+
+2874	8	Stopped_Harbour	Vashi 	down	553	141	2757
 
 2879	5	Departure_Western	Andheri 	up
 
-2883	4	Arrival_Central	Ghatkopar 	down
+2883	7	Departure_Harbour	Tilak Nagar 	up
 
 2883	4	Arrival_Harbour	Tilak Nagar 	down
 
-2883	4	Stopped_Central	Ghatkopar 	down	9	5	71
+2883	4	Arrival_Central	Ghatkopar 	down
 
-2883	4	Stopped_Harbour	Tilak Nagar 	down	13	10	92
+2883	4	Stopped_Harbour	Tilak Nagar 	down	412	229	2887
+
+2883	4	Stopped_Central	Ghatkopar 	down	288	142	2415
+
+2886	9	Arrival_Western	Dadar 	up
+
+2886	9	Stopped_Western	Dadar 	up	131	30	828
 
 2891	3	Departure_Harbour	Vashi 	up
 
 2894	6	Arrival_Central	Bhandup 	down
 
-2894	6	Stopped_Central	Bhandup 	down	6	2	74
+2894	8	Departure_Harbour	Vashi 	down
+
+2894	6	Stopped_Central	Bhandup 	down	330	121	2245
 
 2903	5	Arrival_Central	Vikhroli 	up
 
-2903	5	Stopped_Central	Vikhroli 	up	4	8	73
+2903	5	Stopped_Central	Vikhroli 	up	231	166	2348
 
 2903	4	Departure_Central	Ghatkopar 	down
 
 2903	4	Departure_Harbour	Tilak Nagar 	down
 
+2904	7	Arrival_Western	Khar Road 	up
+
+2904	7	Stopped_Western	Khar Road 	up	105	50	1059
+
+2906	9	Departure_Western	Dadar 	up
+
 2914	6	Departure_Central	Bhandup 	down
 
 2923	5	Departure_Central	Vikhroli 	up
 
+2924	7	Departure_Western	Khar Road 	up
+
 2943	2	Arrival_Central	Sion 	down
 
-2943	2	Stopped_Central	Sion 	down	56	72	851
+2943	2	Stopped_Central	Sion 	down	2205	2422	27934
+
+2946	9	Arrival_Harbour	 G.T.B.nagar	up
+
+2946	9	Stopped_Harbour	 G.T.B.nagar	up	526	138	2714
+
+2946	9	Arrival_Central	Matunga 	up
+
+2946	9	Stopped_Central	Matunga 	up	402	164	3318
 
 2951	1	Arrival_Harbour	Seawoods-Darave 	up
 
 2951	1	Arrival_Central	Kalwa 	up
 
-2951	1	Stopped_Harbour	Seawoods-Darave 	up	42	94	592
+2951	1	Stopped_Harbour	Seawoods-Darave 	up	1138	3362	20261
 
-2951	1	Stopped_Central	Kalwa 	up	29	86	640
+2951	1	Stopped_Central	Kalwa 	up	1260	3165	22168
+
+2954	7	Arrival_Harbour	Chembur 	up
+
+2954	7	Stopped_Harbour	Chembur 	up	437	231	3290
 
 2954	3	Arrival_Western	Malad 	up
 
-2954	3	Stopped_Western	Malad 	up	3	5	28
+2954	3	Stopped_Western	Malad 	up	55	56	919
 
-2963	2	Departure_Central	Sion 	down
+2957	10	Arrival_Harbour	Nerul 	down
+
+2957	10	Stopped_Harbour	Nerul 	down	750	94	2582
 
 2963	2	Arrival_Harbour	Wadala 	down
 
-2963	2	Stopped_Harbour	Wadala 	down	50	87	808
+2963	2	Departure_Central	Sion 	down
+
+2963	2	Stopped_Harbour	Wadala 	down	2033	2869	26831
 
 2963	3	Arrival_Harbour	Sanpada 	up
 
-2963	3	Stopped_Harbour	Sanpada 	up	12	6	61
+2963	3	Stopped_Harbour	Sanpada 	up	320	210	2205
+
+2966	9	Departure_Harbour	 G.T.B.nagar	up
 
 2966	6	Arrival_Harbour	Mankhurd 	down
 
-2966	6	Stopped_Harbour	Mankhurd 	down	21	7	77
+2966	9	Departure_Central	Matunga 	up
+
+2966	6	Stopped_Harbour	Mankhurd 	down	598	106	2266
+
+2971	1	Departure_Central	Kalwa 	up
 
 2971	1	Departure_Harbour	Seawoods-Darave 	up
 
-2971	1	Departure_Central	Kalwa 	up
+2974	7	Departure_Harbour	Chembur 	up
 
 2974	3	Departure_Western	Malad 	up
 
 2974	4	Arrival_Harbour	Kurla 	down
 
-2974	4	Stopped_Harbour	Kurla 	down	9	7	94
+2974	4	Stopped_Harbour	Kurla 	down	423	233	3077
+
+2977	10	Departure_Harbour	Nerul 	down
 
 2983	2	Departure_Harbour	Wadala 	down
 
@@ -1524,39 +2100,73 @@ SimTime	TrainNo	TypeOfEvent	Station_Name	 Direction 	NoOfPassengerWalkIn 	NoOfPa
 
 2986	6	Arrival_Central	Kanjurmarg 	down
 
-2986	6	Stopped_Central	Kanjurmarg 	down	15	4	85
+2986	6	Stopped_Central	Kanjurmarg 	down	397	121	2521
 
 2986	6	Departure_Harbour	Mankhurd 	down
 
 2994	4	Departure_Harbour	Kurla 	down
 
+2997	8	Arrival_Central	Mulund 	down
+
+2997	8	Stopped_Central	Mulund 	down	515	77	2453
+
 3000	5	Arrival_Western	Jogeshwari 	up
 
-3000	5	Stopped_Western	Jogeshwari 	up	5	0	35
+3000	5	Stopped_Western	Jogeshwari 	up	61	54	965
+
+3006	7	Arrival_Central	Vidyavihar 	up
 
 3006	6	Departure_Central	Kanjurmarg 	down
 
+3006	7	Stopped_Central	Vidyavihar 	up	358	191	2999
+
 3016	1	Arrival_Western	Dahisar 	up
 
-3016	1	Stopped_Western	Dahisar 	up	37	51	756
+3016	1	Stopped_Western	Dahisar 	up	1297	1742	26307
+
+3017	8	Departure_Central	Mulund 	down
+
+3018	7	Arrival_Western	Santacruz 	up
+
+3018	7	Stopped_Western	Santacruz 	up	104	41	1122
+
+3019	9	Arrival_Western	Matunga Road 	up
+
+3019	9	Stopped_Western	Matunga Road 	up	131	26	933
 
 3020	5	Departure_Western	Jogeshwari 	up
 
+3026	7	Departure_Central	Vidyavihar 	up
+
 3036	1	Departure_Western	Dahisar 	up
+
+3036	8	Arrival_Western	Palghar 	down
+
+3036	8	Stopped_Western	Palghar 	down	153	8	360
+
+3038	7	Departure_Western	Santacruz 	up
+
+3039	9	Departure_Western	Matunga Road 	up
 
 3046	4	Arrival_Central	Vidyavihar 	down
 
-3046	4	Stopped_Central	Vidyavihar 	down	11	4	78
+3046	4	Stopped_Central	Vidyavihar 	down	333	179	2569
 
 3054	3	Arrival_Central	Mulund 	up
 
-3054	3	Stopped_Central	Mulund 	up	2	10	40
+3054	3	Stopped_Central	Mulund 	up	204	200	1958
+
+3056	8	Departure_Western	Palghar 	down
 
 3066	5	Arrival_Central	Kanjurmarg 	up
 
-3066	5	Stopped_Central	Kanjurmarg 	up	2	7	68
+3066	5	Stopped_Central	Kanjurmarg 	up	231	165	2414
 
 3066	4	Departure_Central	Vidyavihar 	down
+
+3071	10	Arrival_Western	Umroli 	down
+
+3071	10	Stopped_Western	Umroli 	down	154	3	313
 
 3074	3	Departure_Central	Mulund 	up
 
@@ -1564,43 +2174,81 @@ SimTime	TrainNo	TypeOfEvent	Station_Name	 Direction 	NoOfPassengerWalkIn 	NoOfPa
 
 3089	4	Arrival_Western	Saphale 	down
 
-3089	4	Stopped_Western	Saphale 	down	2	1	15
+3089	4	Stopped_Western	Saphale 	down	141	17	582
+
+3091	10	Departure_Western	Umroli 	down
+
+3100	10	Arrival_Central	Kalwa 	down
+
+3100	10	Stopped_Central	Kalwa 	down	436	84	2321
 
 3106	2	Arrival_Central	Matunga 	down
 
-3106	2	Stopped_Central	Matunga 	down	68	79	840
+3106	2	Stopped_Central	Matunga 	down	2066	2625	27375
+
+3109	9	Arrival_Harbour	Chunabhatti 	up
+
+3109	9	Stopped_Harbour	Chunabhatti 	up	530	160	3084
+
+3109	9	Arrival_Central	Sion 	up
 
 3109	4	Departure_Western	Saphale 	down
 
+3109	9	Stopped_Central	Sion 	up	451	180	3589
+
 3110	3	Arrival_Western	Kandivali 	up
 
-3110	3	Stopped_Western	Kandivali 	up	2	2	28
+3110	3	Stopped_Western	Kandivali 	up	74	58	935
 
 3114	1	Arrival_Harbour	CBD Belapur 	up
 
-3114	1	Stopped_Harbour	CBD Belapur 	up	22	113	501
+3114	1	Stopped_Harbour	CBD Belapur 	up	881	3530	17612
 
-3126	2	Departure_Central	Matunga 	down
+3117	7	Arrival_Harbour	Govandi 	up
+
+3117	7	Stopped_Harbour	Govandi 	up	439	274	3455
+
+3120	10	Arrival_Harbour	Juinagar 	down
+
+3120	10	Stopped_Harbour	Juinagar 	down	691	142	3131
+
+3120	10	Departure_Central	Kalwa 	down
+
+3124	9	Arrival_Western	Mahim 	up
+
+3124	9	Stopped_Western	Mahim 	up	88	31	990
 
 3126	2	Arrival_Harbour	Sewri 	down
 
-3126	2	Stopped_Harbour	Sewri 	down	59	110	757
+3126	2	Departure_Central	Matunga 	down
+
+3126	2	Stopped_Harbour	Sewri 	down	1813	3134	25510
 
 3126	3	Arrival_Harbour	Juinagar 	up
 
-3126	3	Stopped_Harbour	Juinagar 	up	10	4	67
+3126	3	Stopped_Harbour	Juinagar 	up	317	257	2265
+
+3129	9	Departure_Harbour	Chunabhatti 	up
+
+3129	9	Departure_Central	Sion 	up
 
 3129	6	Arrival_Harbour	Govandi 	down
 
-3129	6	Stopped_Harbour	Govandi 	down	13	5	85
+3129	6	Stopped_Harbour	Govandi 	down	583	142	2707
 
 3130	3	Departure_Western	Kandivali 	up
 
 3134	1	Departure_Harbour	CBD Belapur 	up
 
+3137	7	Departure_Harbour	Govandi 	up
+
 3137	4	Arrival_Harbour	Chunabhatti 	down
 
-3137	4	Stopped_Harbour	Chunabhatti 	down	10	9	95
+3137	4	Stopped_Harbour	Chunabhatti 	down	417	255	3239
+
+3140	10	Departure_Harbour	Juinagar 	down
+
+3144	9	Departure_Western	Mahim 	up
 
 3146	2	Departure_Harbour	Sewri 	down
 
@@ -1608,81 +2256,129 @@ SimTime	TrainNo	TypeOfEvent	Station_Name	 Direction 	NoOfPassengerWalkIn 	NoOfPa
 
 3149	6	Arrival_Central	Vikhroli 	down
 
-3149	6	Stopped_Central	Vikhroli 	down	9	4	90
+3149	6	Stopped_Central	Vikhroli 	down	383	153	2751
 
 3149	6	Departure_Harbour	Govandi 	down
 
 3154	6	Arrival_Western	Kelve Road 	down
 
-3154	6	Stopped_Western	Kelve Road 	down	1	0	8
+3154	6	Stopped_Western	Kelve Road 	down	99	7	349
 
 3157	5	Arrival_Central	Bhandup 	up
 
-3157	5	Stopped_Central	Bhandup 	up	10	5	73
+3157	5	Stopped_Central	Bhandup 	up	259	194	2479
 
 3157	4	Departure_Harbour	Chunabhatti 	down
 
+3169	7	Arrival_Central	Ghatkopar 	up
+
 3169	6	Departure_Central	Vikhroli 	down
+
+3169	7	Stopped_Central	Ghatkopar 	up	320	211	3108
 
 3174	6	Departure_Western	Kelve Road 	down
 
 3177	5	Departure_Central	Bhandup 	up
 
+3185	7	Arrival_Western	Vile Parle 	up
+
+3185	7	Stopped_Western	Vile Parle 	up	78	50	1150
+
+3189	7	Departure_Central	Ghatkopar 	up
+
 3203	2	Arrival_Western	Vaitarna 	down
 
-3203	2	Stopped_Western	Vaitarna 	down	99	12	486
+3203	2	Stopped_Western	Vaitarna 	down	2942	420	15594
+
+3205	7	Departure_Western	Vile Parle 	up
 
 3209	4	Arrival_Central	Kurla 	down
 
-3209	4	Stopped_Central	Kurla 	down	8	7	79
+3209	4	Stopped_Central	Kurla 	down	300	209	2660
 
 3223	2	Departure_Western	Vaitarna 	down
 
 3229	4	Departure_Central	Kurla 	down
 
+3231	8	Arrival_Central	Nahur 	down
+
+3231	8	Stopped_Central	Nahur 	down	398	147	2704
+
+3251	8	Departure_Central	Nahur 	down
+
 3257	1	Arrival_Central	Mumbra 	up
 
-3257	1	Stopped_Central	Mumbra 	up	24	96	568
+3257	1	Stopped_Central	Mumbra 	up	1034	3272	19930
 
 3261	5	Arrival_Western	Goregaon 	up
 
-3261	5	Stopped_Western	Goregaon 	up	2	5	32
+3261	5	Stopped_Western	Goregaon 	up	56	58	963
+
+3263	10	Arrival_Central	Thane 	down
+
+3263	10	Stopped_Central	Thane 	down	498	122	2697
+
+3267	9	Arrival_Western	Bandra 	up
+
+3267	9	Stopped_Western	Bandra 	up	84	43	1031
 
 3269	2	Arrival_Central	Dadar 	down
 
-3269	2	Stopped_Central	Dadar 	down	51	91	800
+3269	2	Stopped_Central	Dadar 	down	1778	2969	26184
+
+3271	9	Arrival_Harbour	Kurla 	up
+
+3271	9	Stopped_Harbour	Kurla 	up	512	185	3411
 
 3277	1	Departure_Central	Mumbra 	up
 
+3280	7	Arrival_Harbour	Mankhurd 	up
+
+3280	7	Stopped_Harbour	Mankhurd 	up	397	334	3518
+
 3280	1	Arrival_Western	Mira Road 	up
 
-3280	1	Stopped_Western	Mira Road 	up	39	49	746
+3280	1	Stopped_Western	Mira Road 	up	1232	1815	25724
 
 3281	5	Departure_Western	Goregaon 	up
 
-3289	2	Departure_Central	Dadar 	down
+3283	10	Arrival_Harbour	Sanpada 	down
+
+3283	10	Stopped_Harbour	Sanpada 	down	681	150	3662
+
+3283	10	Departure_Central	Thane 	down
+
+3287	9	Departure_Western	Bandra 	up
 
 3289	2	Arrival_Harbour	Cotton Green 	down
 
-3289	2	Stopped_Harbour	Cotton Green 	down	45	101	701
+3289	2	Departure_Central	Dadar 	down
+
+3289	2	Stopped_Harbour	Cotton Green 	down	1557	3330	23737
 
 3289	3	Arrival_Harbour	Nerul 	up
 
 3289	3	Arrival_Central	Thane 	up
 
-3289	3	Stopped_Harbour	Nerul 	up	4	9	62
+3289	3	Stopped_Harbour	Nerul 	up	221	318	2168
 
-3289	3	Stopped_Central	Thane 	up	6	2	44
+3289	3	Stopped_Central	Thane 	up	213	226	1945
+
+3291	9	Departure_Harbour	Kurla 	up
 
 3291	6	Arrival_Harbour	Chembur 	down
 
-3291	6	Stopped_Harbour	Chembur 	down	20	7	98
+3291	6	Stopped_Harbour	Chembur 	down	530	187	3050
 
-3300	1	Departure_Western	Mira Road 	up
+3300	7	Departure_Harbour	Mankhurd 	up
 
 3300	4	Arrival_Harbour	 G.T.B.nagar	down
 
-3300	4	Stopped_Harbour	 G.T.B.nagar	down	6	9	92
+3300	1	Departure_Western	Mira Road 	up
+
+3300	4	Stopped_Harbour	 G.T.B.nagar	down	356	285	3310
+
+3303	10	Departure_Harbour	Sanpada 	down
 
 3309	2	Departure_Harbour	Cotton Green 	down
 
@@ -1694,99 +2390,151 @@ SimTime	TrainNo	TypeOfEvent	Station_Name	 Direction 	NoOfPassengerWalkIn 	NoOfPa
 
 3320	5	Arrival_Central	Nahur 	up
 
-3320	5	Stopped_Central	Nahur 	up	4	5	72
+3320	5	Stopped_Central	Nahur 	up	222	255	2446
 
 3320	4	Departure_Harbour	 G.T.B.nagar	down
 
 3327	3	Arrival_Western	Borivali 	up
 
-3327	3	Stopped_Western	Borivali 	up	0	0	28
+3327	3	Stopped_Western	Borivali 	up	60	49	946
 
 3340	5	Departure_Central	Nahur 	up
+
+3343	9	Arrival_Central	Kurla 	up
+
+3343	9	Stopped_Central	Kurla 	up	398	211	3776
 
 3347	3	Departure_Western	Borivali 	up
 
 3349	1	Arrival_Harbour	Kharghar 	up
 
-3349	1	Stopped_Harbour	Kharghar 	up	13	92	422
+3349	1	Stopped_Harbour	Kharghar 	up	625	3553	14684
+
+3359	7	Arrival_Western	Andheri 	up
+
+3359	7	Stopped_Western	Andheri 	up	46	58	1138
 
 3360	2	Arrival_Central	Parel 	down
 
-3360	2	Stopped_Central	Parel 	down	47	92	755
+3360	2	Stopped_Central	Parel 	down	1649	3060	24773
+
+3363	9	Arrival_Harbour	Tilak Nagar 	up
+
+3363	9	Stopped_Harbour	Tilak Nagar 	up	487	237	3661
+
+3363	9	Departure_Central	Kurla 	up
 
 3369	1	Departure_Harbour	Kharghar 	up
 
 3371	5	Arrival_Harbour	Vashi 	up
 
-3371	5	Stopped_Harbour	Vashi 	up	9	3	77
+3371	5	Stopped_Harbour	Vashi 	up	364	235	2629
+
+3374	10	Arrival_Harbour	Vashi 	down
+
+3374	10	Stopped_Harbour	Vashi 	down	625	204	4083
+
+3379	7	Departure_Western	Andheri 	up
 
 3380	2	Arrival_Harbour	Reay Road 	down
 
 3380	2	Departure_Central	Parel 	down
 
-3380	2	Stopped_Harbour	Reay Road 	down	39	105	635
+3380	2	Stopped_Harbour	Reay Road 	down	1282	3525	21494
 
 3383	6	Arrival_Central	Ghatkopar 	down
 
-3383	6	Stopped_Central	Ghatkopar 	down	9	6	93
+3383	9	Departure_Harbour	Tilak Nagar 	up
+
+3383	6	Stopped_Central	Ghatkopar 	down	404	186	2969
 
 3383	6	Arrival_Harbour	Tilak Nagar 	down
 
-3383	6	Stopped_Harbour	Tilak Nagar 	down	12	6	104
+3383	6	Stopped_Harbour	Tilak Nagar 	down	546	229	3367
 
 3391	5	Departure_Harbour	Vashi 	up
 
+3394	10	Departure_Harbour	Vashi 	down
+
+3394	8	Arrival_Central	Bhandup 	down
+
+3394	8	Stopped_Central	Bhandup 	down	566	160	3110
+
 3400	2	Departure_Harbour	Reay Road 	down
+
+3403	7	Arrival_Central	Vikhroli 	up
 
 3403	6	Departure_Central	Ghatkopar 	down
 
+3403	7	Stopped_Central	Vikhroli 	up	386	231	3263
+
 3403	6	Departure_Harbour	Tilak Nagar 	down
+
+3404	9	Arrival_Western	Khar Road 	up
+
+3404	9	Stopped_Western	Khar Road 	up	89	30	1090
+
+3414	8	Departure_Central	Bhandup 	down
+
+3423	7	Departure_Central	Vikhroli 	up
+
+3424	9	Departure_Western	Khar Road 	up
 
 3436	2	Arrival_Harbour	Dockyard Road 	down
 
-3436	2	Stopped_Harbour	Dockyard Road 	down	31	118	548
+3436	2	Stopped_Harbour	Dockyard Road 	down	1003	3770	18727
 
 3443	4	Arrival_Central	Sion 	down
 
-3443	4	Stopped_Central	Sion 	down	9	5	83
+3443	4	Stopped_Central	Sion 	down	288	250	2698
+
+3451	3	Arrival_Harbour	Seawoods-Darave 	up
 
 3451	2	Arrival_Central	Currey Road 	down
 
 3451	3	Arrival_Central	Kalwa 	up
 
-3451	2	Stopped_Central	Currey Road 	down	44	100	699
+3451	3	Stopped_Harbour	Seawoods-Darave 	up	197	325	2040
 
-3451	3	Stopped_Central	Kalwa 	up	5	9	40
+3451	2	Stopped_Central	Currey Road 	down	1349	3272	22850
 
-3451	3	Arrival_Harbour	Seawoods-Darave 	up
+3451	3	Stopped_Central	Kalwa 	up	173	273	1845
 
-3451	3	Stopped_Harbour	Seawoods-Darave 	up	7	8	61
+3454	9	Arrival_Harbour	Chembur 	up
+
+3454	9	Stopped_Harbour	Chembur 	up	601	297	3965
 
 3454	5	Arrival_Western	Malad 	up
 
-3454	5	Stopped_Western	Malad 	up	2	1	33
+3454	5	Stopped_Western	Malad 	up	63	51	975
 
 3456	2	Departure_Harbour	Dockyard Road 	down
 
-3463	4	Departure_Central	Sion 	down
-
 3463	4	Arrival_Harbour	Wadala 	down
 
-3463	4	Stopped_Harbour	Wadala 	down	4	16	80
+3463	4	Departure_Central	Sion 	down
+
+3463	4	Stopped_Harbour	Wadala 	down	362	361	3311
 
 3463	5	Arrival_Harbour	Sanpada 	up
 
-3463	5	Stopped_Harbour	Sanpada 	up	8	5	80
+3463	5	Stopped_Harbour	Sanpada 	up	341	292	2678
+
+3466	8	Arrival_Harbour	Mankhurd 	down
+
+3466	8	Stopped_Harbour	Mankhurd 	down	668	169	3256
+
+3471	2	Departure_Central	Currey Road 	down
 
 3471	3	Departure_Central	Kalwa 	up
 
 3471	3	Departure_Harbour	Seawoods-Darave 	up
 
-3471	2	Departure_Central	Currey Road 	down
+3474	9	Departure_Harbour	Chembur 	up
 
 3474	6	Arrival_Harbour	Kurla 	down
 
-3474	6	Stopped_Harbour	Kurla 	down	17	9	112
+3474	6	Stopped_Harbour	Kurla 	down	466	309	3524
 
 3474	5	Departure_Western	Malad 	up
 
@@ -1794,89 +2542,141 @@ SimTime	TrainNo	TypeOfEvent	Station_Name	 Direction 	NoOfPassengerWalkIn 	NoOfPa
 
 3483	5	Departure_Harbour	Sanpada 	up
 
+3486	8	Arrival_Central	Kanjurmarg 	down
+
+3486	8	Departure_Harbour	Mankhurd 	down
+
+3486	8	Stopped_Central	Kanjurmarg 	down	443	186	3367
+
 3491	2	Arrival_Harbour	Sandhurst Road 	down
 
-3491	2	Stopped_Harbour	Sandhurst Road 	down	25	101	472
+3491	2	Stopped_Harbour	Sandhurst Road 	down	696	3750	15673
 
 3491	1	Arrival_Central	Diwa 	up
 
-3491	1	Stopped_Central	Diwa 	up	29	107	490
+3491	1	Stopped_Central	Diwa 	up	905	3341	17494
 
 3494	6	Departure_Harbour	Kurla 	down
+
+3497	10	Arrival_Central	Mulund 	down
+
+3497	10	Stopped_Central	Mulund 	down	627	147	3177
+
+3500	7	Arrival_Western	Jogeshwari 	up
+
+3500	7	Stopped_Western	Jogeshwari 	up	76	60	1154
+
+3506	9	Arrival_Central	Vidyavihar 	up
+
+3506	8	Departure_Central	Kanjurmarg 	down
+
+3506	9	Stopped_Central	Vidyavihar 	up	492	240	4028
 
 3511	1	Arrival_Harbour	Mansarovar 	up
 
 3511	2	Departure_Harbour	Sandhurst Road 	down
 
-3511	1	Stopped_Harbour	Mansarovar 	up	7	97	332
+3511	1	Stopped_Harbour	Mansarovar 	up	358	3617	11425
 
 3511	1	Departure_Central	Diwa 	up
 
 3516	3	Arrival_Western	Dahisar 	up
 
-3516	3	Stopped_Western	Dahisar 	up	2	1	29
+3516	3	Stopped_Western	Dahisar 	up	41	71	916
+
+3517	10	Departure_Central	Mulund 	down
+
+3518	9	Arrival_Western	Santacruz 	up
+
+3518	9	Stopped_Western	Santacruz 	up	41	41	1090
+
+3520	7	Departure_Western	Jogeshwari 	up
+
+3526	9	Departure_Central	Vidyavihar 	up
 
 3531	1	Departure_Harbour	Mansarovar 	up
 
+3536	10	Arrival_Western	Palghar 	down
+
 3536	3	Departure_Western	Dahisar 	up
+
+3536	10	Stopped_Western	Palghar 	down	90	9	394
+
+3538	9	Departure_Western	Santacruz 	up
 
 3539	1	Arrival_Western	Bhayandar 	up
 
-3539	1	Stopped_Western	Bhayandar 	up	25	55	716
+3539	1	Stopped_Western	Bhayandar 	up	1116	1864	24976
 
 3543	2	Arrival_Central	Chinchpokli 	down
 
-3543	2	Stopped_Central	Chinchpokli 	down	33	95	637
+3543	2	Stopped_Central	Chinchpokli 	down	1168	3401	20617
 
 3546	6	Arrival_Central	Vidyavihar 	down
 
-3546	6	Stopped_Central	Vidyavihar 	down	21	5	109
+3546	6	Stopped_Central	Vidyavihar 	down	473	224	3218
 
 3554	5	Arrival_Central	Mulund 	up
 
-3554	5	Stopped_Central	Mulund 	up	10	8	74
+3554	5	Stopped_Central	Mulund 	up	262	245	2463
+
+3556	10	Departure_Western	Palghar 	down
 
 3559	1	Departure_Western	Bhayandar 	up
 
 3563	2	Departure_Central	Chinchpokli 	down
 
+3566	7	Arrival_Central	Kanjurmarg 	up
+
 3566	6	Departure_Central	Vidyavihar 	down
+
+3566	7	Stopped_Central	Kanjurmarg 	up	454	265	3452
 
 3574	5	Departure_Central	Mulund 	up
 
 3583	2	Arrival_Harbour	Masjid Bunder 	down
 
-3583	2	Stopped_Harbour	Masjid Bunder 	down	6	123	355
+3583	2	Stopped_Harbour	Masjid Bunder 	down	341	3838	12176
+
+3586	7	Departure_Central	Kanjurmarg 	up
 
 3589	6	Arrival_Western	Saphale 	down
 
-3589	6	Stopped_Western	Saphale 	down	7	0	15
+3589	6	Stopped_Western	Saphale 	down	114	10	453
 
 3603	2	Departure_Harbour	Masjid Bunder 	down
 
 3606	4	Arrival_Central	Matunga 	down
 
-3606	4	Stopped_Central	Matunga 	down	13	7	89
+3606	4	Stopped_Central	Matunga 	down	366	269	2795
 
 3609	6	Departure_Western	Saphale 	down
 
 3610	5	Arrival_Western	Kandivali 	up
 
-3610	5	Stopped_Western	Kandivali 	up	2	2	33
+3610	5	Stopped_Western	Kandivali 	up	42	59	958
 
 3614	3	Arrival_Harbour	CBD Belapur 	up
 
-3614	3	Stopped_Harbour	CBD Belapur 	up	8	7	62
+3614	3	Stopped_Harbour	CBD Belapur 	up	203	358	1885
+
+3617	9	Arrival_Harbour	Govandi 	up
+
+3617	9	Stopped_Harbour	Govandi 	up	628	303	4290
 
 3626	4	Arrival_Harbour	Sewri 	down
 
 3626	4	Departure_Central	Matunga 	down
 
-3626	4	Stopped_Harbour	Sewri 	down	11	12	79
+3626	4	Stopped_Harbour	Sewri 	down	388	407	3292
 
 3626	5	Arrival_Harbour	Juinagar 	up
 
-3626	5	Stopped_Harbour	Juinagar 	up	12	9	83
+3626	5	Stopped_Harbour	Juinagar 	up	337	300	2715
+
+3629	8	Arrival_Harbour	Govandi 	down
+
+3629	8	Stopped_Harbour	Govandi 	down	750	218	3788
 
 3630	5	Departure_Western	Kandivali 	up
 
@@ -1884,43 +2684,87 @@ SimTime	TrainNo	TypeOfEvent	Station_Name	 Direction 	NoOfPassengerWalkIn 	NoOfPa
 
 3634	2	Arrival_Central	Byculla 	down
 
-3634	2	Stopped_Central	Byculla 	down	20	118	539
+3634	2	Stopped_Central	Byculla 	down	870	3612	17875
+
+3637	9	Departure_Harbour	Govandi 	up
 
 3637	6	Arrival_Harbour	Chunabhatti 	down
 
-3637	6	Stopped_Harbour	Chunabhatti 	down	16	13	115
+3637	6	Stopped_Harbour	Chunabhatti 	down	490	305	3709
 
 3646	4	Departure_Harbour	Sewri 	down
 
 3646	5	Departure_Harbour	Juinagar 	up
 
+3649	8	Arrival_Central	Vikhroli 	down
+
+3649	8	Departure_Harbour	Govandi 	down
+
+3649	8	Stopped_Central	Vikhroli 	down	618	239	3746
+
+3654	8	Arrival_Western	Kelve Road 	down
+
+3654	8	Stopped_Western	Kelve Road 	down	119	14	465
+
 3654	2	Departure_Central	Byculla 	down
+
+3657	7	Arrival_Central	Bhandup 	up
+
+3657	7	Stopped_Central	Bhandup 	up	433	324	3561
 
 3657	6	Departure_Harbour	Chunabhatti 	down
 
+3669	9	Arrival_Central	Ghatkopar 	up
+
+3669	8	Departure_Central	Vikhroli 	down
+
+3669	9	Stopped_Central	Ghatkopar 	up	620	283	4365
+
+3674	8	Departure_Western	Kelve Road 	down
+
+3677	7	Departure_Central	Bhandup 	up
+
+3685	9	Arrival_Western	Vile Parle 	up
+
+3685	9	Stopped_Western	Vile Parle 	up	86	49	1127
+
+3689	9	Departure_Central	Ghatkopar 	up
+
 3703	4	Arrival_Western	Vaitarna 	down
 
-3703	4	Stopped_Western	Vaitarna 	down	2	1	16
+3703	4	Stopped_Western	Vaitarna 	down	109	27	664
+
+3705	9	Departure_Western	Vile Parle 	up
 
 3709	6	Arrival_Central	Kurla 	down
 
-3709	6	Stopped_Central	Kurla 	down	12	11	110
+3709	6	Stopped_Central	Kurla 	down	488	260	3446
 
 3723	4	Departure_Western	Vaitarna 	down
 
 3729	6	Departure_Central	Kurla 	down
 
+3731	10	Arrival_Central	Nahur 	down
+
+3731	10	Stopped_Central	Nahur 	down	730	178	3729
+
 3746	2	Arrival_Harbour	CST	down
 
 3746	1	Arrival_Harbour	Khandeshwar 	up
 
-3746	2	Stopped_Harbour	CST	down	0	114	241
+3746	2	Stopped_Harbour	CST	down	0	3745	8431
 
-3746	1	Stopped_Harbour	Khandeshwar 	up	0	102	230
+3746	1	Stopped_Harbour	Khandeshwar 	up	0	3526	7899
+
+3751	10	Departure_Central	Nahur 	down
 
 3757	3	Arrival_Central	Mumbra 	up
 
-3757	3	Stopped_Central	Mumbra 	up	8	5	43
+3757	3	Stopped_Central	Mumbra 	up	185	270	1760
+
+3761	7	Arrival_Western	Goregaon 	up
+
+3761	7	Stopped_Western	Goregaon 	up	58	62	1150
 
 3766	2	Departure_Harbour	CST	down
 
@@ -1928,39 +2772,51 @@ SimTime	TrainNo	TypeOfEvent	Station_Name	 Direction 	NoOfPassengerWalkIn 	NoOfPa
 
 3769	4	Arrival_Central	Dadar 	down
 
-3769	4	Stopped_Central	Dadar 	down	6	14	81
+3769	4	Stopped_Central	Dadar 	down	288	306	2777
 
 3777	3	Departure_Central	Mumbra 	up
 
+3780	9	Arrival_Harbour	Mankhurd 	up
+
+3780	9	Stopped_Harbour	Mankhurd 	up	640	376	4554
+
 3780	3	Arrival_Western	Mira Road 	up
 
-3780	3	Stopped_Western	Mira Road 	up	1	5	25
+3780	3	Stopped_Western	Mira Road 	up	54	67	903
+
+3781	7	Departure_Western	Goregaon 	up
 
 3789	5	Arrival_Central	Thane 	up
 
-3789	5	Stopped_Central	Thane 	up	5	10	69
-
-3789	4	Departure_Central	Dadar 	down
+3789	5	Stopped_Central	Thane 	up	232	275	2420
 
 3789	4	Arrival_Harbour	Cotton Green 	down
 
-3789	4	Stopped_Harbour	Cotton Green 	down	7	6	80
+3789	4	Departure_Central	Dadar 	down
+
+3789	4	Stopped_Harbour	Cotton Green 	down	337	450	3179
 
 3789	5	Arrival_Harbour	Nerul 	up
 
-3789	5	Stopped_Harbour	Nerul 	up	6	10	79
+3789	5	Stopped_Harbour	Nerul 	up	320	359	2676
+
+3791	8	Arrival_Harbour	Chembur 	down
+
+3791	8	Stopped_Harbour	Chembur 	down	794	263	4319
 
 3797	2	Arrival_Central	Sandhurst Road 	down
 
-3797	2	Stopped_Central	Sandhurst Road 	down	20	106	453
+3797	2	Stopped_Central	Sandhurst Road 	down	648	3662	14861
 
 3797	1	Arrival_Central	Kopar 	up
 
-3797	1	Stopped_Central	Kopar 	up	19	91	418
+3797	1	Stopped_Central	Kopar 	up	654	3553	14595
+
+3800	9	Departure_Harbour	Mankhurd 	up
 
 3800	6	Arrival_Harbour	 G.T.B.nagar	down
 
-3800	6	Stopped_Harbour	 G.T.B.nagar	down	15	9	121
+3800	6	Stopped_Harbour	 G.T.B.nagar	down	505	349	3865
 
 3800	3	Departure_Western	Mira Road 	up
 
@@ -1970,19 +2826,27 @@ SimTime	TrainNo	TypeOfEvent	Station_Name	 Direction 	NoOfPassengerWalkIn 	NoOfPa
 
 3809	5	Departure_Harbour	Nerul 	up
 
+3811	8	Departure_Harbour	Chembur 	down
+
 3817	2	Departure_Central	Sandhurst Road 	down
 
 3817	1	Departure_Central	Kopar 	up
+
+3820	7	Arrival_Central	Nahur 	up
+
+3820	7	Stopped_Central	Nahur 	up	353	338	3576
 
 3820	6	Departure_Harbour	 G.T.B.nagar	down
 
 3826	2	Arrival_Western	Virar 	down
 
-3826	2	Stopped_Western	Virar 	down	84	20	550
+3826	2	Stopped_Western	Virar 	down	2919	540	17973
 
 3827	5	Arrival_Western	Borivali 	up
 
-3827	5	Stopped_Western	Borivali 	up	0	1	32
+3827	5	Stopped_Western	Borivali 	up	24	56	926
+
+3840	7	Departure_Central	Nahur 	up
 
 3846	2	Departure_Western	Virar 	down
 
@@ -1990,71 +2854,119 @@ SimTime	TrainNo	TypeOfEvent	Station_Name	 Direction 	NoOfPassengerWalkIn 	NoOfPa
 
 3849	3	Arrival_Harbour	Kharghar 	up
 
-3849	3	Stopped_Harbour	Kharghar 	up	4	12	54
+3849	3	Stopped_Harbour	Kharghar 	up	139	397	1627
+
+3859	9	Arrival_Western	Andheri 	up
+
+3859	9	Stopped_Western	Andheri 	up	37	55	1109
 
 3860	4	Arrival_Central	Parel 	down
 
-3860	4	Stopped_Central	Parel 	down	6	9	78
+3860	4	Stopped_Central	Parel 	down	297	317	2757
 
 3869	3	Departure_Harbour	Kharghar 	up
+
+3871	7	Arrival_Harbour	Vashi 	up
+
+3871	7	Stopped_Harbour	Vashi 	up	487	327	3678
+
+3879	9	Departure_Western	Andheri 	up
 
 3880	4	Arrival_Harbour	Reay Road 	down
 
 3880	4	Departure_Central	Parel 	down
 
-3880	4	Stopped_Harbour	Reay Road 	down	4	6	78
+3880	4	Stopped_Harbour	Reay Road 	down	230	492	2917
+
+3883	8	Arrival_Central	Ghatkopar 	down
+
+3883	8	Arrival_Harbour	Tilak Nagar 	down
+
+3883	8	Stopped_Central	Ghatkopar 	down	538	251	4033
+
+3883	8	Stopped_Harbour	Tilak Nagar 	down	573	347	4545
 
 3889	2	Arrival_Central	Masjid Bunder 	down
 
-3889	2	Stopped_Central	Masjid Bunder 	down	5	106	352
+3889	2	Stopped_Central	Masjid Bunder 	down	322	3684	11499
+
+3891	7	Departure_Harbour	Vashi 	up
 
 3894	1	Arrival_Western	Naigaon 	up
 
-3894	1	Stopped_Western	Naigaon 	up	30	47	699
+3894	1	Stopped_Western	Naigaon 	up	1002	1972	24006
+
+3894	10	Arrival_Central	Bhandup 	down
+
+3894	10	Stopped_Central	Bhandup 	down	800	195	4334
 
 3900	4	Departure_Harbour	Reay Road 	down
 
+3903	8	Departure_Central	Ghatkopar 	down
+
+3903	9	Arrival_Central	Vikhroli 	up
+
+3903	8	Departure_Harbour	Tilak Nagar 	down
+
+3903	9	Stopped_Central	Vikhroli 	up	544	334	4575
+
 3909	2	Arrival_Harbour	Masjid Bunder 	up
 
-3909	2	Stopped_Harbour	Masjid Bunder 	up	96	32	305
+3909	2	Stopped_Harbour	Masjid Bunder 	up	3378	1084	10725
 
 3909	2	Departure_Central	Masjid Bunder 	down
 
 3914	1	Departure_Western	Naigaon 	up
 
+3914	10	Departure_Central	Bhandup 	down
+
+3923	9	Departure_Central	Vikhroli 	up
+
 3929	2	Departure_Harbour	Masjid Bunder 	up
 
 3936	4	Arrival_Harbour	Dockyard Road 	down
 
-3936	4	Stopped_Harbour	Dockyard Road 	down	6	14	70
+3936	4	Stopped_Harbour	Dockyard Road 	down	205	510	2612
 
 3943	6	Arrival_Central	Sion 	down
 
-3943	6	Stopped_Central	Sion 	down	9	10	109
+3943	6	Stopped_Central	Sion 	down	414	301	3559
 
 3951	5	Arrival_Central	Kalwa 	up
 
-3951	5	Stopped_Central	Kalwa 	up	5	6	68
+3951	5	Stopped_Central	Kalwa 	up	230	343	2307
 
 3951	4	Arrival_Central	Currey Road 	down
 
 3951	5	Arrival_Harbour	Seawoods-Darave 	up
 
-3951	4	Stopped_Central	Currey Road 	down	6	9	75
+3951	4	Stopped_Central	Currey Road 	down	230	370	2617
 
-3951	5	Stopped_Harbour	Seawoods-Darave 	up	9	12	76
+3951	5	Stopped_Harbour	Seawoods-Darave 	up	201	421	2456
+
+3954	7	Arrival_Western	Malad 	up
+
+3954	7	Stopped_Western	Malad 	up	68	58	1160
 
 3956	4	Departure_Harbour	Dockyard Road 	down
 
 3960	1	Arrival_Central	Dombivli 	up
 
-3960	1	Stopped_Central	Dombivli 	up	19	106	331
+3960	1	Stopped_Central	Dombivli 	up	317	3562	11350
 
 3963	6	Departure_Central	Sion 	down
 
+3963	7	Arrival_Harbour	Sanpada 	up
+
 3963	6	Arrival_Harbour	Wadala 	down
 
-3963	6	Stopped_Harbour	Wadala 	down	9	15	115
+3963	7	Stopped_Harbour	Sanpada 	up	343	380	3641
+
+3963	6	Stopped_Harbour	Wadala 	down	327	419	3773
+
+3966	10	Arrival_Harbour	Mankhurd 	down
+
+3966	10	Stopped_Harbour	Mankhurd 	down	725	236	4572
 
 3971	5	Departure_Central	Kalwa 	up
 
@@ -2062,39 +2974,63 @@ SimTime	TrainNo	TypeOfEvent	Station_Name	 Direction 	NoOfPassengerWalkIn 	NoOfPa
 
 3971	5	Departure_Harbour	Seawoods-Darave 	up
 
+3974	8	Arrival_Harbour	Kurla 	down
+
+3974	8	Stopped_Harbour	Kurla 	down	468	377	4636
+
+3974	7	Departure_Western	Malad 	up
+
 3980	1	Arrival_Harbour	Panvel 	up
 
-3980	1	Stopped_Harbour	Panvel 	up	0	0	230
+3980	1	Stopped_Harbour	Panvel 	up	0	0	7899
 
 3980	1	Departure_Central	Dombivli 	up
 
 3983	6	Departure_Harbour	Wadala 	down
 
+3983	7	Departure_Harbour	Sanpada 	up
+
+3986	10	Departure_Harbour	Mankhurd 	down
+
+3986	10	Arrival_Central	Kanjurmarg 	down
+
+3986	10	Stopped_Central	Kanjurmarg 	down	730	287	4777
+
 3991	3	Arrival_Central	Diwa 	up
 
 3991	4	Arrival_Harbour	Sandhurst Road 	down
 
-3991	3	Stopped_Central	Diwa 	up	6	9	40
+3991	3	Stopped_Central	Diwa 	up	170	310	1620
 
-3991	4	Stopped_Harbour	Sandhurst Road 	down	5	13	62
+3991	4	Stopped_Harbour	Sandhurst Road 	down	109	555	2166
 
-4000	1	Departure_Harbour	Panvel 	up
+3994	8	Departure_Harbour	Kurla 	down
 
 4000	2	Arrival_Harbour	Sandhurst Road 	up
 
-4000	2	Stopped_Harbour	Sandhurst Road 	up	131	25	411
+4000	9	Arrival_Western	Jogeshwari 	up
+
+4000	1	Departure_Harbour	Panvel 	up
+
+4000	2	Stopped_Harbour	Sandhurst Road 	up	3320	1019	13026
+
+4000	9	Stopped_Western	Jogeshwari 	up	84	56	1137
+
+4006	10	Departure_Central	Kanjurmarg 	down
 
 4011	3	Arrival_Harbour	Mansarovar 	up
 
-4011	3	Stopped_Harbour	Mansarovar 	up	1	11	44
-
-4011	3	Departure_Central	Diwa 	up
+4011	3	Stopped_Harbour	Mansarovar 	up	42	431	1238
 
 4011	4	Departure_Harbour	Sandhurst Road 	down
 
+4011	3	Departure_Central	Diwa 	up
+
 4016	5	Arrival_Western	Dahisar 	up
 
-4016	5	Stopped_Western	Dahisar 	up	3	2	33
+4016	5	Stopped_Western	Dahisar 	up	59	47	938
+
+4020	9	Departure_Western	Jogeshwari 	up
 
 4020	2	Departure_Harbour	Sandhurst Road 	up
 
@@ -2104,95 +3040,165 @@ SimTime	TrainNo	TypeOfEvent	Station_Name	 Direction 	NoOfPassengerWalkIn 	NoOfPa
 
 4039	3	Arrival_Western	Bhayandar 	up
 
-4039	3	Stopped_Western	Bhayandar 	up	1	0	26
+4039	3	Stopped_Western	Bhayandar 	up	32	57	878
 
 4043	4	Arrival_Central	Chinchpokli 	down
 
-4043	4	Stopped_Central	Chinchpokli 	down	4	13	66
+4043	4	Stopped_Central	Chinchpokli 	down	194	416	2395
+
+4046	8	Arrival_Central	Vidyavihar 	down
+
+4046	8	Stopped_Central	Vidyavihar 	down	459	312	4180
 
 4051	2	Arrival_Central	CST	down
 
-4051	2	Stopped_Central	CST	down	0	104	248
+4051	2	Stopped_Central	CST	down	0	3531	7968
 
 4051	1	Arrival_Central	Thakurli 	up
 
-4051	1	Stopped_Central	Thakurli 	up	0	96	235
+4051	1	Stopped_Central	Thakurli 	up	0	3477	7873
+
+4054	7	Arrival_Central	Mulund 	up
+
+4054	7	Stopped_Central	Mulund 	up	380	376	3580
 
 4056	2	Arrival_Harbour	Dockyard Road 	up
 
-4056	2	Stopped_Harbour	Dockyard Road 	up	90	30	471
+4056	2	Stopped_Harbour	Dockyard Road 	up	3117	1000	15143
 
 4059	3	Departure_Western	Bhayandar 	up
 
 4063	4	Departure_Central	Chinchpokli 	down
 
+4066	9	Arrival_Central	Kanjurmarg 	up
+
+4066	8	Departure_Central	Vidyavihar 	down
+
+4066	9	Stopped_Central	Kanjurmarg 	up	539	373	4741
+
 4071	2	Departure_Central	CST	down
 
 4071	1	Departure_Central	Thakurli 	up
+
+4074	7	Departure_Central	Mulund 	up
 
 4076	2	Departure_Harbour	Dockyard Road 	up
 
 4083	4	Arrival_Harbour	Masjid Bunder 	down
 
-4083	4	Stopped_Harbour	Masjid Bunder 	down	1	18	45
+4083	4	Stopped_Harbour	Masjid Bunder 	down	38	550	1654
+
+4086	9	Departure_Central	Kanjurmarg 	up
+
+4089	8	Arrival_Western	Saphale 	down
+
+4089	8	Stopped_Western	Saphale 	down	73	13	525
 
 4103	4	Departure_Harbour	Masjid Bunder 	down
 
 4106	6	Arrival_Central	Matunga 	down
 
-4106	6	Stopped_Central	Matunga 	down	9	15	103
+4106	6	Stopped_Central	Matunga 	down	443	367	3635
+
+4109	8	Departure_Western	Saphale 	down
+
+4110	7	Arrival_Western	Kandivali 	up
+
+4110	7	Stopped_Western	Kandivali 	up	34	63	1131
 
 4111	2	Arrival_Harbour	Reay Road 	up
 
-4111	2	Stopped_Harbour	Reay Road 	up	104	31	544
+4111	2	Stopped_Harbour	Reay Road 	up	3030	1014	17159
 
 4114	5	Arrival_Harbour	CBD Belapur 	up
 
-4114	5	Stopped_Harbour	CBD Belapur 	up	2	16	62
+4114	5	Stopped_Harbour	CBD Belapur 	up	107	412	2151
 
 4126	6	Departure_Central	Matunga 	down
 
+4126	7	Arrival_Harbour	Juinagar 	up
+
 4126	6	Arrival_Harbour	Sewri 	down
 
-4126	6	Stopped_Harbour	Sewri 	down	11	13	113
+4126	7	Stopped_Harbour	Juinagar 	up	203	400	3444
+
+4126	6	Stopped_Harbour	Sewri 	down	197	430	3540
+
+4129	10	Arrival_Harbour	Govandi 	down
+
+4129	10	Stopped_Harbour	Govandi 	down	477	297	4752
+
+4130	7	Departure_Western	Kandivali 	up
 
 4131	2	Departure_Harbour	Reay Road 	up
 
-4134	4	Arrival_Central	Byculla 	down
-
 4134	5	Departure_Harbour	CBD Belapur 	up
 
-4134	4	Stopped_Central	Byculla 	down	2	10	58
+4134	4	Arrival_Central	Byculla 	down
+
+4134	4	Stopped_Central	Byculla 	down	151	425	2121
+
+4137	8	Arrival_Harbour	Chunabhatti 	down
+
+4137	8	Stopped_Harbour	Chunabhatti 	down	322	422	4536
 
 4141	2	Arrival_Western	Nalasopara 	down
 
-4141	2	Stopped_Western	Nalasopara 	down	91	15	626
+4141	2	Stopped_Western	Nalasopara 	down	2798	613	20158
+
+4146	7	Departure_Harbour	Juinagar 	up
 
 4146	6	Departure_Harbour	Sewri 	down
 
+4149	10	Departure_Harbour	Govandi 	down
+
+4149	10	Arrival_Central	Vikhroli 	down
+
+4149	10	Stopped_Central	Vikhroli 	down	639	297	5119
+
+4154	10	Arrival_Western	Kelve Road 	down
+
+4154	10	Stopped_Western	Kelve Road 	down	90	11	473
+
 4154	4	Departure_Central	Byculla 	down
+
+4157	9	Arrival_Central	Bhandup 	up
+
+4157	9	Stopped_Central	Bhandup 	up	420	415	4746
+
+4157	8	Departure_Harbour	Chunabhatti 	down
 
 4161	2	Departure_Western	Nalasopara 	down
 
+4169	10	Departure_Central	Vikhroli 	down
+
+4174	10	Departure_Western	Kelve Road 	down
+
+4177	9	Departure_Central	Bhandup 	up
+
 4199	1	Arrival_Western	Vasai 	up
 
-4199	1	Stopped_Western	Vasai 	up	29	73	655
+4199	1	Stopped_Western	Vasai 	up	964	2042	22928
 
 4203	2	Arrival_Harbour	Cotton Green 	up
 
-4203	2	Stopped_Harbour	Cotton Green 	up	97	31	610
+4203	2	Stopped_Harbour	Cotton Green 	up	2757	1032	18884
 
 4203	6	Arrival_Western	Vaitarna 	down
 
-4203	6	Stopped_Western	Vaitarna 	down	6	0	21
+4203	6	Stopped_Western	Vaitarna 	down	113	15	551
 
-4214	2	Arrival_Central	Masjid Bunder 	up
+4209	8	Arrival_Central	Kurla 	down
+
+4209	8	Stopped_Central	Kurla 	down	471	366	4285
 
 4214	1	Arrival_Harbour	Khandeshwar 	down
 
-4214	2	Stopped_Central	Masjid Bunder 	up	110	22	336
+4214	2	Arrival_Central	Masjid Bunder 	up
 
-4214	1	Stopped_Harbour	Khandeshwar 	down	294	33	491
+4214	1	Stopped_Harbour	Khandeshwar 	down	9303	1312	15890
+
+4214	2	Stopped_Central	Masjid Bunder 	up	3348	1046	10270
 
 4219	1	Departure_Western	Vasai 	up
 
@@ -2200,21 +3206,27 @@ SimTime	TrainNo	TypeOfEvent	Station_Name	 Direction 	NoOfPassengerWalkIn 	NoOfPa
 
 4223	6	Departure_Western	Vaitarna 	down
 
-4234	1	Departure_Harbour	Khandeshwar 	down
+4229	8	Departure_Central	Kurla 	down
 
 4234	2	Departure_Central	Masjid Bunder 	up
 
+4234	1	Departure_Harbour	Khandeshwar 	down
+
 4246	3	Arrival_Harbour	Khandeshwar 	up
 
-4246	3	Stopped_Harbour	Khandeshwar 	up	0	17	27
+4246	3	Stopped_Harbour	Khandeshwar 	up	0	407	831
 
 4246	4	Arrival_Harbour	CST	down
 
-4246	4	Stopped_Harbour	CST	down	0	13	32
+4246	4	Stopped_Harbour	CST	down	0	540	1114
 
 4257	5	Arrival_Central	Mumbra 	up
 
-4257	5	Stopped_Central	Mumbra 	up	1	6	63
+4257	5	Stopped_Central	Mumbra 	up	198	366	2139
+
+4261	9	Arrival_Western	Goregaon 	up
+
+4261	9	Stopped_Western	Goregaon 	up	75	64	1148
 
 4266	3	Departure_Harbour	Khandeshwar 	up
 
@@ -2222,65 +3234,107 @@ SimTime	TrainNo	TypeOfEvent	Station_Name	 Direction 	NoOfPassengerWalkIn 	NoOfPa
 
 4269	6	Arrival_Central	Dadar 	down
 
-4269	6	Stopped_Central	Dadar 	down	5	14	94
+4269	6	Stopped_Central	Dadar 	down	349	379	3605
 
 4277	5	Departure_Central	Mumbra 	up
 
 4280	5	Arrival_Western	Mira Road 	up
 
-4280	5	Stopped_Western	Mira Road 	up	1	0	34
+4280	5	Stopped_Western	Mira Road 	up	59	64	933
+
+4281	9	Departure_Western	Goregaon 	up
+
+4289	7	Arrival_Central	Thane 	up
 
 4289	6	Departure_Central	Dadar 	down
 
+4289	7	Stopped_Central	Thane 	up	262	431	3411
+
 4289	6	Arrival_Harbour	Cotton Green 	down
 
-4289	6	Stopped_Harbour	Cotton Green 	down	2	14	101
+4289	7	Arrival_Harbour	Nerul 	up
+
+4289	6	Stopped_Harbour	Cotton Green 	down	149	470	3219
+
+4289	7	Stopped_Harbour	Nerul 	up	158	453	3149
+
+4291	10	Arrival_Harbour	Chembur 	down
+
+4291	10	Stopped_Harbour	Chembur 	down	343	363	4732
 
 4297	3	Arrival_Central	Kopar 	up
 
-4297	3	Stopped_Central	Kopar 	up	5	10	35
+4297	3	Stopped_Central	Kopar 	up	89	347	1362
 
 4297	4	Arrival_Central	Sandhurst Road 	down
 
-4297	4	Stopped_Central	Sandhurst Road 	down	8	10	56
+4297	4	Stopped_Central	Sandhurst Road 	down	126	448	1799
+
+4300	8	Arrival_Harbour	 G.T.B.nagar	down
+
+4300	8	Stopped_Harbour	 G.T.B.nagar	down	239	447	4328
 
 4300	5	Departure_Western	Mira Road 	up
 
 4306	2	Arrival_Central	Sandhurst Road 	up
 
-4306	2	Stopped_Central	Sandhurst Road 	up	110	35	411
+4306	2	Stopped_Central	Sandhurst Road 	up	3185	944	12511
+
+4309	7	Departure_Central	Thane 	up
 
 4309	6	Departure_Harbour	Cotton Green 	down
+
+4309	7	Departure_Harbour	Nerul 	up
+
+4311	10	Departure_Harbour	Chembur 	down
 
 4317	3	Departure_Central	Kopar 	up
 
 4317	4	Departure_Central	Sandhurst Road 	down
 
-4326	2	Departure_Central	Sandhurst Road 	up
+4320	9	Arrival_Central	Nahur 	up
+
+4320	9	Stopped_Central	Nahur 	up	325	444	4627
+
+4320	8	Departure_Harbour	 G.T.B.nagar	down
 
 4326	4	Arrival_Western	Virar 	down
 
-4326	4	Stopped_Western	Virar 	down	5	0	21
+4326	2	Departure_Central	Sandhurst Road 	up
+
+4326	4	Stopped_Western	Virar 	down	134	21	777
+
+4327	7	Arrival_Western	Borivali 	up
+
+4327	7	Stopped_Western	Borivali 	up	52	77	1106
+
+4340	9	Departure_Central	Nahur 	up
 
 4346	4	Departure_Western	Virar 	down
 
+4347	7	Departure_Western	Borivali 	up
+
 4349	5	Arrival_Harbour	Kharghar 	up
 
-4349	5	Stopped_Harbour	Kharghar 	up	0	13	49
+4349	5	Stopped_Harbour	Kharghar 	up	67	459	1759
 
 4357	1	Arrival_Central	Kalyan 	up
 
-4357	1	Stopped_Central	Kalyan 	up	0	0	235
+4357	1	Stopped_Central	Kalyan 	up	0	0	7873
 
 4360	6	Arrival_Central	Parel 	down
 
-4360	6	Stopped_Central	Parel 	down	11	15	90
+4360	6	Stopped_Central	Parel 	down	269	446	3428
 
 4366	2	Arrival_Harbour	Sewri 	up
 
-4366	2	Stopped_Harbour	Sewri 	up	84	26	668
+4366	2	Stopped_Harbour	Sewri 	up	2678	1125	20437
 
 4369	5	Departure_Harbour	Kharghar 	up
+
+4371	9	Arrival_Harbour	Vashi 	up
+
+4371	9	Stopped_Harbour	Vashi 	up	238	465	4327
 
 4377	1	Departure_Central	Kalyan 	up
 
@@ -2288,25 +3342,39 @@ SimTime	TrainNo	TypeOfEvent	Station_Name	 Direction 	NoOfPassengerWalkIn 	NoOfPa
 
 4380	6	Arrival_Harbour	Reay Road 	down
 
-4380	6	Stopped_Harbour	Reay Road 	down	3	14	90
+4380	6	Stopped_Harbour	Reay Road 	down	124	491	2852
+
+4383	10	Arrival_Harbour	Tilak Nagar 	down
+
+4383	10	Stopped_Harbour	Tilak Nagar 	down	382	359	4755
+
+4383	10	Arrival_Central	Ghatkopar 	down
+
+4383	10	Stopped_Central	Ghatkopar 	down	497	351	5265
 
 4386	2	Departure_Harbour	Sewri 	up
 
 4389	4	Arrival_Central	Masjid Bunder 	down
 
-4389	4	Stopped_Central	Masjid Bunder 	down	2	18	40
+4389	4	Stopped_Central	Masjid Bunder 	down	31	435	1395
+
+4391	9	Departure_Harbour	Vashi 	up
 
 4394	3	Arrival_Western	Naigaon 	up
 
-4394	3	Stopped_Western	Naigaon 	up	1	2	25
+4394	3	Stopped_Western	Naigaon 	up	40	80	838
 
 4400	6	Departure_Harbour	Reay Road 	down
 
-4409	4	Departure_Central	Masjid Bunder 	down
+4403	10	Departure_Harbour	Tilak Nagar 	down
+
+4403	10	Departure_Central	Ghatkopar 	down
 
 4409	4	Arrival_Harbour	Masjid Bunder 	up
 
-4409	4	Stopped_Harbour	Masjid Bunder 	up	9	3	38
+4409	4	Departure_Central	Masjid Bunder 	down
+
+4409	4	Stopped_Harbour	Masjid Bunder 	up	726	166	1674
 
 4414	3	Departure_Western	Naigaon 	up
 
@@ -2314,61 +3382,103 @@ SimTime	TrainNo	TypeOfEvent	Station_Name	 Direction 	NoOfPassengerWalkIn 	NoOfPa
 
 4436	6	Arrival_Harbour	Dockyard Road 	down
 
-4436	6	Stopped_Harbour	Dockyard Road 	down	1	16	75
+4436	6	Stopped_Harbour	Dockyard Road 	down	81	479	2454
+
+4443	8	Arrival_Central	Sion 	down
+
+4443	8	Stopped_Central	Sion 	down	298	380	4203
 
 4449	1	Arrival_Harbour	Mansarovar 	down
 
-4449	1	Stopped_Harbour	Mansarovar 	down	109	44	556
+4449	1	Stopped_Harbour	Mansarovar 	down	4160	1390	18660
+
+4451	7	Arrival_Central	Kalwa 	up
 
 4451	6	Arrival_Central	Currey Road 	down
 
 4451	2	Arrival_Western	Vasai 	down
 
-4451	6	Stopped_Central	Currey Road 	down	5	12	83
+4451	7	Stopped_Central	Kalwa 	up	182	466	3127
 
-4451	2	Stopped_Western	Vasai 	down	91	25	692
+4451	6	Stopped_Central	Currey Road 	down	168	443	3153
+
+4451	2	Stopped_Western	Vasai 	down	2757	736	22179
+
+4451	7	Arrival_Harbour	Seawoods-Darave 	up
+
+4451	7	Stopped_Harbour	Seawoods-Darave 	up	159	501	2807
+
+4454	9	Arrival_Western	Malad 	up
+
+4454	9	Stopped_Western	Malad 	up	63	66	1145
 
 4456	6	Departure_Harbour	Dockyard Road 	down
 
 4460	3	Arrival_Central	Dombivli 	up
 
-4460	3	Stopped_Central	Dombivli 	up	0	10	25
+4460	3	Stopped_Central	Dombivli 	up	43	344	1061
 
-4469	1	Departure_Harbour	Mansarovar 	down
+4463	8	Departure_Central	Sion 	down
+
+4463	9	Arrival_Harbour	Sanpada 	up
+
+4463	9	Stopped_Harbour	Sanpada 	up	218	444	4101
+
+4463	8	Arrival_Harbour	Wadala 	down
+
+4463	8	Stopped_Harbour	Wadala 	down	230	481	4077
 
 4469	2	Arrival_Central	Byculla 	up
 
-4469	2	Stopped_Central	Byculla 	up	103	28	486
+4469	1	Departure_Harbour	Mansarovar 	down
+
+4469	2	Stopped_Central	Byculla 	up	3109	908	14712
 
 4471	6	Departure_Central	Currey Road 	down
 
+4471	7	Departure_Central	Kalwa 	up
+
 4471	2	Departure_Western	Vasai 	down
 
-4480	3	Departure_Central	Dombivli 	up
+4471	7	Departure_Harbour	Seawoods-Darave 	up
+
+4474	10	Arrival_Harbour	Kurla 	down
+
+4474	9	Departure_Western	Malad 	up
+
+4474	10	Stopped_Harbour	Kurla 	down	323	373	4705
 
 4480	3	Arrival_Harbour	Panvel 	up
 
-4480	3	Stopped_Harbour	Panvel 	up	0	0	27
+4480	3	Departure_Central	Dombivli 	up
+
+4480	3	Stopped_Harbour	Panvel 	up	0	0	831
+
+4483	9	Departure_Harbour	Sanpada 	up
+
+4483	8	Departure_Harbour	Wadala 	down
 
 4489	2	Departure_Central	Byculla 	up
 
 4491	5	Arrival_Central	Diwa 	up
 
-4491	5	Stopped_Central	Diwa 	up	3	12	54
+4491	5	Stopped_Central	Diwa 	up	91	366	1864
 
 4491	6	Arrival_Harbour	Sandhurst Road 	down
 
-4491	6	Stopped_Harbour	Sandhurst Road 	down	2	18	59
+4491	6	Stopped_Harbour	Sandhurst Road 	down	87	482	2059
+
+4494	10	Departure_Harbour	Kurla 	down
 
 4500	3	Departure_Harbour	Panvel 	up
 
 4500	4	Arrival_Harbour	Sandhurst Road 	up
 
-4500	4	Stopped_Harbour	Sandhurst Road 	up	19	2	55
+4500	4	Stopped_Harbour	Sandhurst Road 	up	705	151	2228
 
 4509	1	Arrival_Western	Nalasopara 	up
 
-4509	1	Stopped_Western	Nalasopara 	up	24	50	629
+4509	1	Stopped_Western	Nalasopara 	up	870	2105	21693
 
 4511	5	Departure_Central	Diwa 	up
 
@@ -2376,51 +3486,69 @@ SimTime	TrainNo	TypeOfEvent	Station_Name	 Direction 	NoOfPassengerWalkIn 	NoOfPa
 
 4511	5	Arrival_Harbour	Mansarovar 	up
 
-4511	5	Stopped_Harbour	Mansarovar 	up	1	12	38
+4511	5	Stopped_Harbour	Mansarovar 	up	38	450	1347
+
+4516	7	Arrival_Western	Dahisar 	up
+
+4516	7	Stopped_Western	Dahisar 	up	73	73	1106
 
 4520	4	Departure_Harbour	Sandhurst Road 	up
 
 4529	2	Arrival_Harbour	Wadala 	up
 
-4529	2	Stopped_Harbour	Wadala 	up	88	42	714
+4529	2	Stopped_Harbour	Wadala 	up	2527	1231	21733
 
 4529	1	Departure_Western	Nalasopara 	up
 
 4531	5	Departure_Harbour	Mansarovar 	up
 
+4536	7	Departure_Western	Dahisar 	up
+
 4539	5	Arrival_Western	Bhayandar 	up
 
-4539	5	Stopped_Western	Bhayandar 	up	3	3	34
+4539	5	Stopped_Western	Bhayandar 	up	51	74	910
 
 4543	6	Arrival_Central	Chinchpokli 	down
 
-4543	6	Stopped_Central	Chinchpokli 	down	2	13	72
+4543	6	Stopped_Central	Chinchpokli 	down	129	470	2812
+
+4546	10	Arrival_Central	Vidyavihar 	down
+
+4546	10	Stopped_Central	Vidyavihar 	down	383	434	5214
 
 4549	2	Departure_Harbour	Wadala 	up
 
 4551	3	Arrival_Central	Thakurli 	up
 
-4551	3	Stopped_Central	Thakurli 	up	0	7	18
+4551	3	Stopped_Central	Thakurli 	up	0	343	718
 
 4551	4	Arrival_Central	CST	down
 
-4551	4	Stopped_Central	CST	down	0	13	27
+4551	4	Stopped_Central	CST	down	0	438	957
+
+4554	9	Arrival_Central	Mulund 	up
+
+4554	9	Stopped_Central	Mulund 	up	153	484	4296
 
 4556	4	Arrival_Harbour	Dockyard Road 	up
 
-4556	4	Stopped_Harbour	Dockyard Road 	up	13	4	64
+4556	4	Stopped_Harbour	Dockyard Road 	up	691	166	2753
 
 4559	5	Departure_Western	Bhayandar 	up
 
 4560	2	Arrival_Central	Chinchpokli 	up
 
-4560	2	Stopped_Central	Chinchpokli 	up	87	35	538
+4560	2	Stopped_Central	Chinchpokli 	up	3021	908	16825
 
 4563	6	Departure_Central	Chinchpokli 	down
+
+4566	10	Departure_Central	Vidyavihar 	down
 
 4571	3	Departure_Central	Thakurli 	up
 
 4571	4	Departure_Central	CST	down
+
+4574	9	Departure_Central	Mulund 	up
 
 4576	4	Departure_Harbour	Dockyard Road 	up
 
@@ -2428,17 +3556,47 @@ SimTime	TrainNo	TypeOfEvent	Station_Name	 Direction 	NoOfPassengerWalkIn 	NoOfPa
 
 4583	6	Arrival_Harbour	Masjid Bunder 	down
 
-4583	6	Stopped_Harbour	Masjid Bunder 	down	0	16	43
+4583	6	Stopped_Harbour	Masjid Bunder 	down	32	503	1588
+
+4589	10	Arrival_Western	Saphale 	down
+
+4589	10	Stopped_Western	Saphale 	down	140	15	598
 
 4603	6	Departure_Harbour	Masjid Bunder 	down
 
+4606	8	Arrival_Central	Matunga 	down
+
+4606	8	Stopped_Central	Matunga 	down	187	372	4018
+
+4609	10	Departure_Western	Saphale 	down
+
+4610	9	Arrival_Western	Kandivali 	up
+
+4610	9	Stopped_Western	Kandivali 	up	91	69	1167
+
 4611	4	Arrival_Harbour	Reay Road 	up
 
-4611	4	Stopped_Harbour	Reay Road 	up	12	3	73
+4611	4	Stopped_Harbour	Reay Road 	up	582	154	3181
 
 4611	1	Arrival_Harbour	Kharghar 	down
 
-4611	1	Stopped_Harbour	Kharghar 	down	121	37	640
+4611	1	Stopped_Harbour	Kharghar 	down	3938	1332	21266
+
+4614	7	Arrival_Harbour	CBD Belapur 	up
+
+4614	7	Stopped_Harbour	CBD Belapur 	up	103	479	2431
+
+4626	9	Arrival_Harbour	Juinagar 	up
+
+4626	8	Departure_Central	Matunga 	down
+
+4626	9	Stopped_Harbour	Juinagar 	up	199	498	3802
+
+4626	8	Arrival_Harbour	Sewri 	down
+
+4626	8	Stopped_Harbour	Sewri 	down	217	456	3838
+
+4630	9	Departure_Western	Kandivali 	up
 
 4631	4	Departure_Harbour	Reay Road 	up
 
@@ -2446,23 +3604,35 @@ SimTime	TrainNo	TypeOfEvent	Station_Name	 Direction 	NoOfPassengerWalkIn 	NoOfPa
 
 4634	6	Arrival_Central	Byculla 	down
 
-4634	6	Stopped_Central	Byculla 	down	2	12	62
+4634	6	Stopped_Central	Byculla 	down	64	509	2367
+
+4634	7	Departure_Harbour	CBD Belapur 	up
+
+4637	10	Arrival_Harbour	Chunabhatti 	down
+
+4637	10	Stopped_Harbour	Chunabhatti 	down	272	385	4592
 
 4641	4	Arrival_Western	Nalasopara 	down
 
-4641	4	Stopped_Western	Nalasopara 	down	5	0	26
+4641	4	Stopped_Western	Nalasopara 	down	138	25	890
+
+4646	9	Departure_Harbour	Juinagar 	up
+
+4646	8	Departure_Harbour	Sewri 	down
 
 4651	2	Arrival_Central	Currey Road 	up
 
-4651	2	Stopped_Central	Currey Road 	up	113	26	625
+4651	2	Stopped_Central	Currey Road 	up	2669	942	18552
 
 4654	6	Departure_Central	Byculla 	down
+
+4657	10	Departure_Harbour	Chunabhatti 	down
 
 4661	4	Departure_Western	Nalasopara 	down
 
 4663	1	Arrival_Central	Thakurli 	down
 
-4663	1	Stopped_Central	Thakurli 	down	248	39	444
+4663	1	Stopped_Central	Thakurli 	down	9098	1303	15668
 
 4671	2	Departure_Central	Currey Road 	up
 
@@ -2470,29 +3640,41 @@ SimTime	TrainNo	TypeOfEvent	Station_Name	 Direction 	NoOfPassengerWalkIn 	NoOfPa
 
 4691	2	Arrival_Harbour	 G.T.B.nagar	up
 
-4691	2	Stopped_Harbour	 G.T.B.nagar	up	89	33	770
+4691	2	Stopped_Harbour	 G.T.B.nagar	up	2399	1340	22792
 
 4699	3	Arrival_Western	Vasai 	up
 
-4699	3	Stopped_Western	Vasai 	up	0	2	23
+4699	3	Stopped_Western	Vasai 	up	42	87	793
 
 4703	4	Arrival_Harbour	Cotton Green 	up
 
-4703	4	Stopped_Harbour	Cotton Green 	up	11	2	82
+4703	4	Stopped_Harbour	Cotton Green 	up	640	192	3629
+
+4703	8	Arrival_Western	Vaitarna 	down
+
+4703	8	Stopped_Western	Vaitarna 	down	77	18	584
+
+4709	10	Arrival_Central	Kurla 	down
+
+4709	10	Stopped_Central	Kurla 	down	264	376	5102
 
 4711	2	Departure_Harbour	 G.T.B.nagar	up
 
 4714	3	Arrival_Harbour	Khandeshwar 	down
 
-4714	3	Stopped_Harbour	Khandeshwar 	down	24	9	42
+4714	3	Stopped_Harbour	Khandeshwar 	down	772	172	1431
 
 4714	4	Arrival_Central	Masjid Bunder 	up
 
-4714	4	Stopped_Central	Masjid Bunder 	up	8	7	28
+4714	4	Stopped_Central	Masjid Bunder 	up	628	136	1449
 
 4719	3	Departure_Western	Vasai 	up
 
 4723	4	Departure_Harbour	Cotton Green 	up
+
+4723	8	Departure_Western	Vaitarna 	down
+
+4729	10	Departure_Central	Kurla 	down
 
 4734	3	Departure_Harbour	Khandeshwar 	down
 
@@ -2500,23 +3682,27 @@ SimTime	TrainNo	TypeOfEvent	Station_Name	 Direction 	NoOfPassengerWalkIn 	NoOfPa
 
 4743	2	Arrival_Central	Parel 	up
 
-4743	2	Stopped_Central	Parel 	up	109	34	700
+4743	2	Stopped_Central	Parel 	up	2737	1068	20221
 
 4746	6	Arrival_Harbour	CST	down
 
-4746	6	Stopped_Harbour	CST	down	0	9	34
+4746	6	Stopped_Harbour	CST	down	0	478	1110
 
 4746	5	Arrival_Harbour	Khandeshwar 	up
 
-4746	5	Stopped_Harbour	Khandeshwar 	up	0	12	26
+4746	5	Stopped_Harbour	Khandeshwar 	up	0	406	941
 
 4754	1	Arrival_Central	Dombivli 	down
 
-4754	1	Stopped_Central	Dombivli 	down	129	46	527
+4754	1	Stopped_Central	Dombivli 	down	4135	1313	18490
 
 4756	2	Arrival_Western	Naigaon 	down
 
-4756	2	Stopped_Western	Naigaon 	down	83	22	753
+4756	2	Stopped_Western	Naigaon 	down	2759	835	24103
+
+4757	7	Arrival_Central	Mumbra 	up
+
+4757	7	Stopped_Central	Mumbra 	up	103	464	2766
 
 4763	2	Departure_Central	Parel 	up
 
@@ -2524,125 +3710,231 @@ SimTime	TrainNo	TypeOfEvent	Station_Name	 Direction 	NoOfPassengerWalkIn 	NoOfPa
 
 4766	5	Departure_Harbour	Khandeshwar 	up
 
+4769	8	Arrival_Central	Dadar 	down
+
+4769	8	Stopped_Central	Dadar 	down	183	416	3785
+
 4774	1	Departure_Central	Dombivli 	down
 
 4776	2	Departure_Western	Naigaon 	down
 
+4777	7	Departure_Central	Mumbra 	up
+
+4780	7	Arrival_Western	Mira Road 	up
+
+4780	7	Stopped_Western	Mira Road 	up	32	67	1071
+
+4789	9	Arrival_Central	Thane 	up
+
+4789	9	Arrival_Harbour	Nerul 	up
+
+4789	8	Departure_Central	Dadar 	down
+
+4789	9	Stopped_Central	Thane 	up	173	483	3986
+
+4789	9	Stopped_Harbour	Nerul 	up	149	511	3440
+
+4789	8	Arrival_Harbour	Cotton Green 	down
+
+4789	8	Stopped_Harbour	Cotton Green 	down	154	502	3490
+
 4797	5	Arrival_Central	Kopar 	up
 
-4797	5	Stopped_Central	Kopar 	up	2	12	44
+4797	5	Stopped_Central	Kopar 	up	52	393	1523
 
 4797	6	Arrival_Central	Sandhurst Road 	down
 
-4797	6	Stopped_Central	Sandhurst Road 	down	2	15	49
+4797	6	Stopped_Central	Sandhurst Road 	down	76	492	1951
+
+4800	10	Arrival_Harbour	 G.T.B.nagar	down
+
+4800	7	Departure_Western	Mira Road 	up
+
+4800	10	Stopped_Harbour	 G.T.B.nagar	down	237	460	4369
 
 4806	4	Arrival_Central	Sandhurst Road 	up
 
-4806	4	Stopped_Central	Sandhurst Road 	up	12	5	35
+4806	4	Stopped_Central	Sandhurst Road 	up	631	131	1949
+
+4809	9	Departure_Harbour	Nerul 	up
+
+4809	9	Departure_Central	Thane 	up
+
+4809	8	Departure_Harbour	Cotton Green 	down
 
 4817	5	Departure_Central	Kopar 	up
 
 4817	6	Departure_Central	Sandhurst Road 	down
 
+4820	10	Departure_Harbour	 G.T.B.nagar	down
+
 4824	1	Arrival_Western	Virar 	up
 
-4824	1	Stopped_Western	Virar 	up	17	57	589
+4824	1	Stopped_Western	Virar 	up	827	2092	20428
 
 4826	6	Arrival_Western	Virar 	down
 
 4826	4	Departure_Central	Sandhurst Road 	up
 
-4826	6	Stopped_Western	Virar 	down	2	1	22
+4826	6	Stopped_Western	Virar 	down	147	16	682
+
+4827	9	Arrival_Western	Borivali 	up
+
+4827	9	Stopped_Western	Borivali 	up	89	69	1187
 
 4834	2	Arrival_Central	Dadar 	up
 
-4834	2	Stopped_Central	Dadar 	up	92	43	749
+4834	2	Stopped_Central	Dadar 	up	2493	1161	21553
 
 4844	1	Departure_Western	Virar 	up
 
-4846	6	Departure_Western	Virar 	down
-
 4846	1	Arrival_Harbour	CBD Belapur 	down
 
-4846	1	Stopped_Harbour	CBD Belapur 	down	112	45	707
+4846	6	Departure_Western	Virar 	down
 
-4854	2	Departure_Central	Dadar 	up
+4846	1	Stopped_Harbour	CBD Belapur 	down	3525	1329	23462
+
+4847	9	Departure_Western	Borivali 	up
+
+4849	7	Arrival_Harbour	Kharghar 	up
+
+4849	7	Stopped_Harbour	Kharghar 	up	57	493	1995
 
 4854	2	Arrival_Harbour	Chunabhatti 	up
 
-4854	2	Stopped_Harbour	Chunabhatti 	up	77	50	797
+4854	2	Departure_Central	Dadar 	up
+
+4854	2	Stopped_Harbour	Chunabhatti 	up	2108	1396	23504
 
 4857	3	Arrival_Central	Kalyan 	up
 
-4857	3	Stopped_Central	Kalyan 	up	0	0	18
+4857	3	Stopped_Central	Kalyan 	up	0	0	718
+
+4860	8	Arrival_Central	Parel 	down
+
+4860	8	Stopped_Central	Parel 	down	170	446	3509
 
 4866	4	Arrival_Harbour	Sewri 	up
 
-4866	4	Stopped_Harbour	Sewri 	up	10	5	87
+4866	4	Stopped_Harbour	Sewri 	up	671	212	4088
 
 4866	1	Departure_Harbour	CBD Belapur 	down
+
+4869	7	Departure_Harbour	Kharghar 	up
 
 4874	2	Departure_Harbour	Chunabhatti 	up
 
 4877	3	Departure_Central	Kalyan 	up
 
+4880	8	Departure_Central	Parel 	down
+
+4880	8	Arrival_Harbour	Reay Road 	down
+
+4880	8	Stopped_Harbour	Reay Road 	down	123	504	3109
+
 4886	4	Departure_Harbour	Sewri 	up
 
 4889	6	Arrival_Central	Masjid Bunder 	down
 
-4889	6	Stopped_Central	Masjid Bunder 	down	1	11	39
+4889	6	Stopped_Central	Masjid Bunder 	down	32	478	1505
 
 4894	5	Arrival_Western	Naigaon 	up
 
-4894	5	Stopped_Western	Naigaon 	up	0	5	29
+4894	5	Stopped_Western	Naigaon 	up	43	56	897
+
+4900	8	Departure_Harbour	Reay Road 	down
 
 4909	6	Arrival_Harbour	Masjid Bunder 	up
 
 4909	6	Departure_Central	Masjid Bunder 	down
 
-4909	6	Stopped_Harbour	Masjid Bunder 	up	15	5	44
+4909	6	Stopped_Harbour	Masjid Bunder 	up	670	143	1637
 
 4914	5	Departure_Western	Naigaon 	up
 
 4917	1	Arrival_Central	Kopar 	down
 
-4917	1	Stopped_Central	Kopar 	down	123	34	616
+4917	1	Stopped_Central	Kopar 	down	3886	1259	21117
 
 4929	6	Departure_Harbour	Masjid Bunder 	up
 
+4936	8	Arrival_Harbour	Dockyard Road 	down
+
+4936	8	Stopped_Harbour	Dockyard Road 	down	108	531	2686
+
 4937	1	Departure_Central	Kopar 	down
+
+4943	10	Arrival_Central	Sion 	down
+
+4943	10	Stopped_Central	Sion 	down	279	460	4921
 
 4949	3	Arrival_Harbour	Mansarovar 	down
 
-4949	3	Stopped_Harbour	Mansarovar 	down	10	6	46
+4949	3	Stopped_Harbour	Mansarovar 	down	741	143	2029
 
 4951	4	Arrival_Western	Vasai 	down
 
-4951	4	Stopped_Western	Vasai 	down	5	1	30
+4951	4	Stopped_Western	Vasai 	down	149	36	1003
+
+4951	9	Arrival_Central	Kalwa 	up
+
+4951	8	Arrival_Central	Currey Road 	down
+
+4951	9	Arrival_Harbour	Seawoods-Darave 	up
+
+4951	9	Stopped_Central	Kalwa 	up	165	538	3613
+
+4951	8	Stopped_Central	Currey Road 	down	170	453	3226
+
+4951	9	Stopped_Harbour	Seawoods-Darave 	up	149	522	3067
+
+4956	8	Departure_Harbour	Dockyard Road 	down
 
 4960	5	Arrival_Central	Dombivli 	up
 
-4960	5	Stopped_Central	Dombivli 	up	0	12	32
+4960	5	Stopped_Central	Dombivli 	up	35	375	1183
+
+4963	10	Arrival_Harbour	Wadala 	down
+
+4963	10	Stopped_Harbour	Wadala 	down	226	465	4130
+
+4963	10	Departure_Central	Sion 	down
 
 4969	3	Departure_Harbour	Mansarovar 	down
 
 4969	4	Arrival_Central	Byculla 	up
 
-4969	4	Stopped_Central	Byculla 	up	15	2	48
+4969	4	Stopped_Central	Byculla 	up	611	133	2427
 
 4971	4	Departure_Western	Vasai 	down
+
+4971	9	Departure_Harbour	Seawoods-Darave 	up
+
+4971	8	Departure_Central	Currey Road 	down
+
+4971	9	Departure_Central	Kalwa 	up
 
 4980	5	Departure_Central	Dombivli 	up
 
 4980	5	Arrival_Harbour	Panvel 	up
 
-4980	5	Stopped_Harbour	Panvel 	up	0	0	26
+4980	5	Stopped_Harbour	Panvel 	up	0	0	941
+
+4983	10	Departure_Harbour	Wadala 	down
 
 4989	4	Departure_Central	Byculla 	up
 
+4991	7	Arrival_Central	Diwa 	up
+
+4991	7	Stopped_Central	Diwa 	up	93	489	2370
+
+4991	8	Arrival_Harbour	Sandhurst Road 	down
+
+4991	8	Stopped_Harbour	Sandhurst Road 	down	60	533	2213
+
 4997	2	Arrival_Central	Matunga 	up
 
-4997	2	Stopped_Central	Matunga 	up	84	41	792
+4997	2	Stopped_Central	Matunga 	up	2342	1208	22687
 
 5000	6	Arrival_Harbour	Sandhurst Road 	up
 
