@@ -546,10 +546,31 @@ public class Event_handler_Western {
 				jEnd = i + PosnConf.peakThres;
 
 			for (int j = jStart; j <= jEnd; j++) {
-				if (PosnConf.PosnConfidnce_List_Western_Up.get(i).PosnConfidence < 
+				if (Double.compare(PosnConf.PosnConfidnce_List_Western_Up.get(i).PosnConfidence, 
 						PosnConf.PosnConfidnce_List_Western_Up
-						.get(j).PosnConfidence) {
+						.get(j).PosnConfidence)<0) {
 					PosnConf.PosnConfidnce_List_Western_Up.get(i)
+							.setPeak(false);
+					break;
+				}
+			}
+		}
+		for (int i = 0; i < PosnConf.PosnConfidnce_List_Western_Down.size(); i++) {
+			if (i < PosnConf.peakThres)
+				jStart = 0;
+			else
+				jStart = i - PosnConf.peakThres;
+			if (i + PosnConf.peakThres >= PosnConf.PosnConfidnce_List_Western_Down
+					.size())
+				jEnd = PosnConf.PosnConfidnce_List_Western_Down.size() - 1;
+			else
+				jEnd = i + PosnConf.peakThres;
+
+			for (int j = jStart; j <= jEnd; j++) {
+				if (Double.compare(PosnConf.PosnConfidnce_List_Western_Down.get(i).PosnConfidence, 
+						PosnConf.PosnConfidnce_List_Western_Down
+						.get(j).PosnConfidence)<0) {
+					PosnConf.PosnConfidnce_List_Western_Down.get(i)
 							.setPeak(false);
 					break;
 				}

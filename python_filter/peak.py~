@@ -1,0 +1,29 @@
+#!/usr/bin/python
+import csv,math
+LIST=[]
+count=0
+i=0
+preDistPoint=0
+preNumUser=0
+outfile='Peak.csv'
+outf=open(outfile,'wb')
+lines = csv.reader(open('PosnCOnf_western_Up_true.csv','rb'), delimiter=',')
+outline=csv.writer(outf)
+for row in lines:
+    preDistPoint=row[0]
+    preNumUser=row[2]
+    count+=1
+    if (next(lines)):
+        row = next(lines)
+    #print float(preDistPoint)+100
+    if((float(preDistPoint)+100)!=float(row[0]) and row[2]!=preNumUser):
+        i=count
+        count=count/2;
+        LIST.append(i+count)
+        print i+count
+        count=0
+    
+    
+    
+print(LIST)
+#outline.writerow(row)

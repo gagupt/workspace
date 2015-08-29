@@ -556,6 +556,28 @@ public class Event_handler_Harbour {
 			}
 		}
 
+		for (int i = 0; i < PosnConf.PosnConfidnce_List_Harbour_Down.size(); i++) {
+			if (i < PosnConf.peakThres)
+				jStart = 0;
+			else
+				jStart = i - PosnConf.peakThres;
+			if (i + PosnConf.peakThres >= PosnConf.PosnConfidnce_List_Harbour_Down
+					.size())
+				jEnd = PosnConf.PosnConfidnce_List_Harbour_Down.size() - 1;
+			else
+				jEnd = i + PosnConf.peakThres;
+
+			for (int j = jStart; j <= jEnd; j++) {
+				if (PosnConf.PosnConfidnce_List_Harbour_Down.get(i).PosnConfidence < 
+						PosnConf.PosnConfidnce_List_Harbour_Down
+						.get(j).PosnConfidence) {
+					PosnConf.PosnConfidnce_List_Harbour_Down.get(i)
+							.setPeak(false);
+					break;
+				}
+			}
+		}
+
 	}
 
 	static double getConfidence4NumUsers(int N) {
