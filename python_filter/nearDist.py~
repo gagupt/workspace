@@ -10,12 +10,14 @@ n=0
 k=0
 last_peak=0
 total = len(sys.argv)
-if (total!=4):
-	print "Please Enter three arguments....!"
+if (total!=6):
+	print "Please Enter five arguments....!"
 	exit()
 inpfile=sys.argv[1]
 outfileUp=sys.argv[2]
 outfileDown=sys.argv[3]
+stopline=sys.argv[4]
+SpotTime=sys.argv[5]
 
 #outfile='Peak.csv'
 outfUp=open(outfileUp,'wb')
@@ -25,8 +27,8 @@ outlineUp=csv.writer(outfUp)
 outlineDown=csv.writer(outfDown)
 for row in lines:
     if row:
-            if((row[2]=="Stopped_Western")):
-                if(int(row[0])>int(9800)):
+            if((row[2]==stopline)):
+                if(int(row[0])>int(SpotTime)-200):
                         n+=1
                         LIST.append(row)
                         #print row[0],row[1],row[2],row[3],row[4]
@@ -48,7 +50,8 @@ for i, val in enumerate(up_down):
                 outlineUp.writerow(val)
         else:
                 outlineDown.writerow(val)
-        print val[5]
+
+#print val[5]
 
 
 #   outline.writerow(val)    
