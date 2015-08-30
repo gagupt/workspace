@@ -1,0 +1,122 @@
+Num of Trains=10 (5 up, 5 down)\\
+End\_sim\_time = 20000,\\
+getSpottingsNowTime = 10000,\\
+peakThres=5 (500 meters both sides)\\
+PosConf calculated for each point at distance of= 100 meters\\
+Starting time gap between trains=30 min (1800 sec)\\
+Halt\_time\_of\_Train = 20 sec\\
+Speed\_of\_The\_Train = 14 m/sec (50.4 km/h)\\
+
+\subsection{No. of passengers=10000}
+\subsubsection{western up route}
+\begin{table}[h!]
+
+\begin{minipage}{.5\textwidth}
+  \begin{center}
+    \caption{Ground truth value}
+    \label{table1}
+    \pgfplotstabletypeset[
+      multicolumn names, % allows to have multicolumn names
+      col sep=comma, % the seperator in our .csv file
+      display columns/0/.style={
+		column name=$Positions $, % name of first column
+		column type={S},string type},  % use siunitx for formatting
+      display columns/1/.style={
+		column name=$NearestEstDis $,
+		column type={S},string type},
+      every head row/.style={
+		before row={\toprule}, % have a rule at top
+		after row={
+			\si{\meter} & \si{\meter}\\ % the units seperated by &
+			\midrule} % rule under units
+			},
+		every last row/.style={after row=\bottomrule}, % rule at bottom
+    ]{westernTruUp.csv} % filename/path to file
+  \end{center}
+
+\end{minipage}%
+\begin{minipage}{.5\textwidth}
+  \begin{center}
+    \caption{Estimated Value}
+    \label{table1}
+    \pgfplotstabletypeset[
+      multicolumn names, % allows to have multicolumn names
+      col sep=comma, % the seperator in our .csv file
+      display columns/0/.style={
+		column name=$Positions $, % name of first column
+		column type={S},string type},  % use siunitx for formatting
+      display columns/1/.style={
+		column name=$NearestTruthDis $,
+		column type={S},string type},
+      every head row/.style={
+		before row={\toprule}, % have a rule at top
+		after row={
+			\si{\meter} & \si{\meter}\\ % the units seperated by &
+			\midrule} % rule under units
+			},
+		every last row/.style={after row=\bottomrule}, % rule at bottom
+    ]{westernEstUp.csv} % filename/path to file
+  \end{center}
+
+\end{minipage}%
+
+\end{table}
+%%down route
+\subsubsection{western down route}
+\begin{table}[h!]
+
+\begin{minipage}{.5\textwidth}
+  \begin{center}
+    \caption{Ground truth value}
+    \label{table1}
+    \pgfplotstabletypeset[
+      multicolumn names, % allows to have multicolumn names
+      col sep=comma, % the seperator in our .csv file
+      display columns/0/.style={
+		column name=$Positions $, % name of first column
+		column type={S},string type},  % use siunitx for formatting
+      display columns/1/.style={
+		column name=$NearestEstDis $,
+		column type={S},string type},
+      every head row/.style={
+		before row={\toprule}, % have a rule at top
+		after row={
+			\si{\meter} & \si{\meter}\\ % the units seperated by &
+			\midrule} % rule under units
+			},
+		every last row/.style={after row=\bottomrule}, % rule at bottom
+    ]{westernTruDown.csv} % filename/path to file
+  \end{center}
+
+\end{minipage}%
+\begin{minipage}{.5\textwidth}
+  \begin{center}
+    \caption{Estimated Value}
+    \label{table1}
+    \pgfplotstabletypeset[
+      multicolumn names, % allows to have multicolumn names
+      col sep=comma, % the seperator in our .csv file
+      display columns/0/.style={
+		column name=$Positions $, % name of first column
+		column type={S},string type},  % use siunitx for formatting
+      display columns/1/.style={
+		column name=$NearestTruthDis $,
+		column type={S},string type},
+      every head row/.style={
+		before row={\toprule}, % have a rule at top
+		after row={
+			\si{\meter} & \si{\meter}\\ % the units seperated by &
+			\midrule} % rule under units
+			},
+		every last row/.style={after row=\bottomrule}, % rule at bottom
+    ]{westernEstDown.csv} % filename/path to file
+  \end{center}
+
+\end{minipage}%
+
+\end{table}
+
+
+
+
+

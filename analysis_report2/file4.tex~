@@ -1,0 +1,33 @@
+\section{Conclusion} \label{con}
+Researchers have proposed numerous approaches for detecti
+ng
+the ever-increasing number of web sites spreading malware v
+ia
+drive-by downloads. Adversaries have responded with a numb
+er
+of techniques to bypass detection. This paper studies wheth
+er eva-
+sive practices are effective, and whether they are being pur
+sued at
+a large scale.
+Our study focuses on the four most prevalent detections tech
+\pagebreak
+-
+\cite{Abdullah2014256}
+niques: Virtual Machine honeypots, Browser Emulation hone
+y-
+pots, Classification based on Domain Reputation, and Anti-V
+irus
+Engines. We measure the extent to which evasion affects each
+of
+these schemes by analyzing four years worth of data collecte
+d by
+Google SafeBrowsing infrastructure. Our experiments corr
+oborate 
+our hypothesis that malware authors continue to pursue deli
+very
+mechanisms that can confuse different malware detection sy
+stems.
+We find that Social Engineering is growing and poses challeng
+es to
+VM-based honeypots. 
