@@ -176,6 +176,8 @@ public class Event_handler_Central {
 						+ "\t"
 						+ station
 						+ "\t"
+						+distFromOriginMeter
+						+"\t"
 						+ Direction
 						+ "\t"
 						+ countWalkIn++
