@@ -7,8 +7,8 @@ Starting time gap between trains=30 min (1800 sec)\\
 Halt\_time\_of\_Train = 20 sec\\
 Speed\_of\_The\_Train = 14 m/sec (50.4 km/h)\\
 
-\subsection{No. of passengers=\NumUser}
-\subsubsection{harbour up route}
+\subsection{No. of passengers=\myvar}
+\subsubsection{central up route}
 \begin{table}[h!]
 
 \begin{minipage}{.5\textwidth}
@@ -31,7 +31,7 @@ Speed\_of\_The\_Train = 14 m/sec (50.4 km/h)\\
 			\midrule} % rule under units
 			},
 		every last row/.style={after row=\bottomrule}, % rule at bottom
-    ]{harbourTruUp.csv} % filename/path to file
+    ]{centralTruUp.csv} % filename/path to file
   \end{center}
 
 \end{minipage}%
@@ -55,14 +55,14 @@ Speed\_of\_The\_Train = 14 m/sec (50.4 km/h)\\
 			\midrule} % rule under units
 			},
 		every last row/.style={after row=\bottomrule}, % rule at bottom
-    ]{harbourEstUp.csv} % filename/path to file
+    ]{centralEstUp.csv} % filename/path to file
   \end{center}
 
 \end{minipage}%
 
 \end{table}
 %%down route
-\subsubsection{harbour down route}
+\subsubsection{central down route}
 \begin{table}[h!]
 
 \begin{minipage}{.5\textwidth}
@@ -85,7 +85,7 @@ Speed\_of\_The\_Train = 14 m/sec (50.4 km/h)\\
 			\midrule} % rule under units
 			},
 		every last row/.style={after row=\bottomrule}, % rule at bottom
-    ]{harbourTruDown.csv} % filename/path to file
+    ]{centralTruDown.csv} % filename/path to file
   \end{center}
 
 \end{minipage}%
@@ -109,7 +109,7 @@ Speed\_of\_The\_Train = 14 m/sec (50.4 km/h)\\
 			\midrule} % rule under units
 			},
 		every last row/.style={after row=\bottomrule}, % rule at bottom
-    ]{harbourEstDown.csv} % filename/path to file
+    ]{centralEstDown.csv} % filename/path to file
   \end{center}
 
 \end{minipage}%

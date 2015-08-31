@@ -1,12 +1,9 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.5.29)  31 AUG 2015 10:23
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.5.29)  31 AUG 2015 11:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**report.tex
-(./report.tex
-LaTeX2e <2011/06/27>
-Babel <3.9h> and hyphenation patterns for 2 languages loaded.
-(/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
+**\def\NumUser{50} \input{report.tex}
+(./report.tex (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
 (/usr/share/texlive/texmf-dist/tex/latex/base/size10.clo
 File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
@@ -844,30 +841,6 @@ LaTeX Warning: Label `table1' multiply defined.
 
 LaTeX Warning: Label `table1' multiply defined.
 
-
-LaTeX Warning: Label `table1' multiply defined.
-
-
-LaTeX Warning: Label `table1' multiply defined.
-
-
-LaTeX Warning: Label `table1' multiply defined.
-
-
-LaTeX Warning: Label `table1' multiply defined.
-
-
-LaTeX Warning: Label `table1' multiply defined.
-
-
-LaTeX Warning: Label `table1' multiply defined.
-
-
-LaTeX Warning: Label `table1' multiply defined.
-
-
-LaTeX Warning: Label `table1' multiply defined.
-
 )
 \openout1 = `report.aux'.
 
@@ -972,45 +945,27 @@ PGFPlots: reading {westernTruDown.csv}
 PGFPlots: reading {westernEstDown.csv}
 ) [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./file2.tex
-Underfull \hbox (badness 10000) in paragraph at lines 1--9
-
- []
-
-PGFPlots: reading {centralTruUp.csv}
-PGFPlots: reading {centralEstUp.csv}
-PGFPlots: reading {centralTruDown.csv}
-PGFPlots: reading {centralEstDown.csv}
-) [2] (./file3.tex
-Underfull \hbox (badness 10000) in paragraph at lines 1--9
-
- []
-
-PGFPlots: reading {harbourTruUp.csv}
-PGFPlots: reading {harbourEstUp.csv}
-PGFPlots: reading {harbourTruDown.csv}
-PGFPlots: reading {harbourEstDown.csv}
-) [3] (./report.aux)
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./report.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 25687 strings out of 495028
- 630164 string characters out of 6181497
- 714970 words of memory out of 5000000
- 28410 multiletter control sequences out of 15000+600000
+ 25659 strings out of 495028
+ 629653 string characters out of 6181497
+ 715998 words of memory out of 5000000
+ 28403 multiletter control sequences out of 15000+600000
  5962 words of font info for 23 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 70i,15n,76p,10452b,1234s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 71i,15n,76p,10477b,1234s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texl
 ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb>
-Output written on report.pdf (3 pages, 57647 bytes).
+Output written on report.pdf (1 page, 53513 bytes).
 PDF statistics:
- 33 PDF objects out of 1000 (max. 8388607)
- 23 compressed objects within 1 object stream
+ 27 PDF objects out of 1000 (max. 8388607)
+ 19 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

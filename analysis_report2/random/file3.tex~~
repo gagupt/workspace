@@ -7,7 +7,7 @@ Starting time gap between trains=30 min (1800 sec)\\
 Halt\_time\_of\_Train = 20 sec\\
 Speed\_of\_The\_Train = 14 m/sec (50.4 km/h)\\
 
-\subsection{No. of passengers=\NumUser}
+\subsection{No. of passengers=\myvar}
 \subsubsection{harbour up route}
 \begin{table}[h!]
 
