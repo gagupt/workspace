@@ -7,10 +7,10 @@ echo "running CalPeak.sh"
 bash CalPeak.sh
 
 echo "running CalOriginalPos.sh"
-bash CalOriginalPos.sh 10000  #this is getSpottingsNowTime 
+bash CalOriginalPos.sh $1  #this is getSpottingsNowTime 
 
 echo "running CalNearDist.sh"
-bash CalNearDist.sh
+bash CalNearDist.sh $1   #this is getSpottingsNowTime 
 
 echo "copying files to analysis_report2"
 cp centralEstDown.csv ../../analysis_report2/

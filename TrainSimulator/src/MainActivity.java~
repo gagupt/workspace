@@ -15,7 +15,7 @@ public class MainActivity {
 			bufferedwrtrPosnConfH_Up,bufferedwrtrPosnConfW_Down, bufferedwrtrPosnConfC_Down,
 			bufferedwrtrPosnConfH_Down;
 	public static double SimTime = 0;
-	public static int end_sim_time = 20000, getSpottingsNowTime = 5000;// to stop
+	public static int end_sim_time = 20000, getSpottingsNowTime = 2000;// to stop
 																		// the
 																		// simulation
 
