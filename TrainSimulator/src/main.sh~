@@ -3,18 +3,3 @@
 bash CalPeak.sh
 bash CalOriginalPos.sh 10000  #this is getSpottingsNowTime 
 bash CalNearDist.sh
-
-cp centralEstDown.csv ../../analysis_report2/
-cp centralEstUp.csv ../../analysis_report2/
-cp centralTruDown.csv ../../analysis_report2/
-cp centralTruUp.csv ../../analysis_report2/
-
-cp westernEstDown.csv ../../analysis_report2/
-cp westernEstUp.csv ../../analysis_report2/
-cp westernTruDown.csv ../../analysis_report2/
-cp westernTruUp.csv ../../analysis_report2/
-
-cp harbourEstDown.csv ../../analysis_report2/
-cp harbourEstUp.csv ../../analysis_report2/
-cp harbourTruDown.csv ../../analysis_report2/
-cp harbourTruUp.csv ../../analysis_report2/

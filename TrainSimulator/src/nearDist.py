@@ -5,14 +5,14 @@ LISTtru=[]
 
 min=0
 total = len(sys.argv)
-if (total!=5):
-	print "Please Enter four arguments....!"
+if (total!=6):
+	print "Please Enter five arguments....!"
 	exit()
 inpfileEst=sys.argv[1]
 inpfileTru=sys.argv[2]
 outfileEst=sys.argv[3]
 outfileTru=sys.argv[4]
-
+flagUp=sys.argv[5]
 outfEst=open(outfileEst,'wb')
 outfTru=open(outfileTru,'wb')
 outlineEst=csv.writer(outfEst)
@@ -33,7 +33,10 @@ for row1 in linesEst:
         originDist=row2[4]
         timeExceed=float(row2[0])-10000
         distExceed=timeExceed*14 #speed of train is 14 m/s
-        finalDist=float(row2[4])-distExceed
+        if(int(flagUp)==1):
+                finalDist=float(row2[4])-distExceed
+        else:
+                finalDist=float(row2[4])+distExceed
         #print abs(float(row1[0])-float(row2[4]))
         if(min>abs(float(row1[0])-float(finalDist))):
             min=abs(float(row1[0])-float(finalDist))
@@ -85,7 +88,13 @@ for row1 in linesTru:
         timeExceed=float(row1[0])-10000
         #print timeExceed
         distExceed=timeExceed*14 #speed of train is 14 m/s
-        finalDist=float(row1[4])-distExceed
+	
+        if(int(flagUp)==1):
+                finalDist=float(row1[4])-distExceed
+                #print flagUp
+        else:
+                finalDist=float(row1[4])+distExceed
+        
         if(min>abs(float(finalDist)-float(row2[0]))):
             min=abs(float(finalDist)-float(row2[0]))
             #print finalDist
