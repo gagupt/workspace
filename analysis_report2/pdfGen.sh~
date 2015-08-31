@@ -4,6 +4,9 @@ cd random/
 pdflatex "\def\NumUser{$1} \input{report.tex}" </dev/null>/dev/null 2>&1
 mv report.pdf ../
 cd ..
-mv report.pdf $(echo $1_user_report${pdf}).pdf
-#evince report.pdf 
+mv report.pdf $(echo $1_user_report).pdf
+rm report.pdf
+pdftk *.pdf cat output report.pdf
+#evince report.pdf
+ 
 

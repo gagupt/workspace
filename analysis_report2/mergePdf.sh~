@@ -1,0 +1,4 @@
+#!/bin/bash
+
+#rm report.pdf
+pdftk *.pdf cat output Mergereport.pdf

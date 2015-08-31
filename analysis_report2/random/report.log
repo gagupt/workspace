@@ -1,8 +1,8 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.5.29)  31 AUG 2015 11:40
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.5.29)  31 AUG 2015 12:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**\def\NumUser{50} \input{report.tex}
+**\def\NumUser{2} \input{report.tex}
 (./report.tex (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
 (/usr/share/texlive/texmf-dist/tex/latex/base/size10.clo
@@ -934,15 +934,15 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 13.
 \c__siunitx_mathtt_int=\count175
-(./file1.tex
+(./file3.tex
 Underfull \hbox (badness 10000) in paragraph at lines 1--9
 
  []
 
-PGFPlots: reading {westernTruUp.csv}
-PGFPlots: reading {westernEstUp.csv}
-PGFPlots: reading {westernTruDown.csv}
-PGFPlots: reading {westernEstDown.csv}
+PGFPlots: reading {harbourTruUp.csv}
+PGFPlots: reading {harbourEstUp.csv}
+PGFPlots: reading {harbourTruDown.csv}
+PGFPlots: reading {harbourEstDown.csv}
 ) [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./report.aux)
@@ -953,16 +953,16 @@ LaTeX Warning: There were multiply-defined labels.
 Here is how much of TeX's memory you used:
  25659 strings out of 495028
  629653 string characters out of 6181497
- 715998 words of memory out of 5000000
+ 713997 words of memory out of 5000000
  28403 multiletter control sequences out of 15000+600000
  5962 words of font info for 23 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 71i,15n,76p,10477b,1234s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 71i,15n,76p,10476b,1234s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texl
 ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb>
-Output written on report.pdf (1 page, 53513 bytes).
+Output written on report.pdf (1 page, 53688 bytes).
 PDF statistics:
  27 PDF objects out of 1000 (max. 8388607)
  19 compressed objects within 1 object stream
