@@ -30,9 +30,13 @@ for row1 in linesEst:
     listTemp=[]
     linesTru = csv.reader(open(inpfileTru,'rb'), delimiter=',')
     for row2 in linesTru:
+        originDist=row2[4]
+        timeExceed=float(row2[0])-10000
+        distExceed=timeExceed*14 #speed of train is 14 m/s
+        finalDist=float(row2[4])-distExceed
         #print abs(float(row1[0])-float(row2[4]))
-        if(min>abs(float(row1[0])-float(row2[4]))):
-            min=abs(float(row1[0])-float(row2[4]))
+        if(min>abs(float(row1[0])-float(finalDist))):
+            min=abs(float(row1[0])-float(finalDist))
     listTemp.append(row1[0])
     listTemp.append(min)
     LISTEst.append(listTemp)
@@ -77,9 +81,15 @@ for row1 in linesTru:
     linesEst = csv.reader(open(inpfileEst,'rb'), delimiter=',')
     for row2 in linesEst:
         #print abs(float(row1[0])-float(row2[4]))
-        if(min>abs(float(row1[4])-float(row2[0]))):
-            min=abs(float(row1[4])-float(row2[0]))
-    listTemp.append(row1[4])
+        originDist=row1[4]
+        timeExceed=float(row1[0])-10000
+        #print timeExceed
+        distExceed=timeExceed*14 #speed of train is 14 m/s
+        finalDist=float(row1[4])-distExceed
+        if(min>abs(float(finalDist)-float(row2[0]))):
+            min=abs(float(finalDist)-float(row2[0]))
+            #print finalDist
+    listTemp.append(finalDist)
     listTemp.append(min)
     LISTtru.append(listTemp)
 LISTtru.sort(key=lambda x:float(x[0]))

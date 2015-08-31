@@ -28,12 +28,12 @@ outlineDown=csv.writer(outfDown)
 for row in lines:
     if row:
             if((row[2]==stopline)):
-                if(int(row[0])>int(SpotTime)-200):
+                if(int(row[0])>=int(SpotTime)):
                         n+=1
                         LIST.append(row)
                         #print row[0],row[1],row[2],row[3],row[4]
 
-
+#finding unique train near Spottime
 for i, val in enumerate(LIST):
         if(val[1] not in rowIndex):
                 rowIndex.append(val[1])
