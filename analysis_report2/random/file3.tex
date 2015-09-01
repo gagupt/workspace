@@ -48,10 +48,13 @@ Speed\_of\_The\_Train = 14 m/sec (50.4 km/h)\\
       display columns/1/.style={
 		column name=$NearestTruthDis $,
 		column type={S},string type},
+      display columns/2/.style={
+		column name=$PosConf $,
+		column type={S},string type},
       every head row/.style={
 		before row={\toprule}, % have a rule at top
 		after row={
-			\si{\meter} & \si{\meter}\\ % the units seperated by &
+			\si{\meter} & \si{\meter} \\ % the units seperated by &
 			\midrule} % rule under units
 			},
 		every last row/.style={after row=\bottomrule}, % rule at bottom
@@ -61,7 +64,6 @@ Speed\_of\_The\_Train = 14 m/sec (50.4 km/h)\\
 \end{minipage}%
 
 \end{table}
-%%down route
 \subsubsection{harbour down route}
 \begin{table}[h!]
 
@@ -85,7 +87,7 @@ Speed\_of\_The\_Train = 14 m/sec (50.4 km/h)\\
 			\midrule} % rule under units
 			},
 		every last row/.style={after row=\bottomrule}, % rule at bottom
-    ]{harbourTruDown.csv} % filename/path to file
+    ]{harbourTruUp.csv} % filename/path to file
   \end{center}
 
 \end{minipage}%
@@ -102,10 +104,13 @@ Speed\_of\_The\_Train = 14 m/sec (50.4 km/h)\\
       display columns/1/.style={
 		column name=$NearestTruthDis $,
 		column type={S},string type},
+      display columns/2/.style={
+		column name=$PosConf $,
+		column type={S},string type},
       every head row/.style={
 		before row={\toprule}, % have a rule at top
 		after row={
-			\si{\meter} & \si{\meter}\\ % the units seperated by &
+			\si{\meter} & \si{\meter} \\ % the units seperated by &
 			\midrule} % rule under units
 			},
 		every last row/.style={after row=\bottomrule}, % rule at bottom
@@ -115,6 +120,9 @@ Speed\_of\_The\_Train = 14 m/sec (50.4 km/h)\\
 \end{minipage}%
 
 \end{table}
+        
+
+
 
 
 

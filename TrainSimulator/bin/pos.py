@@ -35,7 +35,9 @@ for row in lines:
 
 #finding unique train near Spottime
 LIST.reverse()
+
 for i, val in enumerate(LIST):
+	#print val[3]
         if(val[1] not in rowIndex):
                 rowIndex.append(val[1])
                 train.append(i)
@@ -46,6 +48,8 @@ for i, val in enumerate(LIST):
 for i, val in enumerate(LIST):
         if(i in train):
                 up_down.append(val)
+		#print val
+
 for i, val in enumerate(up_down):
         if(val[5]=="up"):
                 outlineUp.writerow(val)

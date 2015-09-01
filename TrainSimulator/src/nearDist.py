@@ -22,7 +22,7 @@ outlineTru=csv.writer(outfTru)
 
 #calculating for each estimated value
 listTemp=[]
-listTemp.append("Positions , NearestTruthDis")
+listTemp.append("Positions , NearestTruthDis, PosConf")
 outlineEst.writerow(listTemp)
 
 linesEst = csv.reader(open(inpfileEst,'rb'), delimiter=',')
@@ -45,6 +45,7 @@ for row1 in linesEst:
             min=abs(float(row1[0])-float(finalDist))
     listTemp.append(row1[0])
     listTemp.append(min)
+    listTemp.append(row1[1])
     #print min
     LISTEst.append(listTemp)
 for i, val in enumerate(LISTEst):
@@ -68,8 +69,8 @@ else:
         avgPosConf=s/i
 #print avgPosConf,maxPosConf
 
-s1="AvgPosConf, "+str(avgPosConf)
-s2="MaxPosConf,"+str(maxPosConf)
+s1="AvgPosConf, "+str(avgPosConf)+","
+s2="MaxPosConf,"+str(maxPosConf)+","
 listTemp=[]
 listTemp.append(s1)
 outlineEst.writerow(listTemp)
