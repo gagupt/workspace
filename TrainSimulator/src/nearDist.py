@@ -22,8 +22,8 @@ outlineTru=csv.writer(outfTru)
 
 #calculating for each estimated value
 listTemp=[]
-listTemp.append("Positions , NearestTruthDis, PosConf")
-outlineEst.writerow(listTemp)
+#listTemp.append("Positions , NearestTruthDis, PosConf")
+#outlineEst.writerow(listTemp)
 
 linesEst = csv.reader(open(inpfileEst,'rb'), delimiter=',')
 
@@ -73,10 +73,10 @@ s1="AvgPosConf, "+str(avgPosConf)+","
 s2="MaxPosConf,"+str(maxPosConf)+","
 listTemp=[]
 listTemp.append(s1)
-outlineEst.writerow(listTemp)
+#outlineEst.writerow(listTemp)
 listTemp=[]
 listTemp.append(s2)
-outlineEst.writerow(listTemp)
+#outlineEst.writerow(listTemp)
 
 
 listTemp=[]

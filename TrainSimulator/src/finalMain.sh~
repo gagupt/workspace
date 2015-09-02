@@ -1,0 +1,9 @@
+#!/bin/bash
+
+SpotTime=500
+end_sim_time=30000
+         while [  $SpotTime -lt $end_sim_time ]; do
+             bash main.sh $end_sim_time $SpotTime 10
+	     python CalAvg.py westernEstUp.csv wesUpAvg.csv
+	     let SpotTime=SpotTime+5000
+         done

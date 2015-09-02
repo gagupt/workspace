@@ -2,7 +2,7 @@
 echo "running MainActivity"
 javac MainActivity.java 
 java MainActivity $1 $2 $3 >output.csv
-echo $1 $2 $3
+#echo $1 $2 $3
 echo "running CalPeak.sh" 
 bash CalPeak.sh
 
