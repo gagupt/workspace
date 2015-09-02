@@ -1,16 +1,16 @@
 #!/bin/bash
 echo "running MainActivity"
 javac MainActivity.java 
-java MainActivity >output.csv 
-
+java MainActivity $1 $2 $3 >output.csv
+echo $1 $2 $3
 echo "running CalPeak.sh" 
 bash CalPeak.sh
 
 echo "running CalOriginalPos.sh"
-bash CalOriginalPos.sh $1  #this is getSpottingsNowTime 
+bash CalOriginalPos.sh $2  #this is getSpottingsNowTime 
 
 echo "running CalNearDist.sh"
-bash CalNearDist.sh $1   #this is getSpottingsNowTime 
+bash CalNearDist.sh $2   #this is getSpottingsNowTime 
 
 echo "copying files to analysis_report2"
 cp centralEstDown.csv ../../analysis_report2/

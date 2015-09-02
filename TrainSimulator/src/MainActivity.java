@@ -15,7 +15,7 @@ public class MainActivity {
 			bufferedwrtrPosnConfH_Up,bufferedwrtrPosnConfW_Down, bufferedwrtrPosnConfC_Down,
 			bufferedwrtrPosnConfH_Down;
 	public static double SimTime = 0;
-	public static int end_sim_time = 30000, getSpottingsNowTime = 21000;// to stop
+	public static int end_sim_time , getSpottingsNowTime,passenger_all;// to stop
 																		// the
 																		// simulation
 
@@ -36,7 +36,14 @@ public class MainActivity {
 
 	// Main function
 	public static void main(String args[]) throws IOException {
-
+		
+		end_sim_time=Integer.parseInt(args[0]);
+		getSpottingsNowTime=Integer.parseInt(args[1]);
+		passenger_all=Integer.parseInt(args[2]);
+		//Passenger.setPassenger_All(passenger_all);
+		//System.out.println(Passenger.Passenger_All);
+		//System.out.println(end_sim_time+" "+getSpottingsNowTime+" "+Passenger.Passenger_All);
+		
 		try {
 
 			File file1 = new File("western.csv");
