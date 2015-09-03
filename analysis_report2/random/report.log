@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.5.29)  3 SEP 2015 02:29
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.5.29)  3 SEP 2015 13:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -966,7 +966,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1--9
 PGFPlots: reading {westernTruUp.csv}
 PGFPlots: reading {westernEstUp.csv}
 
-Overfull \hbox (42.25952pt too wide) in paragraph at lines 61--62
+Overfull \hbox (52.25955pt too wide) in paragraph at lines 61--62
  [] 
  []
 
@@ -1025,7 +1025,7 @@ LaTeX Warning: There were multiply-defined labels.
 Here is how much of TeX's memory you used:
  25698 strings out of 495028
  630478 string characters out of 6181497
- 714998 words of memory out of 5000000
+ 717999 words of memory out of 5000000
  28421 multiletter control sequences out of 15000+600000
  5962 words of font info for 23 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
@@ -1034,7 +1034,7 @@ Here is how much of TeX's memory you used:
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texl
 ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb>
-Output written on report.pdf (3 pages, 56975 bytes).
+Output written on report.pdf (3 pages, 57189 bytes).
 PDF statistics:
  33 PDF objects out of 1000 (max. 8388607)
  23 compressed objects within 1 object stream

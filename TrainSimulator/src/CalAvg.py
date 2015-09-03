@@ -23,11 +23,11 @@ for row in linesEst:
         count+=1
 squaresum=0
 Avg=Sum/count
-print Avg
+#print Avg
 for i, val in enumerate(List):
         squaresum+=math.pow(abs(float(val)-Avg),2)
 stand_dev=math.sqrt(squaresum/count)
-print stand_dev 
+#print stand_dev 
 listTemp=[]
 listTemp.append(Avg)
 listTemp.append(stand_dev)

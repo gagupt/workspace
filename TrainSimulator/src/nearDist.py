@@ -37,9 +37,13 @@ for row1 in linesEst:
         distExceed=timeExceed*14 #speed of train is 14 m/s
         if(int(flagUp)==1):
                 finalDist=float(row2[4])+distExceed
+                if(float(finalDist)>123780):
+                        finalDist=123780-finalDist+123780
                
         else:
                 finalDist=float(row2[4])-distExceed
+                if(float(finalDist)<0):
+                        finalDist=0-finalDist
         #print abs(float(row1[0])-float(row2[4]))
         if(min>abs(float(row1[0])-float(finalDist))):
             min=abs(float(row1[0])-float(finalDist))
@@ -100,14 +104,14 @@ for row1 in linesTru:
         if(int(flagUp)==1):
                 finalDist=float(row1[4])+distExceed
                 if(float(finalDist)>123780):
-                        finalDist=123780
+                        finalDist=123780-finalDist+123780
                         #print "hello"
                 #print flagUp
         else:
                 finalDist=float(row1[4])-distExceed
 		#print finalDist
                 if(float(finalDist)<0):
-                        finalDist=0
+                        finalDist=0-finalDist
                 
         
         if(min>abs(float(finalDist)-float(row2[0]))):
@@ -121,5 +125,3 @@ LISTtru.sort(key=lambda x:float(x[0]))
 for i, val in enumerate(LISTtru):
     outlineTru.writerow(val)
 
-
-   
