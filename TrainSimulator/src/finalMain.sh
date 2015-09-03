@@ -1,6 +1,6 @@
 #!/bin/bash
-numUsr=100
-maxNumUsr=3000
+numUsr=2500
+maxNumUsr=10000
 rm wesUpAvg.csv
 rm allUsr.csv
 echo NumUsr,AvgError,SD>allUsr.csv
@@ -22,7 +22,7 @@ echo -e "\n"
 python avg.py wesUpAvg.csv $numUsr allUsr.csv
 rm wesUpAvg.csv
    
-     let numUsr=numUsr+300
+     let numUsr=numUsr+500
      
 done
 python error_bar.py </dev/null>/dev/null 2>&1

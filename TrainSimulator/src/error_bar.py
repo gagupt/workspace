@@ -2,7 +2,11 @@
 import matplotlib.pyplot as plt
 import numpy as np
 import csv, sys, re, random, os, time
+font = {'family' : 'normal',
+        
+        'size'   : 10}
 
+plt.rc('font', **font)
 datfile="allUsr.csv"
 Mcsv = csv.reader(open(datfile, 'rb'), delimiter=',', quotechar='"')
 
