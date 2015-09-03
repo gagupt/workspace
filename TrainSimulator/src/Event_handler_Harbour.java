@@ -548,16 +548,15 @@ public class Event_handler_Harbour {
 				jEnd = i + PosnConf.peakThres;
 
 			for (int j = jStart; j <= jEnd; j++) {
-				if (PosnConf.PosnConfidnce_List_Harbour_Up.get(i).PosnConfidence < 
+				if (Double.compare(PosnConf.PosnConfidnce_List_Harbour_Up.get(i).PosnConfidence, 
 						PosnConf.PosnConfidnce_List_Harbour_Up
-						.get(j).PosnConfidence) {
+						.get(j).PosnConfidence)<0) {
 					PosnConf.PosnConfidnce_List_Harbour_Up.get(i)
 							.setPeak(false);
 					break;
 				}
 			}
 		}
-
 		for (int i = 0; i < PosnConf.PosnConfidnce_List_Harbour_Down.size(); i++) {
 			if (i < PosnConf.peakThres)
 				jStart = 0;
@@ -570,9 +569,9 @@ public class Event_handler_Harbour {
 				jEnd = i + PosnConf.peakThres;
 
 			for (int j = jStart; j <= jEnd; j++) {
-				if (PosnConf.PosnConfidnce_List_Harbour_Down.get(i).PosnConfidence < 
+				if (Double.compare(PosnConf.PosnConfidnce_List_Harbour_Down.get(i).PosnConfidence, 
 						PosnConf.PosnConfidnce_List_Harbour_Down
-						.get(j).PosnConfidence) {
+						.get(j).PosnConfidence)<0) {
 					PosnConf.PosnConfidnce_List_Harbour_Down.get(i)
 							.setPeak(false);
 					break;

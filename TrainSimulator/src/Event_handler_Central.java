@@ -548,9 +548,9 @@ public class Event_handler_Central {
 				jEnd = i + PosnConf.peakThres;
 
 			for (int j = jStart; j <= jEnd; j++) {
-				if (PosnConf.PosnConfidnce_List_Central_Up.get(i).PosnConfidence < 
+				if (Double.compare(PosnConf.PosnConfidnce_List_Central_Up.get(i).PosnConfidence, 
 						PosnConf.PosnConfidnce_List_Central_Up
-						.get(j).PosnConfidence) {
+						.get(j).PosnConfidence)<0) {
 					PosnConf.PosnConfidnce_List_Central_Up.get(i)
 							.setPeak(false);
 					break;
@@ -569,15 +569,16 @@ public class Event_handler_Central {
 				jEnd = i + PosnConf.peakThres;
 
 			for (int j = jStart; j <= jEnd; j++) {
-				if (PosnConf.PosnConfidnce_List_Central_Down.get(i).PosnConfidence < 
+				if (Double.compare(PosnConf.PosnConfidnce_List_Central_Down.get(i).PosnConfidence, 
 						PosnConf.PosnConfidnce_List_Central_Down
-						.get(j).PosnConfidence) {
+						.get(j).PosnConfidence)<0) {
 					PosnConf.PosnConfidnce_List_Central_Down.get(i)
 							.setPeak(false);
 					break;
 				}
 			}
 		}
+
 	}
 
 	static double getConfidence4NumUsers(int N) {
