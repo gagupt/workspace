@@ -18,8 +18,8 @@ linesEst = csv.reader(open(inpfileEst,'rb'), delimiter=',')
 
 for row in linesEst:
         
-        Sum=Sum+float(row[1])
-        List.append(row[1])
+        Sum=Sum+float(row[1])*float(row[2])
+        List.append(float(row[1])*float(row[2]))
         count+=1
 squaresum=0
 Avg=Sum/count

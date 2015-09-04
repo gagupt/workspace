@@ -37,8 +37,8 @@ for row1 in linesEst:
         distExceed=timeExceed*14 #speed of train is 14 m/s
         if(int(flagUp)==1):
                 finalDist=float(row2[4])+distExceed
-                if(float(finalDist)>49000):
-                        finalDist=49000-finalDist+49000
+                if(float(finalDist)>54000):
+                        finalDist=54000-finalDist+54000
                
         else:
                 finalDist=float(row2[4])-distExceed
@@ -103,8 +103,8 @@ for row1 in linesTru:
 	
         if(int(flagUp)==1):
                 finalDist=float(row1[4])+distExceed
-                if(float(finalDist)>49000):
-                        finalDist=49000-finalDist+49000
+                if(float(finalDist)>54000):
+                        finalDist=54000-finalDist+54000
                         #print "hello"
                 #print flagUp
         else:

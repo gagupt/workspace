@@ -103,8 +103,8 @@ for row1 in linesTru:
 	
         if(int(flagUp)==1):
                 finalDist=float(row1[4])+distExceed
-                if(float(finalDist)>54000):
-                        finalDist=54000-finalDist+54000
+                if(float(finalDist)>123780):
+                        finalDist=123780-finalDist+123780
                         #print "hello"
                 #print flagUp
         else:
