@@ -1,7 +1,7 @@
 #!/bin/bash
-numUsr=2500
-maxNumUsr=10000
-rm wesUpAvg.csv
+numUsr=$1
+maxNumUsr=$2
+rm Avg.csv
 rm allUsr.csv
 echo NumUsr,AvgError,SD>allUsr.csv
 while [  $numUsr -lt $maxNumUsr ]; do
@@ -15,14 +15,14 @@ echo "Spot Time="$SpotTime
 echo -e "\n"
 
              bash main.sh $end_sim_time $SpotTime $numUsr
-	     python CalAvg.py westernEstUp.csv wesUpAvg.csv
+	     python CalAvg.py $4 Avg.csv
 	     let SpotTime=SpotTime+5000
          done
 
-python avg.py wesUpAvg.csv $numUsr allUsr.csv
-rm wesUpAvg.csv
+python avg.py Avg.csv $numUsr allUsr.csv
+rm Avg.csv
    
-     let numUsr=numUsr+500
+     let numUsr=numUsr+$3
      
 done
-python error_bar.py </dev/null>/dev/null 2>&1
+python error_bar.py $4 </dev/null>/dev/null 2>&1

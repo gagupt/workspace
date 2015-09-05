@@ -8,6 +8,7 @@ inpfileEst=sys.argv[1]
 Sum=0
 Avg=0
 count=0
+stand_dev=0
 outfileAvg=sys.argv[2]
 
 outfAvg=open(outfileAvg,'a')
@@ -22,11 +23,13 @@ for row in linesEst:
         List.append(float(row[1])*float(row[2]))
         count+=1
 squaresum=0
-Avg=Sum/count
+if(count!=0):
+        Avg=Sum/count
 #print Avg
 for i, val in enumerate(List):
         squaresum+=math.pow(abs(float(val)-Avg),2)
-stand_dev=math.sqrt(squaresum/count)
+if(count!=0):
+        stand_dev=math.sqrt(squaresum/count)
 #print stand_dev 
 listTemp=[]
 listTemp.append(Avg)

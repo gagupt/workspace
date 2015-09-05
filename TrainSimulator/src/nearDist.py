@@ -5,8 +5,8 @@ LISTtru=[]
 finalDist=0
 min=0
 total = len(sys.argv)
-if (total!=7):
-	print "Please Enter six arguments....!"
+if (total!=8):
+	print "Please Enter seven arguments....!"
 	exit()
 inpfileEst=sys.argv[1]
 inpfileTru=sys.argv[2]
@@ -14,6 +14,7 @@ outfileEst=sys.argv[3]
 outfileTru=sys.argv[4]
 flagUp=sys.argv[5]
 SpotTime=sys.argv[6]
+totoal_path_length=sys.argv[7]
 
 outfEst=open(outfileEst,'wb')
 outfTru=open(outfileTru,'wb')
@@ -37,13 +38,17 @@ for row1 in linesEst:
         distExceed=timeExceed*14 #speed of train is 14 m/s
         if(int(flagUp)==1):
                 finalDist=float(row2[4])+distExceed
-                if(float(finalDist)>54000):
-                        finalDist=54000-finalDist+54000
+                #print finalDist
+                #print totoal_path_length
+                if(float(finalDist)>float(totoal_path_length)):
+                        finalDist=float(totoal_path_length)-finalDist+float(totoal_path_length)
+               
                
         else:
                 finalDist=float(row2[4])-distExceed
                 if(float(finalDist)<0):
                         finalDist=0-finalDist
+        #print finalDist
         #print abs(float(row1[0])-float(row2[4]))
         if(min>abs(float(row1[0])-float(finalDist))):
             min=abs(float(row1[0])-float(finalDist))
@@ -103,8 +108,9 @@ for row1 in linesTru:
 	
         if(int(flagUp)==1):
                 finalDist=float(row1[4])+distExceed
-                if(float(finalDist)>54000):
-                        finalDist=54000-finalDist+54000
+                if(float(finalDist)>float(totoal_path_length)):
+                        finalDist=float(totoal_path_length)-finalDist+float(totoal_path_length)
+               
                         #print "hello"
                 #print flagUp
         else:

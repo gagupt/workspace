@@ -1,0 +1,5 @@
+#!/bin/bash
+
+bash superWes.sh 
+bash superCen.sh
+bash superHarb.sh
