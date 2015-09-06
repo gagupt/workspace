@@ -377,10 +377,23 @@ public class Event_handler_Central {
 
 	public static void getSpottingsNow(double nowtime) {
 		// TODO Auto-generated method stub
+		/*System.out.println("New PRINT");
+		for (int jj = 0; jj < Train_Spotting.Train_Spotting_List_Central
+				.size(); jj++) {
+			//if(Train_Spotting.Train_Spotting_List_Central.get(j).Direction=="down"){
+				
+				System.out.print(Train_Spotting.Train_Spotting_List_Central.get(jj).DistFromOriginMeter);
+				System.out.println(Train_Spotting.Train_Spotting_List_Central.get(jj).Direction);
+				
+				//}
+		}
+		
+		System.out.println("New PRINT END");
+		*/
 		for (int i = 0; i < Train_Spotting.Train_Spotting_List_Central.size(); i++) {
 
 			double t = Train_Spotting.Train_Spotting_List_Central.get(i).Timestamp;
-
+			
 			Train_Spotting.Train_Spotting_List_Central.get(i).setConfidence(
 					getConfidenceFromPast(t, nowtime));
 
@@ -399,6 +412,8 @@ public class Event_handler_Central {
 			double timetoTravel = nowtime - t;
 			// System.out.println("timetoTravel="+timetoTravel);
 			int m = 0;
+			int dir_flag=0;
+			
 			while (true) {
 				if (dir == "up") {
 					for (m = k1 + 1; m <= 25; m++) {
@@ -414,6 +429,7 @@ public class Event_handler_Central {
 						}
 					}
 					if (m > 25) {
+						dir_flag++;
 						dir = "down";
 						k1 = m - 1;
 					} else {
@@ -437,6 +453,7 @@ public class Event_handler_Central {
 					}
 					if (m < 0) {
 						dir = "up";
+						dir_flag++;
 						k1 = m;
 					} else {
 						break;
@@ -448,6 +465,9 @@ public class Event_handler_Central {
 				m--;
 			// System.out.println("k=" + k1 + "m=" + m + "station=" + station
 			// + "distOffset=" + distOffset);
+			//double total_run_dist=timetoTravel*Trains.Speed_of_The_Train 
+			//		+station_count*Trains.Halt_time_of_Train;
+			//int dir_flag=(int)total_run_dist/54000;
 			int ii = 0;
 			double distNow = 0;
 			for (ii = 0; ii < Station.StationList_Central.size(); ii++) {
@@ -461,8 +481,19 @@ public class Event_handler_Central {
 			distNow += distOffset;
 			Train_Spotting.Train_Spotting_List_Central.get(i).setDistNow(
 					distNow);
-
+			//if(dir_flag%2==1){
+			//		if(Train_Spotting.Train_Spotting_List_Central.get(i).Direction=="up"){
+						
+						Train_Spotting.Train_Spotting_List_Central.get(i).setDirection(dir);
+						
+				//	}
+					//else{
+						//Train_Spotting.Train_Spotting_List_Central.get(i).setDirection("up");
+						
+					//}
+				//}
 		}
+		
 		// computePosnConf..................
 		double dist = 0;
 		double inrc = 100;
