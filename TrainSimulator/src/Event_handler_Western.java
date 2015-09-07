@@ -93,12 +93,26 @@ public class Event_handler_Western {
 				Trains.Trainlist_Western.get(TrainNo - 1).Train
 						.add(Passenger.ListOfPassenger_Western.get(i));
 				// Passengers telling us that they are boarding train
+//Including probability to give input by passengers
+		/*		Uniform inp = null;
+				int val;
 
+				inp = new Uniform(0,4);
+				val = (int) inp.nextDouble();
+				if(val==0)
 				Train_Spotting.Train_Spotting_List_Western
 						.add(new Train_Spotting(
 								Passenger.ListOfPassenger_Western.get(i).id,
-								timestamp, "down", station,
+								timestamp+300, "down", station,
 								distFromOriginMeter, 0, 0));
+				else
+				*/
+					Train_Spotting.Train_Spotting_List_Western
+					.add(new Train_Spotting(
+							Passenger.ListOfPassenger_Western.get(i).id,
+							timestamp, "down", station,
+							distFromOriginMeter, 0, 0));
+			
 				// ........................
 
 				countWalkIn++;
@@ -186,9 +200,15 @@ public class Event_handler_Western {
 						+ "\t"
 						+ Trains.Trainlist_Western.get(TrainNo - 1).Train
 								.size());
+//Inserting Random Delays
+				Uniform inp = null;
+		int val;
 
+		inp = new Uniform(0,60);
+		val = (int) inp.nextDouble();
+		
 		MainActivity.EventList.add(new Event(TrainNo, "Departure_Western",
-				station, MainActivity.SimTime + Trains.Halt_time_of_Train,
+				station, MainActivity.SimTime + Trains.Halt_time_of_Train+val,
 				Direction));
 
 	}
