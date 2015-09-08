@@ -94,24 +94,27 @@ public class Event_handler_Western {
 						.add(Passenger.ListOfPassenger_Western.get(i));
 				// Passengers telling us that they are boarding train
 //Including probability to give input by passengers
-		/*		Uniform inp = null;
-				int val;
+				Uniform inp = null,inperr=null;
+				int val,valadded;
 
-				inp = new Uniform(0,4);
+				inp = new Uniform(0,2);
 				val = (int) inp.nextDouble();
-				if(val==0)
+				
+				inperr = new Uniform(0,600);
+				valadded = (int) inperr.nextDouble();
+				//System.out.println("VALUE="+valadded);
+				//if(val==0)
 				Train_Spotting.Train_Spotting_List_Western
 						.add(new Train_Spotting(
 								Passenger.ListOfPassenger_Western.get(i).id,
-								timestamp+300, "down", station,
+								timestamp+valadded, "down", station,
 								distFromOriginMeter, 0, 0));
-				else
-				*/
-					Train_Spotting.Train_Spotting_List_Western
-					.add(new Train_Spotting(
-							Passenger.ListOfPassenger_Western.get(i).id,
-							timestamp, "down", station,
-							distFromOriginMeter, 0, 0));
+				//else
+					//Train_Spotting.Train_Spotting_List_Western
+			//		.add(new Train_Spotting(
+				//			Passenger.ListOfPassenger_Western.get(i).id,
+					//		timestamp, "down", station,
+						//	distFromOriginMeter, 0, 0));
 			
 				// ........................
 
@@ -204,11 +207,11 @@ public class Event_handler_Western {
 				Uniform inp = null;
 		int val;
 
-		inp = new Uniform(0,60);
+		inp = new Uniform(0,3600);
 		val = (int) inp.nextDouble();
 		
 		MainActivity.EventList.add(new Event(TrainNo, "Departure_Western",
-				station, MainActivity.SimTime + Trains.Halt_time_of_Train+val,
+				station, MainActivity.SimTime + Trains.Halt_time_of_Train,
 				Direction));
 
 	}

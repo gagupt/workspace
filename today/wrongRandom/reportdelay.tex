@@ -1,0 +1,41 @@
+\documentclass[a4paper,12pt]{report}
+\textwidth=15cm \textheight=25cm
+\usepackage{multicol}
+
+\usepackage{graphicx}
+\usepackage{verbatim}
+\usepackage{mathtools}
+\setlength{\topmargin}{-0.20in}
+\setlength{\textheight}{9.0in}
+\setlength{\oddsidemargin}{-0.25in}
+\setlength{\evensidemargin}{-0.25in}
+\setlength{\textwidth}{7.0in}
+\setlength{\columnsep}{0.33in}
+\setlength{\parindent}{1pc}
+\graphicspath{{images/}}
+\usepackage{blindtext}
+
+\begin{document}
+\begin{figure}[h!]
+
+\centering
+\includegraphics[height=10cm,width=17cm]{00_withoutDelay.pdf}
+\caption{Without Any Wrong Input}
+
+\centering
+\includegraphics[height=10cm,width=17cm]{01_1prob-0-5minlate.pdf}
+\caption{random late input with 0-5 minute}
+
+\end{figure}
+\begin{figure}[h!]
+
+\centering
+\includegraphics[height=10cm,width=17cm]{02_1prob-0-10minlate.pdf}
+\caption{random late input with 0-10 minute}
+
+\centering
+\includegraphics[height=10cm,width=17cm]{03_1prob-30minlate.pdf}
+\caption{random late input with 0-30 minute}
+\end{figure}
+
+\end{document}

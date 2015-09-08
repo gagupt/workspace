@@ -1,0 +1,36 @@
+\documentclass[a4paper,12pt]{report}
+\textwidth=15cm \textheight=25cm
+\usepackage{multicol}
+
+\usepackage{graphicx}
+\usepackage{verbatim}
+\usepackage{mathtools}
+\setlength{\topmargin}{-0.20in}
+\setlength{\textheight}{9.0in}
+\setlength{\oddsidemargin}{-0.25in}
+\setlength{\evensidemargin}{-0.25in}
+\setlength{\textwidth}{7.0in}
+\setlength{\columnsep}{0.33in}
+\setlength{\parindent}{1pc}
+\graphicspath{{images/}}
+\usepackage{blindtext}
+
+\begin{document}
+\begin{figure}[h!]
+\begin{minipage}{.5\textwidth}
+
+\centering
+\includegraphics[height=6cm,width=9cm]{00_withoutDelay.pdf}
+\caption{Predicted positions of the trains}
+
+\end{minipage}%
+\begin{minipage}{.5\textwidth}
+
+\centering
+\includegraphics[height=5cm,width=8cm]{01_1minDelay.pdf}
+\caption{Real positions of the trains}
+
+\end{minipage}%
+\end{figure}
+
+\end{document}
