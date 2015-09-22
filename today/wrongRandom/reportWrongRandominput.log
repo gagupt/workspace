@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.5.29)  8 SEP 2015 14:35
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.5.29)  8 SEP 2015 14:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**reportdelay.tex
-(./reportdelay.tex
+**reportWrongRandominput.tex
+(./reportWrongRandominput.tex
 LaTeX2e <2011/06/27>
 Babel <3.9h> and hyphenation patterns for 2 languages loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/base/report.cls
@@ -223,8 +223,9 @@ Package: xspace 2009/10/20 v1.13 Space after command names (DPC,MH)
 \c@blind@randommax=\count129
 \c@blind@pangramcount=\count130
 \c@blind@pangrammax=\count131
-) (./reportdelay.aux)
-\openout1 = `reportdelay.aux'.
+)
+(./reportWrongRandominput.aux)
+\openout1 = `reportWrongRandominput.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
 LaTeX Font Info:    ... okay on input line 18.
@@ -238,6 +239,7 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 18.
 LaTeX Font Info:    ... okay on input line 18.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 18.
 LaTeX Font Info:    ... okay on input line 18.
+
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count132
@@ -349,18 +351,18 @@ Overfull \vbox (1.3287pt too high) has occurred while \output is active []
 
 pdfTeX warning: pdflatex (file ./03_1prob-30minlate.pdf): PDF inclusion: multip
 le pdfs with page group included in a single page
->] (./reportdelay.aux) ) 
+>] (./reportWrongRandominput.aux) ) 
 Here is how much of TeX's memory you used:
  2932 strings out of 495028
- 42413 string characters out of 6181497
+ 42512 string characters out of 6181497
  103541 words of memory out of 5000000
  6120 multiletter control sequences out of 15000+600000
  3938 words of font info for 15 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 38i,5n,23p,275b,241s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmr12.pfb>
-Output written on reportdelay.pdf (2 pages, 93628 bytes).
+ 38i,5n,23p,286b,241s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmr12.pfb>
+Output written on reportWrongRandominput.pdf (2 pages, 93628 bytes).
 PDF statistics:
  249 PDF objects out of 1000 (max. 8388607)
  31 compressed objects within 1 object stream

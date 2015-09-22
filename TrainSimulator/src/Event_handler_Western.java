@@ -93,29 +93,29 @@ public class Event_handler_Western {
 				Trains.Trainlist_Western.get(TrainNo - 1).Train
 						.add(Passenger.ListOfPassenger_Western.get(i));
 				// Passengers telling us that they are boarding train
-//Including probability to give input by passengers
-				Uniform inp = null,inperr=null;
-				int val,valadded;
+				// Including probability to give input by passengers
+				Uniform inp = null, inperr = null;
+				int val, valadded;
 
-				inp = new Uniform(0,2);
+				inp = new Uniform(0, 2);
 				val = (int) inp.nextDouble();
-				
-				inperr = new Uniform(0,600);
+
+				inperr = new Uniform(0, 600);
 				valadded = (int) inperr.nextDouble();
-				//System.out.println("VALUE="+valadded);
-				//if(val==0)
+				// System.out.println("VALUE="+valadded);
+				// if(val==0)
 				Train_Spotting.Train_Spotting_List_Western
 						.add(new Train_Spotting(
 								Passenger.ListOfPassenger_Western.get(i).id,
-								timestamp+valadded, "down", station,
+								timestamp, "down", station,
 								distFromOriginMeter, 0, 0));
-				//else
-					//Train_Spotting.Train_Spotting_List_Western
-			//		.add(new Train_Spotting(
-				//			Passenger.ListOfPassenger_Western.get(i).id,
-					//		timestamp, "down", station,
-						//	distFromOriginMeter, 0, 0));
-			
+				// else
+				// Train_Spotting.Train_Spotting_List_Western
+				// .add(new Train_Spotting(
+				// Passenger.ListOfPassenger_Western.get(i).id,
+				// timestamp, "down", station,
+				// distFromOriginMeter, 0, 0));
+
 				// ........................
 
 				countWalkIn++;
@@ -184,32 +184,18 @@ public class Event_handler_Western {
 			}
 		}
 
-		System.out
-				.println(Math.round(MainActivity.SimTime * 1000 / 1000)
-						+ "\t"
-						+ TrainNo
-						+ "\t"
-						+ "Stopped_Western"
-						+ "\t"
-						+ station
-						+ "\t"
-						+distFromOriginMeter
-						+"\t"
-						+ Direction
-						+ "\t"
-						+ countWalkIn++
-						+ "\t"
-						+ countWalkOut
-						+ "\t"
-						+ Trains.Trainlist_Western.get(TrainNo - 1).Train
-								.size());
-//Inserting Random Delays
-				Uniform inp = null;
+		System.out.println(Math.round(MainActivity.SimTime * 1000 / 1000)
+				+ "\t" + TrainNo + "\t" + "Stopped_Western" + "\t" + station
+				+ "\t" + distFromOriginMeter + "\t" + Direction + "\t"
+				+ countWalkIn++ + "\t" + countWalkOut + "\t"
+				+ Trains.Trainlist_Western.get(TrainNo - 1).Train.size());
+		// Inserting Random Delays
+		Uniform inp = null;
 		int val;
 
-		inp = new Uniform(0,3600);
+		inp = new Uniform(0, 3600);
 		val = (int) inp.nextDouble();
-		
+
 		MainActivity.EventList.add(new Event(TrainNo, "Departure_Western",
 				station, MainActivity.SimTime + Trains.Halt_time_of_Train,
 				Direction));
@@ -400,23 +386,25 @@ public class Event_handler_Western {
 
 	public static void getSpottingsNow(double nowtime) {
 		// TODO Auto-generated method stub
-		/*System.out.println("New PRINT");
-		for (int jj = 0; jj < Train_Spotting.Train_Spotting_List_Western
-				.size(); jj++) {
-			//if(Train_Spotting.Train_Spotting_List_Western.get(j).Direction=="down"){
-				
-				System.out.print(Train_Spotting.Train_Spotting_List_Western.get(jj).DistFromOriginMeter);
-				System.out.println(Train_Spotting.Train_Spotting_List_Western.get(jj).Direction);
-				
-				//}
-		}
-		
-		System.out.println("New PRINT END");
-		*/
+		/*
+		 * System.out.println("New PRINT"); for (int jj = 0; jj <
+		 * Train_Spotting.Train_Spotting_List_Western .size(); jj++) {
+		 * //if(Train_Spotting
+		 * .Train_Spotting_List_Western.get(j).Direction=="down"){
+		 * 
+		 * System.out.print(Train_Spotting.Train_Spotting_List_Western.get(jj).
+		 * DistFromOriginMeter);
+		 * System.out.println(Train_Spotting.Train_Spotting_List_Western
+		 * .get(jj).Direction);
+		 * 
+		 * //} }
+		 * 
+		 * System.out.println("New PRINT END");
+		 */
 		for (int i = 0; i < Train_Spotting.Train_Spotting_List_Western.size(); i++) {
 
 			double t = Train_Spotting.Train_Spotting_List_Western.get(i).Timestamp;
-			
+
 			Train_Spotting.Train_Spotting_List_Western.get(i).setConfidence(
 					getConfidenceFromPast(t, nowtime));
 
@@ -435,8 +423,8 @@ public class Event_handler_Western {
 			double timetoTravel = nowtime - t;
 			// System.out.println("timetoTravel="+timetoTravel);
 			int m = 0;
-			int dir_flag=0;
-			
+			int dir_flag = 0;
+
 			while (true) {
 				if (dir == "up") {
 					for (m = k1 + 1; m <= 35; m++) {
@@ -488,9 +476,9 @@ public class Event_handler_Western {
 				m--;
 			// System.out.println("k=" + k1 + "m=" + m + "station=" + station
 			// + "distOffset=" + distOffset);
-			//double total_run_dist=timetoTravel*Trains.Speed_of_The_Train 
-			//		+station_count*Trains.Halt_time_of_Train;
-			//int dir_flag=(int)total_run_dist/123780;
+			// double total_run_dist=timetoTravel*Trains.Speed_of_The_Train
+			// +station_count*Trains.Halt_time_of_Train;
+			// int dir_flag=(int)total_run_dist/123780;
 			int ii = 0;
 			double distNow = 0;
 			for (ii = 0; ii < Station.StationList_Western.size(); ii++) {
@@ -504,19 +492,19 @@ public class Event_handler_Western {
 			distNow += distOffset;
 			Train_Spotting.Train_Spotting_List_Western.get(i).setDistNow(
 					distNow);
-			//if(dir_flag%2==1){
-	//		if(Train_Spotting.Train_Spotting_List_Western.get(i).Direction=="up"){
-				
-				Train_Spotting.Train_Spotting_List_Western.get(i).setDirection(dir);
-				
-		//	}
-			//else{
-				//Train_Spotting.Train_Spotting_List_Western.get(i).setDirection("up");
-				
-			//}
-		//}
-	}
-		
+			// if(dir_flag%2==1){
+			// if(Train_Spotting.Train_Spotting_List_Western.get(i).Direction=="up"){
+
+			Train_Spotting.Train_Spotting_List_Western.get(i).setDirection(dir);
+
+			// }
+			// else{
+			// Train_Spotting.Train_Spotting_List_Western.get(i).setDirection("up");
+
+			// }
+			// }
+		}
+
 		// computePosnConf..................
 		double dist = 0;
 		double inrc = 100;
@@ -602,9 +590,10 @@ public class Event_handler_Western {
 				jEnd = i + PosnConf.peakThres;
 
 			for (int j = jStart; j <= jEnd; j++) {
-				if (Double.compare(PosnConf.PosnConfidnce_List_Western_Up.get(i).PosnConfidence, 
-						PosnConf.PosnConfidnce_List_Western_Up
-						.get(j).PosnConfidence)<0) {
+				if (Double
+						.compare(
+								PosnConf.PosnConfidnce_List_Western_Up.get(i).PosnConfidence,
+								PosnConf.PosnConfidnce_List_Western_Up.get(j).PosnConfidence) < 0) {
 					PosnConf.PosnConfidnce_List_Western_Up.get(i)
 							.setPeak(false);
 					break;
@@ -623,13 +612,44 @@ public class Event_handler_Western {
 				jEnd = i + PosnConf.peakThres;
 
 			for (int j = jStart; j <= jEnd; j++) {
-				if (Double.compare(PosnConf.PosnConfidnce_List_Western_Down.get(i).PosnConfidence, 
-						PosnConf.PosnConfidnce_List_Western_Down
-						.get(j).PosnConfidence)<0) {
-					PosnConf.PosnConfidnce_List_Western_Down.get(i)
-							.setPeak(false);
+				if (Double
+						.compare(
+								PosnConf.PosnConfidnce_List_Western_Down.get(i).PosnConfidence,
+								PosnConf.PosnConfidnce_List_Western_Down.get(j).PosnConfidence) < 0) {
+					PosnConf.PosnConfidnce_List_Western_Down.get(i).setPeak(
+							false);
 					break;
 				}
+			}
+		}
+		// updating users reputation
+		for (int i = 0; i < Train_Spotting.Train_Spotting_List_Western.size(); i++) {
+			double max_confidence = 0;
+			for (int j = 0; j < PosnConf.PosnConfidnce_List_Western_Up.size(); j++) {
+				if (PosnConf.PosnConfidnce_List_Western_Up.get(j).isPeak()) {
+					double pos_index = PosnConf.PosnConfidnce_List_Western_Up
+							.get(j).DistFromOriginMeter;
+					double distAlongRoute = Train_Spotting.Train_Spotting_List_Western
+							.get(i).DistFromOriginMeter;
+					double confDist = getConfidenceFromFarSpotting(Math
+							.abs(distAlongRoute - pos_index));
+					double confidence = Train_Spotting.Train_Spotting_List_Western
+							.get(i).Confidence;
+					double PosnCnf = PosnConf.PosnConfidnce_List_Western_Up
+							.get(j).PosnConfidence;
+					double this_confidence = confidence * confDist * PosnCnf;
+					if (this_confidence > max_confidence) {
+						max_confidence = this_confidence;
+					}
+					int userId = Train_Spotting.Train_Spotting_List_Western
+							.get(i).Id;
+					Passenger.reputation[userId] += Passenger.REPUTATION_INCR_VALUE
+							* max_confidence;
+					if (Passenger.reputation[userId] > Passenger.MAX_REPUTATION) {
+						Passenger.reputation[userId] = Passenger.MAX_REPUTATION;
+					}
+				}
+
 			}
 		}
 

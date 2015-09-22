@@ -1,6 +1,13 @@
 import java.util.ArrayList;
 
 public class Passenger {
+	public static final double INITIAL_REPUTATION= 0.5;
+	public static final double MIN_REPUTATION=0.5;
+	public static final double MAX_REPUTATION=1.0;
+	public static final double REPUTATION_DECAY_VALUE =0.05;
+	public static final double REPUTATION_INCR_VALUE =0.02;
+
+	
 	public int id,TrainNo;
 	public double ArrTime;
 	String Src,Dest,CurrStation,Status;
@@ -33,6 +40,10 @@ public class Passenger {
 	public void setCurrStation(String CurrStation){
 		this.CurrStation=CurrStation;
 	}
+	//array of reputations for all users
+	
+	
+	public static double[] reputation = new double[3*Passenger_All];
 	public static ArrayList<Passenger> ListOfPassenger_Western = 
 			new ArrayList<Passenger>(TotalNumOfPassenger_Western);
 	public static ArrayList<Passenger> ListOfPassenger_Central = 
