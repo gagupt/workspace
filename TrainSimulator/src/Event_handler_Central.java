@@ -93,12 +93,29 @@ public class Event_handler_Central {
 				Trains.Trainlist_Central.get(TrainNo - 1).Train
 						.add(Passenger.ListOfPassenger_Central.get(i));
 				// Passengers telling us that they are boarding train
+				// Including probability to give input by passengers
+				Uniform inp = null, inperr = null;
+				int val, valadded;
 
+				inp = new Uniform(0, 2);
+				val = (int) inp.nextDouble();
+
+				inperr = new Uniform(0, 600);
+				valadded = (int) inperr.nextDouble();
+				// System.out.println("VALUE="+valadded);
+				// if(val==0)
 				Train_Spotting.Train_Spotting_List_Central
 						.add(new Train_Spotting(
 								Passenger.ListOfPassenger_Central.get(i).id,
 								timestamp, "down", station,
 								distFromOriginMeter, 0, 0));
+				// else
+				// Train_Spotting.Train_Spotting_List_Central
+				// .add(new Train_Spotting(
+				// Passenger.ListOfPassenger_Central.get(i).id,
+				// timestamp, "down", station,
+				// distFromOriginMeter, 0, 0));
+
 				// ........................
 
 				countWalkIn++;
@@ -167,25 +184,17 @@ public class Event_handler_Central {
 			}
 		}
 
-		System.out
-				.println(Math.round(MainActivity.SimTime * 1000 / 1000)
-						+ "\t"
-						+ TrainNo
-						+ "\t"
-						+ "Stopped_Central"
-						+ "\t"
-						+ station
-						+ "\t"
-						+distFromOriginMeter
-						+"\t"
-						+ Direction
-						+ "\t"
-						+ countWalkIn++
-						+ "\t"
-						+ countWalkOut
-						+ "\t"
-						+ Trains.Trainlist_Central.get(TrainNo - 1).Train
-								.size());
+		System.out.println(Math.round(MainActivity.SimTime * 1000 / 1000)
+				+ "\t" + TrainNo + "\t" + "Stopped_Central" + "\t" + station
+				+ "\t" + distFromOriginMeter + "\t" + Direction + "\t"
+				+ countWalkIn++ + "\t" + countWalkOut + "\t"
+				+ Trains.Trainlist_Central.get(TrainNo - 1).Train.size());
+		// Inserting Random Delays
+		Uniform inp = null;
+		int val;
+
+		inp = new Uniform(0, 3600);
+		val = (int) inp.nextDouble();
 
 		MainActivity.EventList.add(new Event(TrainNo, "Departure_Central",
 				station, MainActivity.SimTime + Trains.Halt_time_of_Train,
@@ -377,23 +386,25 @@ public class Event_handler_Central {
 
 	public static void getSpottingsNow(double nowtime) {
 		// TODO Auto-generated method stub
-		/*System.out.println("New PRINT");
-		for (int jj = 0; jj < Train_Spotting.Train_Spotting_List_Central
-				.size(); jj++) {
-			//if(Train_Spotting.Train_Spotting_List_Central.get(j).Direction=="down"){
-				
-				System.out.print(Train_Spotting.Train_Spotting_List_Central.get(jj).DistFromOriginMeter);
-				System.out.println(Train_Spotting.Train_Spotting_List_Central.get(jj).Direction);
-				
-				//}
-		}
-		
-		System.out.println("New PRINT END");
-		*/
+		/*
+		 * System.out.println("New PRINT"); for (int jj = 0; jj <
+		 * Train_Spotting.Train_Spotting_List_Central .size(); jj++) {
+		 * //if(Train_Spotting
+		 * .Train_Spotting_List_Central.get(j).Direction=="down"){
+		 * 
+		 * System.out.print(Train_Spotting.Train_Spotting_List_Central.get(jj).
+		 * DistFromOriginMeter);
+		 * System.out.println(Train_Spotting.Train_Spotting_List_Central
+		 * .get(jj).Direction);
+		 * 
+		 * //} }
+		 * 
+		 * System.out.println("New PRINT END");
+		 */
 		for (int i = 0; i < Train_Spotting.Train_Spotting_List_Central.size(); i++) {
 
 			double t = Train_Spotting.Train_Spotting_List_Central.get(i).Timestamp;
-			
+
 			Train_Spotting.Train_Spotting_List_Central.get(i).setConfidence(
 					getConfidenceFromPast(t, nowtime));
 
@@ -412,8 +423,8 @@ public class Event_handler_Central {
 			double timetoTravel = nowtime - t;
 			// System.out.println("timetoTravel="+timetoTravel);
 			int m = 0;
-			int dir_flag=0;
-			
+			int dir_flag = 0;
+
 			while (true) {
 				if (dir == "up") {
 					for (m = k1 + 1; m <= 25; m++) {
@@ -465,9 +476,9 @@ public class Event_handler_Central {
 				m--;
 			// System.out.println("k=" + k1 + "m=" + m + "station=" + station
 			// + "distOffset=" + distOffset);
-			//double total_run_dist=timetoTravel*Trains.Speed_of_The_Train 
-			//		+station_count*Trains.Halt_time_of_Train;
-			//int dir_flag=(int)total_run_dist/54000;
+			// double total_run_dist=timetoTravel*Trains.Speed_of_The_Train
+			// +station_count*Trains.Halt_time_of_Train;
+			// int dir_flag=(int)total_run_dist/54000;
 			int ii = 0;
 			double distNow = 0;
 			for (ii = 0; ii < Station.StationList_Central.size(); ii++) {
@@ -481,19 +492,19 @@ public class Event_handler_Central {
 			distNow += distOffset;
 			Train_Spotting.Train_Spotting_List_Central.get(i).setDistNow(
 					distNow);
-			//if(dir_flag%2==1){
-			//		if(Train_Spotting.Train_Spotting_List_Central.get(i).Direction=="up"){
-						
-						Train_Spotting.Train_Spotting_List_Central.get(i).setDirection(dir);
-						
-				//	}
-					//else{
-						//Train_Spotting.Train_Spotting_List_Central.get(i).setDirection("up");
-						
-					//}
-				//}
+			// if(dir_flag%2==1){
+			// if(Train_Spotting.Train_Spotting_List_Central.get(i).Direction=="up"){
+
+			Train_Spotting.Train_Spotting_List_Central.get(i).setDirection(dir);
+
+			// }
+			// else{
+			// Train_Spotting.Train_Spotting_List_Central.get(i).setDirection("up");
+
+			// }
+			// }
 		}
-		
+
 		// computePosnConf..................
 		double dist = 0;
 		double inrc = 100;
@@ -516,7 +527,10 @@ public class Event_handler_Central {
 						double confDist = getConfidenceFromFarSpotting(Math
 								.abs(dist - distEach));
 						double overallConf = Train_Spotting.Train_Spotting_List_Central
-								.get(j).Confidence * confDist;
+								.get(j).Confidence
+								* confDist
+								* Passenger.reputation[Train_Spotting.Train_Spotting_List_Central
+										.get(j).Id];
 						Posnconf_Up += (1 - Posnconf_Up) * overallConf;
 						NumUserInputs_Up++;
 					} else if (Train_Spotting.Train_Spotting_List_Central
@@ -524,7 +538,10 @@ public class Event_handler_Central {
 						double confDist = getConfidenceFromFarSpotting(Math
 								.abs(dist - distEach));
 						double overallConf = Train_Spotting.Train_Spotting_List_Central
-								.get(j).Confidence * confDist;
+								.get(j).Confidence
+								* confDist
+								* Passenger.reputation[Train_Spotting.Train_Spotting_List_Central
+										.get(j).Id];
 						Posnconf_Down += (1 - Posnconf_Down) * overallConf;
 						NumUserInputs_Down++;
 
@@ -579,9 +596,10 @@ public class Event_handler_Central {
 				jEnd = i + PosnConf.peakThres;
 
 			for (int j = jStart; j <= jEnd; j++) {
-				if (Double.compare(PosnConf.PosnConfidnce_List_Central_Up.get(i).PosnConfidence, 
-						PosnConf.PosnConfidnce_List_Central_Up
-						.get(j).PosnConfidence)<0) {
+				if (Double
+						.compare(
+								PosnConf.PosnConfidnce_List_Central_Up.get(i).PosnConfidence,
+								PosnConf.PosnConfidnce_List_Central_Up.get(j).PosnConfidence) < 0) {
 					PosnConf.PosnConfidnce_List_Central_Up.get(i)
 							.setPeak(false);
 					break;
@@ -600,14 +618,72 @@ public class Event_handler_Central {
 				jEnd = i + PosnConf.peakThres;
 
 			for (int j = jStart; j <= jEnd; j++) {
-				if (Double.compare(PosnConf.PosnConfidnce_List_Central_Down.get(i).PosnConfidence, 
-						PosnConf.PosnConfidnce_List_Central_Down
-						.get(j).PosnConfidence)<0) {
-					PosnConf.PosnConfidnce_List_Central_Down.get(i)
-							.setPeak(false);
+				if (Double
+						.compare(
+								PosnConf.PosnConfidnce_List_Central_Down.get(i).PosnConfidence,
+								PosnConf.PosnConfidnce_List_Central_Down.get(j).PosnConfidence) < 0) {
+					PosnConf.PosnConfidnce_List_Central_Down.get(i).setPeak(
+							false);
 					break;
 				}
 			}
+		}
+		// updating users reputation
+		for (int i = 0; i < Train_Spotting.Train_Spotting_List_Central.size(); i++) {
+			double max_confidence = 0;
+			for (int j = 0; j < PosnConf.PosnConfidnce_List_Central_Up.size(); j++) {
+				if (PosnConf.PosnConfidnce_List_Central_Up.get(j).isPeak()) {
+					double pos_index = PosnConf.PosnConfidnce_List_Central_Up
+							.get(j).DistFromOriginMeter;
+					double distAlongRoute = Train_Spotting.Train_Spotting_List_Central
+							.get(i).DistFromOriginMeter;
+					double confDist = getConfidenceFromFarSpotting(Math
+							.abs(distAlongRoute - pos_index));
+					double confidence = Train_Spotting.Train_Spotting_List_Central
+							.get(i).Confidence;
+					double PosnCnf = PosnConf.PosnConfidnce_List_Central_Up
+							.get(j).PosnConfidence;
+					double this_confidence = confidence * confDist * PosnCnf;
+					if (this_confidence > max_confidence) {
+						max_confidence = this_confidence;
+					}
+					int userId = Train_Spotting.Train_Spotting_List_Central
+							.get(i).Id;
+					Passenger.reputation[userId] += Passenger.REPUTATION_INCR_VALUE
+							* max_confidence;
+					if (Passenger.reputation[userId] > Passenger.MAX_REPUTATION) {
+						Passenger.reputation[userId] = Passenger.MAX_REPUTATION;
+					}
+				}
+
+			}
+			for (int j = 0; j < PosnConf.PosnConfidnce_List_Central_Down.size(); j++) {
+				if (PosnConf.PosnConfidnce_List_Central_Down.get(j).isPeak()) {
+					double pos_index = PosnConf.PosnConfidnce_List_Central_Down
+							.get(j).DistFromOriginMeter;
+					double distAlongRoute = Train_Spotting.Train_Spotting_List_Central
+							.get(i).DistFromOriginMeter;
+					double confDist = getConfidenceFromFarSpotting(Math
+							.abs(distAlongRoute - pos_index));
+					double confidence = Train_Spotting.Train_Spotting_List_Central
+							.get(i).Confidence;
+					double PosnCnf = PosnConf.PosnConfidnce_List_Central_Down
+							.get(j).PosnConfidence;
+					double this_confidence = confidence * confDist * PosnCnf;
+					if (this_confidence > max_confidence) {
+						max_confidence = this_confidence;
+					}
+					int userId = Train_Spotting.Train_Spotting_List_Central
+							.get(i).Id;
+					Passenger.reputation[userId] += Passenger.REPUTATION_INCR_VALUE
+							* max_confidence;
+					if (Passenger.reputation[userId] > Passenger.MAX_REPUTATION) {
+						Passenger.reputation[userId] = Passenger.MAX_REPUTATION;
+					}
+				}
+
+			}
+
 		}
 
 	}

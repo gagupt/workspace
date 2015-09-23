@@ -527,7 +527,10 @@ public class Event_handler_Western {
 						double confDist = getConfidenceFromFarSpotting(Math
 								.abs(dist - distEach));
 						double overallConf = Train_Spotting.Train_Spotting_List_Western
-								.get(j).Confidence * confDist;
+								.get(j).Confidence
+								* confDist
+								* Passenger.reputation[Train_Spotting.Train_Spotting_List_Western
+										.get(j).Id];
 						Posnconf_Up += (1 - Posnconf_Up) * overallConf;
 						NumUserInputs_Up++;
 					} else if (Train_Spotting.Train_Spotting_List_Western
@@ -535,7 +538,10 @@ public class Event_handler_Western {
 						double confDist = getConfidenceFromFarSpotting(Math
 								.abs(dist - distEach));
 						double overallConf = Train_Spotting.Train_Spotting_List_Western
-								.get(j).Confidence * confDist;
+								.get(j).Confidence
+								* confDist
+								* Passenger.reputation[Train_Spotting.Train_Spotting_List_Western
+										.get(j).Id];
 						Posnconf_Down += (1 - Posnconf_Down) * overallConf;
 						NumUserInputs_Down++;
 
@@ -651,6 +657,33 @@ public class Event_handler_Western {
 				}
 
 			}
+			for (int j = 0; j < PosnConf.PosnConfidnce_List_Western_Down.size(); j++) {
+				if (PosnConf.PosnConfidnce_List_Western_Down.get(j).isPeak()) {
+					double pos_index = PosnConf.PosnConfidnce_List_Western_Down
+							.get(j).DistFromOriginMeter;
+					double distAlongRoute = Train_Spotting.Train_Spotting_List_Western
+							.get(i).DistFromOriginMeter;
+					double confDist = getConfidenceFromFarSpotting(Math
+							.abs(distAlongRoute - pos_index));
+					double confidence = Train_Spotting.Train_Spotting_List_Western
+							.get(i).Confidence;
+					double PosnCnf = PosnConf.PosnConfidnce_List_Western_Down
+							.get(j).PosnConfidence;
+					double this_confidence = confidence * confDist * PosnCnf;
+					if (this_confidence > max_confidence) {
+						max_confidence = this_confidence;
+					}
+					int userId = Train_Spotting.Train_Spotting_List_Western
+							.get(i).Id;
+					Passenger.reputation[userId] += Passenger.REPUTATION_INCR_VALUE
+							* max_confidence;
+					if (Passenger.reputation[userId] > Passenger.MAX_REPUTATION) {
+						Passenger.reputation[userId] = Passenger.MAX_REPUTATION;
+					}
+				}
+
+			}
+
 		}
 
 	}

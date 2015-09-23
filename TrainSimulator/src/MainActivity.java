@@ -12,10 +12,11 @@ public class MainActivity {
 	static BufferedWriter bufferedwrtr, bufferedwrtrpassengerInfo,
 			bufferedwrtrpassengerInfoC, bufferedwrtrpassengerInfoH,
 			bufferedwrtrPosnConfW_Up, bufferedwrtrPosnConfC_Up,
-			bufferedwrtrPosnConfH_Up,bufferedwrtrPosnConfW_Down, bufferedwrtrPosnConfC_Down,
-			bufferedwrtrPosnConfH_Down;
+			bufferedwrtrPosnConfH_Up, bufferedwrtrPosnConfW_Down,
+			bufferedwrtrPosnConfC_Down, bufferedwrtrPosnConfH_Down;
 	public static double SimTime = 0;
-	public static int end_sim_time , getSpottingsNowTime,passenger_all;// to stop
+	public static int end_sim_time, getSpottingsNowTime, passenger_all;// to
+																		// stop
 																		// the
 																		// simulation
 
@@ -36,14 +37,14 @@ public class MainActivity {
 
 	// Main function
 	public static void main(String args[]) throws IOException {
-		
-		end_sim_time=Integer.parseInt(args[0]);
-		getSpottingsNowTime=Integer.parseInt(args[1]);
-		passenger_all=Integer.parseInt(args[2]);
-		//Passenger.setPassenger_All(passenger_all);
-		//System.out.println(Passenger.Passenger_All);
-		//System.out.println(end_sim_time+" "+getSpottingsNowTime+" "+Passenger.Passenger_All);
-		
+
+		end_sim_time = Integer.parseInt(args[0]);
+		getSpottingsNowTime = Integer.parseInt(args[1]);
+		passenger_all = Integer.parseInt(args[2]);
+		// Passenger.setPassenger_All(passenger_all);
+		// System.out.println(Passenger.Passenger_All);
+		// System.out.println(end_sim_time+" "+getSpottingsNowTime+" "+Passenger.Passenger_All);
+
 		try {
 
 			File file1 = new File("western.csv");
@@ -146,6 +147,11 @@ public class MainActivity {
 			Event_handler_Central.AssignStationToPassenger();
 			Event_handler_Harbour.AssignStationToPassenger();
 
+			// initiate reputation value
+			for (int i = 0; i < Passenger.reputation.length; i++) {
+				Passenger.reputation[i] = Passenger.INITIAL_REPUTATION;
+			}
+
 			System.out.println("		MUMBAI RAIL");
 			System.out.println("");
 			System.out.println("SimTime\t" + "TrainNo\t" + "TypeOfEvent\t"
@@ -156,7 +162,7 @@ public class MainActivity {
 			if (!outPassenger.exists()) {
 				outPassenger.createNewFile();
 			}
-
+			double timer=SimTime+1800;
 			FileWriter wrtr = new FileWriter(outPassenger);
 			bufferedwrtr = new BufferedWriter(wrtr);
 			int flag = 0;
@@ -170,6 +176,20 @@ public class MainActivity {
 					flag = 1;
 				}
 				// ....................
+				// decayReputation()
+				
+				if (timer<=SimTime) {
+					for (int i = 0; i < Passenger.reputation.length; i++) {
+
+						Passenger.reputation[i] -= Passenger.REPUTATION_DECAY_VALUE; // linear
+																						// decay
+						if (Passenger.reputation[i] < Passenger.MIN_REPUTATION) {
+							Passenger.reputation[i] = Passenger.MIN_REPUTATION;
+						}
+					}
+					timer=timer+1800;
+					
+				}
 
 				// printing passengers info into csv file
 
@@ -184,84 +204,57 @@ public class MainActivity {
 				// bufferedwrtr.newLine();
 				int i;
 				// bufferedwrtr.write("passenger info Start");
-			/*	bufferedwrtr.newLine();
-				for (i = 0; i < Passenger.ListOfPassenger_Western.size(); i++) {
-
-					bufferedwrtr
-							.write(e.TimeStamp
-									+ "\t"
-									// +
-									// Passenger.ListOfPassenger_Western.get(i).ArrTime+"\t"
-									+ Passenger.ListOfPassenger_Western.get(i).id
-									+ "\t"
-									+ Passenger.ListOfPassenger_Western.get(i).TrainNo
-									+ "\t"
-									+ Passenger.ListOfPassenger_Western.get(i).Src
-									+ "\t"
-									+ Passenger.ListOfPassenger_Western.get(i)
-											.getDest()
-									+ "\t"
-									+ Passenger.ListOfPassenger_Western.get(i).Status
-									+ "\t"
-									+ Passenger.ListOfPassenger_Western.get(i).CurrStation
-
-							);
-
-					bufferedwrtr.newLine();
-
-				}
-				bufferedwrtr.newLine();
-				for (i = 0; i < Passenger.ListOfPassenger_Central.size(); i++) {
-
-					bufferedwrtr
-							.write(e.TimeStamp
-									+ "\t"
-									// +
-									// Passenger.ListOfPassenger_Central.get(i).ArrTime+"\t"
-									+ Passenger.ListOfPassenger_Central.get(i).id
-									+ "\t"
-									+ Passenger.ListOfPassenger_Central.get(i).TrainNo
-									+ "\t"
-									+ Passenger.ListOfPassenger_Central.get(i).Src
-									+ "\t"
-									+ Passenger.ListOfPassenger_Central.get(i).Dest
-									+ "\t"
-									+ Passenger.ListOfPassenger_Western.get(i).Status
-									+ "\t"
-									+ Passenger.ListOfPassenger_Western.get(i).CurrStation);
-
-					bufferedwrtr.newLine();
-				}
-				bufferedwrtr.newLine();
-				for (i = 0; i < Passenger.ListOfPassenger_Harbour.size(); i++) {
-
-					bufferedwrtr
-							.write(e.TimeStamp
-									+ "\t"
-									// +
-									// Passenger.ListOfPassenger_Harbour.get(i).ArrTime+"\t"
-									+ Passenger.ListOfPassenger_Harbour.get(i).id
-									+ "\t"
-									+ Passenger.ListOfPassenger_Harbour.get(i).TrainNo
-									+ "\t"
-									+ Passenger.ListOfPassenger_Harbour.get(i).Src
-									+ "\t"
-									+ Passenger.ListOfPassenger_Harbour.get(i).Dest
-									+ "\t"
-									+ Passenger.ListOfPassenger_Western.get(i).Status
-									+ "\t"
-									+ Passenger.ListOfPassenger_Western.get(i).CurrStation
-
-							);
-
-					bufferedwrtr.newLine();
-
-				}
-
-				bufferedwrtr.newLine();
-
-				bufferedwrtr.newLine();
-*/
+				/*
+				 * bufferedwrtr.newLine(); for (i = 0; i <
+				 * Passenger.ListOfPassenger_Western.size(); i++) {
+				 * 
+				 * bufferedwrtr .write(e.TimeStamp + "\t" // + //
+				 * Passenger.ListOfPassenger_Western.get(i).ArrTime+"\t" +
+				 * Passenger.ListOfPassenger_Western.get(i).id + "\t" +
+				 * Passenger.ListOfPassenger_Western.get(i).TrainNo + "\t" +
+				 * Passenger.ListOfPassenger_Western.get(i).Src + "\t" +
+				 * Passenger.ListOfPassenger_Western.get(i) .getDest() + "\t" +
+				 * Passenger.ListOfPassenger_Western.get(i).Status + "\t" +
+				 * Passenger.ListOfPassenger_Western.get(i).CurrStation
+				 * 
+				 * );
+				 * 
+				 * bufferedwrtr.newLine();
+				 * 
+				 * } bufferedwrtr.newLine(); for (i = 0; i <
+				 * Passenger.ListOfPassenger_Central.size(); i++) {
+				 * 
+				 * bufferedwrtr .write(e.TimeStamp + "\t" // + //
+				 * Passenger.ListOfPassenger_Central.get(i).ArrTime+"\t" +
+				 * Passenger.ListOfPassenger_Central.get(i).id + "\t" +
+				 * Passenger.ListOfPassenger_Central.get(i).TrainNo + "\t" +
+				 * Passenger.ListOfPassenger_Central.get(i).Src + "\t" +
+				 * Passenger.ListOfPassenger_Central.get(i).Dest + "\t" +
+				 * Passenger.ListOfPassenger_Western.get(i).Status + "\t" +
+				 * Passenger.ListOfPassenger_Western.get(i).CurrStation);
+				 * 
+				 * bufferedwrtr.newLine(); } bufferedwrtr.newLine(); for (i = 0;
+				 * i < Passenger.ListOfPassenger_Harbour.size(); i++) {
+				 * 
+				 * bufferedwrtr .write(e.TimeStamp + "\t" // + //
+				 * Passenger.ListOfPassenger_Harbour.get(i).ArrTime+"\t" +
+				 * Passenger.ListOfPassenger_Harbour.get(i).id + "\t" +
+				 * Passenger.ListOfPassenger_Harbour.get(i).TrainNo + "\t" +
+				 * Passenger.ListOfPassenger_Harbour.get(i).Src + "\t" +
+				 * Passenger.ListOfPassenger_Harbour.get(i).Dest + "\t" +
+				 * Passenger.ListOfPassenger_Western.get(i).Status + "\t" +
+				 * Passenger.ListOfPassenger_Western.get(i).CurrStation
+				 * 
+				 * );
+				 * 
+				 * bufferedwrtr.newLine();
+				 * 
+				 * }
+				 * 
+				 * bufferedwrtr.newLine();
+				 * 
+				 * bufferedwrtr.newLine();
+				 */
 				switch (e.TypeOfEvent) {
 				case "Arrival_Western":
 					Event_handler_Western.Arrival(e.TrainNo, e.StationName,
@@ -431,7 +424,7 @@ public class MainActivity {
 				bufferedwrtrpassengerInfoH.newLine();
 
 			}
-			
+
 			File posnconfW_Up = new File("PosnCOnf_western_Up.csv");
 			if (!posnconfW_Up.exists()) {
 				posnconfW_Up.createNewFile();
@@ -439,8 +432,8 @@ public class MainActivity {
 
 			FileWriter file_posnconfW_Up = new FileWriter(posnconfW_Up);
 			bufferedwrtrPosnConfW_Up = new BufferedWriter(file_posnconfW_Up);
-			bufferedwrtrPosnConfW_Up.write("Distance" + "\t" + "PosnConf" + "\t"
-					+ "NumUserInput" + "\t" + "isPeak");
+			bufferedwrtrPosnConfW_Up.write("Distance" + "\t" + "PosnConf"
+					+ "\t" + "NumUserInput" + "\t" + "isPeak");
 			bufferedwrtrPosnConfW_Up.newLine();
 			for (j = 0; j < PosnConf.PosnConfidnce_List_Western_Up.size(); j++) {
 
@@ -464,8 +457,8 @@ public class MainActivity {
 
 			FileWriter file_posnconfC_Up = new FileWriter(posnconfC_Up);
 			bufferedwrtrPosnConfC_Up = new BufferedWriter(file_posnconfC_Up);
-			bufferedwrtrPosnConfC_Up.write("Distance" + "\t" + "PosnConf" + "\t"
-					+ "NumUserInput" + "\t" + "isPeak");
+			bufferedwrtrPosnConfC_Up.write("Distance" + "\t" + "PosnConf"
+					+ "\t" + "NumUserInput" + "\t" + "isPeak");
 			bufferedwrtrPosnConfC_Up.newLine();
 			for (j = 0; j < PosnConf.PosnConfidnce_List_Central_Up.size(); j++) {
 
@@ -492,8 +485,8 @@ public class MainActivity {
 
 			FileWriter file_posnconfH_Up = new FileWriter(posnconfH_Up);
 			bufferedwrtrPosnConfH_Up = new BufferedWriter(file_posnconfH_Up);
-			bufferedwrtrPosnConfH_Up.write("Distance" + "\t" + "PosnConf" + "\t"
-					+ "NumUserInput" + "\t" + "isPeak");
+			bufferedwrtrPosnConfH_Up.write("Distance" + "\t" + "PosnConf"
+					+ "\t" + "NumUserInput" + "\t" + "isPeak");
 			bufferedwrtrPosnConfH_Up.newLine();
 			for (j = 0; j < PosnConf.PosnConfidnce_List_Harbour_Up.size(); j++) {
 
@@ -521,20 +514,22 @@ public class MainActivity {
 
 			FileWriter file_posnconfW_Down = new FileWriter(posnconfW_Down);
 			bufferedwrtrPosnConfW_Down = new BufferedWriter(file_posnconfW_Down);
-			bufferedwrtrPosnConfW_Down.write("Distance" + "\t" + "PosnConf" + "\t"
-					+ "NumUserInput" + "\t" + "isPeak");
+			bufferedwrtrPosnConfW_Down.write("Distance" + "\t" + "PosnConf"
+					+ "\t" + "NumUserInput" + "\t" + "isPeak");
 			bufferedwrtrPosnConfW_Down.newLine();
 			for (j = 0; j < PosnConf.PosnConfidnce_List_Western_Down.size(); j++) {
 
 				bufferedwrtrPosnConfW_Down
 						.write(PosnConf.PosnConfidnce_List_Western_Down.get(j).DistFromOriginMeter
 								+ "\t"
-								+ PosnConf.PosnConfidnce_List_Western_Down.get(j).PosnConfidence
+								+ PosnConf.PosnConfidnce_List_Western_Down
+										.get(j).PosnConfidence
 								+ "\t"
-								+ PosnConf.PosnConfidnce_List_Western_Down.get(j).NumUserInputs
+								+ PosnConf.PosnConfidnce_List_Western_Down
+										.get(j).NumUserInputs
 								+ "\t"
-								+ PosnConf.PosnConfidnce_List_Western_Down.get(j).isPeak
-								+ "\t");
+								+ PosnConf.PosnConfidnce_List_Western_Down
+										.get(j).isPeak + "\t");
 
 				bufferedwrtrPosnConfW_Down.newLine();
 
@@ -546,19 +541,22 @@ public class MainActivity {
 
 			FileWriter file_posnconfC_Down = new FileWriter(posnconfC_Down);
 			bufferedwrtrPosnConfC_Down = new BufferedWriter(file_posnconfC_Down);
-			bufferedwrtrPosnConfC_Down.write("Distance" + "\t" + "PosnConf" + "\t"
-					+ "NumUserInput" + "\t" + "isPeak");
+			bufferedwrtrPosnConfC_Down.write("Distance" + "\t" + "PosnConf"
+					+ "\t" + "NumUserInput" + "\t" + "isPeak");
 			bufferedwrtrPosnConfC_Down.newLine();
 			for (j = 0; j < PosnConf.PosnConfidnce_List_Central_Down.size(); j++) {
 
 				bufferedwrtrPosnConfC_Down
 						.write(PosnConf.PosnConfidnce_List_Central_Down.get(j).DistFromOriginMeter
 								+ "\t"
-								+ PosnConf.PosnConfidnce_List_Central_Down.get(j).PosnConfidence
+								+ PosnConf.PosnConfidnce_List_Central_Down
+										.get(j).PosnConfidence
 								+ "\t"
-								+ PosnConf.PosnConfidnce_List_Central_Down.get(j).NumUserInputs
+								+ PosnConf.PosnConfidnce_List_Central_Down
+										.get(j).NumUserInputs
 								+ "\t"
-								+ PosnConf.PosnConfidnce_List_Central_Down.get(j).isPeak
+								+ PosnConf.PosnConfidnce_List_Central_Down
+										.get(j).isPeak
 
 								+ "\t"
 
@@ -574,19 +572,22 @@ public class MainActivity {
 
 			FileWriter file_posnconfH_Down = new FileWriter(posnconfH_Down);
 			bufferedwrtrPosnConfH_Down = new BufferedWriter(file_posnconfH_Down);
-			bufferedwrtrPosnConfH_Down.write("Distance" + "\t" + "PosnConf" + "\t"
-					+ "NumUserInput" + "\t" + "isPeak");
+			bufferedwrtrPosnConfH_Down.write("Distance" + "\t" + "PosnConf"
+					+ "\t" + "NumUserInput" + "\t" + "isPeak");
 			bufferedwrtrPosnConfH_Down.newLine();
 			for (j = 0; j < PosnConf.PosnConfidnce_List_Harbour_Down.size(); j++) {
 
 				bufferedwrtrPosnConfH_Down
 						.write(PosnConf.PosnConfidnce_List_Harbour_Down.get(j).DistFromOriginMeter
 								+ "\t"
-								+ PosnConf.PosnConfidnce_List_Harbour_Down.get(j).PosnConfidence
+								+ PosnConf.PosnConfidnce_List_Harbour_Down
+										.get(j).PosnConfidence
 								+ "\t"
-								+ PosnConf.PosnConfidnce_List_Harbour_Down.get(j).NumUserInputs
+								+ PosnConf.PosnConfidnce_List_Harbour_Down
+										.get(j).NumUserInputs
 								+ "\t"
-								+ PosnConf.PosnConfidnce_List_Harbour_Down.get(j).isPeak
+								+ PosnConf.PosnConfidnce_List_Harbour_Down
+										.get(j).isPeak
 
 								+ "\t"
 
@@ -602,7 +603,7 @@ public class MainActivity {
 			bufferedwrtrPosnConfW_Down.close();
 			bufferedwrtrPosnConfC_Down.close();
 			bufferedwrtrPosnConfH_Down.close();
-			
+
 			bufferedwrtrpassengerInfo.close();
 			bufferedwrtrpassengerInfoC.close();
 			bufferedwrtrpassengerInfoH.close();
