@@ -9,7 +9,7 @@ public class Passenger {
 
 	
 	public int id,TrainNo;
-	public double ArrTime;
+	public double ArrTime,nextJourneyTime;
 	String Src,Dest,CurrStation,Status;
 	static int Passenger_All=MainActivity.passenger_all;
 	static int passengerId =0,TotalNumOfPassenger_Western=Passenger_All,
@@ -44,6 +44,15 @@ public class Passenger {
 	
 	
 	public static double[] reputation = new double[3*Passenger_All];
+	public double getNextJourneyTime() {
+		return nextJourneyTime;
+	}
+
+	public void setNextJourneyTime(double nextJourneyTime) {
+		this.nextJourneyTime = nextJourneyTime;
+	}
+
+
 	public static ArrayList<Passenger> ListOfPassenger_Western = 
 			new ArrayList<Passenger>(TotalNumOfPassenger_Western);
 	public static ArrayList<Passenger> ListOfPassenger_Central = 
@@ -51,8 +60,10 @@ public class Passenger {
 	public static ArrayList<Passenger> ListOfPassenger_Harbour = 
 			new ArrayList<Passenger>(TotalNumOfPassenger_Harbour);
 	
+	static int faultyPassenger[] = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20};
+	
 	public Passenger(int id , int TrainNo, double ArrTime
-			,String Src,String Dest,String CurrStation,String Status) {
+			,String Src,String Dest,String CurrStation,String Status,double nextJourneyTime) {
 		this.id = id ;
 		this.TrainNo = TrainNo;
 		this.ArrTime = ArrTime;

@@ -121,19 +121,19 @@ public class MainActivity {
 			}
 			for (int i = 0; i < Passenger.TotalNumOfPassenger_Western; i++) {
 				Passenger p = new Passenger(Passenger.passengerId, -1, -1,
-						null, null, null, "outofStation");
+						null, null, null, "outofStation",-1);
 				Passenger.ListOfPassenger_Western.add(p);
 				Passenger.passengerId++;
 			}
 			for (int i = 0; i < Passenger.TotalNumOfPassenger_Central; i++) {
 				Passenger p = new Passenger(Passenger.passengerId, -1, -1,
-						null, null, null, "outofStation");
+						null, null, null, "outofStation",-1);
 				Passenger.ListOfPassenger_Central.add(p);
 				Passenger.passengerId++;
 			}
 			for (int i = 0; i < Passenger.TotalNumOfPassenger_Harbour; i++) {
 				Passenger p = new Passenger(Passenger.passengerId, -1, -1,
-						null, null, null, "outofStation");
+						null, null, null, "outofStation",-1);
 				Passenger.ListOfPassenger_Harbour.add(p);
 				Passenger.passengerId++;
 			}
@@ -208,7 +208,7 @@ public class MainActivity {
 							Passenger.reputation[i] = Passenger.MIN_REPUTATION;
 						}
 					}
-					timer=timer+180;
+					timer=timer+1800;
 					
 				}
 				

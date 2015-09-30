@@ -6,8 +6,8 @@ rm allUsr.csv
 echo NumUsr,AvgError,SD>allUsr.csv
 while [  $numUsr -lt $maxNumUsr ]; do
          
-SpotTime=1000
-end_sim_time=30000
+SpotTime=7200
+end_sim_time=432000
          while [  $SpotTime -lt $end_sim_time ]; do
 echo -e "\n"
 echo "num user="$numUsr
@@ -16,7 +16,7 @@ echo -e "\n"
 
              bash main.sh $end_sim_time $SpotTime $numUsr
 	     python CalAvg.py $4 Avg.csv
-	     let SpotTime=SpotTime+5000
+	     let SpotTime=SpotTime+86400
          done
 
 python avg.py Avg.csv $numUsr allUsr.csv

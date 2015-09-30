@@ -69,54 +69,109 @@ public class Event_handler_Central {
 			if (Passenger.ListOfPassenger_Central.get(i).getSrc()
 					.equals(station)
 					&& Passenger.ListOfPassenger_Central.get(i).TrainNo == -1
-					&& (k2 > k1) && Direction == "up") {
+					&& (k2 > k1) && Direction == "up"&& timestamp>Passenger.ListOfPassenger_Central.get(i).nextJourneyTime) {
 				// add that passenger to train list
 				Passenger.ListOfPassenger_Central.get(i).setTrainNo(TrainNo);
 				Passenger.ListOfPassenger_Central.get(i).setStatus("InTrain");
 				Trains.Trainlist_Central.get(TrainNo - 1).Train
 						.add(Passenger.ListOfPassenger_Central.get(i));
+				//Checking if the passenger is faulty
+				boolean faulty=false;
+				for(int b=0;b<Passenger.faultyPassenger.length;b++){
+					if(Passenger.faultyPassenger[b]==Passenger.ListOfPassenger_Central.get(i).id){
+						faulty=true;
+						break;
+					}
+				
+				}
 				// Passengers telling us that they are boarding train
 
+				if(faulty){
+				Uniform inp = null, inperr = null;
+				int val, valadded;
+
+			//	inp = new Uniform(0, 2);
+			//	val = (int) inp.nextDouble();
+				val=0;
+				inperr = new Uniform(0, 600);
+				valadded = (int) inperr.nextDouble();
+				// System.out.println("VALUE="+valadded);
+				 if(val==0)
 				Train_Spotting.Train_Spotting_List_Central
+						.add(new Train_Spotting(
+								Passenger.ListOfPassenger_Central.get(i).id,
+								timestamp, "down", station, distFromOriginMeter,
+								0, 0));
+				 else
+					 Train_Spotting.Train_Spotting_List_Central
 						.add(new Train_Spotting(
 								Passenger.ListOfPassenger_Central.get(i).id,
 								timestamp, "up", station, distFromOriginMeter,
 								0, 0));
+				}
+				else{
+					Train_Spotting.Train_Spotting_List_Central
+					.add(new Train_Spotting(
+							Passenger.ListOfPassenger_Central.get(i).id,
+							timestamp, "up", station, distFromOriginMeter,
+							0, 0));
+				}
 				// ........................
 				countWalkIn++;
 			} else if (Passenger.ListOfPassenger_Central.get(i).getSrc()
 					.equals(station)
 					&& Passenger.ListOfPassenger_Central.get(i).TrainNo == -1
-					&& (k2 < k1) && Direction == "down") {
+					&& (k2 < k1) && Direction == "down"&& timestamp>Passenger.ListOfPassenger_Central.get(i).nextJourneyTime) {
 				// add that passenger to train list
 				Passenger.ListOfPassenger_Central.get(i).setTrainNo(TrainNo);
 				Passenger.ListOfPassenger_Central.get(i).setStatus("InTrain");
 				Trains.Trainlist_Central.get(TrainNo - 1).Train
 						.add(Passenger.ListOfPassenger_Central.get(i));
-				// Passengers telling us that they are boarding train
+
 				// Including probability to give input by passengers
+				
+				boolean faulty=false;
+				for(int b=0;b<Passenger.faultyPassenger.length;b++){
+					if(Passenger.faultyPassenger[b]==Passenger.ListOfPassenger_Central.get(i).id){
+						faulty=true;
+						break;
+					}
+				
+				}
+				// Passengers telling us that they are boarding train
+
+				if(faulty){
+
 				Uniform inp = null, inperr = null;
 				int val, valadded;
 
-				inp = new Uniform(0, 2);
-				val = (int) inp.nextDouble();
-
+			//	inp = new Uniform(0, 2);
+			//	val = (int) inp.nextDouble();
+				val=0;
 				inperr = new Uniform(0, 600);
 				valadded = (int) inperr.nextDouble();
 				// System.out.println("VALUE="+valadded);
-				// if(val==0)
+				 if(val==0)
 				Train_Spotting.Train_Spotting_List_Central
 						.add(new Train_Spotting(
 								Passenger.ListOfPassenger_Central.get(i).id,
-								timestamp, "down", station,
+								timestamp, "up", station,
 								distFromOriginMeter, 0, 0));
-				// else
-				// Train_Spotting.Train_Spotting_List_Central
-				// .add(new Train_Spotting(
-				// Passenger.ListOfPassenger_Central.get(i).id,
-				// timestamp, "down", station,
-				// distFromOriginMeter, 0, 0));
-
+				 else
+				 Train_Spotting.Train_Spotting_List_Central
+				 .add(new Train_Spotting(
+				 Passenger.ListOfPassenger_Central.get(i).id,
+				 timestamp, "down", station,
+				 distFromOriginMeter, 0, 0));
+				}
+				else{
+					 Train_Spotting.Train_Spotting_List_Central
+					 .add(new Train_Spotting(
+					 Passenger.ListOfPassenger_Central.get(i).id,
+					 timestamp, "down", station,
+					 distFromOriginMeter, 0, 0));
+						
+				}
 				// ........................
 
 				countWalkIn++;
@@ -178,7 +233,10 @@ public class Event_handler_Central {
 				}
 				Trains.Trainlist_Central.get(TrainNo - 1).Train.get(i).setDest(
 						Station.StationList_Central.get(Dest).StationName);
-
+//setting next journey time
+				Trains.Trainlist_Central.get(TrainNo - 1).Train.get(i).
+				setNextJourneyTime(timestamp+43200);
+				
 				Trains.Trainlist_Central.get(TrainNo - 1).Train.remove(i);
 				countWalkOut++;
 
