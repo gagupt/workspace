@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 public class Passenger {
 	public static final double INITIAL_REPUTATION= 0.5;
-	public static final double MIN_REPUTATION=0.5;
+	public static final double MIN_REPUTATION=0.2;
 	public static final double MAX_REPUTATION=1.0;
 	public static final double REPUTATION_DECAY_VALUE =0.05;
 	public static final double REPUTATION_INCR_VALUE =0.02;

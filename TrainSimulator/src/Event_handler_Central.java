@@ -1,4 +1,5 @@
 import java.io.IOException;
+import java.util.ArrayList;
 
 public class Event_handler_Central {
 
@@ -401,7 +402,15 @@ public class Event_handler_Central {
 		 * 
 		 * System.out.println("New PRINT END");
 		 */
-		for (int i = 0; i < Train_Spotting.Train_Spotting_List_Central.size(); i++) {
+		ArrayList<Train_Spotting> Train_Spotting_List_Central_t = new ArrayList<Train_Spotting>(
+				10000);
+		
+		
+		for(Train_Spotting p : Train_Spotting.Train_Spotting_List_Central) {
+			Train_Spotting_List_Central_t.add(p.clone(p.Id,p.Timestamp,p.DistFromOriginMeter,p.Confidence,p.DistNow,p.Direction,p.Station));
+		}
+		
+			for (int i = 0; i < Train_Spotting.Train_Spotting_List_Central.size(); i++) {
 
 			double t = Train_Spotting.Train_Spotting_List_Central.get(i).Timestamp;
 
@@ -423,8 +432,8 @@ public class Event_handler_Central {
 			double timetoTravel = nowtime - t;
 			// System.out.println("timetoTravel="+timetoTravel);
 			int m = 0;
-			int dir_flag = 0;
-
+		//	int dir_flag = 0;
+		
 			while (true) {
 				if (dir == "up") {
 					for (m = k1 + 1; m <= 25; m++) {
@@ -440,15 +449,15 @@ public class Event_handler_Central {
 						}
 					}
 					if (m > 25) {
-						dir_flag++;
+					//	dir_flag++;
 						dir = "down";
 						k1 = m - 1;
 					} else {
 						break;
 					}
 				}
-				// System.out.println("m="+m);
-
+				
+				//System.out.println("k="+k1);
 				if (dir == "down") {
 					for (m = k1; m >= 0; m--) {
 						double dist = Station.StationList_Central.get(m).NextStationDistance;
@@ -464,7 +473,7 @@ public class Event_handler_Central {
 					}
 					if (m < 0) {
 						dir = "up";
-						dir_flag++;
+						//dir_flag++;
 						k1 = m;
 					} else {
 						break;
@@ -479,6 +488,7 @@ public class Event_handler_Central {
 			// double total_run_dist=timetoTravel*Trains.Speed_of_The_Train
 			// +station_count*Trains.Halt_time_of_Train;
 			// int dir_flag=(int)total_run_dist/54000;
+		//	 System.out.println("m="+m);
 			int ii = 0;
 			double distNow = 0;
 			for (ii = 0; ii < Station.StationList_Central.size(); ii++) {
@@ -490,6 +500,14 @@ public class Event_handler_Central {
 			}
 			//
 			distNow += distOffset;
+			
+			/*
+			for(int kk=0;kk<Station.StationList_Central.size();kk++){
+				System.out.print(Station.StationList_Central.get(kk).getNextStationDistance());
+			}
+			System.out.println();
+			*/
+			//System.out.println("dist="+distNow+" "+"dir="+dir);
 			Train_Spotting.Train_Spotting_List_Central.get(i).setDistNow(
 					distNow);
 			// if(dir_flag%2==1){
@@ -503,9 +521,15 @@ public class Event_handler_Central {
 
 			// }
 			// }
-		}
+		}		
+		
+		
 
 		// computePosnConf..................
+		
+		PosnConf.PosnConfidnce_List_Central_Up.clear();
+		PosnConf.PosnConfidnce_List_Central_Down.clear();
+		
 		double dist = 0;
 		double inrc = 100;
 		double Posnconf_Up, Posnconf_Down;
@@ -530,7 +554,7 @@ public class Event_handler_Central {
 								.get(j).Confidence
 								* confDist
 								* Passenger.reputation[Train_Spotting.Train_Spotting_List_Central
-										.get(j).Id];
+									.get(j).Id];
 						Posnconf_Up += (1 - Posnconf_Up) * overallConf;
 						NumUserInputs_Up++;
 					} else if (Train_Spotting.Train_Spotting_List_Central
@@ -582,6 +606,7 @@ public class Event_handler_Central {
 					posnconf);
 
 		}
+		
 		// computeConfidencePeaks.................
 		int jStart, jEnd;
 		for (int i = 0; i < PosnConf.PosnConfidnce_List_Central_Up.size(); i++) {
@@ -685,7 +710,10 @@ public class Event_handler_Central {
 			}
 
 		}
-
+		Train_Spotting.Train_Spotting_List_Central.clear();
+		for(Train_Spotting p : Train_Spotting_List_Central_t) {
+			Train_Spotting.Train_Spotting_List_Central.add(p.clone(p.Id,p.Timestamp,p.DistFromOriginMeter,p.Confidence,p.DistNow,p.Direction,p.Station));
+		}
 	}
 
 	static double getConfidence4NumUsers(int N) {

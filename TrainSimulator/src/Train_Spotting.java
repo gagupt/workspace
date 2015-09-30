@@ -23,13 +23,20 @@ public class Train_Spotting {
 		
 		Station=station;
 	}
-
+	
 	static ArrayList<Train_Spotting> Train_Spotting_List_Western = new ArrayList<Train_Spotting>(
-			2000);
+			10000);
 	static ArrayList<Train_Spotting> Train_Spotting_List_Central = new ArrayList<Train_Spotting>(
-			2000);
+			10000);
 	static ArrayList<Train_Spotting> Train_Spotting_List_Harbour = new ArrayList<Train_Spotting>(
-			2000);
+			10000);
+	
+	static ArrayList<Train_Spotting> Train_Spotting_List_Western_temp = new ArrayList<Train_Spotting>(
+			10000);
+	static ArrayList<Train_Spotting> Train_Spotting_List_Central_temp = new ArrayList<Train_Spotting>(
+			10000);
+	static ArrayList<Train_Spotting> Train_Spotting_List_Harbour_temp = new ArrayList<Train_Spotting>(
+			10000);
 	
 	public int getId() {
 		return Id;
@@ -86,6 +93,16 @@ public class Train_Spotting {
 
 	public void setStation(String station) {
 		Station = station;
+	}
+
+	public Train_Spotting clone(int id2, double timestamp2,
+			double distFromOriginMeter2, double confidence2, double distNow2,
+			String direction2, String station2) {
+		// TODO Auto-generated method stub
+		Train_Spotting p = new Train_Spotting(id2, timestamp2,direction2,station2,
+				distFromOriginMeter2, confidence2, distNow2);
+        
+        return p;
 	}
 
 }

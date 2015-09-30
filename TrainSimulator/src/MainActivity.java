@@ -4,6 +4,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.File;
 import java.io.FileReader;
+import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.PriorityQueue;
 import java.util.Queue;
@@ -36,15 +37,19 @@ public class MainActivity {
 	public static Queue<Event> EventList = new PriorityQueue<>(3000, Comparator);
 
 	// Main function
+	@SuppressWarnings("unchecked")
 	public static void main(String args[]) throws IOException {
 
 		end_sim_time = Integer.parseInt(args[0]);
 		getSpottingsNowTime = Integer.parseInt(args[1]);
 		passenger_all = Integer.parseInt(args[2]);
+		//end_sim_time = 20000;
+		//getSpottingsNowTime = 10000;
+		//passenger_all = 500;
+		
 		// Passenger.setPassenger_All(passenger_all);
 		// System.out.println(Passenger.Passenger_All);
 		// System.out.println(end_sim_time+" "+getSpottingsNowTime+" "+Passenger.Passenger_All);
-
 		try {
 
 			File file1 = new File("western.csv");
@@ -151,7 +156,7 @@ public class MainActivity {
 			for (int i = 0; i < Passenger.reputation.length; i++) {
 				Passenger.reputation[i] = Passenger.INITIAL_REPUTATION;
 			}
-
+			
 			System.out.println("		MUMBAI RAIL");
 			System.out.println("");
 			System.out.println("SimTime\t" + "TrainNo\t" + "TypeOfEvent\t"
@@ -169,16 +174,32 @@ public class MainActivity {
 			while (SimTime < end_sim_time) {
 
 				// getSpottingsNow method call
+				
+				// ....................
 				if (SimTime >= getSpottingsNowTime && flag == 0) {
+					
+		
 					Event_handler_Western.getSpottingsNow(SimTime);
 					Event_handler_Central.getSpottingsNow(SimTime);
 					Event_handler_Harbour.getSpottingsNow(SimTime);
 					flag = 1;
+					
+
 				}
-				// ....................
-				// decayReputation()
 				
-				if (timer<=SimTime) {
+				if (timer<=SimTime&&flag==0) {		
+					Event_handler_Western.getSpottingsNow(SimTime);
+					Event_handler_Central.getSpottingsNow(SimTime);
+					Event_handler_Harbour.getSpottingsNow(SimTime);
+					/*
+					System.out.println("START");
+					for (int i = 0; i < Passenger.reputation.length; i++) {
+						System.out.println(Passenger.reputation[i]);
+					}
+					System.out.println("END");
+					*/
+					// decayReputation()
+					
 					for (int i = 0; i < Passenger.reputation.length; i++) {
 
 						Passenger.reputation[i] -= Passenger.REPUTATION_DECAY_VALUE; // linear
@@ -187,9 +208,10 @@ public class MainActivity {
 							Passenger.reputation[i] = Passenger.MIN_REPUTATION;
 						}
 					}
-					timer=timer+1800;
+					timer=timer+180;
 					
 				}
+				
 
 				// printing passengers info into csv file
 
@@ -596,7 +618,11 @@ public class MainActivity {
 				bufferedwrtrPosnConfH_Down.newLine();
 
 			}
-
+			/*for (int i = 0; i < Passenger.reputation.length; i++) {
+				System.out.println("reputation["+i+"]"+Passenger.reputation[i]);
+			
+			}*/
+			
 			bufferedwrtrPosnConfW_Up.close();
 			bufferedwrtrPosnConfC_Up.close();
 			bufferedwrtrPosnConfH_Up.close();
@@ -611,6 +637,7 @@ public class MainActivity {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-
+		
+		
 	}
 }

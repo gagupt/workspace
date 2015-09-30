@@ -1,4 +1,5 @@
 import java.io.IOException;
+import java.util.ArrayList;
 
 public class Event_handler_Western {
 
@@ -75,8 +76,23 @@ public class Event_handler_Western {
 				Trains.Trainlist_Western.get(TrainNo - 1).Train
 						.add(Passenger.ListOfPassenger_Western.get(i));
 				// Passengers telling us that they are boarding train
+				Uniform inp = null, inperr = null;
+				int val, valadded;
 
+				inp = new Uniform(0, 2);
+				val = (int) inp.nextDouble();
+
+				inperr = new Uniform(0, 600);
+				valadded = (int) inperr.nextDouble();
+				// System.out.println("VALUE="+valadded);
+				 if(val==0)
 				Train_Spotting.Train_Spotting_List_Western
+						.add(new Train_Spotting(
+								Passenger.ListOfPassenger_Western.get(i).id,
+								timestamp+valadded, "up", station, distFromOriginMeter,
+								0, 0));
+				 else
+					 Train_Spotting.Train_Spotting_List_Western
 						.add(new Train_Spotting(
 								Passenger.ListOfPassenger_Western.get(i).id,
 								timestamp, "up", station, distFromOriginMeter,
@@ -103,18 +119,18 @@ public class Event_handler_Western {
 				inperr = new Uniform(0, 600);
 				valadded = (int) inperr.nextDouble();
 				// System.out.println("VALUE="+valadded);
-				// if(val==0)
+				 if(val==0)
 				Train_Spotting.Train_Spotting_List_Western
 						.add(new Train_Spotting(
 								Passenger.ListOfPassenger_Western.get(i).id,
-								timestamp, "down", station,
+								timestamp+valadded, "down", station,
 								distFromOriginMeter, 0, 0));
-				// else
-				// Train_Spotting.Train_Spotting_List_Western
-				// .add(new Train_Spotting(
-				// Passenger.ListOfPassenger_Western.get(i).id,
-				// timestamp, "down", station,
-				// distFromOriginMeter, 0, 0));
+				 else
+				 Train_Spotting.Train_Spotting_List_Western
+				 .add(new Train_Spotting(
+				 Passenger.ListOfPassenger_Western.get(i).id,
+				 timestamp, "down", station,
+				 distFromOriginMeter, 0, 0));
 
 				// ........................
 
@@ -401,7 +417,15 @@ public class Event_handler_Western {
 		 * 
 		 * System.out.println("New PRINT END");
 		 */
-		for (int i = 0; i < Train_Spotting.Train_Spotting_List_Western.size(); i++) {
+		ArrayList<Train_Spotting> Train_Spotting_List_Western_t = new ArrayList<Train_Spotting>(
+				10000);
+		
+		
+		for(Train_Spotting p : Train_Spotting.Train_Spotting_List_Western) {
+			Train_Spotting_List_Western_t.add(p.clone(p.Id,p.Timestamp,p.DistFromOriginMeter,p.Confidence,p.DistNow,p.Direction,p.Station));
+		}
+		
+			for (int i = 0; i < Train_Spotting.Train_Spotting_List_Western.size(); i++) {
 
 			double t = Train_Spotting.Train_Spotting_List_Western.get(i).Timestamp;
 
@@ -423,8 +447,8 @@ public class Event_handler_Western {
 			double timetoTravel = nowtime - t;
 			// System.out.println("timetoTravel="+timetoTravel);
 			int m = 0;
-			int dir_flag = 0;
-
+		//	int dir_flag = 0;
+		
 			while (true) {
 				if (dir == "up") {
 					for (m = k1 + 1; m <= 35; m++) {
@@ -440,15 +464,15 @@ public class Event_handler_Western {
 						}
 					}
 					if (m > 35) {
-						dir_flag++;
+					//	dir_flag++;
 						dir = "down";
 						k1 = m - 1;
 					} else {
 						break;
 					}
 				}
-				// System.out.println("m="+m);
-
+				
+				//System.out.println("k="+k1);
 				if (dir == "down") {
 					for (m = k1; m >= 0; m--) {
 						double dist = Station.StationList_Western.get(m).NextStationDistance;
@@ -464,7 +488,7 @@ public class Event_handler_Western {
 					}
 					if (m < 0) {
 						dir = "up";
-						dir_flag++;
+						//dir_flag++;
 						k1 = m;
 					} else {
 						break;
@@ -479,6 +503,7 @@ public class Event_handler_Western {
 			// double total_run_dist=timetoTravel*Trains.Speed_of_The_Train
 			// +station_count*Trains.Halt_time_of_Train;
 			// int dir_flag=(int)total_run_dist/123780;
+		//	 System.out.println("m="+m);
 			int ii = 0;
 			double distNow = 0;
 			for (ii = 0; ii < Station.StationList_Western.size(); ii++) {
@@ -490,6 +515,14 @@ public class Event_handler_Western {
 			}
 			//
 			distNow += distOffset;
+			
+			/*
+			for(int kk=0;kk<Station.StationList_Western.size();kk++){
+				System.out.print(Station.StationList_Western.get(kk).getNextStationDistance());
+			}
+			System.out.println();
+			*/
+			//System.out.println("dist="+distNow+" "+"dir="+dir);
 			Train_Spotting.Train_Spotting_List_Western.get(i).setDistNow(
 					distNow);
 			// if(dir_flag%2==1){
@@ -503,9 +536,15 @@ public class Event_handler_Western {
 
 			// }
 			// }
-		}
+		}		
+		
+		
 
 		// computePosnConf..................
+		
+		PosnConf.PosnConfidnce_List_Western_Up.clear();
+		PosnConf.PosnConfidnce_List_Western_Down.clear();
+		
 		double dist = 0;
 		double inrc = 100;
 		double Posnconf_Up, Posnconf_Down;
@@ -530,7 +569,7 @@ public class Event_handler_Western {
 								.get(j).Confidence
 								* confDist
 								* Passenger.reputation[Train_Spotting.Train_Spotting_List_Western
-										.get(j).Id];
+									.get(j).Id];
 						Posnconf_Up += (1 - Posnconf_Up) * overallConf;
 						NumUserInputs_Up++;
 					} else if (Train_Spotting.Train_Spotting_List_Western
@@ -582,6 +621,7 @@ public class Event_handler_Western {
 					posnconf);
 
 		}
+		
 		// computeConfidencePeaks.................
 		int jStart, jEnd;
 		for (int i = 0; i < PosnConf.PosnConfidnce_List_Western_Up.size(); i++) {
@@ -685,7 +725,10 @@ public class Event_handler_Western {
 			}
 
 		}
-
+		Train_Spotting.Train_Spotting_List_Western.clear();
+		for(Train_Spotting p : Train_Spotting_List_Western_t) {
+			Train_Spotting.Train_Spotting_List_Western.add(p.clone(p.Id,p.Timestamp,p.DistFromOriginMeter,p.Confidence,p.DistNow,p.Direction,p.Station));
+		}
 	}
 
 	static double getConfidence4NumUsers(int N) {
