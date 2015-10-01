@@ -1,5 +1,5 @@
 #!/bin/bash
-#mkdir ~/Desktop/SimGraphs
+mkdir ~/Desktop/SimGraphs
 bash superWes.sh 
-#bash superCen.sh
+bash superCen.sh
 bash superHarb.sh

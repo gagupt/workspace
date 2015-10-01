@@ -85,7 +85,7 @@ public class Event_handler_Western {
 				
 				}
 				// Passengers telling us that they are boarding train
-
+				faulty=false;
 				if(faulty){
 				Uniform inp = null, inperr = null;
 				int val, valadded;
@@ -139,7 +139,7 @@ public class Event_handler_Western {
 				
 				}
 				// Passengers telling us that they are boarding train
-
+				faulty=false;
 				if(faulty){
 
 				Uniform inp = null, inperr = null;

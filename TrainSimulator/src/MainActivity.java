@@ -37,7 +37,7 @@ public class MainActivity {
 	public static Queue<Event> EventList = new PriorityQueue<>(3000, Comparator);
 
 	// Main function
-	@SuppressWarnings("unchecked")
+	//@SuppressWarnings("unchecked")
 	public static void main(String args[]) throws IOException {
 
 		end_sim_time = Integer.parseInt(args[0]);
@@ -119,19 +119,33 @@ public class MainActivity {
 				Trains t = new Trains();
 				Trains.Trainlist_Harbour.add(t);
 			}
+			//setting random time of a day to come on station
+			Uniform uni_time = null;
+			int t;
+
+			
 			for (int i = 0; i < Passenger.TotalNumOfPassenger_Western; i++) {
+				uni_time = new Uniform(0, 86400);
+				t= (int) uni_time.nextDouble();
+
 				Passenger p = new Passenger(Passenger.passengerId, -1, -1,
-						null, null, null, "outofStation",-1);
+						null, null, null, "outofStation",t);
 				Passenger.ListOfPassenger_Western.add(p);
 				Passenger.passengerId++;
 			}
 			for (int i = 0; i < Passenger.TotalNumOfPassenger_Central; i++) {
+				uni_time = new Uniform(0, 86400);
+				t= (int) uni_time.nextDouble();
+
 				Passenger p = new Passenger(Passenger.passengerId, -1, -1,
 						null, null, null, "outofStation",-1);
 				Passenger.ListOfPassenger_Central.add(p);
 				Passenger.passengerId++;
 			}
 			for (int i = 0; i < Passenger.TotalNumOfPassenger_Harbour; i++) {
+				uni_time = new Uniform(0, 86400);
+				t= (int) uni_time.nextDouble();
+
 				Passenger p = new Passenger(Passenger.passengerId, -1, -1,
 						null, null, null, "outofStation",-1);
 				Passenger.ListOfPassenger_Harbour.add(p);
