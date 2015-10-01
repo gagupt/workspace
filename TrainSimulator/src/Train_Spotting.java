@@ -25,11 +25,11 @@ public class Train_Spotting {
 	}
 	
 	static ArrayList<Train_Spotting> Train_Spotting_List_Western = new ArrayList<Train_Spotting>(
-			10000);
+			1000000);
 	static ArrayList<Train_Spotting> Train_Spotting_List_Central = new ArrayList<Train_Spotting>(
-			10000);
+			1000000);
 	static ArrayList<Train_Spotting> Train_Spotting_List_Harbour = new ArrayList<Train_Spotting>(
-			10000);
+			1000000);
 	
 	public int getId() {
 		return Id;

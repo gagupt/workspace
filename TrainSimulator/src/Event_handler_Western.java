@@ -85,14 +85,14 @@ public class Event_handler_Western {
 				
 				}
 				// Passengers telling us that they are boarding train
-				faulty=false;
+				faulty=true;
 				if(faulty){
 				Uniform inp = null, inperr = null;
 				int val, valadded;
 
-			//	inp = new Uniform(0, 2);
-			//	val = (int) inp.nextDouble();
-				val=0;
+				inp = new Uniform(0, 2);
+				val = (int) inp.nextDouble();
+				//val=0;
 				inperr = new Uniform(0, 600);
 				valadded = (int) inperr.nextDouble();
 				// System.out.println("VALUE="+valadded);
@@ -139,15 +139,15 @@ public class Event_handler_Western {
 				
 				}
 				// Passengers telling us that they are boarding train
-				faulty=false;
+				faulty=true;
 				if(faulty){
 
 				Uniform inp = null, inperr = null;
 				int val, valadded;
 
-			//	inp = new Uniform(0, 2);
-			//	val = (int) inp.nextDouble();
-				val=0;
+				inp = new Uniform(0, 2);
+				val = (int) inp.nextDouble();
+				//val=0;
 				inperr = new Uniform(0, 600);
 				valadded = (int) inperr.nextDouble();
 				// System.out.println("VALUE="+valadded);

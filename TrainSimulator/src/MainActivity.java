@@ -222,7 +222,7 @@ public class MainActivity {
 							Passenger.reputation[i] = Passenger.MIN_REPUTATION;
 						}
 					}
-					timer=timer+1800;
+					timer=timer+86400;
 					
 				}
 				
@@ -349,6 +349,7 @@ public class MainActivity {
 
 				}
 			}
+			/*
 			File passengerInfo = new File("Train_Spotting_western.csv");
 			if (!passengerInfo.exists()) {
 				passengerInfo.createNewFile();
@@ -460,7 +461,8 @@ public class MainActivity {
 				bufferedwrtrpassengerInfoH.newLine();
 
 			}
-
+*/
+			int j;
 			File posnconfW_Up = new File("PosnCOnf_western_Up.csv");
 			if (!posnconfW_Up.exists()) {
 				posnconfW_Up.createNewFile();
@@ -636,7 +638,7 @@ public class MainActivity {
 				System.out.println("reputation["+i+"]"+Passenger.reputation[i]);
 			
 			}*/
-			
+			//bufferedwrtrpassengerInfo
 			bufferedwrtrPosnConfW_Up.close();
 			bufferedwrtrPosnConfC_Up.close();
 			bufferedwrtrPosnConfH_Up.close();
@@ -644,9 +646,9 @@ public class MainActivity {
 			bufferedwrtrPosnConfC_Down.close();
 			bufferedwrtrPosnConfH_Down.close();
 
-			bufferedwrtrpassengerInfo.close();
-			bufferedwrtrpassengerInfoC.close();
-			bufferedwrtrpassengerInfoH.close();
+			//bufferedwrtrpassengerInfo.close();
+			//bufferedwrtrpassengerInfoC.close();
+			//bufferedwrtrpassengerInfoH.close();
 			bufferedwrtr.close();
 		} catch (IOException e) {
 			e.printStackTrace();
