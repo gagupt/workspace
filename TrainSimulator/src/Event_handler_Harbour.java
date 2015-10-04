@@ -99,19 +99,19 @@ public class Event_handler_Harbour {
 				// System.out.println("VALUE="+valadded);
 				 if(val==0)
 					{
-			/*		 			 if(station=="CST"||station=="Masjid Bunder"||
+					 			 if(station=="CST"||station=="Masjid Bunder"||
 								 station=="Sandhurst Road"||station=="Kurla")
 							 Train_Spotting.Train_Spotting_List_Central
 								.add(new Train_Spotting(
 										Passenger.ListOfPassenger_Harbour.get(i).id,
-										timestamp, "down", station, distFromOriginMeter,
+										timestamp, "up", station, distFromOriginMeter,
 										0, 0));
 					
-						 else */ 
+						 else  
 							 Train_Spotting.Train_Spotting_List_Harbour
 								.add(new Train_Spotting(
 										Passenger.ListOfPassenger_Harbour.get(i).id,
-										timestamp, "down", station, distFromOriginMeter,
+										timestamp, "up", station, distFromOriginMeter,
 										0, 0));
 						
 					} 
@@ -168,19 +168,19 @@ public class Event_handler_Harbour {
 				// System.out.println("VALUE="+valadded);
 				 if(val==0)
 					{
-					/*	 if(station=="CST"||station=="Masjid Bunder"||
+						 if(station=="CST"||station=="Masjid Bunder"||
 								 station=="Sandhurst Road"||station=="Kurla")
 							 Train_Spotting.Train_Spotting_List_Central
 								.add(new Train_Spotting(
 										Passenger.ListOfPassenger_Harbour.get(i).id,
-										timestamp, "up", station, distFromOriginMeter,
+										timestamp, "down", station, distFromOriginMeter,
 										0, 0));
 					
-						 else */
+						 else 
 							 Train_Spotting.Train_Spotting_List_Harbour
 								.add(new Train_Spotting(
 										Passenger.ListOfPassenger_Harbour.get(i).id,
-										timestamp, "up", station, distFromOriginMeter,
+										timestamp, "down", station, distFromOriginMeter,
 										0, 0));
 						
 					} 

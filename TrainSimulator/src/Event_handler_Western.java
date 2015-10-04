@@ -98,17 +98,17 @@ public class Event_handler_Western {
 				// System.out.println("VALUE="+valadded);
 				//direction error
 				if(val==0){
-			/*	if(station=="Dadar")
+				if(station=="Dadar")
 					 Train_Spotting.Train_Spotting_List_Central
 						.add(new Train_Spotting(
 								Passenger.ListOfPassenger_Western.get(i).id,
-								timestamp, "down", station, distFromOriginMeter,
+								timestamp, "up", station, distFromOriginMeter,
 								0, 0));
-				else */
+				else 
 					 Train_Spotting.Train_Spotting_List_Western
 						.add(new Train_Spotting(
 								Passenger.ListOfPassenger_Western.get(i).id,
-								timestamp, "down", station, distFromOriginMeter,
+								timestamp, "up", station, distFromOriginMeter,
 								0, 0));
 				
 				}
@@ -163,17 +163,17 @@ public class Event_handler_Western {
 				// System.out.println("VALUE="+valadded);
 				//direction error
 				 if(val==0){
-				/*		if(station=="Dadar")
+						if(station=="Dadar")
 							 Train_Spotting.Train_Spotting_List_Central
 								.add(new Train_Spotting(
 										Passenger.ListOfPassenger_Western.get(i).id,
-										timestamp, "up", station, distFromOriginMeter,
+										timestamp, "down", station, distFromOriginMeter,
 										0, 0));
-						else */
+						else 
 							 Train_Spotting.Train_Spotting_List_Western
 								.add(new Train_Spotting(
 										Passenger.ListOfPassenger_Western.get(i).id,
-										timestamp, "up", station, distFromOriginMeter,
+										timestamp, "down", station, distFromOriginMeter,
 										0, 0));
 						
 						}
