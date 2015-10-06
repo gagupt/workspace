@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.5.29)  4 OCT 2015 15:32
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.5.29)  7 OCT 2015 04:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -964,6 +964,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 1--9
  []
 
 PGFPlots: reading {westernTruUp.csv}
+
+Overfull \hbox (4.36911pt too wide) in paragraph at lines 34--35
+ [] 
+ []
+
 PGFPlots: reading {westernEstUp.csv}
 
 Overfull \hbox (42.25952pt too wide) in paragraph at lines 61--62
@@ -971,6 +976,11 @@ Overfull \hbox (42.25952pt too wide) in paragraph at lines 61--62
  []
 
 PGFPlots: reading {westernTruDown.csv}
+
+Overfull \hbox (4.36911pt too wide) in paragraph at lines 90--91
+ [] 
+ []
+
 PGFPlots: reading {westernEstDown.csv}
 
 Overfull \hbox (52.25955pt too wide) in paragraph at lines 117--118
@@ -1023,18 +1033,18 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 25698 strings out of 495028
- 630478 string characters out of 6181497
- 716999 words of memory out of 5000000
- 28421 multiletter control sequences out of 15000+600000
+ 25694 strings out of 495028
+ 630302 string characters out of 6181497
+ 715998 words of memory out of 5000000
+ 28417 multiletter control sequences out of 15000+600000
  5962 words of font info for 23 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 71i,15n,76p,10478b,1235s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 71i,15n,76p,10478b,1236s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texl
 ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb>
-Output written on report.pdf (3 pages, 57156 bytes).
+Output written on report.pdf (3 pages, 57164 bytes).
 PDF statistics:
  33 PDF objects out of 1000 (max. 8388607)
  23 compressed objects within 1 object stream

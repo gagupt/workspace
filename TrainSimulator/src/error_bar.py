@@ -8,7 +8,9 @@ font = {'family' : 'normal',
 
 plt.rc('font', **font)
 fname=sys.argv[1]
-datfile="allUsr.csv"
+#datfile="allUsr.csv"
+datfile=sys.argv[2]
+gName=sys.argv[3]
 Mcsv = csv.reader(open(datfile, 'rb'), delimiter=',', quotechar='"')
 
 # Mapping from column name to column index
@@ -48,5 +50,5 @@ plt.grid(b='on')
 plt.xticks(ind+1.5*width, Usr)
 plt.legend(loc=0)
 plt.suptitle('Graph for Average Error with repect to Ground Trhuth value (' +fname+')')
-plt.savefig("allUsrGraph.pdf", bbox_inches='tight')
+plt.savefig(gName, bbox_inches='tight')
 #plt.show()

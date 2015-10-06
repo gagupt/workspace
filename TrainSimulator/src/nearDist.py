@@ -146,14 +146,15 @@ listTemp.append(s2)
 
 
 listTemp=[]
-listTemp.append("Positions , NearestEstDis")
-outlineTru.writerow(listTemp)
+#listTemp.append("Positions , NearestEstDis")
+#outlineTru.writerow(listTemp)
 
 #calculating for each ground truth value
 #linesTru = csv.reader(open(inpfileTru,'rb'), delimiter=',')
 
 for row1 in linesTru:
-    min=1000000
+    min=123780
+    posConfTmp=1
     listTemp=[]
     linesEst = csv.reader(open(inpfileEst,'rb'), delimiter=',')
     for row2 in linesEst:
@@ -181,9 +182,12 @@ for row1 in linesTru:
         
         if(min>abs(float(finalDist)-float(row2[0]))):
             min=abs(float(finalDist)-float(row2[0]))
+            posConfTmp=1
             #print finalDist
     listTemp.append(finalDist)
     listTemp.append(min)
+    listTemp.append(posConfTmp)
+#add here 
     LISTtru.append(listTemp)
 LISTtru.sort(key=lambda x:float(x[0]))
 #print LISTtru

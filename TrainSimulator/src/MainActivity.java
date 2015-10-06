@@ -14,7 +14,7 @@ public class MainActivity {
 			bufferedwrtrpassengerInfoC, bufferedwrtrpassengerInfoH,
 			bufferedwrtrPosnConfW_Up, bufferedwrtrPosnConfC_Up,
 			bufferedwrtrPosnConfH_Up, bufferedwrtrPosnConfW_Down,
-			bufferedwrtrPosnConfC_Down, bufferedwrtrPosnConfH_Down;
+			bufferedwrtrPosnConfC_Down, bufferedwrtrPosnConfH_Down,bufferedwrtrpassengerInfoTrue;
 	public static double SimTime = 0;
 	public static int end_sim_time, getSpottingsNowTime, passenger_all;// to
 																		// stop
@@ -181,10 +181,23 @@ public class MainActivity {
 			if (!outPassenger.exists()) {
 				outPassenger.createNewFile();
 			}
-			double timer=SimTime+1800;
+			double timer=SimTime;
+			double timer1=0;
+			double timer2=0;
 			FileWriter wrtr = new FileWriter(outPassenger);
 			bufferedwrtr = new BufferedWriter(wrtr);
 			int flag = 0;
+			File passengerInfoTrue = new File("repuTrue.csv");
+			if (!passengerInfoTrue.exists()) {
+				passengerInfoTrue.createNewFile();
+			}
+
+			FileWriter wrtrpassengerInfoTrue = new FileWriter(passengerInfoTrue);
+			bufferedwrtrpassengerInfoTrue = new BufferedWriter(wrtrpassengerInfoTrue);
+			bufferedwrtrpassengerInfoTrue
+			.write("SimTime"
+					+ ","
+					+ "reputation");
 			while (SimTime < end_sim_time) {
 
 				// getSpottingsNow method call
@@ -200,18 +213,9 @@ public class MainActivity {
 					
 
 				}
+				//System.out.println("START"+Passenger.reputation[6]);
 				
-				if (timer<=SimTime&&flag==0) {		
-					Event_handler_Western.getSpottingsNow(SimTime);
-					Event_handler_Central.getSpottingsNow(SimTime);
-					Event_handler_Harbour.getSpottingsNow(SimTime);
-					/*
-					System.out.println("START");
-					for (int i = 0; i < Passenger.reputation.length; i++) {
-						System.out.println(Passenger.reputation[i]);
-					}
-					System.out.println("END");
-					*/
+				if (timer<=SimTime) {		
 					// decayReputation()
 					
 					for (int i = 0; i < Passenger.reputation.length; i++) {
@@ -223,9 +227,40 @@ public class MainActivity {
 						}
 					}
 					timer=timer+86400;
+					}
+				if (timer2<=SimTime) {		
+					Event_handler_Western.getSpottingsNow(SimTime);
+					Event_handler_Central.getSpottingsNow(SimTime);
+					Event_handler_Harbour.getSpottingsNow(SimTime);
+					timer2=timer2+43200;
+					}
+
+				if (timer1<=SimTime) {
+					//System.out.println("HELLO"+timer1);
+					double sumRepu=0;
+					for (int i = 0; i < Passenger.reputation.length; i++) {
+						sumRepu+=Passenger.reputation[i];
+					}
+					sumRepu=sumRepu/Passenger.reputation.length;
+					bufferedwrtrpassengerInfoTrue
+					.newLine();
+						bufferedwrtrpassengerInfoTrue
+								.write(timer1
+										+ ","
+										+ sumRepu);
+						timer1=timer1+1000;
 					
 				}
+				//
+				//reputation values for graph
 				
+		/*		bufferedwrtrpassengerInfoTrue
+				.newLine();
+					bufferedwrtrpassengerInfoTrue
+							.write(SimTime
+									+ "\t"
+									+ Passenger.reputation[21]);*/
+				//
 
 				// printing passengers info into csv file
 

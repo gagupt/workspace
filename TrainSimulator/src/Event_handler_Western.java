@@ -98,13 +98,13 @@ public class Event_handler_Western {
 				// System.out.println("VALUE="+valadded);
 				//direction error
 				if(val==0){
-				if(station=="Dadar")
+		/*		if(station=="Dadar")
 					 Train_Spotting.Train_Spotting_List_Central
 						.add(new Train_Spotting(
 								Passenger.ListOfPassenger_Western.get(i).id,
 								timestamp, "up", station, distFromOriginMeter,
 								0, 0));
-				else 
+				else */ 
 					 Train_Spotting.Train_Spotting_List_Western
 						.add(new Train_Spotting(
 								Passenger.ListOfPassenger_Western.get(i).id,
@@ -163,13 +163,13 @@ public class Event_handler_Western {
 				// System.out.println("VALUE="+valadded);
 				//direction error
 				 if(val==0){
-						if(station=="Dadar")
+	/*					if(station=="Dadar")
 							 Train_Spotting.Train_Spotting_List_Central
 								.add(new Train_Spotting(
 										Passenger.ListOfPassenger_Western.get(i).id,
 										timestamp, "down", station, distFromOriginMeter,
 										0, 0));
-						else 
+						else */
 							 Train_Spotting.Train_Spotting_List_Western
 								.add(new Train_Spotting(
 										Passenger.ListOfPassenger_Western.get(i).id,
@@ -755,12 +755,29 @@ public class Event_handler_Western {
 							.get(i).Id;
 					Passenger.reputation[userId] += Passenger.REPUTATION_INCR_VALUE
 							* max_confidence;
+						
 					if (Passenger.reputation[userId] > Passenger.MAX_REPUTATION) {
 						Passenger.reputation[userId] = Passenger.MAX_REPUTATION;
 					}
+				/*
+					double sumRepu=0;
+					for (int ii = 0; ii < Passenger.reputation.length; ii++) {
+						sumRepu+=Passenger.reputation[ii];
+					}
+					sumRepu=sumRepu/Passenger.reputation.length;
+					//System.out.println("SEE"+sumRepu);
+					//if(confidence!=0&& confDist!=0&& PosnCnf!=0)
+					if(sumRepu!=0&&confidence!=0&& confDist!=0&& PosnCnf!=0)
+					System.out.print("SEE"+confidence+"/"+ confDist +"/"+  PosnCnf);
+						System.out.print("INC"+Passenger.REPUTATION_INCR_VALUE
+								* max_confidence+" "+userId+"="+Passenger.reputation[userId]+"avg= "+sumRepu);
+						System.out.println();
+					
+*/
 				}
 
 			}
+			max_confidence = 0;
 			for (int j = 0; j < PosnConf.PosnConfidnce_List_Western_Down.size(); j++) {
 				if (PosnConf.PosnConfidnce_List_Western_Down.get(j).isPeak()) {
 					double pos_index = PosnConf.PosnConfidnce_List_Western_Down
@@ -781,9 +798,26 @@ public class Event_handler_Western {
 							.get(i).Id;
 					Passenger.reputation[userId] += Passenger.REPUTATION_INCR_VALUE
 							* max_confidence;
+										
 					if (Passenger.reputation[userId] > Passenger.MAX_REPUTATION) {
 						Passenger.reputation[userId] = Passenger.MAX_REPUTATION;
 					}
+					/*
+					double sumRepu=0;
+					for (int ii = 0; ii < Passenger.reputation.length; ii++) {
+						sumRepu+=Passenger.reputation[ii];
+					}
+					sumRepu=sumRepu/Passenger.reputation.length;
+					//System.out.println("SEE"+sumRepu);
+					//if(confidence!=0&& confDist!=0&& PosnCnf!=0)
+					if(sumRepu!=0&&confidence!=0&& confDist!=0&& PosnCnf!=0)
+					System.out.print("SEE"+confidence+"/"+ confDist +"/"+  PosnCnf);
+						System.out.print("INC"+Passenger.REPUTATION_INCR_VALUE
+								* max_confidence+" "+userId+"="+Passenger.reputation[userId]+"avg= "+sumRepu);
+						System.out.println();
+					
+*/
+
 				}
 
 			}
